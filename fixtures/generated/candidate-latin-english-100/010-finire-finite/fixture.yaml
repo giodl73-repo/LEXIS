@@ -1,0 +1,212 @@
+fixture_id: LEXIS-GEN-CAND-010-finire-finite
+status: candidate_review
+scope:
+  scope_id: candidate-010-finire-finite-scope
+  question: Candidate generated multi-stage graph-facing chain for Latin finire, Old French, Middle English, and Modern English finite.
+  excluded_claims:
+  - unreviewed generated relationship claims
+  - source text ingestion or redistribution
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+- source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+  may_support_claims: false
+deferred_records: []
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers: []
+nodes:
+  languages:
+  - id: lang-latin
+    label: Latin
+    kind: language
+    source_posture: candidate_review
+  - id: lang-middle-english
+    label: Middle English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-modern-english
+    label: Modern English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-old-french
+    label: Old French
+    kind: language
+    source_posture: candidate_review
+  roots: []
+  wordforms:
+  - id: wf-latin-finire
+    label: finire
+    language_id: lang-latin
+    form: finire
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-finire
+  - id: wf-latin-finitum
+    label: finitum
+    language_id: lang-latin
+    form: finitum
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-finitum
+  - id: wf-old-french-old-french-finite-candidate
+    label: Old French candidate stage for finite
+    language_id: lang-old-french
+    form: old-french-finite-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-old-french-old-french-finite-candidate
+  - id: wf-middle-english-middle-english-finite-candidate
+    label: Middle English candidate stage for finite
+    language_id: lang-middle-english
+    form: middle-english-finite-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-middle-english-middle-english-finite-candidate
+  - id: wf-modern-english-finite
+    label: finite
+    language_id: lang-modern-english
+    form: finite
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-finite
+  meaning_senses:
+  - id: sense-finire
+    label: ending or bounding
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-latin-finire
+  - id: sense-finite
+    label: ending or bounding
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-finite
+  script_forms: []
+source_links:
+- id: src-latin-finire
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-latin-finitum
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-old-french-old-french-finite-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-middle-english-middle-english-finite-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-modern-english-finite
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+relationship_edges:
+- id: edge-finire-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-finire
+  target_id: wf-latin-finire
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-finire-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-latin-finire
+  target_id: sense-finire
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-finitum-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-finitum
+  target_id: wf-latin-finitum
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-finite-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-old-french-old-french-finite-candidate
+  target_id: wf-old-french-old-french-finite-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-finite-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-middle-english-middle-english-finite-candidate
+  target_id: wf-middle-english-middle-english-finite-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-finite-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-modern-english-finite
+  target_id: wf-modern-english-finite
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-finite-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-modern-english-finite
+  target_id: sense-finite
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-finitum-descends-from-finire
+  edge_kind: descends_from
+  source_id: wf-latin-finitum
+  target_id: wf-latin-finire
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-finite-candidate-borrowed-from-finitum
+  edge_kind: borrowed_from
+  source_id: wf-old-french-old-french-finite-candidate
+  target_id: wf-latin-finitum
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-finite-candidate-borrowed-from-old-french-finite-candidate
+  edge_kind: borrowed_from
+  source_id: wf-middle-english-middle-english-finite-candidate
+  target_id: wf-old-french-old-french-finite-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-finite-descends-from-middle-english-finite-candidate
+  edge_kind: descends_from
+  source_id: wf-modern-english-finite
+  target_id: wf-middle-english-middle-english-finite-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review

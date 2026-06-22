@@ -1,0 +1,59 @@
+slice_id: corrected-candidate-085
+fixture_id: LEXIS-GEN-CORR-085
+status: candidate_review
+question: Corrected graph-facing candidate route for generated Latin-English chain 085.
+source_state: candidate_review
+sources:
+- id: LEXIS-SRCDEC-102-tier3-proof-placid
+  state: candidate_review
+  may_support_claims: false
+forms:
+- form: placere
+  language: Latin
+  source: LEXIS-SRCDEC-102-tier3-proof-placid
+  id: wf-latin-placere
+  label: null
+  meaning: null
+- form: placidus
+  language: Unspecified intermediate
+  source: LEXIS-SRCDEC-102-tier3-proof-placid
+  id: wf-unspecified-intermediate-placidus
+  label: null
+  meaning: null
+- form: placide
+  language: French
+  source: LEXIS-SRCDEC-102-tier3-proof-placid
+  id: wf-french-placide
+  label: null
+  meaning: null
+- form: placid
+  language: Modern English
+  source: LEXIS-SRCDEC-102-tier3-proof-placid
+  id: wf-modern-english-placid
+  label: null
+  meaning: Corrected candidate target meaning; source-detail review required.
+relationships:
+- kind: borrowed_from
+  source: wf-unspecified-intermediate-placidus
+  target: wf-latin-placere
+  claim_type: inference
+  uncertainty: source_limited
+  support:
+  - LEXIS-SRCDEC-102-tier3-proof-placid
+  review_state: candidate_review
+- kind: borrowed_from
+  source: wf-french-placide
+  target: wf-unspecified-intermediate-placidus
+  claim_type: inference
+  uncertainty: source_limited
+  support:
+  - LEXIS-SRCDEC-102-tier3-proof-placid
+  review_state: candidate_review
+- kind: borrowed_from
+  source: wf-modern-english-placid
+  target: wf-french-placide
+  claim_type: inference
+  uncertainty: source_limited
+  support:
+  - LEXIS-SRCDEC-102-tier3-proof-placid
+  review_state: candidate_review

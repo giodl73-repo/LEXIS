@@ -1,0 +1,17 @@
+decision_id: LEXIS-SRCDEC-067-tier2-proof-exempt
+status: candidate_review
+source_family: English etymology pointer for Latin-to-English candidate exempt
+related_slice_packages:
+  - LEXIS-SLICE-001-SOURCE
+pointer: https://www.etymonline.com/word/exempt
+candidate_source_name: Etymonline and Merriam-Webster entries for exempt
+rights_posture: copyrighted_reference_pointer_only
+redistribution_posture: pointer_only_planned
+citation_note: Proof pointers support Old French/Anglo-French exempt, Latin exemptus, and eximere route; no source text is copied.
+review_state: source_detail_required
+reviewer: L-5 Source Custody Reviewer pending
+promotion_allowed: false
+blocks:
+  - compound ex- plus emere/eximere path must be modeled explicitly
+  - per-chain fixture has not been corrected or accepted
+

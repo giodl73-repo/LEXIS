@@ -1,0 +1,225 @@
+{
+  "slice_id": "LEXIS-GEN-CORR-075",
+  "nodes": [
+    {
+      "id": "lang-late-latin",
+      "label": "Late Latin",
+      "record_class": "Language",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "lang-latin",
+      "label": "Latin",
+      "record_class": "Language",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "lang-modern-english",
+      "label": "Modern English",
+      "record_class": "Language",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "lang-old-french",
+      "label": "Old French",
+      "record_class": "Language",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-latin-linquere",
+      "label": "linquere",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-latin-relinquere",
+      "label": "relinquere",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-latin-reliquus",
+      "label": "reliquus",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-late-latin-reliquiae",
+      "label": "reliquiae",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-old-french-relique",
+      "label": "relique",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-modern-english-relic",
+      "label": "relic",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "sense-wf-modern-english-relic",
+      "label": "Corrected candidate target meaning; source-detail review required.",
+      "record_class": "MeaningSense",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-wf-latin-linquere-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-latin-linquere",
+      "target_id": "wf-latin-linquere",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-099-tier3-proof-relic"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-latin-relinquere-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-latin-relinquere",
+      "target_id": "wf-latin-relinquere",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-099-tier3-proof-relic"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-latin-reliquus-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-latin-reliquus",
+      "target_id": "wf-latin-reliquus",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-099-tier3-proof-relic"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-late-latin-reliquiae-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-late-latin-reliquiae",
+      "target_id": "wf-late-latin-reliquiae",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-099-tier3-proof-relic"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-old-french-relique-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-old-french-relique",
+      "target_id": "wf-old-french-relique",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-099-tier3-proof-relic"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-modern-english-relic-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-modern-english-relic",
+      "target_id": "wf-modern-english-relic",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-099-tier3-proof-relic"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-modern-english-relic-meaning",
+      "edge_kind": "meaning_shift_to",
+      "source_id": "wf-modern-english-relic",
+      "target_id": "sense-wf-modern-english-relic",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-099-tier3-proof-relic"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-latin-relinquere-descends-from-wf-latin-linquere",
+      "edge_kind": "descends_from",
+      "source_id": "wf-latin-relinquere",
+      "target_id": "wf-latin-linquere",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-099-tier3-proof-relic"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-late-latin-reliquiae-borrowed-from-wf-latin-relinquere",
+      "edge_kind": "borrowed_from",
+      "source_id": "wf-late-latin-reliquiae",
+      "target_id": "wf-latin-relinquere",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-099-tier3-proof-relic"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-old-french-relique-borrowed-from-wf-late-latin-reliquiae",
+      "edge_kind": "borrowed_from",
+      "source_id": "wf-old-french-relique",
+      "target_id": "wf-late-latin-reliquiae",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-099-tier3-proof-relic"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-modern-english-relic-borrowed-from-wf-old-french-relique",
+      "edge_kind": "borrowed_from",
+      "source_id": "wf-modern-english-relic",
+      "target_id": "wf-old-french-relique",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-099-tier3-proof-relic"
+      ],
+      "review_state": "candidate_review"
+    }
+  ],
+  "source_posture_summary": [
+    "LEXIS-SRCDEC-099-tier3-proof-relic:candidate_review"
+  ],
+  "graph_engine_posture": "local-only",
+  "graph_output_posture": "preview_only_not_promoted",
+  "validation_error_count": 18
+}

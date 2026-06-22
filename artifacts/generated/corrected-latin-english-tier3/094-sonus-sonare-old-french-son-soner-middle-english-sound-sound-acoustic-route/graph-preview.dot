@@ -1,0 +1,24 @@
+digraph lexis_slice {
+  graph [label="LEXIS-GEN-CORR-094\npreview_only_not_promoted\nvalidation errors: 17"];
+  "lang-latin" [label="Latin\nLanguage\ncandidate_review"];
+  "lang-middle-english" [label="Middle English\nLanguage\ncandidate_review"];
+  "lang-modern-english" [label="Modern English\nLanguage\ncandidate_review"];
+  "lang-old-french" [label="Old French\nLanguage\ncandidate_review"];
+  "wf-latin-sonus" [label="sonus\nWordform\ncandidate_review"];
+  "wf-latin-sonare" [label="sonare\nWordform\ncandidate_review"];
+  "wf-old-french-son" [label="son\nWordform\ncandidate_review"];
+  "wf-old-french-soner" [label="soner\nWordform\ncandidate_review"];
+  "wf-middle-english-sound" [label="sound\nWordform\ncandidate_review"];
+  "wf-modern-english-sound" [label="sound\nWordform\ncandidate_review"];
+  "sense-wf-modern-english-sound" [label="Corrected candidate target meaning; source-detail review required.\nMeaningSense\ncandidate_review"];
+  "src-latin-sonus" -> "wf-latin-sonus" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "src-latin-sonare" -> "wf-latin-sonare" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "src-old-french-son" -> "wf-old-french-son" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "src-old-french-soner" -> "wf-old-french-soner" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "src-middle-english-sound" -> "wf-middle-english-sound" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "src-modern-english-sound" -> "wf-modern-english-sound" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "wf-modern-english-sound" -> "sense-wf-modern-english-sound" [label="meaning_shift_to\ninference\nsource_limited"];
+  "wf-old-french-son" -> "wf-latin-sonus" [label="borrowed_from\ninference\nsource_limited"];
+  "wf-middle-english-sound" -> "wf-old-french-son" [label="borrowed_from\ninference\nsource_limited"];
+  "wf-modern-english-sound" -> "wf-middle-english-sound" [label="borrowed_from\ninference\nsource_limited"];
+}

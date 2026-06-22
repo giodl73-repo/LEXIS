@@ -1,0 +1,216 @@
+fixture_id: LEXIS-GEN-CORR-075
+status: candidate_review
+scope:
+  scope_id: corrected-candidate-075-scope
+  question: Corrected graph-facing candidate route for generated Latin-English chain 075.
+  excluded_claims:
+  - unreviewed generated relationship claims
+  - source text ingestion or redistribution
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+- source_ref: LEXIS-SRCDEC-099-tier3-proof-relic
+  contract_state: candidate_review
+  may_support_claims: false
+deferred_records: []
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers: []
+nodes:
+  languages:
+  - id: lang-late-latin
+    label: Late Latin
+    kind: language
+    source_posture: candidate_review
+  - id: lang-latin
+    label: Latin
+    kind: language
+    source_posture: candidate_review
+  - id: lang-modern-english
+    label: Modern English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-old-french
+    label: Old French
+    kind: language
+    source_posture: candidate_review
+  roots: []
+  wordforms:
+  - id: wf-latin-linquere
+    label: linquere
+    language_id: lang-latin
+    form: linquere
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-linquere
+  - id: wf-latin-relinquere
+    label: relinquere
+    language_id: lang-latin
+    form: relinquere
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-relinquere
+  - id: wf-latin-reliquus
+    label: reliquus
+    language_id: lang-latin
+    form: reliquus
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-reliquus
+  - id: wf-late-latin-reliquiae
+    label: reliquiae
+    language_id: lang-late-latin
+    form: reliquiae
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-late-latin-reliquiae
+  - id: wf-old-french-relique
+    label: relique
+    language_id: lang-old-french
+    form: relique
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-old-french-relique
+  - id: wf-modern-english-relic
+    label: relic
+    language_id: lang-modern-english
+    form: relic
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-relic
+  meaning_senses:
+  - id: sense-wf-modern-english-relic
+    label: Corrected candidate target meaning; source-detail review required.
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-relic
+  script_forms: []
+source_links:
+- id: src-latin-linquere
+  source_ref: LEXIS-SRCDEC-099-tier3-proof-relic
+  contract_state: candidate_review
+- id: src-latin-relinquere
+  source_ref: LEXIS-SRCDEC-099-tier3-proof-relic
+  contract_state: candidate_review
+- id: src-latin-reliquus
+  source_ref: LEXIS-SRCDEC-099-tier3-proof-relic
+  contract_state: candidate_review
+- id: src-late-latin-reliquiae
+  source_ref: LEXIS-SRCDEC-099-tier3-proof-relic
+  contract_state: candidate_review
+- id: src-old-french-relique
+  source_ref: LEXIS-SRCDEC-099-tier3-proof-relic
+  contract_state: candidate_review
+- id: src-modern-english-relic
+  source_ref: LEXIS-SRCDEC-099-tier3-proof-relic
+  contract_state: candidate_review
+relationship_edges:
+- id: edge-wf-latin-linquere-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-linquere
+  target_id: wf-latin-linquere
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-099-tier3-proof-relic
+  review_state: candidate_review
+- id: edge-wf-latin-relinquere-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-relinquere
+  target_id: wf-latin-relinquere
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-099-tier3-proof-relic
+  review_state: candidate_review
+- id: edge-wf-latin-reliquus-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-reliquus
+  target_id: wf-latin-reliquus
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-099-tier3-proof-relic
+  review_state: candidate_review
+- id: edge-wf-late-latin-reliquiae-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-late-latin-reliquiae
+  target_id: wf-late-latin-reliquiae
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-099-tier3-proof-relic
+  review_state: candidate_review
+- id: edge-wf-old-french-relique-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-old-french-relique
+  target_id: wf-old-french-relique
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-099-tier3-proof-relic
+  review_state: candidate_review
+- id: edge-wf-modern-english-relic-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-modern-english-relic
+  target_id: wf-modern-english-relic
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-099-tier3-proof-relic
+  review_state: candidate_review
+- id: edge-wf-modern-english-relic-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-modern-english-relic
+  target_id: sense-wf-modern-english-relic
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-099-tier3-proof-relic
+  review_state: candidate_review
+- id: edge-wf-latin-relinquere-descends-from-wf-latin-linquere
+  edge_kind: descends_from
+  source_id: wf-latin-relinquere
+  target_id: wf-latin-linquere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-099-tier3-proof-relic
+  review_state: candidate_review
+- id: edge-wf-late-latin-reliquiae-borrowed-from-wf-latin-relinquere
+  edge_kind: borrowed_from
+  source_id: wf-late-latin-reliquiae
+  target_id: wf-latin-relinquere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-099-tier3-proof-relic
+  review_state: candidate_review
+- id: edge-wf-old-french-relique-borrowed-from-wf-late-latin-reliquiae
+  edge_kind: borrowed_from
+  source_id: wf-old-french-relique
+  target_id: wf-late-latin-reliquiae
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-099-tier3-proof-relic
+  review_state: candidate_review
+- id: edge-wf-modern-english-relic-borrowed-from-wf-old-french-relique
+  edge_kind: borrowed_from
+  source_id: wf-modern-english-relic
+  target_id: wf-old-french-relique
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-099-tier3-proof-relic
+  review_state: candidate_review

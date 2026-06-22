@@ -1,0 +1,79 @@
+slice_id: corrected-candidate-068
+fixture_id: LEXIS-GEN-CORR-068
+status: candidate_review
+question: Corrected graph-facing candidate route for generated Latin-English chain 068.
+source_state: candidate_review
+sources:
+- id: LEXIS-SRCDEC-096-tier3-proof-joy
+  state: candidate_review
+  may_support_claims: false
+forms:
+- form: gaudere
+  language: Latin
+  source: LEXIS-SRCDEC-096-tier3-proof-joy
+  id: wf-latin-gaudere
+  label: null
+  meaning: null
+- form: gaudium
+  language: Latin
+  source: LEXIS-SRCDEC-096-tier3-proof-joy
+  id: wf-latin-gaudium
+  label: null
+  meaning: null
+- form: gaudia
+  language: Latin
+  source: LEXIS-SRCDEC-096-tier3-proof-joy
+  id: wf-latin-gaudia
+  label: null
+  meaning: null
+- form: joie
+  language: Old French
+  source: LEXIS-SRCDEC-096-tier3-proof-joy
+  id: wf-old-french-joie
+  label: null
+  meaning: null
+- form: joy
+  language: Middle English
+  source: LEXIS-SRCDEC-096-tier3-proof-joy
+  id: wf-middle-english-joy
+  label: null
+  meaning: null
+- form: joy
+  language: Modern English
+  source: LEXIS-SRCDEC-096-tier3-proof-joy
+  id: wf-modern-english-joy
+  label: null
+  meaning: Corrected candidate target meaning; source-detail review required.
+relationships:
+- kind: descends_from
+  source: wf-latin-gaudium
+  target: wf-latin-gaudere
+  claim_type: inference
+  uncertainty: source_limited
+  support:
+  - LEXIS-SRCDEC-096-tier3-proof-joy
+  review_state: candidate_review
+- kind: borrowed_from
+  source: wf-old-french-joie
+  target: wf-latin-gaudium
+  claim_type: inference
+  uncertainty: source_limited
+  support:
+  - LEXIS-SRCDEC-096-tier3-proof-joy
+  review_state: candidate_review
+- kind: borrowed_from
+  source: wf-middle-english-joy
+  target: wf-old-french-joie
+  claim_type: inference
+  uncertainty: source_limited
+  support:
+  - LEXIS-SRCDEC-096-tier3-proof-joy
+  review_state: candidate_review
+- kind: borrowed_from
+  source: wf-modern-english-joy
+  target: wf-middle-english-joy
+  claim_type: inference
+  uncertainty: source_limited
+  support:
+  - LEXIS-SRCDEC-096-tier3-proof-joy
+  review_state: candidate_review

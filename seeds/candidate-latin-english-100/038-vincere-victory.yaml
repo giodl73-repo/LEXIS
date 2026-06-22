@@ -1,0 +1,62 @@
+slice_id: candidate-038-vincere-victory
+fixture_id: LEXIS-GEN-CAND-038-vincere-victory
+status: candidate_review
+source_state: candidate_review
+question: Candidate generated multi-stage graph-facing chain for Latin vincere, Old French, Middle English, and Modern English victory.
+sources:
+  - id: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+    state: candidate_review
+    may_support_claims: false
+forms:
+  - form: vincere
+    language: Latin
+    source: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+    meaning: conquering or overcoming
+  - form: victum
+    language: Latin
+    source: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  - form: old-french-victory-candidate
+    label: Old French candidate stage for victory
+    language: Old French
+    source: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  - form: middle-english-victory-candidate
+    label: Middle English candidate stage for victory
+    language: Middle English
+    source: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  - form: victory
+    language: Modern English
+    source: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+    meaning: conquering or overcoming
+relationships:
+  - kind: descends_from
+    source: victum
+    target: vincere
+    claim_type: inference
+    uncertainty: source_limited
+    support:
+      - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+    review_state: candidate_review
+  - kind: borrowed_from
+    source: old-french-victory-candidate
+    target: victum
+    claim_type: inference
+    uncertainty: source_limited
+    support:
+      - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+    review_state: candidate_review
+  - kind: borrowed_from
+    source: middle-english-victory-candidate
+    target: old-french-victory-candidate
+    claim_type: inference
+    uncertainty: source_limited
+    support:
+      - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+    review_state: candidate_review
+  - kind: descends_from
+    source: victory
+    target: middle-english-victory-candidate
+    claim_type: inference
+    uncertainty: source_limited
+    support:
+      - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+    review_state: candidate_review

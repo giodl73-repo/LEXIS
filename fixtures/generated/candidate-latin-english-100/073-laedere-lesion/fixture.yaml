@@ -1,0 +1,212 @@
+fixture_id: LEXIS-GEN-CAND-073-laedere-lesion
+status: candidate_review
+scope:
+  scope_id: candidate-073-laedere-lesion-scope
+  question: Candidate generated multi-stage graph-facing chain for Latin laedere, Old French, Middle English, and Modern English lesion.
+  excluded_claims:
+  - unreviewed generated relationship claims
+  - source text ingestion or redistribution
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+- source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+  may_support_claims: false
+deferred_records: []
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers: []
+nodes:
+  languages:
+  - id: lang-latin
+    label: Latin
+    kind: language
+    source_posture: candidate_review
+  - id: lang-middle-english
+    label: Middle English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-modern-english
+    label: Modern English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-old-french
+    label: Old French
+    kind: language
+    source_posture: candidate_review
+  roots: []
+  wordforms:
+  - id: wf-latin-laedere
+    label: laedere
+    language_id: lang-latin
+    form: laedere
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-laedere
+  - id: wf-latin-laesum
+    label: laesum
+    language_id: lang-latin
+    form: laesum
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-laesum
+  - id: wf-old-french-old-french-lesion-candidate
+    label: Old French candidate stage for lesion
+    language_id: lang-old-french
+    form: old-french-lesion-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-old-french-old-french-lesion-candidate
+  - id: wf-middle-english-middle-english-lesion-candidate
+    label: Middle English candidate stage for lesion
+    language_id: lang-middle-english
+    form: middle-english-lesion-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-middle-english-middle-english-lesion-candidate
+  - id: wf-modern-english-lesion
+    label: lesion
+    language_id: lang-modern-english
+    form: lesion
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-lesion
+  meaning_senses:
+  - id: sense-laedere
+    label: hurting or damaging
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-latin-laedere
+  - id: sense-lesion
+    label: hurting or damaging
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-lesion
+  script_forms: []
+source_links:
+- id: src-latin-laedere
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-latin-laesum
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-old-french-old-french-lesion-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-middle-english-middle-english-lesion-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-modern-english-lesion
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+relationship_edges:
+- id: edge-laedere-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-laedere
+  target_id: wf-latin-laedere
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-laedere-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-latin-laedere
+  target_id: sense-laedere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-laesum-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-laesum
+  target_id: wf-latin-laesum
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-lesion-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-old-french-old-french-lesion-candidate
+  target_id: wf-old-french-old-french-lesion-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-lesion-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-middle-english-middle-english-lesion-candidate
+  target_id: wf-middle-english-middle-english-lesion-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-lesion-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-modern-english-lesion
+  target_id: wf-modern-english-lesion
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-lesion-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-modern-english-lesion
+  target_id: sense-lesion
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-laesum-descends-from-laedere
+  edge_kind: descends_from
+  source_id: wf-latin-laesum
+  target_id: wf-latin-laedere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-lesion-candidate-borrowed-from-laesum
+  edge_kind: borrowed_from
+  source_id: wf-old-french-old-french-lesion-candidate
+  target_id: wf-latin-laesum
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-lesion-candidate-borrowed-from-old-french-lesion-candidate
+  edge_kind: borrowed_from
+  source_id: wf-middle-english-middle-english-lesion-candidate
+  target_id: wf-old-french-old-french-lesion-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-lesion-descends-from-middle-english-lesion-candidate
+  edge_kind: descends_from
+  source_id: wf-modern-english-lesion
+  target_id: wf-middle-english-middle-english-lesion-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review

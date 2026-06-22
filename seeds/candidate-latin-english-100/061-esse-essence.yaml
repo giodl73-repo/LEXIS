@@ -1,0 +1,62 @@
+slice_id: candidate-061-esse-essence
+fixture_id: LEXIS-GEN-CAND-061-esse-essence
+status: candidate_review
+source_state: candidate_review
+question: Candidate generated multi-stage graph-facing chain for Latin esse, Old French, Middle English, and Modern English essence.
+sources:
+  - id: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+    state: candidate_review
+    may_support_claims: false
+forms:
+  - form: esse
+    language: Latin
+    source: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+    meaning: being or existence
+  - form: essentia
+    language: Latin
+    source: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  - form: old-french-essence-candidate
+    label: Old French candidate stage for essence
+    language: Old French
+    source: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  - form: middle-english-essence-candidate
+    label: Middle English candidate stage for essence
+    language: Middle English
+    source: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  - form: essence
+    language: Modern English
+    source: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+    meaning: being or existence
+relationships:
+  - kind: descends_from
+    source: essentia
+    target: esse
+    claim_type: inference
+    uncertainty: source_limited
+    support:
+      - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+    review_state: candidate_review
+  - kind: borrowed_from
+    source: old-french-essence-candidate
+    target: essentia
+    claim_type: inference
+    uncertainty: source_limited
+    support:
+      - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+    review_state: candidate_review
+  - kind: borrowed_from
+    source: middle-english-essence-candidate
+    target: old-french-essence-candidate
+    claim_type: inference
+    uncertainty: source_limited
+    support:
+      - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+    review_state: candidate_review
+  - kind: descends_from
+    source: essence
+    target: middle-english-essence-candidate
+    claim_type: inference
+    uncertainty: source_limited
+    support:
+      - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+    review_state: candidate_review

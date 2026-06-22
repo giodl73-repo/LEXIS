@@ -1,0 +1,212 @@
+fixture_id: LEXIS-GEN-CAND-030-videre-vision
+status: candidate_review
+scope:
+  scope_id: candidate-030-videre-vision-scope
+  question: Candidate generated multi-stage graph-facing chain for Latin videre, Old French, Middle English, and Modern English vision.
+  excluded_claims:
+  - unreviewed generated relationship claims
+  - source text ingestion or redistribution
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+- source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+  may_support_claims: false
+deferred_records: []
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers: []
+nodes:
+  languages:
+  - id: lang-latin
+    label: Latin
+    kind: language
+    source_posture: candidate_review
+  - id: lang-middle-english
+    label: Middle English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-modern-english
+    label: Modern English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-old-french
+    label: Old French
+    kind: language
+    source_posture: candidate_review
+  roots: []
+  wordforms:
+  - id: wf-latin-videre
+    label: videre
+    language_id: lang-latin
+    form: videre
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-videre
+  - id: wf-latin-visum
+    label: visum
+    language_id: lang-latin
+    form: visum
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-visum
+  - id: wf-old-french-old-french-vision-candidate
+    label: Old French candidate stage for vision
+    language_id: lang-old-french
+    form: old-french-vision-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-old-french-old-french-vision-candidate
+  - id: wf-middle-english-middle-english-vision-candidate
+    label: Middle English candidate stage for vision
+    language_id: lang-middle-english
+    form: middle-english-vision-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-middle-english-middle-english-vision-candidate
+  - id: wf-modern-english-vision
+    label: vision
+    language_id: lang-modern-english
+    form: vision
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-vision
+  meaning_senses:
+  - id: sense-videre
+    label: seeing or viewing
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-latin-videre
+  - id: sense-vision
+    label: seeing or viewing
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-vision
+  script_forms: []
+source_links:
+- id: src-latin-videre
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-latin-visum
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-old-french-old-french-vision-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-middle-english-middle-english-vision-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-modern-english-vision
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+relationship_edges:
+- id: edge-videre-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-videre
+  target_id: wf-latin-videre
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-videre-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-latin-videre
+  target_id: sense-videre
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-visum-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-visum
+  target_id: wf-latin-visum
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-vision-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-old-french-old-french-vision-candidate
+  target_id: wf-old-french-old-french-vision-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-vision-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-middle-english-middle-english-vision-candidate
+  target_id: wf-middle-english-middle-english-vision-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-vision-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-modern-english-vision
+  target_id: wf-modern-english-vision
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-vision-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-modern-english-vision
+  target_id: sense-vision
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-visum-descends-from-videre
+  edge_kind: descends_from
+  source_id: wf-latin-visum
+  target_id: wf-latin-videre
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-vision-candidate-borrowed-from-visum
+  edge_kind: borrowed_from
+  source_id: wf-old-french-old-french-vision-candidate
+  target_id: wf-latin-visum
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-vision-candidate-borrowed-from-old-french-vision-candidate
+  edge_kind: borrowed_from
+  source_id: wf-middle-english-middle-english-vision-candidate
+  target_id: wf-old-french-old-french-vision-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-vision-descends-from-middle-english-vision-candidate
+  edge_kind: descends_from
+  source_id: wf-modern-english-vision
+  target_id: wf-middle-english-middle-english-vision-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review

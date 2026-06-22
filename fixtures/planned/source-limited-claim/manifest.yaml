@@ -1,0 +1,30 @@
+fixture_id: LEXIS-FIX-004-source-limited-claim
+status: planned_blocked
+fixture_class: source-pointer fixture / chronicle fixture
+owning_work_package: LEXIS-WP-005
+linked_scenarios:
+  - LEXIS-SC-003-source-limited-claim
+linked_slice_packages:
+  - LEXIS-SLICE-001-SOURCE
+  - LEXIS-SLICE-001-NEGATIVES
+  - LEXIS-SLICE-001-CHRONICLE
+linked_research:
+  - LEXIS-PAPER-001
+  - LEXIS-PAPER-007
+  - LEXIS-PAPER-008
+linked_source_custody_decision:
+  - LEXIS-SRCDEC-005-source-limited-placeholder
+linked_scope: LEXIS-SLICE-001-SCOPE
+expected_result: invalid_for_public_claim_until_source_limit_is_visible
+expected_diagnostics:
+  - source_custody
+  - chronicle_overclaim
+records_and_edges_included: planned_source_limited_claim_no_data_yet
+source_text_redistribution_posture: pointer_only_planned
+graph_impact: source_limited_posture_must_survive_graph
+chronicle_impact: source_limits_section_required
+review_state: planned_not_reviewed_for_content
+promotion_blockers:
+  - no accepted source-custody decision
+  - no chronicle validation command
+  - no source-limit wording fixture

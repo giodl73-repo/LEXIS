@@ -1,0 +1,211 @@
+{
+  "slice_id": "LEXIS-GEN-CORR-093",
+  "nodes": [
+    {
+      "id": "lang-latin",
+      "label": "Latin",
+      "record_class": "Language",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "lang-middle-english",
+      "label": "Middle English",
+      "record_class": "Language",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "lang-modern-english",
+      "label": "Modern English",
+      "record_class": "Language",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "lang-old-french",
+      "label": "Old French",
+      "record_class": "Language",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "lang-unspecified-intermediate",
+      "label": "Unspecified intermediate",
+      "record_class": "Language",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-latin-servus",
+      "label": "servus",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-unspecified-intermediate-servire",
+      "label": "servire",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-old-french-servir",
+      "label": "servir",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-middle-english-serve",
+      "label": "serve",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-modern-english-serve",
+      "label": "serve",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "sense-wf-modern-english-serve",
+      "label": "Corrected candidate target meaning; source-detail review required.",
+      "record_class": "MeaningSense",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-wf-latin-servus-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-latin-servus",
+      "target_id": "wf-latin-servus",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-105-tier3-proof-serve"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-unspecified-intermediate-servire-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-unspecified-intermediate-servire",
+      "target_id": "wf-unspecified-intermediate-servire",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-105-tier3-proof-serve"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-old-french-servir-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-old-french-servir",
+      "target_id": "wf-old-french-servir",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-105-tier3-proof-serve"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-middle-english-serve-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-middle-english-serve",
+      "target_id": "wf-middle-english-serve",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-105-tier3-proof-serve"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-modern-english-serve-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-modern-english-serve",
+      "target_id": "wf-modern-english-serve",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-105-tier3-proof-serve"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-modern-english-serve-meaning",
+      "edge_kind": "meaning_shift_to",
+      "source_id": "wf-modern-english-serve",
+      "target_id": "sense-wf-modern-english-serve",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-105-tier3-proof-serve"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-unspecified-intermediate-servire-borrowed-from-wf-latin-servus",
+      "edge_kind": "borrowed_from",
+      "source_id": "wf-unspecified-intermediate-servire",
+      "target_id": "wf-latin-servus",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-105-tier3-proof-serve"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-old-french-servir-borrowed-from-wf-unspecified-intermediate-servire",
+      "edge_kind": "borrowed_from",
+      "source_id": "wf-old-french-servir",
+      "target_id": "wf-unspecified-intermediate-servire",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-105-tier3-proof-serve"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-middle-english-serve-borrowed-from-wf-old-french-servir",
+      "edge_kind": "borrowed_from",
+      "source_id": "wf-middle-english-serve",
+      "target_id": "wf-old-french-servir",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-105-tier3-proof-serve"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-modern-english-serve-borrowed-from-wf-middle-english-serve",
+      "edge_kind": "borrowed_from",
+      "source_id": "wf-modern-english-serve",
+      "target_id": "wf-middle-english-serve",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-105-tier3-proof-serve"
+      ],
+      "review_state": "candidate_review"
+    }
+  ],
+  "source_posture_summary": [
+    "LEXIS-SRCDEC-105-tier3-proof-serve:candidate_review"
+  ],
+  "graph_engine_posture": "local-only",
+  "graph_output_posture": "preview_only_not_promoted",
+  "validation_error_count": 16
+}

@@ -1,0 +1,62 @@
+slice_id: candidate-009-ferre-transfer
+fixture_id: LEXIS-GEN-CAND-009-ferre-transfer
+status: candidate_review
+source_state: candidate_review
+question: Candidate generated multi-stage graph-facing chain for Latin ferre, Old French, Middle English, and Modern English transfer.
+sources:
+  - id: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+    state: candidate_review
+    may_support_claims: false
+forms:
+  - form: ferre
+    language: Latin
+    source: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+    meaning: bearing or carrying across
+  - form: transferre
+    language: Latin
+    source: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  - form: old-french-transfer-candidate
+    label: Old French candidate stage for transfer
+    language: Old French
+    source: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  - form: middle-english-transfer-candidate
+    label: Middle English candidate stage for transfer
+    language: Middle English
+    source: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  - form: transfer
+    language: Modern English
+    source: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+    meaning: bearing or carrying across
+relationships:
+  - kind: descends_from
+    source: transferre
+    target: ferre
+    claim_type: inference
+    uncertainty: source_limited
+    support:
+      - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+    review_state: candidate_review
+  - kind: borrowed_from
+    source: old-french-transfer-candidate
+    target: transferre
+    claim_type: inference
+    uncertainty: source_limited
+    support:
+      - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+    review_state: candidate_review
+  - kind: borrowed_from
+    source: middle-english-transfer-candidate
+    target: old-french-transfer-candidate
+    claim_type: inference
+    uncertainty: source_limited
+    support:
+      - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+    review_state: candidate_review
+  - kind: descends_from
+    source: transfer
+    target: middle-english-transfer-candidate
+    claim_type: inference
+    uncertainty: source_limited
+    support:
+      - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+    review_state: candidate_review

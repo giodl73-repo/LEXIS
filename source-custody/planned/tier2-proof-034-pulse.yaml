@@ -1,0 +1,17 @@
+decision_id: LEXIS-SRCDEC-050-tier2-proof-pulse
+status: candidate_review
+source_family: English etymology pointer for Latin-to-English candidate pulse
+related_slice_packages:
+  - LEXIS-SLICE-001-SOURCE
+pointer: https://www.etymonline.com/word/pulse
+candidate_source_name: Etymonline and Merriam-Webster entries for pulse
+rights_posture: copyrighted_reference_pointer_only
+redistribution_posture: pointer_only_planned
+citation_note: Proof pointers support Old French pous/pulse, Latin pulsus, and pellere route, with deeper-root uncertainty; no source text is copied.
+review_state: source_detail_required
+reviewer: L-5 Source Custody Reviewer pending
+promotion_allowed: false
+blocks:
+  - deeper pellere root uncertainty must be retained
+  - per-chain fixture has not been corrected or accepted
+

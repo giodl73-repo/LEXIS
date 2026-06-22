@@ -1,0 +1,62 @@
+slice_id: candidate-081-nocere-noxious
+fixture_id: LEXIS-GEN-CAND-081-nocere-noxious
+status: candidate_review
+source_state: candidate_review
+question: Candidate generated multi-stage graph-facing chain for Latin nocere, Old French, Middle English, and Modern English noxious.
+sources:
+  - id: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+    state: candidate_review
+    may_support_claims: false
+forms:
+  - form: nocere
+    language: Latin
+    source: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+    meaning: harming or injuring
+  - form: nocitum
+    language: Latin
+    source: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  - form: old-french-noxious-candidate
+    label: Old French candidate stage for noxious
+    language: Old French
+    source: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  - form: middle-english-noxious-candidate
+    label: Middle English candidate stage for noxious
+    language: Middle English
+    source: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  - form: noxious
+    language: Modern English
+    source: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+    meaning: harming or injuring
+relationships:
+  - kind: descends_from
+    source: nocitum
+    target: nocere
+    claim_type: inference
+    uncertainty: source_limited
+    support:
+      - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+    review_state: candidate_review
+  - kind: borrowed_from
+    source: old-french-noxious-candidate
+    target: nocitum
+    claim_type: inference
+    uncertainty: source_limited
+    support:
+      - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+    review_state: candidate_review
+  - kind: borrowed_from
+    source: middle-english-noxious-candidate
+    target: old-french-noxious-candidate
+    claim_type: inference
+    uncertainty: source_limited
+    support:
+      - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+    review_state: candidate_review
+  - kind: descends_from
+    source: noxious
+    target: middle-english-noxious-candidate
+    claim_type: inference
+    uncertainty: source_limited
+    support:
+      - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+    review_state: candidate_review

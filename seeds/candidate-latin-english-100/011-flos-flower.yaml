@@ -1,0 +1,62 @@
+slice_id: candidate-011-flos-flower
+fixture_id: LEXIS-GEN-CAND-011-flos-flower
+status: candidate_review
+source_state: candidate_review
+question: Candidate generated multi-stage graph-facing chain for Latin flos, Old French, Middle English, and Modern English flower.
+sources:
+  - id: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+    state: candidate_review
+    may_support_claims: false
+forms:
+  - form: flos
+    language: Latin
+    source: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+    meaning: flowering or blooming
+  - form: florem
+    language: Latin
+    source: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  - form: old-french-flower-candidate
+    label: Old French candidate stage for flower
+    language: Old French
+    source: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  - form: middle-english-flower-candidate
+    label: Middle English candidate stage for flower
+    language: Middle English
+    source: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  - form: flower
+    language: Modern English
+    source: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+    meaning: flowering or blooming
+relationships:
+  - kind: descends_from
+    source: florem
+    target: flos
+    claim_type: inference
+    uncertainty: source_limited
+    support:
+      - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+    review_state: candidate_review
+  - kind: borrowed_from
+    source: old-french-flower-candidate
+    target: florem
+    claim_type: inference
+    uncertainty: source_limited
+    support:
+      - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+    review_state: candidate_review
+  - kind: borrowed_from
+    source: middle-english-flower-candidate
+    target: old-french-flower-candidate
+    claim_type: inference
+    uncertainty: source_limited
+    support:
+      - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+    review_state: candidate_review
+  - kind: descends_from
+    source: flower
+    target: middle-english-flower-candidate
+    claim_type: inference
+    uncertainty: source_limited
+    support:
+      - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+    review_state: candidate_review

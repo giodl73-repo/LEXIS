@@ -1,0 +1,212 @@
+fixture_id: LEXIS-GEN-CAND-018-ponere-position
+status: candidate_review
+scope:
+  scope_id: candidate-018-ponere-position-scope
+  question: Candidate generated multi-stage graph-facing chain for Latin ponere, Old French, Middle English, and Modern English position.
+  excluded_claims:
+  - unreviewed generated relationship claims
+  - source text ingestion or redistribution
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+- source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+  may_support_claims: false
+deferred_records: []
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers: []
+nodes:
+  languages:
+  - id: lang-latin
+    label: Latin
+    kind: language
+    source_posture: candidate_review
+  - id: lang-middle-english
+    label: Middle English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-modern-english
+    label: Modern English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-old-french
+    label: Old French
+    kind: language
+    source_posture: candidate_review
+  roots: []
+  wordforms:
+  - id: wf-latin-ponere
+    label: ponere
+    language_id: lang-latin
+    form: ponere
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-ponere
+  - id: wf-latin-positum
+    label: positum
+    language_id: lang-latin
+    form: positum
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-positum
+  - id: wf-old-french-old-french-position-candidate
+    label: Old French candidate stage for position
+    language_id: lang-old-french
+    form: old-french-position-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-old-french-old-french-position-candidate
+  - id: wf-middle-english-middle-english-position-candidate
+    label: Middle English candidate stage for position
+    language_id: lang-middle-english
+    form: middle-english-position-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-middle-english-middle-english-position-candidate
+  - id: wf-modern-english-position
+    label: position
+    language_id: lang-modern-english
+    form: position
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-position
+  meaning_senses:
+  - id: sense-ponere
+    label: placing or setting
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-latin-ponere
+  - id: sense-position
+    label: placing or setting
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-position
+  script_forms: []
+source_links:
+- id: src-latin-ponere
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-latin-positum
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-old-french-old-french-position-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-middle-english-middle-english-position-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-modern-english-position
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+relationship_edges:
+- id: edge-ponere-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-ponere
+  target_id: wf-latin-ponere
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-ponere-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-latin-ponere
+  target_id: sense-ponere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-positum-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-positum
+  target_id: wf-latin-positum
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-position-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-old-french-old-french-position-candidate
+  target_id: wf-old-french-old-french-position-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-position-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-middle-english-middle-english-position-candidate
+  target_id: wf-middle-english-middle-english-position-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-position-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-modern-english-position
+  target_id: wf-modern-english-position
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-position-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-modern-english-position
+  target_id: sense-position
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-positum-descends-from-ponere
+  edge_kind: descends_from
+  source_id: wf-latin-positum
+  target_id: wf-latin-ponere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-position-candidate-borrowed-from-positum
+  edge_kind: borrowed_from
+  source_id: wf-old-french-old-french-position-candidate
+  target_id: wf-latin-positum
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-position-candidate-borrowed-from-old-french-position-candidate
+  edge_kind: borrowed_from
+  source_id: wf-middle-english-middle-english-position-candidate
+  target_id: wf-old-french-old-french-position-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-position-descends-from-middle-english-position-candidate
+  edge_kind: descends_from
+  source_id: wf-modern-english-position
+  target_id: wf-middle-english-middle-english-position-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review

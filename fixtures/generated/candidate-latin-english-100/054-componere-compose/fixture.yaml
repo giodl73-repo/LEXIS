@@ -1,0 +1,212 @@
+fixture_id: LEXIS-GEN-CAND-054-componere-compose
+status: candidate_review
+scope:
+  scope_id: candidate-054-componere-compose-scope
+  question: Candidate generated multi-stage graph-facing chain for Latin componere, Old French, Middle English, and Modern English compose.
+  excluded_claims:
+  - unreviewed generated relationship claims
+  - source text ingestion or redistribution
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+- source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+  may_support_claims: false
+deferred_records: []
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers: []
+nodes:
+  languages:
+  - id: lang-latin
+    label: Latin
+    kind: language
+    source_posture: candidate_review
+  - id: lang-middle-english
+    label: Middle English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-modern-english
+    label: Modern English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-old-french
+    label: Old French
+    kind: language
+    source_posture: candidate_review
+  roots: []
+  wordforms:
+  - id: wf-latin-componere
+    label: componere
+    language_id: lang-latin
+    form: componere
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-componere
+  - id: wf-latin-compositum
+    label: compositum
+    language_id: lang-latin
+    form: compositum
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-compositum
+  - id: wf-old-french-old-french-compose-candidate
+    label: Old French candidate stage for compose
+    language_id: lang-old-french
+    form: old-french-compose-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-old-french-old-french-compose-candidate
+  - id: wf-middle-english-middle-english-compose-candidate
+    label: Middle English candidate stage for compose
+    language_id: lang-middle-english
+    form: middle-english-compose-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-middle-english-middle-english-compose-candidate
+  - id: wf-modern-english-compose
+    label: compose
+    language_id: lang-modern-english
+    form: compose
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-compose
+  meaning_senses:
+  - id: sense-componere
+    label: putting together
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-latin-componere
+  - id: sense-compose
+    label: putting together
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-compose
+  script_forms: []
+source_links:
+- id: src-latin-componere
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-latin-compositum
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-old-french-old-french-compose-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-middle-english-middle-english-compose-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-modern-english-compose
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+relationship_edges:
+- id: edge-componere-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-componere
+  target_id: wf-latin-componere
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-componere-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-latin-componere
+  target_id: sense-componere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-compositum-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-compositum
+  target_id: wf-latin-compositum
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-compose-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-old-french-old-french-compose-candidate
+  target_id: wf-old-french-old-french-compose-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-compose-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-middle-english-middle-english-compose-candidate
+  target_id: wf-middle-english-middle-english-compose-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-compose-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-modern-english-compose
+  target_id: wf-modern-english-compose
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-compose-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-modern-english-compose
+  target_id: sense-compose
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-compositum-descends-from-componere
+  edge_kind: descends_from
+  source_id: wf-latin-compositum
+  target_id: wf-latin-componere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-compose-candidate-borrowed-from-compositum
+  edge_kind: borrowed_from
+  source_id: wf-old-french-old-french-compose-candidate
+  target_id: wf-latin-compositum
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-compose-candidate-borrowed-from-old-french-compose-candidate
+  edge_kind: borrowed_from
+  source_id: wf-middle-english-middle-english-compose-candidate
+  target_id: wf-old-french-old-french-compose-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-compose-descends-from-middle-english-compose-candidate
+  edge_kind: descends_from
+  source_id: wf-modern-english-compose
+  target_id: wf-middle-english-middle-english-compose-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review

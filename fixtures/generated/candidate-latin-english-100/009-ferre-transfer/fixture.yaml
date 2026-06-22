@@ -1,0 +1,212 @@
+fixture_id: LEXIS-GEN-CAND-009-ferre-transfer
+status: candidate_review
+scope:
+  scope_id: candidate-009-ferre-transfer-scope
+  question: Candidate generated multi-stage graph-facing chain for Latin ferre, Old French, Middle English, and Modern English transfer.
+  excluded_claims:
+  - unreviewed generated relationship claims
+  - source text ingestion or redistribution
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+- source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+  may_support_claims: false
+deferred_records: []
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers: []
+nodes:
+  languages:
+  - id: lang-latin
+    label: Latin
+    kind: language
+    source_posture: candidate_review
+  - id: lang-middle-english
+    label: Middle English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-modern-english
+    label: Modern English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-old-french
+    label: Old French
+    kind: language
+    source_posture: candidate_review
+  roots: []
+  wordforms:
+  - id: wf-latin-ferre
+    label: ferre
+    language_id: lang-latin
+    form: ferre
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-ferre
+  - id: wf-latin-transferre
+    label: transferre
+    language_id: lang-latin
+    form: transferre
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-transferre
+  - id: wf-old-french-old-french-transfer-candidate
+    label: Old French candidate stage for transfer
+    language_id: lang-old-french
+    form: old-french-transfer-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-old-french-old-french-transfer-candidate
+  - id: wf-middle-english-middle-english-transfer-candidate
+    label: Middle English candidate stage for transfer
+    language_id: lang-middle-english
+    form: middle-english-transfer-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-middle-english-middle-english-transfer-candidate
+  - id: wf-modern-english-transfer
+    label: transfer
+    language_id: lang-modern-english
+    form: transfer
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-transfer
+  meaning_senses:
+  - id: sense-ferre
+    label: bearing or carrying across
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-latin-ferre
+  - id: sense-transfer
+    label: bearing or carrying across
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-transfer
+  script_forms: []
+source_links:
+- id: src-latin-ferre
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-latin-transferre
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-old-french-old-french-transfer-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-middle-english-middle-english-transfer-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-modern-english-transfer
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+relationship_edges:
+- id: edge-ferre-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-ferre
+  target_id: wf-latin-ferre
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-ferre-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-latin-ferre
+  target_id: sense-ferre
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-transferre-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-transferre
+  target_id: wf-latin-transferre
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-transfer-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-old-french-old-french-transfer-candidate
+  target_id: wf-old-french-old-french-transfer-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-transfer-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-middle-english-middle-english-transfer-candidate
+  target_id: wf-middle-english-middle-english-transfer-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-transfer-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-modern-english-transfer
+  target_id: wf-modern-english-transfer
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-transfer-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-modern-english-transfer
+  target_id: sense-transfer
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-transferre-descends-from-ferre
+  edge_kind: descends_from
+  source_id: wf-latin-transferre
+  target_id: wf-latin-ferre
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-transfer-candidate-borrowed-from-transferre
+  edge_kind: borrowed_from
+  source_id: wf-old-french-old-french-transfer-candidate
+  target_id: wf-latin-transferre
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-transfer-candidate-borrowed-from-old-french-transfer-candidate
+  edge_kind: borrowed_from
+  source_id: wf-middle-english-middle-english-transfer-candidate
+  target_id: wf-old-french-old-french-transfer-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-transfer-descends-from-middle-english-transfer-candidate
+  edge_kind: descends_from
+  source_id: wf-modern-english-transfer
+  target_id: wf-middle-english-middle-english-transfer-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review

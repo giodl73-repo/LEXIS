@@ -1,0 +1,45 @@
+slice_id: corrected-candidate-025
+fixture_id: LEXIS-GEN-CORR-025
+status: candidate_review
+question: Corrected graph-facing candidate route for generated Latin-English chain 025.
+source_state: candidate_review
+sources:
+- id: LEXIS-SRCDEC-095-tier3-proof-spectator
+  state: candidate_review
+  may_support_claims: false
+forms:
+- form: spectare
+  language: Latin
+  source: LEXIS-SRCDEC-095-tier3-proof-spectator
+  id: wf-latin-spectare
+  label: null
+  meaning: null
+- form: spectator
+  language: Unspecified intermediate
+  source: LEXIS-SRCDEC-095-tier3-proof-spectator
+  id: wf-unspecified-intermediate-spectator
+  label: null
+  meaning: null
+- form: spectator
+  language: Modern English
+  source: LEXIS-SRCDEC-095-tier3-proof-spectator
+  id: wf-modern-english-spectator
+  label: null
+  meaning: Corrected candidate target meaning; source-detail review required.
+relationships:
+- kind: borrowed_from
+  source: wf-unspecified-intermediate-spectator
+  target: wf-latin-spectare
+  claim_type: inference
+  uncertainty: source_limited
+  support:
+  - LEXIS-SRCDEC-095-tier3-proof-spectator
+  review_state: candidate_review
+- kind: borrowed_from
+  source: wf-modern-english-spectator
+  target: wf-unspecified-intermediate-spectator
+  claim_type: inference
+  uncertainty: source_limited
+  support:
+  - LEXIS-SRCDEC-095-tier3-proof-spectator
+  review_state: candidate_review

@@ -1,0 +1,37 @@
+scenario_id: LEXIS-SC-004-rline-preservation
+status: planned_not_executed
+actor: graph systems reviewer
+purpose: >
+  Prove that local graph output and any later RLINE-backed output preserve
+  LEXIS-owned edge kinds, claim types, uncertainty labels, source posture, and
+  review state.
+slice_package: LEXIS-SLICE-001
+related_work_packages:
+  - LEXIS-WP-006
+  - LEXIS-WP-007
+specs_exercised:
+  - docs/specs/relationship-edges.md
+  - docs/specs/validation-diagnostics.md
+  - docs/specs/graph-slice.md
+boundary_classes:
+  - graph contract
+  - data/model contract
+  - diagnostic contract
+positive_path:
+  - Emit local graph slice with node classes and edge kinds preserved.
+  - Compare any RLINE-backed graph output to the local preservation baseline.
+  - Record graph engine posture as local-only, RLINE-candidate, RLINE-backed, or deferred.
+negative_paths:
+  - Reject graph output that drops borrowed_from versus descends_from.
+  - Reject graph output that drops source_limited posture.
+  - Reject graph output that omits rejected or disputed alternatives from a reviewed slice.
+diagnostics_expected:
+  - graph_preservation
+  - relationship
+evidence_expected:
+  - future graph preservation report
+  - future RLINE adoption decision or deferral
+fixture_candidates:
+  - graph-preservation fixture
+findings_file: 99-findings.md
+

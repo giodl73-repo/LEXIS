@@ -1,0 +1,134 @@
+{
+  "slice_id": "LEXIS-FIX-009-glyph-graph-write-meta-slice",
+  "nodes": [
+    {
+      "id": "lang-en",
+      "label": "English",
+      "record_class": "Language",
+      "source_posture": "planned_blocked"
+    },
+    {
+      "id": "lang-grc",
+      "label": "Ancient Greek candidate context",
+      "record_class": "Language",
+      "source_posture": "planned_blocked"
+    },
+    {
+      "id": "root-grc-graph",
+      "label": "Greek graph root candidate",
+      "record_class": "Root",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "source_posture": "planned_blocked"
+    },
+    {
+      "id": "wf-en-glyph",
+      "label": "glyph",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "planned_blocked"
+    },
+    {
+      "id": "wf-en-graph",
+      "label": "graph",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "planned_blocked"
+    },
+    {
+      "id": "wf-en-write",
+      "label": "write",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "planned_blocked"
+    },
+    {
+      "id": "wf-grc-graphein",
+      "label": "graphein",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "planned_blocked"
+    },
+    {
+      "id": "sense-mark-write",
+      "label": "writing and marking semantic neighborhood",
+      "record_class": "MeaningSense",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "source_posture": "planned_blocked"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-graph-greek-candidate",
+      "edge_kind": "borrowed_from",
+      "source_id": "wf-en-graph",
+      "target_id": "wf-grc-graphein",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-008-meta-etymology-reference"
+      ],
+      "review_state": "blocked"
+    },
+    {
+      "id": "edge-graph-root-candidate",
+      "edge_kind": "cognate_with",
+      "source_id": "wf-grc-graphein",
+      "target_id": "root-grc-graph",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-008-meta-etymology-reference"
+      ],
+      "review_state": "blocked"
+    },
+    {
+      "id": "edge-write-not-graph-root",
+      "edge_kind": "disputes_claim",
+      "source_id": "wf-en-write",
+      "target_id": "root-grc-graph",
+      "claim_type": "rejected_alternative",
+      "uncertainty": "disputed",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-005-source-limited-placeholder"
+      ],
+      "review_state": "blocked"
+    },
+    {
+      "id": "edge-glyph-not-graph-by-spelling",
+      "edge_kind": "disputes_claim",
+      "source_id": "wf-en-glyph",
+      "target_id": "wf-en-graph",
+      "claim_type": "rejected_alternative",
+      "uncertainty": "disputed",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-008-meta-etymology-reference"
+      ],
+      "review_state": "blocked"
+    },
+    {
+      "id": "edge-meta-meaning-neighborhood",
+      "edge_kind": "meaning_shift_to",
+      "source_id": "wf-en-graph",
+      "target_id": "sense-mark-write",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-008-meta-etymology-reference"
+      ],
+      "review_state": "blocked"
+    }
+  ],
+  "source_posture_summary": [
+    "LEXIS-SRCDEC-008-meta-etymology-reference:planned_blocked",
+    "LEXIS-SRCDEC-005-source-limited-placeholder:planned_blocked"
+  ],
+  "graph_engine_posture": "local-only",
+  "graph_output_posture": "preview_only_not_promoted",
+  "validation_error_count": 11
+}

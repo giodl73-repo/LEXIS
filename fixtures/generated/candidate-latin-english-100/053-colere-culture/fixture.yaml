@@ -1,0 +1,212 @@
+fixture_id: LEXIS-GEN-CAND-053-colere-culture
+status: candidate_review
+scope:
+  scope_id: candidate-053-colere-culture-scope
+  question: Candidate generated multi-stage graph-facing chain for Latin colere, Old French, Middle English, and Modern English culture.
+  excluded_claims:
+  - unreviewed generated relationship claims
+  - source text ingestion or redistribution
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+- source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+  may_support_claims: false
+deferred_records: []
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers: []
+nodes:
+  languages:
+  - id: lang-latin
+    label: Latin
+    kind: language
+    source_posture: candidate_review
+  - id: lang-middle-english
+    label: Middle English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-modern-english
+    label: Modern English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-old-french
+    label: Old French
+    kind: language
+    source_posture: candidate_review
+  roots: []
+  wordforms:
+  - id: wf-latin-colere
+    label: colere
+    language_id: lang-latin
+    form: colere
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-colere
+  - id: wf-latin-cultum
+    label: cultum
+    language_id: lang-latin
+    form: cultum
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-cultum
+  - id: wf-old-french-old-french-culture-candidate
+    label: Old French candidate stage for culture
+    language_id: lang-old-french
+    form: old-french-culture-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-old-french-old-french-culture-candidate
+  - id: wf-middle-english-middle-english-culture-candidate
+    label: Middle English candidate stage for culture
+    language_id: lang-middle-english
+    form: middle-english-culture-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-middle-english-middle-english-culture-candidate
+  - id: wf-modern-english-culture
+    label: culture
+    language_id: lang-modern-english
+    form: culture
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-culture
+  meaning_senses:
+  - id: sense-colere
+    label: cultivating or tending
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-latin-colere
+  - id: sense-culture
+    label: cultivating or tending
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-culture
+  script_forms: []
+source_links:
+- id: src-latin-colere
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-latin-cultum
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-old-french-old-french-culture-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-middle-english-middle-english-culture-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-modern-english-culture
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+relationship_edges:
+- id: edge-colere-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-colere
+  target_id: wf-latin-colere
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-colere-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-latin-colere
+  target_id: sense-colere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-cultum-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-cultum
+  target_id: wf-latin-cultum
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-culture-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-old-french-old-french-culture-candidate
+  target_id: wf-old-french-old-french-culture-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-culture-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-middle-english-middle-english-culture-candidate
+  target_id: wf-middle-english-middle-english-culture-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-culture-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-modern-english-culture
+  target_id: wf-modern-english-culture
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-culture-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-modern-english-culture
+  target_id: sense-culture
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-cultum-descends-from-colere
+  edge_kind: descends_from
+  source_id: wf-latin-cultum
+  target_id: wf-latin-colere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-culture-candidate-borrowed-from-cultum
+  edge_kind: borrowed_from
+  source_id: wf-old-french-old-french-culture-candidate
+  target_id: wf-latin-cultum
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-culture-candidate-borrowed-from-old-french-culture-candidate
+  edge_kind: borrowed_from
+  source_id: wf-middle-english-middle-english-culture-candidate
+  target_id: wf-old-french-old-french-culture-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-culture-descends-from-middle-english-culture-candidate
+  edge_kind: descends_from
+  source_id: wf-modern-english-culture
+  target_id: wf-middle-english-middle-english-culture-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review

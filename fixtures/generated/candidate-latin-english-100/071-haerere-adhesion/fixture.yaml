@@ -1,0 +1,212 @@
+fixture_id: LEXIS-GEN-CAND-071-haerere-adhesion
+status: candidate_review
+scope:
+  scope_id: candidate-071-haerere-adhesion-scope
+  question: Candidate generated multi-stage graph-facing chain for Latin haerere, Old French, Middle English, and Modern English adhesion.
+  excluded_claims:
+  - unreviewed generated relationship claims
+  - source text ingestion or redistribution
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+- source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+  may_support_claims: false
+deferred_records: []
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers: []
+nodes:
+  languages:
+  - id: lang-latin
+    label: Latin
+    kind: language
+    source_posture: candidate_review
+  - id: lang-middle-english
+    label: Middle English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-modern-english
+    label: Modern English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-old-french
+    label: Old French
+    kind: language
+    source_posture: candidate_review
+  roots: []
+  wordforms:
+  - id: wf-latin-haerere
+    label: haerere
+    language_id: lang-latin
+    form: haerere
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-haerere
+  - id: wf-latin-haesum
+    label: haesum
+    language_id: lang-latin
+    form: haesum
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-haesum
+  - id: wf-old-french-old-french-adhesion-candidate
+    label: Old French candidate stage for adhesion
+    language_id: lang-old-french
+    form: old-french-adhesion-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-old-french-old-french-adhesion-candidate
+  - id: wf-middle-english-middle-english-adhesion-candidate
+    label: Middle English candidate stage for adhesion
+    language_id: lang-middle-english
+    form: middle-english-adhesion-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-middle-english-middle-english-adhesion-candidate
+  - id: wf-modern-english-adhesion
+    label: adhesion
+    language_id: lang-modern-english
+    form: adhesion
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-adhesion
+  meaning_senses:
+  - id: sense-haerere
+    label: sticking or clinging
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-latin-haerere
+  - id: sense-adhesion
+    label: sticking or clinging
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-adhesion
+  script_forms: []
+source_links:
+- id: src-latin-haerere
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-latin-haesum
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-old-french-old-french-adhesion-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-middle-english-middle-english-adhesion-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-modern-english-adhesion
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+relationship_edges:
+- id: edge-haerere-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-haerere
+  target_id: wf-latin-haerere
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-haerere-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-latin-haerere
+  target_id: sense-haerere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-haesum-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-haesum
+  target_id: wf-latin-haesum
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-adhesion-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-old-french-old-french-adhesion-candidate
+  target_id: wf-old-french-old-french-adhesion-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-adhesion-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-middle-english-middle-english-adhesion-candidate
+  target_id: wf-middle-english-middle-english-adhesion-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-adhesion-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-modern-english-adhesion
+  target_id: wf-modern-english-adhesion
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-adhesion-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-modern-english-adhesion
+  target_id: sense-adhesion
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-haesum-descends-from-haerere
+  edge_kind: descends_from
+  source_id: wf-latin-haesum
+  target_id: wf-latin-haerere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-adhesion-candidate-borrowed-from-haesum
+  edge_kind: borrowed_from
+  source_id: wf-old-french-old-french-adhesion-candidate
+  target_id: wf-latin-haesum
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-adhesion-candidate-borrowed-from-old-french-adhesion-candidate
+  edge_kind: borrowed_from
+  source_id: wf-middle-english-middle-english-adhesion-candidate
+  target_id: wf-old-french-old-french-adhesion-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-adhesion-descends-from-middle-english-adhesion-candidate
+  edge_kind: descends_from
+  source_id: wf-modern-english-adhesion
+  target_id: wf-middle-english-middle-english-adhesion-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review

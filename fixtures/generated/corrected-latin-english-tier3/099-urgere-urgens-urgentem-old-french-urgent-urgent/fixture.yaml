@@ -1,0 +1,183 @@
+fixture_id: LEXIS-GEN-CORR-099
+status: candidate_review
+scope:
+  scope_id: corrected-candidate-099-scope
+  question: Corrected graph-facing candidate route for generated Latin-English chain 099.
+  excluded_claims:
+  - unreviewed generated relationship claims
+  - source text ingestion or redistribution
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+- source_ref: LEXIS-SRCDEC-109-tier3-proof-urgent
+  contract_state: candidate_review
+  may_support_claims: false
+deferred_records: []
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers: []
+nodes:
+  languages:
+  - id: lang-latin
+    label: Latin
+    kind: language
+    source_posture: candidate_review
+  - id: lang-modern-english
+    label: Modern English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-old-french
+    label: Old French
+    kind: language
+    source_posture: candidate_review
+  roots: []
+  wordforms:
+  - id: wf-latin-urgere
+    label: urgere
+    language_id: lang-latin
+    form: urgere
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-urgere
+  - id: wf-latin-urgens
+    label: urgens
+    language_id: lang-latin
+    form: urgens
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-urgens
+  - id: wf-latin-urgentem
+    label: urgentem
+    language_id: lang-latin
+    form: urgentem
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-urgentem
+  - id: wf-old-french-urgent
+    label: urgent
+    language_id: lang-old-french
+    form: urgent
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-old-french-urgent
+  - id: wf-modern-english-urgent
+    label: urgent
+    language_id: lang-modern-english
+    form: urgent
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-urgent
+  meaning_senses:
+  - id: sense-wf-modern-english-urgent
+    label: Corrected candidate target meaning; source-detail review required.
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-urgent
+  script_forms: []
+source_links:
+- id: src-latin-urgere
+  source_ref: LEXIS-SRCDEC-109-tier3-proof-urgent
+  contract_state: candidate_review
+- id: src-latin-urgens
+  source_ref: LEXIS-SRCDEC-109-tier3-proof-urgent
+  contract_state: candidate_review
+- id: src-latin-urgentem
+  source_ref: LEXIS-SRCDEC-109-tier3-proof-urgent
+  contract_state: candidate_review
+- id: src-old-french-urgent
+  source_ref: LEXIS-SRCDEC-109-tier3-proof-urgent
+  contract_state: candidate_review
+- id: src-modern-english-urgent
+  source_ref: LEXIS-SRCDEC-109-tier3-proof-urgent
+  contract_state: candidate_review
+relationship_edges:
+- id: edge-wf-latin-urgere-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-urgere
+  target_id: wf-latin-urgere
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-109-tier3-proof-urgent
+  review_state: candidate_review
+- id: edge-wf-latin-urgens-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-urgens
+  target_id: wf-latin-urgens
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-109-tier3-proof-urgent
+  review_state: candidate_review
+- id: edge-wf-latin-urgentem-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-urgentem
+  target_id: wf-latin-urgentem
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-109-tier3-proof-urgent
+  review_state: candidate_review
+- id: edge-wf-old-french-urgent-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-old-french-urgent
+  target_id: wf-old-french-urgent
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-109-tier3-proof-urgent
+  review_state: candidate_review
+- id: edge-wf-modern-english-urgent-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-modern-english-urgent
+  target_id: wf-modern-english-urgent
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-109-tier3-proof-urgent
+  review_state: candidate_review
+- id: edge-wf-modern-english-urgent-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-modern-english-urgent
+  target_id: sense-wf-modern-english-urgent
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-109-tier3-proof-urgent
+  review_state: candidate_review
+- id: edge-wf-latin-urgens-descends-from-wf-latin-urgere
+  edge_kind: descends_from
+  source_id: wf-latin-urgens
+  target_id: wf-latin-urgere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-109-tier3-proof-urgent
+  review_state: candidate_review
+- id: edge-wf-old-french-urgent-borrowed-from-wf-latin-urgens
+  edge_kind: borrowed_from
+  source_id: wf-old-french-urgent
+  target_id: wf-latin-urgens
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-109-tier3-proof-urgent
+  review_state: candidate_review
+- id: edge-wf-modern-english-urgent-borrowed-from-wf-old-french-urgent
+  edge_kind: borrowed_from
+  source_id: wf-modern-english-urgent
+  target_id: wf-old-french-urgent
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-109-tier3-proof-urgent
+  review_state: candidate_review

@@ -1,0 +1,17 @@
+decision_id: LEXIS-SRCDEC-069-tier2-proof-essence
+status: candidate_review
+source_family: English etymology pointer for Latin-to-English candidate essence
+related_slice_packages:
+  - LEXIS-SLICE-001-SOURCE
+pointer: https://www.etymonline.com/word/essence
+candidate_source_name: Etymonline entry for essence
+rights_posture: copyrighted_reference_pointer_only
+redistribution_posture: pointer_only_planned
+citation_note: Proof pointer supports Latin essentia formed from esse present-participle stem with philosophical translation context; no source text is copied.
+review_state: source_detail_required
+reviewer: L-5 Source Custody Reviewer pending
+promotion_allowed: false
+blocks:
+  - philosophical coinage and Greek-translation context must be modeled
+  - per-chain fixture has not been corrected or accepted
+

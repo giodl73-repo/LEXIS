@@ -1,0 +1,138 @@
+{
+  "slice_id": "LEXIS-FIX-007-pie-root-mini-slice",
+  "nodes": [
+    {
+      "id": "lang-pie",
+      "label": "Proto-Indo-European candidate context",
+      "record_class": "Language",
+      "source_posture": "planned_blocked"
+    },
+    {
+      "id": "lang-lat",
+      "label": "Latin",
+      "record_class": "Language",
+      "source_posture": "planned_blocked"
+    },
+    {
+      "id": "lang-en",
+      "label": "English",
+      "record_class": "Language",
+      "source_posture": "planned_blocked"
+    },
+    {
+      "id": "lang-grc",
+      "label": "Ancient Greek",
+      "record_class": "Language",
+      "source_posture": "planned_blocked"
+    },
+    {
+      "id": "root-pie-bher",
+      "label": "PIE root candidate *bher-",
+      "record_class": "Root",
+      "claim_type": "reconstruction",
+      "uncertainty": "disputed",
+      "source_posture": "planned_blocked"
+    },
+    {
+      "id": "wf-lat-ferre",
+      "label": "ferre",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "planned_blocked"
+    },
+    {
+      "id": "wf-en-bear",
+      "label": "bear",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "planned_blocked"
+    },
+    {
+      "id": "wf-grc-pherein",
+      "label": "pherein",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "planned_blocked"
+    },
+    {
+      "id": "sense-carry-bear",
+      "label": "carrying or bearing sense candidate",
+      "record_class": "MeaningSense",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "source_posture": "planned_blocked"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-pie-root-support",
+      "edge_kind": "supports_claim",
+      "source_id": "src-pie-root",
+      "target_id": "root-pie-bher",
+      "claim_type": "reconstruction",
+      "uncertainty": "disputed",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-006-pie-reconstruction-reference"
+      ],
+      "review_state": "blocked"
+    },
+    {
+      "id": "edge-lat-ferre-cognate-candidate",
+      "edge_kind": "cognate_with",
+      "source_id": "wf-lat-ferre",
+      "target_id": "root-pie-bher",
+      "claim_type": "reconstruction",
+      "uncertainty": "disputed",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-006-pie-reconstruction-reference"
+      ],
+      "review_state": "blocked"
+    },
+    {
+      "id": "edge-en-bear-cognate-candidate",
+      "edge_kind": "cognate_with",
+      "source_id": "wf-en-bear",
+      "target_id": "root-pie-bher",
+      "claim_type": "reconstruction",
+      "uncertainty": "disputed",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-006-pie-reconstruction-reference"
+      ],
+      "review_state": "blocked"
+    },
+    {
+      "id": "edge-grc-pherein-cognate-candidate",
+      "edge_kind": "cognate_with",
+      "source_id": "wf-grc-pherein",
+      "target_id": "root-pie-bher",
+      "claim_type": "reconstruction",
+      "uncertainty": "disputed",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-006-pie-reconstruction-reference"
+      ],
+      "review_state": "blocked"
+    },
+    {
+      "id": "edge-bear-meaning-candidate",
+      "edge_kind": "meaning_shift_to",
+      "source_id": "wf-en-bear",
+      "target_id": "sense-carry-bear",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-006-pie-reconstruction-reference"
+      ],
+      "review_state": "blocked"
+    }
+  ],
+  "source_posture_summary": [
+    "LEXIS-SRCDEC-006-pie-reconstruction-reference:planned_blocked",
+    "LEXIS-SRCDEC-003-general-language-history-reference:deferred_after_first_slice_scope"
+  ],
+  "graph_engine_posture": "local-only",
+  "graph_output_posture": "preview_only_not_promoted",
+  "validation_error_count": 10
+}

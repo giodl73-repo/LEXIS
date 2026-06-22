@@ -1,0 +1,26 @@
+digraph lexis_slice {
+  graph [label="LEXIS-GEN-CORR-074\npreview_only_not_promoted\nvalidation errors: 18"];
+  "lang-latin" [label="Latin\nLanguage\ncandidate_review"];
+  "lang-middle-english" [label="Middle English\nLanguage\ncandidate_review"];
+  "lang-modern-english" [label="Modern English\nLanguage\ncandidate_review"];
+  "lang-old-french" [label="Old French\nLanguage\ncandidate_review"];
+  "lang-unspecified-intermediate" [label="Unspecified intermediate\nLanguage\ncandidate_review"];
+  "wf-latin-laus" [label="laus\nWordform\ncandidate_review"];
+  "wf-latin-laudis" [label="laudis\nWordform\ncandidate_review"];
+  "wf-unspecified-intermediate-laudare" [label="laudare\nWordform\ncandidate_review"];
+  "wf-old-french-lauder" [label="lauder\nWordform\ncandidate_review"];
+  "wf-middle-english-laud" [label="laud\nWordform\ncandidate_review"];
+  "wf-modern-english-laud" [label="laud\nWordform\ncandidate_review"];
+  "sense-wf-modern-english-laud" [label="Corrected candidate target meaning; source-detail review required.\nMeaningSense\ncandidate_review"];
+  "src-latin-laus" -> "wf-latin-laus" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "src-latin-laudis" -> "wf-latin-laudis" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "src-unspecified-intermediate-laudare" -> "wf-unspecified-intermediate-laudare" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "src-old-french-lauder" -> "wf-old-french-lauder" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "src-middle-english-laud" -> "wf-middle-english-laud" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "src-modern-english-laud" -> "wf-modern-english-laud" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "wf-modern-english-laud" -> "sense-wf-modern-english-laud" [label="meaning_shift_to\ninference\nsource_limited"];
+  "wf-unspecified-intermediate-laudare" -> "wf-latin-laus" [label="borrowed_from\ninference\nsource_limited"];
+  "wf-old-french-lauder" -> "wf-unspecified-intermediate-laudare" [label="borrowed_from\ninference\nsource_limited"];
+  "wf-middle-english-laud" -> "wf-old-french-lauder" [label="borrowed_from\ninference\nsource_limited"];
+  "wf-modern-english-laud" -> "wf-middle-english-laud" [label="borrowed_from\ninference\nsource_limited"];
+}

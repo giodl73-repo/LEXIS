@@ -1,0 +1,29 @@
+fixture_id: LEXIS-FIX-009-glyph-graph-write-meta-slice
+status: draft_node_edge_shape_blocked
+fixture_class: contrastive meta-language fixture
+owning_work_package: LEXIS-WP-004
+linked_scenarios:
+  - LEXIS-SC-003-source-limited-claim
+linked_slice_packages:
+  - LEXIS-SLICE-005-SCOPE
+  - LEXIS-SLICE-005-NODES
+  - LEXIS-SLICE-005-EDGES
+  - LEXIS-SLICE-005-NEGATIVES
+linked_source_custody_decision:
+  - LEXIS-SRCDEC-008-meta-etymology-reference
+  - LEXIS-SRCDEC-005-source-limited-placeholder
+linked_scope: LEXIS-SLICE-005-SCOPE
+fixture_shape: fixture.yaml
+expected_result: invalid_until_meta_etymology_source_custody_is_accepted
+expected_diagnostics:
+  - source_custody
+  - relationship
+  - graph_preservation
+records_and_edges_included: draft_glyph_graph_write_contrast_nodes_and_edges
+source_text_redistribution_posture: pointer_only_planned
+graph_impact: graph_candidate_blocked_until_validation_passes
+chronicle_impact: chronicle_candidate_after_graph_review
+review_state: draft_shape_not_promoted
+promotion_blockers:
+  - no accepted meta-etymology source-custody decision
+  - no accepted rejected-relationship review

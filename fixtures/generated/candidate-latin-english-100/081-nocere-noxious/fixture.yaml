@@ -1,0 +1,212 @@
+fixture_id: LEXIS-GEN-CAND-081-nocere-noxious
+status: candidate_review
+scope:
+  scope_id: candidate-081-nocere-noxious-scope
+  question: Candidate generated multi-stage graph-facing chain for Latin nocere, Old French, Middle English, and Modern English noxious.
+  excluded_claims:
+  - unreviewed generated relationship claims
+  - source text ingestion or redistribution
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+- source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+  may_support_claims: false
+deferred_records: []
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers: []
+nodes:
+  languages:
+  - id: lang-latin
+    label: Latin
+    kind: language
+    source_posture: candidate_review
+  - id: lang-middle-english
+    label: Middle English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-modern-english
+    label: Modern English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-old-french
+    label: Old French
+    kind: language
+    source_posture: candidate_review
+  roots: []
+  wordforms:
+  - id: wf-latin-nocere
+    label: nocere
+    language_id: lang-latin
+    form: nocere
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-nocere
+  - id: wf-latin-nocitum
+    label: nocitum
+    language_id: lang-latin
+    form: nocitum
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-nocitum
+  - id: wf-old-french-old-french-noxious-candidate
+    label: Old French candidate stage for noxious
+    language_id: lang-old-french
+    form: old-french-noxious-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-old-french-old-french-noxious-candidate
+  - id: wf-middle-english-middle-english-noxious-candidate
+    label: Middle English candidate stage for noxious
+    language_id: lang-middle-english
+    form: middle-english-noxious-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-middle-english-middle-english-noxious-candidate
+  - id: wf-modern-english-noxious
+    label: noxious
+    language_id: lang-modern-english
+    form: noxious
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-noxious
+  meaning_senses:
+  - id: sense-nocere
+    label: harming or injuring
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-latin-nocere
+  - id: sense-noxious
+    label: harming or injuring
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-noxious
+  script_forms: []
+source_links:
+- id: src-latin-nocere
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-latin-nocitum
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-old-french-old-french-noxious-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-middle-english-middle-english-noxious-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-modern-english-noxious
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+relationship_edges:
+- id: edge-nocere-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-nocere
+  target_id: wf-latin-nocere
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-nocere-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-latin-nocere
+  target_id: sense-nocere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-nocitum-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-nocitum
+  target_id: wf-latin-nocitum
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-noxious-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-old-french-old-french-noxious-candidate
+  target_id: wf-old-french-old-french-noxious-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-noxious-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-middle-english-middle-english-noxious-candidate
+  target_id: wf-middle-english-middle-english-noxious-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-noxious-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-modern-english-noxious
+  target_id: wf-modern-english-noxious
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-noxious-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-modern-english-noxious
+  target_id: sense-noxious
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-nocitum-descends-from-nocere
+  edge_kind: descends_from
+  source_id: wf-latin-nocitum
+  target_id: wf-latin-nocere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-noxious-candidate-borrowed-from-nocitum
+  edge_kind: borrowed_from
+  source_id: wf-old-french-old-french-noxious-candidate
+  target_id: wf-latin-nocitum
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-noxious-candidate-borrowed-from-old-french-noxious-candidate
+  edge_kind: borrowed_from
+  source_id: wf-middle-english-middle-english-noxious-candidate
+  target_id: wf-old-french-old-french-noxious-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-noxious-descends-from-middle-english-noxious-candidate
+  edge_kind: descends_from
+  source_id: wf-modern-english-noxious
+  target_id: wf-middle-english-middle-english-noxious-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review

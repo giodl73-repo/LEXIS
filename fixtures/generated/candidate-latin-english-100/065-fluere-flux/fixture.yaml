@@ -1,0 +1,212 @@
+fixture_id: LEXIS-GEN-CAND-065-fluere-flux
+status: candidate_review
+scope:
+  scope_id: candidate-065-fluere-flux-scope
+  question: Candidate generated multi-stage graph-facing chain for Latin fluere, Old French, Middle English, and Modern English flux.
+  excluded_claims:
+  - unreviewed generated relationship claims
+  - source text ingestion or redistribution
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+- source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+  may_support_claims: false
+deferred_records: []
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers: []
+nodes:
+  languages:
+  - id: lang-latin
+    label: Latin
+    kind: language
+    source_posture: candidate_review
+  - id: lang-middle-english
+    label: Middle English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-modern-english
+    label: Modern English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-old-french
+    label: Old French
+    kind: language
+    source_posture: candidate_review
+  roots: []
+  wordforms:
+  - id: wf-latin-fluere
+    label: fluere
+    language_id: lang-latin
+    form: fluere
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-fluere
+  - id: wf-latin-fluxum
+    label: fluxum
+    language_id: lang-latin
+    form: fluxum
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-fluxum
+  - id: wf-old-french-old-french-flux-candidate
+    label: Old French candidate stage for flux
+    language_id: lang-old-french
+    form: old-french-flux-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-old-french-old-french-flux-candidate
+  - id: wf-middle-english-middle-english-flux-candidate
+    label: Middle English candidate stage for flux
+    language_id: lang-middle-english
+    form: middle-english-flux-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-middle-english-middle-english-flux-candidate
+  - id: wf-modern-english-flux
+    label: flux
+    language_id: lang-modern-english
+    form: flux
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-flux
+  meaning_senses:
+  - id: sense-fluere
+    label: flowing or moving
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-latin-fluere
+  - id: sense-flux
+    label: flowing or moving
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-flux
+  script_forms: []
+source_links:
+- id: src-latin-fluere
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-latin-fluxum
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-old-french-old-french-flux-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-middle-english-middle-english-flux-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-modern-english-flux
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+relationship_edges:
+- id: edge-fluere-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-fluere
+  target_id: wf-latin-fluere
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-fluere-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-latin-fluere
+  target_id: sense-fluere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-fluxum-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-fluxum
+  target_id: wf-latin-fluxum
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-flux-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-old-french-old-french-flux-candidate
+  target_id: wf-old-french-old-french-flux-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-flux-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-middle-english-middle-english-flux-candidate
+  target_id: wf-middle-english-middle-english-flux-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-flux-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-modern-english-flux
+  target_id: wf-modern-english-flux
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-flux-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-modern-english-flux
+  target_id: sense-flux
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-fluxum-descends-from-fluere
+  edge_kind: descends_from
+  source_id: wf-latin-fluxum
+  target_id: wf-latin-fluere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-flux-candidate-borrowed-from-fluxum
+  edge_kind: borrowed_from
+  source_id: wf-old-french-old-french-flux-candidate
+  target_id: wf-latin-fluxum
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-flux-candidate-borrowed-from-old-french-flux-candidate
+  edge_kind: borrowed_from
+  source_id: wf-middle-english-middle-english-flux-candidate
+  target_id: wf-old-french-old-french-flux-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-flux-descends-from-middle-english-flux-candidate
+  edge_kind: descends_from
+  source_id: wf-modern-english-flux
+  target_id: wf-middle-english-middle-english-flux-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review

@@ -1,0 +1,17 @@
+decision_id: LEXIS-SRCDEC-046-tier2-proof-state
+status: candidate_review
+source_family: English etymology pointer for Latin-to-English candidate state
+related_slice_packages:
+  - LEXIS-SLICE-001-SOURCE
+pointer: https://www.etymonline.com/word/state
+candidate_source_name: Etymonline entry for state
+rights_posture: copyrighted_reference_pointer_only
+redistribution_posture: pointer_only_planned
+citation_note: Proof pointer supports Old French estat, Latin status, and stare route; no source text is copied.
+review_state: source_detail_required
+reviewer: L-5 Source Custody Reviewer pending
+promotion_allowed: false
+blocks:
+  - generated bridge should model status rather than statum
+  - per-chain fixture has not been corrected or accepted
+

@@ -1,0 +1,17 @@
+decision_id: LEXIS-SRCDEC-071-tier2-proof-confess
+status: candidate_review
+source_family: English etymology pointer for Latin-to-English candidate confess
+related_slice_packages:
+  - LEXIS-SLICE-001-SOURCE
+pointer: https://www.etymonline.com/word/confession
+candidate_source_name: Etymonline confession entry and Merriam-Webster confess entry
+rights_posture: copyrighted_reference_pointer_only
+redistribution_posture: pointer_only_planned
+citation_note: Proof pointers support Old French/Anglo-French confesser, Latin confiteri, and fateri route; no source text is copied.
+review_state: source_detail_required
+reviewer: L-5 Source Custody Reviewer pending
+promotion_allowed: false
+blocks:
+  - compound con- plus fateri path must be modeled explicitly
+  - generated bridge fassum is too flat for promotion
+

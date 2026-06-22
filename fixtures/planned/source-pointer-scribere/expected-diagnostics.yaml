@@ -1,0 +1,68 @@
+fixture_id: LEXIS-FIX-001-source-pointer-scribere
+status: expected_diagnostics_planned
+validation_command: lexis validate fixtures/planned/source-pointer-scribere/fixture.yaml
+command_status: implemented_minimal
+expected_exit: nonzero_for_draft_blocked_fixture
+expected_diagnostics:
+  - diagnostic_id: LEXIS-DIAG-SRC-000
+    family: source_custody
+    severity: error
+    condition: fixture is blocked or invalid by design and cannot be promoted
+    affected_source:
+      - LEXIS-FIX-001-source-pointer-scribere
+    expected_disposition: keep fixture blocked until validator, accepted source records, and promotion review exist
+  - diagnostic_id: LEXIS-DIAG-SRC-001
+    family: source_custody
+    severity: error
+    condition: candidate source record present before source acceptance
+    affected_source:
+      - LEXIS-SRCDEC-001-latin-lexicographic-reference
+      - LEXIS-SRCDEC-002-english-etymology-reference
+    expected_disposition: remove claim or promote source through accepted_for_slice review
+  - diagnostic_id: LEXIS-DIAG-SRC-002
+    family: source_custody
+    severity: error
+    condition: deferred source record used in first scribere fixture
+    affected_source:
+      - LEXIS-SRCDEC-003-general-language-history-reference
+    expected_disposition: keep reconstruction and broad theory claims out of the first fixture
+  - diagnostic_id: LEXIS-DIAG-SRC-003
+    family: source_custody
+    severity: error
+    condition: copied source text included under pointer-only redistribution posture
+    affected_source:
+      - any pointer-only source record
+    expected_disposition: remove copied source text or complete rights review
+  - diagnostic_id: LEXIS-DIAG-SRC-004
+    family: source_custody
+    severity: error
+    condition: non-accepted source is marked as claim-supporting
+    affected_source:
+      - any non-accepted source record
+    expected_disposition: set may_support_claims false or promote source through accepted_for_slice review
+  - diagnostic_id: LEXIS-DIAG-SRC-005
+    family: source_custody
+    severity: error
+    condition: fixture source state differs from linked source-custody record state
+    affected_source:
+      - any linked source-custody decision
+    expected_disposition: update the fixture contract state or source-custody decision through review
+  - diagnostic_id: LEXIS-DIAG-SRC-006
+    family: source_custody
+    severity: error
+    condition: linked source-custody decision record was not found
+    affected_source:
+      - any missing source-custody decision
+    expected_disposition: add the source-custody decision record or remove the fixture link
+  - diagnostic_id: LEXIS-DIAG-SRC-007
+    family: source_custody
+    severity: error
+    condition: linked source-custody decision record could not be parsed
+    affected_source:
+      - any malformed source-custody decision
+    expected_disposition: repair source-custody YAML before fixture validation
+expected_non_diagnostics:
+  - no relationship diagnostic is expected because the fixture contains no relationship claims
+  - no graph_preservation diagnostic is expected because the fixture contains no graph output
+  - no chronicle_overclaim diagnostic is expected because the fixture contains no chronicle output
+  - no LEXIS-DIAG-SRC-005 diagnostic is expected while fixture states match source-custody record states

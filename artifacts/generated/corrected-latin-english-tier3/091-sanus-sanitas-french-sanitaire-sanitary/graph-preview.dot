@@ -1,0 +1,20 @@
+digraph lexis_slice {
+  graph [label="LEXIS-GEN-CORR-091\npreview_only_not_promoted\nvalidation errors: 13"];
+  "lang-french" [label="French\nLanguage\ncandidate_review"];
+  "lang-latin" [label="Latin\nLanguage\ncandidate_review"];
+  "lang-modern-english" [label="Modern English\nLanguage\ncandidate_review"];
+  "lang-unspecified-intermediate" [label="Unspecified intermediate\nLanguage\ncandidate_review"];
+  "wf-latin-sanus" [label="sanus\nWordform\ncandidate_review"];
+  "wf-unspecified-intermediate-sanitas" [label="sanitas\nWordform\ncandidate_review"];
+  "wf-french-sanitaire" [label="sanitaire\nWordform\ncandidate_review"];
+  "wf-modern-english-sanitary" [label="sanitary\nWordform\ncandidate_review"];
+  "sense-wf-modern-english-sanitary" [label="Corrected candidate target meaning; source-detail review required.\nMeaningSense\ncandidate_review"];
+  "src-latin-sanus" -> "wf-latin-sanus" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "src-unspecified-intermediate-sanitas" -> "wf-unspecified-intermediate-sanitas" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "src-french-sanitaire" -> "wf-french-sanitaire" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "src-modern-english-sanitary" -> "wf-modern-english-sanitary" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "wf-modern-english-sanitary" -> "sense-wf-modern-english-sanitary" [label="meaning_shift_to\ninference\nsource_limited"];
+  "wf-unspecified-intermediate-sanitas" -> "wf-latin-sanus" [label="borrowed_from\ninference\nsource_limited"];
+  "wf-french-sanitaire" -> "wf-unspecified-intermediate-sanitas" [label="borrowed_from\ninference\nsource_limited"];
+  "wf-modern-english-sanitary" -> "wf-french-sanitaire" [label="borrowed_from\ninference\nsource_limited"];
+}

@@ -1,0 +1,212 @@
+fixture_id: LEXIS-GEN-CAND-040-sedere-session
+status: candidate_review
+scope:
+  scope_id: candidate-040-sedere-session-scope
+  question: Candidate generated multi-stage graph-facing chain for Latin sedere, Old French, Middle English, and Modern English session.
+  excluded_claims:
+  - unreviewed generated relationship claims
+  - source text ingestion or redistribution
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+- source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+  may_support_claims: false
+deferred_records: []
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers: []
+nodes:
+  languages:
+  - id: lang-latin
+    label: Latin
+    kind: language
+    source_posture: candidate_review
+  - id: lang-middle-english
+    label: Middle English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-modern-english
+    label: Modern English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-old-french
+    label: Old French
+    kind: language
+    source_posture: candidate_review
+  roots: []
+  wordforms:
+  - id: wf-latin-sedere
+    label: sedere
+    language_id: lang-latin
+    form: sedere
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-sedere
+  - id: wf-latin-sessum
+    label: sessum
+    language_id: lang-latin
+    form: sessum
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-sessum
+  - id: wf-old-french-old-french-session-candidate
+    label: Old French candidate stage for session
+    language_id: lang-old-french
+    form: old-french-session-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-old-french-old-french-session-candidate
+  - id: wf-middle-english-middle-english-session-candidate
+    label: Middle English candidate stage for session
+    language_id: lang-middle-english
+    form: middle-english-session-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-middle-english-middle-english-session-candidate
+  - id: wf-modern-english-session
+    label: session
+    language_id: lang-modern-english
+    form: session
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-session
+  meaning_senses:
+  - id: sense-sedere
+    label: sitting or settling
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-latin-sedere
+  - id: sense-session
+    label: sitting or settling
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-session
+  script_forms: []
+source_links:
+- id: src-latin-sedere
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-latin-sessum
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-old-french-old-french-session-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-middle-english-middle-english-session-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-modern-english-session
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+relationship_edges:
+- id: edge-sedere-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-sedere
+  target_id: wf-latin-sedere
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-sedere-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-latin-sedere
+  target_id: sense-sedere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-sessum-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-sessum
+  target_id: wf-latin-sessum
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-session-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-old-french-old-french-session-candidate
+  target_id: wf-old-french-old-french-session-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-session-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-middle-english-middle-english-session-candidate
+  target_id: wf-middle-english-middle-english-session-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-session-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-modern-english-session
+  target_id: wf-modern-english-session
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-session-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-modern-english-session
+  target_id: sense-session
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-sessum-descends-from-sedere
+  edge_kind: descends_from
+  source_id: wf-latin-sessum
+  target_id: wf-latin-sedere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-session-candidate-borrowed-from-sessum
+  edge_kind: borrowed_from
+  source_id: wf-old-french-old-french-session-candidate
+  target_id: wf-latin-sessum
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-session-candidate-borrowed-from-old-french-session-candidate
+  edge_kind: borrowed_from
+  source_id: wf-middle-english-middle-english-session-candidate
+  target_id: wf-old-french-old-french-session-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-session-descends-from-middle-english-session-candidate
+  edge_kind: descends_from
+  source_id: wf-modern-english-session
+  target_id: wf-middle-english-middle-english-session-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review

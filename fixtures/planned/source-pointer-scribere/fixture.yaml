@@ -1,0 +1,39 @@
+fixture_id: LEXIS-FIX-001-source-pointer-scribere
+status: draft_shape_invalid_by_design
+fixture_class: source-pointer fixture
+scope_id: LEXIS-SLICE-001-SOURCE
+description: Candidate source-pointer records for the first scribere pilot.
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+expected_result: invalid_candidate_sources_cannot_support_claims
+source_records:
+  - source_ref: LEXIS-SRCDEC-001-latin-lexicographic-reference
+    contract_state: candidate_review
+    candidate_use: Latin source pointer for scribere / scribo posture.
+    may_support_claims: false
+    may_appear_in_fixture: true
+    fixture_use: blocked_source_pointer_shape_only
+    required_diagnostic_if_used_as_evidence: source_custody
+  - source_ref: LEXIS-SRCDEC-002-english-etymology-reference
+    contract_state: candidate_review
+    candidate_use: English source pointer for scribe and related first-slice forms.
+    may_support_claims: false
+    may_appear_in_fixture: true
+    fixture_use: blocked_source_pointer_shape_only
+    required_diagnostic_if_used_as_evidence: source_custody
+deferred_records:
+  - source_ref: LEXIS-SRCDEC-003-general-language-history-reference
+    contract_state: deferred_after_first_slice_scope
+    reason: First scribere fixture excludes reconstruction and broad theory claims.
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers:
+  - source records are candidate or deferred, not accepted_for_slice
+  - validator is minimal and does not promote fixtures
+  - source-record contract is draft-reviewed but not implemented
+  - no fixture promotion review has occurred
+review_lanes_required:
+  - L-5 Source Custody Reviewer
+  - L-8 Software Assurance Reviewer

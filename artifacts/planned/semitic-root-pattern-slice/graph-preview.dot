@@ -1,0 +1,18 @@
+digraph lexis_slice {
+  graph [label="LEXIS-FIX-008-semitic-root-pattern-slice\npreview_only_not_promoted\nvalidation errors: 9"];
+  "lang-ar" [label="Arabic\nLanguage\nplanned_blocked"];
+  "lang-he" [label="Hebrew\nLanguage\nplanned_blocked"];
+  "lang-arc" [label="Aramaic candidate context\nLanguage\nplanned_blocked"];
+  "root-sem-ktb" [label="Semitic root candidate K-T-B\nRoot\nplanned_blocked"];
+  "wf-ar-kitab" [label="kitab\nWordform\nplanned_blocked"];
+  "wf-he-ketav" [label="ketav\nWordform\nplanned_blocked"];
+  "wf-arc-ktaba" [label="ktaba\nWordform\nplanned_blocked"];
+  "sense-writing-root-pattern" [label="writing-associated root-pattern candidate\nMeaningSense\nplanned_blocked"];
+  "script-arabic-translit" [label="Arabic transliteration posture\nScriptForm\nplanned_blocked"];
+  "script-hebrew-translit" [label="Hebrew transliteration posture\nScriptForm\nplanned_blocked"];
+  "src-semitic-root" -> "root-sem-ktb" [label="supports_claim\nreconstruction\nsource_limited"];
+  "wf-ar-kitab" -> "root-sem-ktb" [label="cognate_with\ninference\nsource_limited"];
+  "wf-he-ketav" -> "root-sem-ktb" [label="cognate_with\ninference\nsource_limited"];
+  "script-arabic-translit" -> "script-hebrew-translit" [label="disputes_claim\nrejected_alternative\ndisputed"];
+  "root-sem-ktb" -> "sense-writing-root-pattern" [label="meaning_shift_to\ninference\nsource_limited"];
+}

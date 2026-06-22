@@ -1,0 +1,16 @@
+digraph lexis_slice {
+  graph [label="LEXIS-GEN-CORR-025\npreview_only_not_promoted\nvalidation errors: 10"];
+  "lang-latin" [label="Latin\nLanguage\ncandidate_review"];
+  "lang-modern-english" [label="Modern English\nLanguage\ncandidate_review"];
+  "lang-unspecified-intermediate" [label="Unspecified intermediate\nLanguage\ncandidate_review"];
+  "wf-latin-spectare" [label="spectare\nWordform\ncandidate_review"];
+  "wf-unspecified-intermediate-spectator" [label="spectator\nWordform\ncandidate_review"];
+  "wf-modern-english-spectator" [label="spectator\nWordform\ncandidate_review"];
+  "sense-wf-modern-english-spectator" [label="Corrected candidate target meaning; source-detail review required.\nMeaningSense\ncandidate_review"];
+  "src-latin-spectare" -> "wf-latin-spectare" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "src-unspecified-intermediate-spectator" -> "wf-unspecified-intermediate-spectator" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "src-modern-english-spectator" -> "wf-modern-english-spectator" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "wf-modern-english-spectator" -> "sense-wf-modern-english-spectator" [label="meaning_shift_to\ninference\nsource_limited"];
+  "wf-unspecified-intermediate-spectator" -> "wf-latin-spectare" [label="borrowed_from\ninference\nsource_limited"];
+  "wf-modern-english-spectator" -> "wf-unspecified-intermediate-spectator" [label="borrowed_from\ninference\nsource_limited"];
+}

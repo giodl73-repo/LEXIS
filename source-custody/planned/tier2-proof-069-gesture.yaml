@@ -1,0 +1,17 @@
+decision_id: LEXIS-SRCDEC-076-tier2-proof-gesture
+status: candidate_review
+source_family: English etymology pointer for Latin-to-English candidate gesture
+related_slice_packages:
+  - LEXIS-SLICE-001-SOURCE
+pointer: https://www.etymonline.com/word/gesture
+candidate_source_name: Etymonline entry for gesture
+rights_posture: copyrighted_reference_pointer_only
+redistribution_posture: pointer_only_planned
+citation_note: Proof pointer supports Medieval Latin gestura, Latin gestus, and gerere route; no source text is copied.
+review_state: source_detail_required
+reviewer: L-5 Source Custody Reviewer pending
+promotion_allowed: false
+blocks:
+  - generated bridge should model gestura or gestus rather than gestum
+  - semantic path through body carriage and action needs labeling
+

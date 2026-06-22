@@ -1,0 +1,17 @@
+digraph lexis_slice {
+  graph [label="LEXIS-FIX-007-pie-root-mini-slice\npreview_only_not_promoted\nvalidation errors: 10"];
+  "lang-pie" [label="Proto-Indo-European candidate context\nLanguage\nplanned_blocked"];
+  "lang-lat" [label="Latin\nLanguage\nplanned_blocked"];
+  "lang-en" [label="English\nLanguage\nplanned_blocked"];
+  "lang-grc" [label="Ancient Greek\nLanguage\nplanned_blocked"];
+  "root-pie-bher" [label="PIE root candidate *bher-\nRoot\nplanned_blocked"];
+  "wf-lat-ferre" [label="ferre\nWordform\nplanned_blocked"];
+  "wf-en-bear" [label="bear\nWordform\nplanned_blocked"];
+  "wf-grc-pherein" [label="pherein\nWordform\nplanned_blocked"];
+  "sense-carry-bear" [label="carrying or bearing sense candidate\nMeaningSense\nplanned_blocked"];
+  "src-pie-root" -> "root-pie-bher" [label="supports_claim\nreconstruction\ndisputed"];
+  "wf-lat-ferre" -> "root-pie-bher" [label="cognate_with\nreconstruction\ndisputed"];
+  "wf-en-bear" -> "root-pie-bher" [label="cognate_with\nreconstruction\ndisputed"];
+  "wf-grc-pherein" -> "root-pie-bher" [label="cognate_with\nreconstruction\ndisputed"];
+  "wf-en-bear" -> "sense-carry-bear" [label="meaning_shift_to\ninference\nsource_limited"];
+}

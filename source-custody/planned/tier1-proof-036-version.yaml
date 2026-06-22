@@ -1,0 +1,17 @@
+decision_id: LEXIS-SRCDEC-028-tier1-proof-version
+status: candidate_review
+source_family: English etymology pointer for Latin-to-English candidate version
+related_slice_packages:
+  - LEXIS-SLICE-001-SOURCE
+pointer: https://www.etymonline.com/word/version
+candidate_source_name: Etymonline entry for version
+rights_posture: copyrighted_reference_pointer_only
+redistribution_posture: pointer_only_planned
+citation_note: Proof pointer supports French version, Medieval Latin versionem/versio, and vertere route; no source text is copied.
+review_state: source_detail_required
+reviewer: L-5 Source Custody Reviewer pending
+promotion_allowed: false
+blocks:
+  - generated bridge should model versio or versionem rather than only versum
+  - per-chain fixture has not been corrected or accepted
+

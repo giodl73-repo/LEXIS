@@ -1,0 +1,187 @@
+fixture_id: LEXIS-GEN-CORR-082
+status: candidate_review
+scope:
+  scope_id: corrected-candidate-082-scope
+  question: Corrected graph-facing candidate route for generated Latin-English chain 082.
+  excluded_claims:
+  - unreviewed generated relationship claims
+  - source text ingestion or redistribution
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+- source_ref: LEXIS-SRCDEC-101-tier3-proof-novel
+  contract_state: candidate_review
+  may_support_claims: false
+deferred_records: []
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers: []
+nodes:
+  languages:
+  - id: lang-latin
+    label: Latin
+    kind: language
+    source_posture: candidate_review
+  - id: lang-modern-english
+    label: Modern English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-old-french
+    label: Old French
+    kind: language
+    source_posture: candidate_review
+  - id: lang-unspecified-intermediate
+    label: Unspecified intermediate
+    kind: language
+    source_posture: candidate_review
+  roots: []
+  wordforms:
+  - id: wf-latin-novus
+    label: novus
+    language_id: lang-latin
+    form: novus
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-novus
+  - id: wf-unspecified-intermediate-novellus
+    label: novellus
+    language_id: lang-unspecified-intermediate
+    form: novellus
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-unspecified-intermediate-novellus
+  - id: wf-old-french-novel
+    label: novel
+    language_id: lang-old-french
+    form: novel
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-old-french-novel
+  - id: wf-old-french-nouvel
+    label: nouvel
+    language_id: lang-old-french
+    form: nouvel
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-old-french-nouvel
+  - id: wf-modern-english-novel
+    label: novel
+    language_id: lang-modern-english
+    form: novel
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-novel
+  meaning_senses:
+  - id: sense-wf-modern-english-novel
+    label: Corrected candidate target meaning; source-detail review required.
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-novel
+  script_forms: []
+source_links:
+- id: src-latin-novus
+  source_ref: LEXIS-SRCDEC-101-tier3-proof-novel
+  contract_state: candidate_review
+- id: src-unspecified-intermediate-novellus
+  source_ref: LEXIS-SRCDEC-101-tier3-proof-novel
+  contract_state: candidate_review
+- id: src-old-french-novel
+  source_ref: LEXIS-SRCDEC-101-tier3-proof-novel
+  contract_state: candidate_review
+- id: src-old-french-nouvel
+  source_ref: LEXIS-SRCDEC-101-tier3-proof-novel
+  contract_state: candidate_review
+- id: src-modern-english-novel
+  source_ref: LEXIS-SRCDEC-101-tier3-proof-novel
+  contract_state: candidate_review
+relationship_edges:
+- id: edge-wf-latin-novus-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-novus
+  target_id: wf-latin-novus
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-101-tier3-proof-novel
+  review_state: candidate_review
+- id: edge-wf-unspecified-intermediate-novellus-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-unspecified-intermediate-novellus
+  target_id: wf-unspecified-intermediate-novellus
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-101-tier3-proof-novel
+  review_state: candidate_review
+- id: edge-wf-old-french-novel-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-old-french-novel
+  target_id: wf-old-french-novel
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-101-tier3-proof-novel
+  review_state: candidate_review
+- id: edge-wf-old-french-nouvel-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-old-french-nouvel
+  target_id: wf-old-french-nouvel
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-101-tier3-proof-novel
+  review_state: candidate_review
+- id: edge-wf-modern-english-novel-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-modern-english-novel
+  target_id: wf-modern-english-novel
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-101-tier3-proof-novel
+  review_state: candidate_review
+- id: edge-wf-modern-english-novel-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-modern-english-novel
+  target_id: sense-wf-modern-english-novel
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-101-tier3-proof-novel
+  review_state: candidate_review
+- id: edge-wf-unspecified-intermediate-novellus-borrowed-from-wf-latin-novus
+  edge_kind: borrowed_from
+  source_id: wf-unspecified-intermediate-novellus
+  target_id: wf-latin-novus
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-101-tier3-proof-novel
+  review_state: candidate_review
+- id: edge-wf-old-french-novel-borrowed-from-wf-unspecified-intermediate-novellus
+  edge_kind: borrowed_from
+  source_id: wf-old-french-novel
+  target_id: wf-unspecified-intermediate-novellus
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-101-tier3-proof-novel
+  review_state: candidate_review
+- id: edge-wf-modern-english-novel-borrowed-from-wf-old-french-novel
+  edge_kind: borrowed_from
+  source_id: wf-modern-english-novel
+  target_id: wf-old-french-novel
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-101-tier3-proof-novel
+  review_state: candidate_review

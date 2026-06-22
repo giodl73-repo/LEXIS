@@ -1,0 +1,17 @@
+decision_id: LEXIS-SRCDEC-089-tier2-proof-rapture
+status: candidate_review
+source_family: English etymology pointer for Latin-to-English candidate rapture
+related_slice_packages:
+  - LEXIS-SLICE-001-SOURCE
+pointer: https://www.etymonline.com/word/rapture
+candidate_source_name: Etymonline entry for rapture
+rights_posture: copyrighted_reference_pointer_only
+redistribution_posture: pointer_only_planned
+citation_note: Proof pointer supports Medieval Latin raptura, Latin raptus, and rapere route; no source text is copied.
+review_state: source_detail_required
+reviewer: L-5 Source Custody Reviewer pending
+promotion_allowed: false
+blocks:
+  - generated bridge should model raptura or raptus rather than raptum
+  - semantic shift from seizure/carrying off to ecstatic transport must be labeled
+

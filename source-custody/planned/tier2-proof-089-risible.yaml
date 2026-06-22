@@ -1,0 +1,17 @@
+decision_id: LEXIS-SRCDEC-090-tier2-proof-risible
+status: candidate_review
+source_family: English etymology pointer for Latin-to-English candidate risible
+related_slice_packages:
+  - LEXIS-SLICE-001-SOURCE
+pointer: https://www.etymonline.com/word/risible
+candidate_source_name: Etymonline entry for risible
+rights_posture: copyrighted_reference_pointer_only
+redistribution_posture: pointer_only_planned
+citation_note: Proof pointer supports French risible, Late Latin risibilis, Latin risus, and ridere route, with deeper-origin uncertainty; no source text is copied.
+review_state: source_detail_required
+reviewer: L-5 Source Custody Reviewer pending
+promotion_allowed: false
+blocks:
+  - generated bridge should model risibilis rather than risum
+  - no-good-PIE-etymology uncertainty must be retained
+

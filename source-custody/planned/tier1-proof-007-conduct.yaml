@@ -1,0 +1,17 @@
+decision_id: LEXIS-SRCDEC-014-tier1-proof-conduct
+status: candidate_review
+source_family: English etymology pointer for Latin-to-English candidate conduct
+related_slice_packages:
+  - LEXIS-SLICE-001-SOURCE
+pointer: https://www.etymonline.com/word/conduct
+candidate_source_name: Etymonline and Merriam-Webster entries for conduct
+rights_posture: copyrighted_reference_pointer_only
+redistribution_posture: pointer_only_planned
+citation_note: Proof pointers support Medieval Latin conductus and Latin conducere/ducere route; no source text is copied.
+review_state: source_detail_required
+reviewer: L-5 Source Custody Reviewer pending
+promotion_allowed: false
+blocks:
+  - Middle English and Anglo-French forms need modeled replacement
+  - per-chain fixture has not been corrected or accepted
+

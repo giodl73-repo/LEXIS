@@ -1,0 +1,17 @@
+decision_id: LEXIS-SRCDEC-047-tier2-proof-tenant
+status: candidate_review
+source_family: English etymology pointer for Latin-to-English candidate tenant
+related_slice_packages:
+  - LEXIS-SLICE-001-SOURCE
+pointer: https://www.merriam-webster.com/dictionary/tenant
+candidate_source_name: Merriam-Webster and Wiktionary entries for tenant
+rights_posture: copyrighted_reference_pointer_only
+redistribution_posture: pointer_only_planned
+citation_note: Proof pointers support Middle English/Anglo-French/French tenant from tenir, ultimately Latin tenere; no source text is copied.
+review_state: source_detail_required
+reviewer: L-5 Source Custody Reviewer pending
+promotion_allowed: false
+blocks:
+  - generated bridge should model tenant or tenens present-participle path rather than tentum
+  - per-chain fixture has not been corrected or accepted
+

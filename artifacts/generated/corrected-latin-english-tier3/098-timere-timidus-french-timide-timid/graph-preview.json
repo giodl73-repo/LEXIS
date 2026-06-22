@@ -1,0 +1,173 @@
+{
+  "slice_id": "LEXIS-GEN-CORR-098",
+  "nodes": [
+    {
+      "id": "lang-french",
+      "label": "French",
+      "record_class": "Language",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "lang-latin",
+      "label": "Latin",
+      "record_class": "Language",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "lang-modern-english",
+      "label": "Modern English",
+      "record_class": "Language",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "lang-unspecified-intermediate",
+      "label": "Unspecified intermediate",
+      "record_class": "Language",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-latin-timere",
+      "label": "timere",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-unspecified-intermediate-timidus",
+      "label": "timidus",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-french-timide",
+      "label": "timide",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-modern-english-timid",
+      "label": "timid",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "sense-wf-modern-english-timid",
+      "label": "Corrected candidate target meaning; source-detail review required.",
+      "record_class": "MeaningSense",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-wf-latin-timere-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-latin-timere",
+      "target_id": "wf-latin-timere",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-108-tier3-proof-timid"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-unspecified-intermediate-timidus-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-unspecified-intermediate-timidus",
+      "target_id": "wf-unspecified-intermediate-timidus",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-108-tier3-proof-timid"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-french-timide-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-french-timide",
+      "target_id": "wf-french-timide",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-108-tier3-proof-timid"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-modern-english-timid-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-modern-english-timid",
+      "target_id": "wf-modern-english-timid",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-108-tier3-proof-timid"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-modern-english-timid-meaning",
+      "edge_kind": "meaning_shift_to",
+      "source_id": "wf-modern-english-timid",
+      "target_id": "sense-wf-modern-english-timid",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-108-tier3-proof-timid"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-unspecified-intermediate-timidus-borrowed-from-wf-latin-timere",
+      "edge_kind": "borrowed_from",
+      "source_id": "wf-unspecified-intermediate-timidus",
+      "target_id": "wf-latin-timere",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-108-tier3-proof-timid"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-french-timide-borrowed-from-wf-unspecified-intermediate-timidus",
+      "edge_kind": "borrowed_from",
+      "source_id": "wf-french-timide",
+      "target_id": "wf-unspecified-intermediate-timidus",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-108-tier3-proof-timid"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-modern-english-timid-borrowed-from-wf-french-timide",
+      "edge_kind": "borrowed_from",
+      "source_id": "wf-modern-english-timid",
+      "target_id": "wf-french-timide",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-108-tier3-proof-timid"
+      ],
+      "review_state": "candidate_review"
+    }
+  ],
+  "source_posture_summary": [
+    "LEXIS-SRCDEC-108-tier3-proof-timid:candidate_review"
+  ],
+  "graph_engine_posture": "local-only",
+  "graph_output_posture": "preview_only_not_promoted",
+  "validation_error_count": 13
+}

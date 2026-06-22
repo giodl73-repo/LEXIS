@@ -1,0 +1,212 @@
+fixture_id: LEXIS-GEN-CAND-051-clamare-claim
+status: candidate_review
+scope:
+  scope_id: candidate-051-clamare-claim-scope
+  question: Candidate generated multi-stage graph-facing chain for Latin clamare, Old French, Middle English, and Modern English claim.
+  excluded_claims:
+  - unreviewed generated relationship claims
+  - source text ingestion or redistribution
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+- source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+  may_support_claims: false
+deferred_records: []
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers: []
+nodes:
+  languages:
+  - id: lang-latin
+    label: Latin
+    kind: language
+    source_posture: candidate_review
+  - id: lang-middle-english
+    label: Middle English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-modern-english
+    label: Modern English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-old-french
+    label: Old French
+    kind: language
+    source_posture: candidate_review
+  roots: []
+  wordforms:
+  - id: wf-latin-clamare
+    label: clamare
+    language_id: lang-latin
+    form: clamare
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-clamare
+  - id: wf-latin-clamatum
+    label: clamatum
+    language_id: lang-latin
+    form: clamatum
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-clamatum
+  - id: wf-old-french-old-french-claim-candidate
+    label: Old French candidate stage for claim
+    language_id: lang-old-french
+    form: old-french-claim-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-old-french-old-french-claim-candidate
+  - id: wf-middle-english-middle-english-claim-candidate
+    label: Middle English candidate stage for claim
+    language_id: lang-middle-english
+    form: middle-english-claim-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-middle-english-middle-english-claim-candidate
+  - id: wf-modern-english-claim
+    label: claim
+    language_id: lang-modern-english
+    form: claim
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-claim
+  meaning_senses:
+  - id: sense-clamare
+    label: calling or crying out
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-latin-clamare
+  - id: sense-claim
+    label: calling or crying out
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-claim
+  script_forms: []
+source_links:
+- id: src-latin-clamare
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-latin-clamatum
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-old-french-old-french-claim-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-middle-english-middle-english-claim-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-modern-english-claim
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+relationship_edges:
+- id: edge-clamare-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-clamare
+  target_id: wf-latin-clamare
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-clamare-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-latin-clamare
+  target_id: sense-clamare
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-clamatum-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-clamatum
+  target_id: wf-latin-clamatum
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-claim-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-old-french-old-french-claim-candidate
+  target_id: wf-old-french-old-french-claim-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-claim-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-middle-english-middle-english-claim-candidate
+  target_id: wf-middle-english-middle-english-claim-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-claim-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-modern-english-claim
+  target_id: wf-modern-english-claim
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-claim-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-modern-english-claim
+  target_id: sense-claim
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-clamatum-descends-from-clamare
+  edge_kind: descends_from
+  source_id: wf-latin-clamatum
+  target_id: wf-latin-clamare
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-claim-candidate-borrowed-from-clamatum
+  edge_kind: borrowed_from
+  source_id: wf-old-french-old-french-claim-candidate
+  target_id: wf-latin-clamatum
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-claim-candidate-borrowed-from-old-french-claim-candidate
+  edge_kind: borrowed_from
+  source_id: wf-middle-english-middle-english-claim-candidate
+  target_id: wf-old-french-old-french-claim-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-claim-descends-from-middle-english-claim-candidate
+  edge_kind: descends_from
+  source_id: wf-modern-english-claim
+  target_id: wf-middle-english-middle-english-claim-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review

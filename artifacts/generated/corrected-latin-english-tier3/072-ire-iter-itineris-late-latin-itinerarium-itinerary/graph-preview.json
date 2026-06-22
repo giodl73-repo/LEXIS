@@ -1,0 +1,187 @@
+{
+  "slice_id": "LEXIS-GEN-CORR-072",
+  "nodes": [
+    {
+      "id": "lang-late-latin",
+      "label": "Late Latin",
+      "record_class": "Language",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "lang-latin",
+      "label": "Latin",
+      "record_class": "Language",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "lang-modern-english",
+      "label": "Modern English",
+      "record_class": "Language",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-latin-ire",
+      "label": "ire",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-latin-iter",
+      "label": "iter",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-latin-itineris",
+      "label": "itineris",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-late-latin-itinerarium",
+      "label": "itinerarium",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-modern-english-itinerary",
+      "label": "itinerary",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "sense-wf-modern-english-itinerary",
+      "label": "Corrected candidate target meaning; source-detail review required.",
+      "record_class": "MeaningSense",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-wf-latin-ire-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-latin-ire",
+      "target_id": "wf-latin-ire",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-097-tier3-proof-itinerary"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-latin-iter-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-latin-iter",
+      "target_id": "wf-latin-iter",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-097-tier3-proof-itinerary"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-latin-itineris-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-latin-itineris",
+      "target_id": "wf-latin-itineris",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-097-tier3-proof-itinerary"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-late-latin-itinerarium-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-late-latin-itinerarium",
+      "target_id": "wf-late-latin-itinerarium",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-097-tier3-proof-itinerary"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-modern-english-itinerary-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-modern-english-itinerary",
+      "target_id": "wf-modern-english-itinerary",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-097-tier3-proof-itinerary"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-modern-english-itinerary-meaning",
+      "edge_kind": "meaning_shift_to",
+      "source_id": "wf-modern-english-itinerary",
+      "target_id": "sense-wf-modern-english-itinerary",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-097-tier3-proof-itinerary"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-latin-iter-descends-from-wf-latin-ire",
+      "edge_kind": "descends_from",
+      "source_id": "wf-latin-iter",
+      "target_id": "wf-latin-ire",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-097-tier3-proof-itinerary"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-late-latin-itinerarium-borrowed-from-wf-latin-iter",
+      "edge_kind": "borrowed_from",
+      "source_id": "wf-late-latin-itinerarium",
+      "target_id": "wf-latin-iter",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-097-tier3-proof-itinerary"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-modern-english-itinerary-borrowed-from-wf-late-latin-itinerarium",
+      "edge_kind": "borrowed_from",
+      "source_id": "wf-modern-english-itinerary",
+      "target_id": "wf-late-latin-itinerarium",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-097-tier3-proof-itinerary"
+      ],
+      "review_state": "candidate_review"
+    }
+  ],
+  "source_posture_summary": [
+    "LEXIS-SRCDEC-097-tier3-proof-itinerary:candidate_review"
+  ],
+  "graph_engine_posture": "local-only",
+  "graph_output_posture": "preview_only_not_promoted",
+  "validation_error_count": 15
+}

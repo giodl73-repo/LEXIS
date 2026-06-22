@@ -1,0 +1,348 @@
+{
+  "slice_id": "LEXIS-FIX-002-golden-scribere-slice",
+  "nodes": [
+    {
+      "id": "lang-lat",
+      "label": "Latin",
+      "record_class": "Language",
+      "source_posture": "accepted_for_slice"
+    },
+    {
+      "id": "lang-en",
+      "label": "English",
+      "record_class": "Language",
+      "source_posture": "accepted_for_slice"
+    },
+    {
+      "id": "wf-lat-scribere",
+      "label": "scribere / scribo",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "settled_for_slice",
+      "source_posture": "accepted_for_slice"
+    },
+    {
+      "id": "wf-lat-scriba",
+      "label": "scriba",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "settled_for_slice",
+      "source_posture": "accepted_for_slice"
+    },
+    {
+      "id": "wf-lat-scriptum",
+      "label": "scriptum",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "settled_for_slice",
+      "source_posture": "accepted_for_slice"
+    },
+    {
+      "id": "wf-lat-inscriptio",
+      "label": "inscriptio / inscribere",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "settled_for_slice",
+      "source_posture": "accepted_for_slice"
+    },
+    {
+      "id": "wf-lat-describere",
+      "label": "describere",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "settled_for_slice",
+      "source_posture": "accepted_for_slice"
+    },
+    {
+      "id": "wf-en-scribe",
+      "label": "scribe",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "settled_for_slice",
+      "source_posture": "accepted_for_slice"
+    },
+    {
+      "id": "wf-en-script",
+      "label": "script",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "settled_for_slice",
+      "source_posture": "accepted_for_slice"
+    },
+    {
+      "id": "wf-en-inscription",
+      "label": "inscription",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "settled_for_slice",
+      "source_posture": "accepted_for_slice"
+    },
+    {
+      "id": "wf-en-describe",
+      "label": "describe",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "settled_for_slice",
+      "source_posture": "accepted_for_slice"
+    },
+    {
+      "id": "sense-writing",
+      "label": "writing / marking with words",
+      "record_class": "MeaningSense",
+      "claim_type": "inference",
+      "uncertainty": "settled_for_slice",
+      "source_posture": "accepted_for_slice"
+    },
+    {
+      "id": "sense-scribe-person",
+      "label": "person who writes",
+      "record_class": "MeaningSense",
+      "claim_type": "inference",
+      "uncertainty": "settled_for_slice",
+      "source_posture": "accepted_for_slice"
+    },
+    {
+      "id": "sense-script-written-text",
+      "label": "written text / writing system context",
+      "record_class": "MeaningSense",
+      "claim_type": "inference",
+      "uncertainty": "settled_for_slice",
+      "source_posture": "accepted_for_slice"
+    },
+    {
+      "id": "sense-inscription-marked-text",
+      "label": "marked or written text on a surface",
+      "record_class": "MeaningSense",
+      "claim_type": "inference",
+      "uncertainty": "settled_for_slice",
+      "source_posture": "accepted_for_slice"
+    },
+    {
+      "id": "sense-describe-account",
+      "label": "written or verbal account",
+      "record_class": "MeaningSense",
+      "claim_type": "inference",
+      "uncertainty": "settled_for_slice",
+      "source_posture": "accepted_for_slice"
+    },
+    {
+      "id": "script-latin-form",
+      "label": "Latin script form posture",
+      "record_class": "ScriptForm",
+      "source_posture": "accepted_for_slice"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-scribere-supported-by-latin-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-lat-scribere",
+      "target_id": "wf-lat-scribere",
+      "claim_type": "direct_evidence",
+      "uncertainty": "settled_for_slice",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-001-latin-lexicographic-reference"
+      ],
+      "review_state": "accepted_for_slice"
+    },
+    {
+      "id": "edge-scribe-supported-by-english-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-en-scribe",
+      "target_id": "wf-en-scribe",
+      "claim_type": "direct_evidence",
+      "uncertainty": "settled_for_slice",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-002-english-etymology-reference"
+      ],
+      "review_state": "accepted_for_slice"
+    },
+    {
+      "id": "edge-script-supported-by-english-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-en-script",
+      "target_id": "wf-en-script",
+      "claim_type": "direct_evidence",
+      "uncertainty": "settled_for_slice",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-002-english-etymology-reference"
+      ],
+      "review_state": "accepted_for_slice"
+    },
+    {
+      "id": "edge-inscription-supported-by-english-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-en-inscription",
+      "target_id": "wf-en-inscription",
+      "claim_type": "direct_evidence",
+      "uncertainty": "settled_for_slice",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-002-english-etymology-reference"
+      ],
+      "review_state": "accepted_for_slice"
+    },
+    {
+      "id": "edge-describe-supported-by-english-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-en-describe",
+      "target_id": "wf-en-describe",
+      "claim_type": "direct_evidence",
+      "uncertainty": "settled_for_slice",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-002-english-etymology-reference"
+      ],
+      "review_state": "accepted_for_slice"
+    },
+    {
+      "id": "edge-scriba-descends-from-scribere",
+      "edge_kind": "descends_from",
+      "source_id": "wf-lat-scriba",
+      "target_id": "wf-lat-scribere",
+      "claim_type": "direct_evidence",
+      "uncertainty": "settled_for_slice",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-001-latin-lexicographic-reference"
+      ],
+      "review_state": "accepted_for_slice"
+    },
+    {
+      "id": "edge-scriptum-descends-from-scribere",
+      "edge_kind": "descends_from",
+      "source_id": "wf-lat-scriptum",
+      "target_id": "wf-lat-scribere",
+      "claim_type": "direct_evidence",
+      "uncertainty": "settled_for_slice",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-001-latin-lexicographic-reference"
+      ],
+      "review_state": "accepted_for_slice"
+    },
+    {
+      "id": "edge-inscriptio-descends-from-scribere",
+      "edge_kind": "descends_from",
+      "source_id": "wf-lat-inscriptio",
+      "target_id": "wf-lat-scribere",
+      "claim_type": "direct_evidence",
+      "uncertainty": "settled_for_slice",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-001-latin-lexicographic-reference"
+      ],
+      "review_state": "accepted_for_slice"
+    },
+    {
+      "id": "edge-describere-descends-from-scribere",
+      "edge_kind": "descends_from",
+      "source_id": "wf-lat-describere",
+      "target_id": "wf-lat-scribere",
+      "claim_type": "direct_evidence",
+      "uncertainty": "settled_for_slice",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-001-latin-lexicographic-reference"
+      ],
+      "review_state": "accepted_for_slice"
+    },
+    {
+      "id": "edge-scribe-borrowed-from-scriba",
+      "edge_kind": "borrowed_from",
+      "source_id": "wf-en-scribe",
+      "target_id": "wf-lat-scriba",
+      "claim_type": "direct_evidence",
+      "uncertainty": "settled_for_slice",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-002-english-etymology-reference"
+      ],
+      "review_state": "accepted_for_slice"
+    },
+    {
+      "id": "edge-script-borrowed-from-scriptum",
+      "edge_kind": "borrowed_from",
+      "source_id": "wf-en-script",
+      "target_id": "wf-lat-scriptum",
+      "claim_type": "direct_evidence",
+      "uncertainty": "settled_for_slice",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-002-english-etymology-reference"
+      ],
+      "review_state": "accepted_for_slice"
+    },
+    {
+      "id": "edge-inscription-borrowed-from-inscriptio",
+      "edge_kind": "borrowed_from",
+      "source_id": "wf-en-inscription",
+      "target_id": "wf-lat-inscriptio",
+      "claim_type": "direct_evidence",
+      "uncertainty": "settled_for_slice",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-002-english-etymology-reference"
+      ],
+      "review_state": "accepted_for_slice"
+    },
+    {
+      "id": "edge-describe-borrowed-from-describere",
+      "edge_kind": "borrowed_from",
+      "source_id": "wf-en-describe",
+      "target_id": "wf-lat-describere",
+      "claim_type": "direct_evidence",
+      "uncertainty": "settled_for_slice",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-002-english-etymology-reference"
+      ],
+      "review_state": "accepted_for_slice"
+    },
+    {
+      "id": "edge-scribe-meaning-writing-role",
+      "edge_kind": "meaning_shift_to",
+      "source_id": "wf-en-scribe",
+      "target_id": "sense-scribe-person",
+      "claim_type": "inference",
+      "uncertainty": "settled_for_slice",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-002-english-etymology-reference"
+      ],
+      "review_state": "accepted_for_slice"
+    },
+    {
+      "id": "edge-script-meaning-written-text",
+      "edge_kind": "meaning_shift_to",
+      "source_id": "wf-en-script",
+      "target_id": "sense-script-written-text",
+      "claim_type": "inference",
+      "uncertainty": "settled_for_slice",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-002-english-etymology-reference"
+      ],
+      "review_state": "accepted_for_slice"
+    },
+    {
+      "id": "edge-inscription-meaning-marked-text",
+      "edge_kind": "meaning_shift_to",
+      "source_id": "wf-en-inscription",
+      "target_id": "sense-inscription-marked-text",
+      "claim_type": "inference",
+      "uncertainty": "settled_for_slice",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-002-english-etymology-reference"
+      ],
+      "review_state": "accepted_for_slice"
+    },
+    {
+      "id": "edge-describe-meaning-account",
+      "edge_kind": "meaning_shift_to",
+      "source_id": "wf-en-describe",
+      "target_id": "sense-describe-account",
+      "claim_type": "inference",
+      "uncertainty": "settled_for_slice",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-002-english-etymology-reference"
+      ],
+      "review_state": "accepted_for_slice"
+    }
+  ],
+  "source_posture_summary": [
+    "LEXIS-SRCDEC-001-latin-lexicographic-reference:accepted_for_slice",
+    "LEXIS-SRCDEC-002-english-etymology-reference:accepted_for_slice"
+  ],
+  "graph_engine_posture": "local-only",
+  "graph_output_posture": "validated",
+  "validation_error_count": 0
+}

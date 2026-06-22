@@ -1,0 +1,212 @@
+fixture_id: LEXIS-GEN-CAND-025-spectare-spectator
+status: candidate_review
+scope:
+  scope_id: candidate-025-spectare-spectator-scope
+  question: Candidate generated multi-stage graph-facing chain for Latin spectare, Old French, Middle English, and Modern English spectator.
+  excluded_claims:
+  - unreviewed generated relationship claims
+  - source text ingestion or redistribution
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+- source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+  may_support_claims: false
+deferred_records: []
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers: []
+nodes:
+  languages:
+  - id: lang-latin
+    label: Latin
+    kind: language
+    source_posture: candidate_review
+  - id: lang-middle-english
+    label: Middle English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-modern-english
+    label: Modern English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-old-french
+    label: Old French
+    kind: language
+    source_posture: candidate_review
+  roots: []
+  wordforms:
+  - id: wf-latin-spectare
+    label: spectare
+    language_id: lang-latin
+    form: spectare
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-spectare
+  - id: wf-latin-spectator
+    label: spectator
+    language_id: lang-latin
+    form: spectator
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-spectator
+  - id: wf-old-french-old-french-spectator-candidate
+    label: Old French candidate stage for spectator
+    language_id: lang-old-french
+    form: old-french-spectator-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-old-french-old-french-spectator-candidate
+  - id: wf-middle-english-middle-english-spectator-candidate
+    label: Middle English candidate stage for spectator
+    language_id: lang-middle-english
+    form: middle-english-spectator-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-middle-english-middle-english-spectator-candidate
+  - id: wf-modern-english-spectator
+    label: spectator
+    language_id: lang-modern-english
+    form: spectator
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-spectator
+  meaning_senses:
+  - id: sense-spectare
+    label: looking or observing
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-latin-spectare
+  - id: sense-spectator
+    label: looking or observing
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-spectator
+  script_forms: []
+source_links:
+- id: src-latin-spectare
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-latin-spectator
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-old-french-old-french-spectator-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-middle-english-middle-english-spectator-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-modern-english-spectator
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+relationship_edges:
+- id: edge-spectare-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-spectare
+  target_id: wf-latin-spectare
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-spectare-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-latin-spectare
+  target_id: sense-spectare
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-spectator-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-modern-english-spectator
+  target_id: wf-modern-english-spectator
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-spectator-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-old-french-old-french-spectator-candidate
+  target_id: wf-old-french-old-french-spectator-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-spectator-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-middle-english-middle-english-spectator-candidate
+  target_id: wf-middle-english-middle-english-spectator-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-spectator-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-modern-english-spectator
+  target_id: wf-modern-english-spectator
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-spectator-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-modern-english-spectator
+  target_id: sense-spectator
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-spectator-descends-from-spectare
+  edge_kind: descends_from
+  source_id: wf-modern-english-spectator
+  target_id: wf-latin-spectare
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-spectator-candidate-borrowed-from-spectator
+  edge_kind: borrowed_from
+  source_id: wf-old-french-old-french-spectator-candidate
+  target_id: wf-modern-english-spectator
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-spectator-candidate-borrowed-from-old-french-spectator-candidate
+  edge_kind: borrowed_from
+  source_id: wf-middle-english-middle-english-spectator-candidate
+  target_id: wf-old-french-old-french-spectator-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-spectator-descends-from-middle-english-spectator-candidate
+  edge_kind: descends_from
+  source_id: wf-modern-english-spectator
+  target_id: wf-middle-english-middle-english-spectator-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review

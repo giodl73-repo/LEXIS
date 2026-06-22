@@ -1,0 +1,22 @@
+decision_id: LEXIS-SRCDEC-008-meta-etymology-reference
+status: planned_blocked
+source_family: Glyph graph write contrastive etymology reference
+related_slice_packages:
+  - LEXIS-SLICE-005-SOURCE
+related_research:
+  - LEXIS-PAPER-011
+candidate_use:
+  - pointer metadata for glyph graph write contrast and rejected relationship claims
+pointer: none_selected
+rights_posture: unknown_until_source_review
+redistribution_posture: pointer_only_planned
+citation_note: no real source selected; meta-slice contrast claims remain candidate-only
+date_posture: unavailable_until_source_review
+language_script_posture: English and Greek etymology pointer family planned
+review_state: proposed_blocked
+reviewer: L-5 Source Custody Reviewer and L-2 Etymology Reviewer required
+promotion_allowed: false
+blocks:
+  - glyph graph write fixture
+  - rejected relationship graph output
+  - public identity chronicle output

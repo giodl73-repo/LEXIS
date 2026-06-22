@@ -1,0 +1,134 @@
+fixture_id: LEXIS-GEN-CORR-025
+status: candidate_review
+scope:
+  scope_id: corrected-candidate-025-scope
+  question: Corrected graph-facing candidate route for generated Latin-English chain 025.
+  excluded_claims:
+  - unreviewed generated relationship claims
+  - source text ingestion or redistribution
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+- source_ref: LEXIS-SRCDEC-095-tier3-proof-spectator
+  contract_state: candidate_review
+  may_support_claims: false
+deferred_records: []
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers: []
+nodes:
+  languages:
+  - id: lang-latin
+    label: Latin
+    kind: language
+    source_posture: candidate_review
+  - id: lang-modern-english
+    label: Modern English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-unspecified-intermediate
+    label: Unspecified intermediate
+    kind: language
+    source_posture: candidate_review
+  roots: []
+  wordforms:
+  - id: wf-latin-spectare
+    label: spectare
+    language_id: lang-latin
+    form: spectare
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-spectare
+  - id: wf-unspecified-intermediate-spectator
+    label: spectator
+    language_id: lang-unspecified-intermediate
+    form: spectator
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-unspecified-intermediate-spectator
+  - id: wf-modern-english-spectator
+    label: spectator
+    language_id: lang-modern-english
+    form: spectator
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-spectator
+  meaning_senses:
+  - id: sense-wf-modern-english-spectator
+    label: Corrected candidate target meaning; source-detail review required.
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-spectator
+  script_forms: []
+source_links:
+- id: src-latin-spectare
+  source_ref: LEXIS-SRCDEC-095-tier3-proof-spectator
+  contract_state: candidate_review
+- id: src-unspecified-intermediate-spectator
+  source_ref: LEXIS-SRCDEC-095-tier3-proof-spectator
+  contract_state: candidate_review
+- id: src-modern-english-spectator
+  source_ref: LEXIS-SRCDEC-095-tier3-proof-spectator
+  contract_state: candidate_review
+relationship_edges:
+- id: edge-wf-latin-spectare-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-spectare
+  target_id: wf-latin-spectare
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-095-tier3-proof-spectator
+  review_state: candidate_review
+- id: edge-wf-unspecified-intermediate-spectator-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-unspecified-intermediate-spectator
+  target_id: wf-unspecified-intermediate-spectator
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-095-tier3-proof-spectator
+  review_state: candidate_review
+- id: edge-wf-modern-english-spectator-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-modern-english-spectator
+  target_id: wf-modern-english-spectator
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-095-tier3-proof-spectator
+  review_state: candidate_review
+- id: edge-wf-modern-english-spectator-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-modern-english-spectator
+  target_id: sense-wf-modern-english-spectator
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-095-tier3-proof-spectator
+  review_state: candidate_review
+- id: edge-wf-unspecified-intermediate-spectator-borrowed-from-wf-latin-spectare
+  edge_kind: borrowed_from
+  source_id: wf-unspecified-intermediate-spectator
+  target_id: wf-latin-spectare
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-095-tier3-proof-spectator
+  review_state: candidate_review
+- id: edge-wf-modern-english-spectator-borrowed-from-wf-unspecified-intermediate-spectator
+  edge_kind: borrowed_from
+  source_id: wf-modern-english-spectator
+  target_id: wf-unspecified-intermediate-spectator
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-095-tier3-proof-spectator
+  review_state: candidate_review

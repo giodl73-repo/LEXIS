@@ -1,0 +1,17 @@
+decision_id: LEXIS-SRCDEC-070-tier2-proof-false
+status: candidate_review
+source_family: English etymology pointer for Latin-to-English candidate false
+related_slice_packages:
+  - LEXIS-SLICE-001-SOURCE
+pointer: https://www.etymonline.com/word/false
+candidate_source_name: Etymonline entry for false
+rights_posture: copyrighted_reference_pointer_only
+redistribution_posture: pointer_only_planned
+citation_note: Proof pointer supports Old French fals/faus, Latin falsus, and fallere route, with uncertain deeper origin; no source text is copied.
+review_state: source_detail_required
+reviewer: L-5 Source Custody Reviewer pending
+promotion_allowed: false
+blocks:
+  - uncertain deeper root posture must be retained
+  - per-chain fixture has not been corrected or accepted
+

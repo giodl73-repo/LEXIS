@@ -1,0 +1,212 @@
+fixture_id: LEXIS-GEN-CAND-070-gradi-progress
+status: candidate_review
+scope:
+  scope_id: candidate-070-gradi-progress-scope
+  question: Candidate generated multi-stage graph-facing chain for Latin gradi, Old French, Middle English, and Modern English progress.
+  excluded_claims:
+  - unreviewed generated relationship claims
+  - source text ingestion or redistribution
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+- source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+  may_support_claims: false
+deferred_records: []
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers: []
+nodes:
+  languages:
+  - id: lang-latin
+    label: Latin
+    kind: language
+    source_posture: candidate_review
+  - id: lang-middle-english
+    label: Middle English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-modern-english
+    label: Modern English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-old-french
+    label: Old French
+    kind: language
+    source_posture: candidate_review
+  roots: []
+  wordforms:
+  - id: wf-latin-gradi
+    label: gradi
+    language_id: lang-latin
+    form: gradi
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-gradi
+  - id: wf-latin-gressum
+    label: gressum
+    language_id: lang-latin
+    form: gressum
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-gressum
+  - id: wf-old-french-old-french-progress-candidate
+    label: Old French candidate stage for progress
+    language_id: lang-old-french
+    form: old-french-progress-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-old-french-old-french-progress-candidate
+  - id: wf-middle-english-middle-english-progress-candidate
+    label: Middle English candidate stage for progress
+    language_id: lang-middle-english
+    form: middle-english-progress-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-middle-english-middle-english-progress-candidate
+  - id: wf-modern-english-progress
+    label: progress
+    language_id: lang-modern-english
+    form: progress
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-progress
+  meaning_senses:
+  - id: sense-gradi
+    label: stepping or going
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-latin-gradi
+  - id: sense-progress
+    label: stepping or going
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-progress
+  script_forms: []
+source_links:
+- id: src-latin-gradi
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-latin-gressum
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-old-french-old-french-progress-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-middle-english-middle-english-progress-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-modern-english-progress
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+relationship_edges:
+- id: edge-gradi-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-gradi
+  target_id: wf-latin-gradi
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-gradi-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-latin-gradi
+  target_id: sense-gradi
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-gressum-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-gressum
+  target_id: wf-latin-gressum
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-progress-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-old-french-old-french-progress-candidate
+  target_id: wf-old-french-old-french-progress-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-progress-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-middle-english-middle-english-progress-candidate
+  target_id: wf-middle-english-middle-english-progress-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-progress-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-modern-english-progress
+  target_id: wf-modern-english-progress
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-progress-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-modern-english-progress
+  target_id: sense-progress
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-gressum-descends-from-gradi
+  edge_kind: descends_from
+  source_id: wf-latin-gressum
+  target_id: wf-latin-gradi
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-progress-candidate-borrowed-from-gressum
+  edge_kind: borrowed_from
+  source_id: wf-old-french-old-french-progress-candidate
+  target_id: wf-latin-gressum
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-progress-candidate-borrowed-from-old-french-progress-candidate
+  edge_kind: borrowed_from
+  source_id: wf-middle-english-middle-english-progress-candidate
+  target_id: wf-old-french-old-french-progress-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-progress-descends-from-middle-english-progress-candidate
+  edge_kind: descends_from
+  source_id: wf-modern-english-progress
+  target_id: wf-middle-english-middle-english-progress-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review

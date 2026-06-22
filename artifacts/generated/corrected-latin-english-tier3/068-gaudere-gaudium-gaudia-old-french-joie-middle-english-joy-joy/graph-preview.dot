@@ -1,0 +1,25 @@
+digraph lexis_slice {
+  graph [label="LEXIS-GEN-CORR-068\npreview_only_not_promoted\nvalidation errors: 18"];
+  "lang-latin" [label="Latin\nLanguage\ncandidate_review"];
+  "lang-middle-english" [label="Middle English\nLanguage\ncandidate_review"];
+  "lang-modern-english" [label="Modern English\nLanguage\ncandidate_review"];
+  "lang-old-french" [label="Old French\nLanguage\ncandidate_review"];
+  "wf-latin-gaudere" [label="gaudere\nWordform\ncandidate_review"];
+  "wf-latin-gaudium" [label="gaudium\nWordform\ncandidate_review"];
+  "wf-latin-gaudia" [label="gaudia\nWordform\ncandidate_review"];
+  "wf-old-french-joie" [label="joie\nWordform\ncandidate_review"];
+  "wf-middle-english-joy" [label="joy\nWordform\ncandidate_review"];
+  "wf-modern-english-joy" [label="joy\nWordform\ncandidate_review"];
+  "sense-wf-modern-english-joy" [label="Corrected candidate target meaning; source-detail review required.\nMeaningSense\ncandidate_review"];
+  "src-latin-gaudere" -> "wf-latin-gaudere" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "src-latin-gaudium" -> "wf-latin-gaudium" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "src-latin-gaudia" -> "wf-latin-gaudia" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "src-old-french-joie" -> "wf-old-french-joie" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "src-middle-english-joy" -> "wf-middle-english-joy" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "src-modern-english-joy" -> "wf-modern-english-joy" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "wf-modern-english-joy" -> "sense-wf-modern-english-joy" [label="meaning_shift_to\ninference\nsource_limited"];
+  "wf-latin-gaudium" -> "wf-latin-gaudere" [label="descends_from\ninference\nsource_limited"];
+  "wf-old-french-joie" -> "wf-latin-gaudium" [label="borrowed_from\ninference\nsource_limited"];
+  "wf-middle-english-joy" -> "wf-old-french-joie" [label="borrowed_from\ninference\nsource_limited"];
+  "wf-modern-english-joy" -> "wf-middle-english-joy" [label="borrowed_from\ninference\nsource_limited"];
+}

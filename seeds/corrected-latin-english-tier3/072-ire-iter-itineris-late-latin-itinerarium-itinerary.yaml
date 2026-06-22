@@ -1,0 +1,65 @@
+slice_id: corrected-candidate-072
+fixture_id: LEXIS-GEN-CORR-072
+status: candidate_review
+question: Corrected graph-facing candidate route for generated Latin-English chain 072.
+source_state: candidate_review
+sources:
+- id: LEXIS-SRCDEC-097-tier3-proof-itinerary
+  state: candidate_review
+  may_support_claims: false
+forms:
+- form: ire
+  language: Latin
+  source: LEXIS-SRCDEC-097-tier3-proof-itinerary
+  id: wf-latin-ire
+  label: null
+  meaning: null
+- form: iter
+  language: Latin
+  source: LEXIS-SRCDEC-097-tier3-proof-itinerary
+  id: wf-latin-iter
+  label: null
+  meaning: null
+- form: itineris
+  language: Latin
+  source: LEXIS-SRCDEC-097-tier3-proof-itinerary
+  id: wf-latin-itineris
+  label: null
+  meaning: null
+- form: itinerarium
+  language: Late Latin
+  source: LEXIS-SRCDEC-097-tier3-proof-itinerary
+  id: wf-late-latin-itinerarium
+  label: null
+  meaning: null
+- form: itinerary
+  language: Modern English
+  source: LEXIS-SRCDEC-097-tier3-proof-itinerary
+  id: wf-modern-english-itinerary
+  label: null
+  meaning: Corrected candidate target meaning; source-detail review required.
+relationships:
+- kind: descends_from
+  source: wf-latin-iter
+  target: wf-latin-ire
+  claim_type: inference
+  uncertainty: source_limited
+  support:
+  - LEXIS-SRCDEC-097-tier3-proof-itinerary
+  review_state: candidate_review
+- kind: borrowed_from
+  source: wf-late-latin-itinerarium
+  target: wf-latin-iter
+  claim_type: inference
+  uncertainty: source_limited
+  support:
+  - LEXIS-SRCDEC-097-tier3-proof-itinerary
+  review_state: candidate_review
+- kind: borrowed_from
+  source: wf-modern-english-itinerary
+  target: wf-late-latin-itinerarium
+  claim_type: inference
+  uncertainty: source_limited
+  support:
+  - LEXIS-SRCDEC-097-tier3-proof-itinerary
+  review_state: candidate_review

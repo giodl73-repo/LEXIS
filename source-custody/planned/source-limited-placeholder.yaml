@@ -1,0 +1,23 @@
+decision_id: LEXIS-SRCDEC-005-source-limited-placeholder
+status: planned_blocked
+source_family: Unknown restricted or source-limited placeholder
+related_slice_packages:
+  - LEXIS-SLICE-001-NEGATIVES
+related_research:
+  - LEXIS-PAPER-001
+  - LEXIS-PAPER-007
+candidate_use:
+  - negative validation of source-limited claims and overclaim blocking
+pointer: none_selected
+rights_posture: unknown_or_restricted_placeholder
+redistribution_posture: blocked
+citation_note: no real source selected
+date_posture: unavailable_until_source_review
+language_script_posture: intentionally source-limited test posture planned
+review_state: proposed_blocked
+reviewer: L-5 Source Custody Reviewer required
+promotion_allowed: false
+blocks:
+  - public chronicle claim
+  - publisher handoff
+  - source-backed graph claim

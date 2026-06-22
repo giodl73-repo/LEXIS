@@ -1,0 +1,17 @@
+decision_id: LEXIS-SRCDEC-044-tier2-proof-rector
+status: candidate_review
+source_family: English etymology pointer for Latin-to-English candidate rector
+related_slice_packages:
+  - LEXIS-SLICE-001-SOURCE
+pointer: https://www.etymonline.com/word/rector
+candidate_source_name: Etymonline entry for rector
+rights_posture: copyrighted_reference_pointer_only
+redistribution_posture: pointer_only_planned
+citation_note: Proof pointer supports Latin rector from rect- stem of regere route; no source text is copied.
+review_state: source_detail_required
+reviewer: L-5 Source Custody Reviewer pending
+promotion_allowed: false
+blocks:
+  - generated bridge should model rector agent noun route rather than only rectum
+  - per-chain fixture has not been corrected or accepted
+

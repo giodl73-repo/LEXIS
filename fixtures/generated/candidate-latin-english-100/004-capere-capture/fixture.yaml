@@ -1,0 +1,212 @@
+fixture_id: LEXIS-GEN-CAND-004-capere-capture
+status: candidate_review
+scope:
+  scope_id: candidate-004-capere-capture-scope
+  question: Candidate generated multi-stage graph-facing chain for Latin capere, Old French, Middle English, and Modern English capture.
+  excluded_claims:
+  - unreviewed generated relationship claims
+  - source text ingestion or redistribution
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+- source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+  may_support_claims: false
+deferred_records: []
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers: []
+nodes:
+  languages:
+  - id: lang-latin
+    label: Latin
+    kind: language
+    source_posture: candidate_review
+  - id: lang-middle-english
+    label: Middle English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-modern-english
+    label: Modern English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-old-french
+    label: Old French
+    kind: language
+    source_posture: candidate_review
+  roots: []
+  wordforms:
+  - id: wf-latin-capere
+    label: capere
+    language_id: lang-latin
+    form: capere
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-capere
+  - id: wf-latin-captum
+    label: captum
+    language_id: lang-latin
+    form: captum
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-captum
+  - id: wf-old-french-old-french-capture-candidate
+    label: Old French candidate stage for capture
+    language_id: lang-old-french
+    form: old-french-capture-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-old-french-old-french-capture-candidate
+  - id: wf-middle-english-middle-english-capture-candidate
+    label: Middle English candidate stage for capture
+    language_id: lang-middle-english
+    form: middle-english-capture-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-middle-english-middle-english-capture-candidate
+  - id: wf-modern-english-capture
+    label: capture
+    language_id: lang-modern-english
+    form: capture
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-capture
+  meaning_senses:
+  - id: sense-capere
+    label: taking or seizing
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-latin-capere
+  - id: sense-capture
+    label: taking or seizing
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-capture
+  script_forms: []
+source_links:
+- id: src-latin-capere
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-latin-captum
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-old-french-old-french-capture-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-middle-english-middle-english-capture-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-modern-english-capture
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+relationship_edges:
+- id: edge-capere-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-capere
+  target_id: wf-latin-capere
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-capere-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-latin-capere
+  target_id: sense-capere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-captum-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-captum
+  target_id: wf-latin-captum
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-capture-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-old-french-old-french-capture-candidate
+  target_id: wf-old-french-old-french-capture-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-capture-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-middle-english-middle-english-capture-candidate
+  target_id: wf-middle-english-middle-english-capture-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-capture-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-modern-english-capture
+  target_id: wf-modern-english-capture
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-capture-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-modern-english-capture
+  target_id: sense-capture
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-captum-descends-from-capere
+  edge_kind: descends_from
+  source_id: wf-latin-captum
+  target_id: wf-latin-capere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-capture-candidate-borrowed-from-captum
+  edge_kind: borrowed_from
+  source_id: wf-old-french-old-french-capture-candidate
+  target_id: wf-latin-captum
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-capture-candidate-borrowed-from-old-french-capture-candidate
+  edge_kind: borrowed_from
+  source_id: wf-middle-english-middle-english-capture-candidate
+  target_id: wf-old-french-old-french-capture-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-capture-descends-from-middle-english-capture-candidate
+  edge_kind: descends_from
+  source_id: wf-modern-english-capture
+  target_id: wf-middle-english-middle-english-capture-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review

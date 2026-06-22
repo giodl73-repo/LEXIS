@@ -1,0 +1,35 @@
+fixture_id: LEXIS-FIX-001-source-pointer-scribere
+status: fixture_shape_drafted_blocked
+fixture_class: source-pointer fixture
+owning_work_package: LEXIS-WP-003
+linked_scenarios:
+  - LEXIS-SC-001-word-root-slice
+  - LEXIS-SC-003-source-limited-claim
+linked_slice_packages:
+  - LEXIS-SLICE-001-SOURCE
+linked_research:
+  - LEXIS-PAPER-001
+  - LEXIS-PAPER-008
+linked_source_custody_decision:
+  - LEXIS-SRCDEC-001-latin-lexicographic-reference
+  - LEXIS-SRCDEC-002-english-etymology-reference
+linked_scope: LEXIS-SLICE-001-SCOPE
+fixture_shape: fixture.yaml
+expected_diagnostics_file: expected-diagnostics.yaml
+expected_result: invalid_candidate_sources_cannot_support_claims
+expected_diagnostics:
+  - source_custody
+records_and_edges_included: source_records_only_no_language_claims
+source_text_redistribution_posture: pointer_only_planned
+graph_impact: none
+chronicle_impact: source_limit_note_required_later
+review_state: fixture_shape_drafted_not_executable
+promotion_blockers:
+  - candidate source pointers are not accepted source family decisions
+  - no validation command
+  - fixture schema is draft-only
+  - no accepted source-record contract implementation
+closeout_expectation:
+  - future validator should parse the fixture shape
+  - future validator should emit source_custody diagnostics for candidate-only records if any claim-support use is attempted
+  - future validator should confirm no source text is stored

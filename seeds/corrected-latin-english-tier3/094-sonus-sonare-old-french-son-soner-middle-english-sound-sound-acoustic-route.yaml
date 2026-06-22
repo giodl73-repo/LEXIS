@@ -1,0 +1,71 @@
+slice_id: corrected-candidate-094
+fixture_id: LEXIS-GEN-CORR-094
+status: candidate_review
+question: Corrected graph-facing candidate route for generated Latin-English chain 094.
+source_state: candidate_review
+sources:
+- id: LEXIS-SRCDEC-106-tier3-proof-sound
+  state: candidate_review
+  may_support_claims: false
+forms:
+- form: sonus
+  language: Latin
+  source: LEXIS-SRCDEC-106-tier3-proof-sound
+  id: wf-latin-sonus
+  label: null
+  meaning: null
+- form: sonare
+  language: Latin
+  source: LEXIS-SRCDEC-106-tier3-proof-sound
+  id: wf-latin-sonare
+  label: null
+  meaning: null
+- form: son
+  language: Old French
+  source: LEXIS-SRCDEC-106-tier3-proof-sound
+  id: wf-old-french-son
+  label: null
+  meaning: null
+- form: soner
+  language: Old French
+  source: LEXIS-SRCDEC-106-tier3-proof-sound
+  id: wf-old-french-soner
+  label: null
+  meaning: null
+- form: sound
+  language: Middle English
+  source: LEXIS-SRCDEC-106-tier3-proof-sound
+  id: wf-middle-english-sound
+  label: null
+  meaning: null
+- form: sound
+  language: Modern English
+  source: LEXIS-SRCDEC-106-tier3-proof-sound
+  id: wf-modern-english-sound
+  label: null
+  meaning: Corrected candidate target meaning; source-detail review required.
+relationships:
+- kind: borrowed_from
+  source: wf-old-french-son
+  target: wf-latin-sonus
+  claim_type: inference
+  uncertainty: source_limited
+  support:
+  - LEXIS-SRCDEC-106-tier3-proof-sound
+  review_state: candidate_review
+- kind: borrowed_from
+  source: wf-middle-english-sound
+  target: wf-old-french-son
+  claim_type: inference
+  uncertainty: source_limited
+  support:
+  - LEXIS-SRCDEC-106-tier3-proof-sound
+  review_state: candidate_review
+- kind: borrowed_from
+  source: wf-modern-english-sound
+  target: wf-middle-english-sound
+  claim_type: inference
+  uncertainty: source_limited
+  support:
+  - LEXIS-SRCDEC-106-tier3-proof-sound
+  review_state: candidate_review

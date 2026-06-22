@@ -1,0 +1,150 @@
+fixture_id: LEXIS-FIX-007-pie-root-mini-slice
+status: draft_shape_invalid_by_design
+fixture_class: reconstruction fixture
+scope:
+  scope_id: LEXIS-SLICE-003-SCOPE
+  question: Draft graph-facing slice for one reconstructed PIE root candidate and three descendant-form candidates.
+  included_languages:
+    - pie
+    - lat
+    - en
+    - grc
+  included_forms:
+    - root-pie-bher
+    - wf-lat-ferre
+    - wf-en-bear
+    - wf-grc-pherein
+  excluded_claims:
+    - broad Indo-European tree
+    - universal root certainty
+    - complete sound-law explanation
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+  - source_ref: LEXIS-SRCDEC-006-pie-reconstruction-reference
+    contract_state: planned_blocked
+    may_support_claims: false
+deferred_records:
+  - source_ref: LEXIS-SRCDEC-003-general-language-history-reference
+    contract_state: deferred_after_first_slice_scope
+nodes:
+  languages:
+    - id: lang-pie
+      label: Proto-Indo-European candidate context
+      kind: reconstructed_language
+      source_posture: planned_blocked
+    - id: lang-lat
+      label: Latin
+      kind: language
+      source_posture: planned_blocked
+    - id: lang-en
+      label: English
+      kind: language
+      source_posture: planned_blocked
+    - id: lang-grc
+      label: Ancient Greek
+      kind: language
+      source_posture: planned_blocked
+  roots:
+    - id: root-pie-bher
+      label: PIE root candidate *bher-
+      root_text: bher
+      claim_type: reconstruction
+      uncertainty: disputed
+      source_links:
+        - src-pie-root
+  wordforms:
+    - id: wf-lat-ferre
+      label: ferre
+      language_id: lang-lat
+      form: ferre
+      claim_type: direct_evidence
+      uncertainty: source_limited
+      source_links:
+        - src-pie-root
+    - id: wf-en-bear
+      label: bear
+      language_id: lang-en
+      form: bear
+      claim_type: direct_evidence
+      uncertainty: source_limited
+      source_links:
+        - src-pie-root
+    - id: wf-grc-pherein
+      label: pherein
+      language_id: lang-grc
+      form: pherein
+      claim_type: direct_evidence
+      uncertainty: source_limited
+      source_links:
+        - src-pie-root
+  meaning_senses:
+    - id: sense-carry-bear
+      label: carrying or bearing sense candidate
+      gloss: Project summary of carry/bear semantic neighborhood; not copied source text.
+      claim_type: inference
+      uncertainty: source_limited
+      source_links:
+        - src-pie-root
+  script_forms: []
+source_links:
+  - id: src-pie-root
+    source_ref: LEXIS-SRCDEC-006-pie-reconstruction-reference
+    contract_state: planned_blocked
+relationship_edges:
+  - id: edge-pie-root-support
+    edge_kind: supports_claim
+    source_id: src-pie-root
+    target_id: root-pie-bher
+    claim_type: reconstruction
+    uncertainty: disputed
+    supporting_sources:
+      - LEXIS-SRCDEC-006-pie-reconstruction-reference
+    review_state: blocked
+  - id: edge-lat-ferre-cognate-candidate
+    edge_kind: cognate_with
+    source_id: wf-lat-ferre
+    target_id: root-pie-bher
+    claim_type: reconstruction
+    uncertainty: disputed
+    supporting_sources:
+      - LEXIS-SRCDEC-006-pie-reconstruction-reference
+    review_state: blocked
+  - id: edge-en-bear-cognate-candidate
+    edge_kind: cognate_with
+    source_id: wf-en-bear
+    target_id: root-pie-bher
+    claim_type: reconstruction
+    uncertainty: disputed
+    supporting_sources:
+      - LEXIS-SRCDEC-006-pie-reconstruction-reference
+    review_state: blocked
+  - id: edge-grc-pherein-cognate-candidate
+    edge_kind: cognate_with
+    source_id: wf-grc-pherein
+    target_id: root-pie-bher
+    claim_type: reconstruction
+    uncertainty: disputed
+    supporting_sources:
+      - LEXIS-SRCDEC-006-pie-reconstruction-reference
+    review_state: blocked
+  - id: edge-bear-meaning-candidate
+    edge_kind: meaning_shift_to
+    source_id: wf-en-bear
+    target_id: sense-carry-bear
+    claim_type: inference
+    uncertainty: source_limited
+    supporting_sources:
+      - LEXIS-SRCDEC-006-pie-reconstruction-reference
+    review_state: blocked
+language_claims: []
+relationship_claims: []
+graph_outputs:
+  - id: graph-pie-root-draft
+    format: json
+    status: blocked_until_validation_passes
+chronicle_outputs: []
+promotion_blockers:
+  - reconstruction source is planned_blocked, not accepted_for_slice
+  - general language-history source remains deferred
+  - root and cognate claims require etymology review

@@ -1,0 +1,17 @@
+decision_id: LEXIS-SRCDEC-057-tier2-proof-volition
+status: candidate_review
+source_family: English etymology pointer for Latin-to-English candidate volition
+related_slice_packages:
+  - LEXIS-SLICE-001-SOURCE
+pointer: https://www.etymonline.com/word/volition
+candidate_source_name: Etymonline entry for volition
+rights_posture: copyrighted_reference_pointer_only
+redistribution_posture: pointer_only_planned
+citation_note: Proof pointer supports French volition, Medieval Latin volitionem/volitio, and Latin velle/volo route; no source text is copied.
+review_state: source_detail_required
+reviewer: L-5 Source Custody Reviewer pending
+promotion_allowed: false
+blocks:
+  - Medieval Latin bridge posture must be modeled
+  - per-chain fixture has not been corrected or accepted
+

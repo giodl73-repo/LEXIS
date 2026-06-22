@@ -1,0 +1,156 @@
+fixture_id: LEXIS-FIX-008-semitic-root-pattern-slice
+status: draft_shape_invalid_by_design
+fixture_class: root-pattern fixture
+scope:
+  scope_id: LEXIS-SLICE-004-SCOPE
+  question: Draft graph-facing slice for one Semitic root-pattern candidate across selected languages and scripts.
+  included_languages:
+    - ar
+    - he
+    - arc
+  included_forms:
+    - root-sem-ktb
+    - wf-ar-kitab
+    - wf-he-ketav
+    - wf-arc-ktaba
+  excluded_claims:
+    - broad Semitic grammar
+    - full script history
+    - pronunciation equivalence across transliterations
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+  - source_ref: LEXIS-SRCDEC-007-semitic-root-reference
+    contract_state: planned_blocked
+    may_support_claims: false
+nodes:
+  languages:
+    - id: lang-ar
+      label: Arabic
+      kind: language
+      source_posture: planned_blocked
+    - id: lang-he
+      label: Hebrew
+      kind: language
+      source_posture: planned_blocked
+    - id: lang-arc
+      label: Aramaic candidate context
+      kind: language
+      source_posture: planned_blocked
+  roots:
+    - id: root-sem-ktb
+      label: Semitic root candidate K-T-B
+      root_text: K-T-B
+      claim_type: reconstruction
+      uncertainty: source_limited
+      source_links:
+        - src-semitic-root
+  wordforms:
+    - id: wf-ar-kitab
+      label: kitab
+      language_id: lang-ar
+      form: kitab
+      claim_type: direct_evidence
+      uncertainty: source_limited
+      source_links:
+        - src-semitic-root
+    - id: wf-he-ketav
+      label: ketav
+      language_id: lang-he
+      form: ketav
+      claim_type: direct_evidence
+      uncertainty: source_limited
+      source_links:
+        - src-semitic-root
+    - id: wf-arc-ktaba
+      label: ktaba
+      language_id: lang-arc
+      form: ktaba
+      claim_type: direct_evidence
+      uncertainty: source_limited
+      source_links:
+        - src-semitic-root
+  meaning_senses:
+    - id: sense-writing-root-pattern
+      label: writing-associated root-pattern candidate
+      gloss: Project summary of writing-associated Semitic root-pattern sense; not copied source text.
+      claim_type: inference
+      uncertainty: source_limited
+      source_links:
+        - src-semitic-root
+  script_forms:
+    - id: script-arabic-translit
+      label: Arabic transliteration posture
+      script_label: Arabic script
+      form_text: kitab
+      transliteration_posture: transliteration_candidate
+      source_links:
+        - src-semitic-root
+    - id: script-hebrew-translit
+      label: Hebrew transliteration posture
+      script_label: Hebrew script
+      form_text: ketav
+      transliteration_posture: transliteration_candidate
+      source_links:
+        - src-semitic-root
+source_links:
+  - id: src-semitic-root
+    source_ref: LEXIS-SRCDEC-007-semitic-root-reference
+    contract_state: planned_blocked
+relationship_edges:
+  - id: edge-semitic-root-support
+    edge_kind: supports_claim
+    source_id: src-semitic-root
+    target_id: root-sem-ktb
+    claim_type: reconstruction
+    uncertainty: source_limited
+    supporting_sources:
+      - LEXIS-SRCDEC-007-semitic-root-reference
+    review_state: blocked
+  - id: edge-ar-kitab-root-candidate
+    edge_kind: cognate_with
+    source_id: wf-ar-kitab
+    target_id: root-sem-ktb
+    claim_type: inference
+    uncertainty: source_limited
+    supporting_sources:
+      - LEXIS-SRCDEC-007-semitic-root-reference
+    review_state: blocked
+  - id: edge-he-ketav-root-candidate
+    edge_kind: cognate_with
+    source_id: wf-he-ketav
+    target_id: root-sem-ktb
+    claim_type: inference
+    uncertainty: source_limited
+    supporting_sources:
+      - LEXIS-SRCDEC-007-semitic-root-reference
+    review_state: blocked
+  - id: edge-transliteration-not-equivalence
+    edge_kind: disputes_claim
+    source_id: script-arabic-translit
+    target_id: script-hebrew-translit
+    claim_type: rejected_alternative
+    uncertainty: disputed
+    supporting_sources:
+      - LEXIS-SRCDEC-007-semitic-root-reference
+    review_state: blocked
+  - id: edge-root-writing-meaning
+    edge_kind: meaning_shift_to
+    source_id: root-sem-ktb
+    target_id: sense-writing-root-pattern
+    claim_type: inference
+    uncertainty: source_limited
+    supporting_sources:
+      - LEXIS-SRCDEC-007-semitic-root-reference
+    review_state: blocked
+language_claims: []
+relationship_claims: []
+graph_outputs:
+  - id: graph-semitic-root-pattern-draft
+    format: json
+    status: blocked_until_validation_passes
+chronicle_outputs: []
+promotion_blockers:
+  - Semitic root-pattern source is planned_blocked, not accepted_for_slice
+  - transliteration posture requires script systems review
+  - graph output blocked while fixture is invalid

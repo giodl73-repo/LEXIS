@@ -1,0 +1,212 @@
+fixture_id: LEXIS-GEN-CAND-077-lucere-lucid
+status: candidate_review
+scope:
+  scope_id: candidate-077-lucere-lucid-scope
+  question: Candidate generated multi-stage graph-facing chain for Latin lucere, Old French, Middle English, and Modern English lucid.
+  excluded_claims:
+  - unreviewed generated relationship claims
+  - source text ingestion or redistribution
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+- source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+  may_support_claims: false
+deferred_records: []
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers: []
+nodes:
+  languages:
+  - id: lang-latin
+    label: Latin
+    kind: language
+    source_posture: candidate_review
+  - id: lang-middle-english
+    label: Middle English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-modern-english
+    label: Modern English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-old-french
+    label: Old French
+    kind: language
+    source_posture: candidate_review
+  roots: []
+  wordforms:
+  - id: wf-latin-lucere
+    label: lucere
+    language_id: lang-latin
+    form: lucere
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-lucere
+  - id: wf-latin-lucem
+    label: lucem
+    language_id: lang-latin
+    form: lucem
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-lucem
+  - id: wf-old-french-old-french-lucid-candidate
+    label: Old French candidate stage for lucid
+    language_id: lang-old-french
+    form: old-french-lucid-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-old-french-old-french-lucid-candidate
+  - id: wf-middle-english-middle-english-lucid-candidate
+    label: Middle English candidate stage for lucid
+    language_id: lang-middle-english
+    form: middle-english-lucid-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-middle-english-middle-english-lucid-candidate
+  - id: wf-modern-english-lucid
+    label: lucid
+    language_id: lang-modern-english
+    form: lucid
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-lucid
+  meaning_senses:
+  - id: sense-lucere
+    label: shining or being clear
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-latin-lucere
+  - id: sense-lucid
+    label: shining or being clear
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-lucid
+  script_forms: []
+source_links:
+- id: src-latin-lucere
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-latin-lucem
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-old-french-old-french-lucid-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-middle-english-middle-english-lucid-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-modern-english-lucid
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+relationship_edges:
+- id: edge-lucere-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-lucere
+  target_id: wf-latin-lucere
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-lucere-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-latin-lucere
+  target_id: sense-lucere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-lucem-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-lucem
+  target_id: wf-latin-lucem
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-lucid-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-old-french-old-french-lucid-candidate
+  target_id: wf-old-french-old-french-lucid-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-lucid-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-middle-english-middle-english-lucid-candidate
+  target_id: wf-middle-english-middle-english-lucid-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-lucid-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-modern-english-lucid
+  target_id: wf-modern-english-lucid
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-lucid-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-modern-english-lucid
+  target_id: sense-lucid
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-lucem-descends-from-lucere
+  edge_kind: descends_from
+  source_id: wf-latin-lucem
+  target_id: wf-latin-lucere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-lucid-candidate-borrowed-from-lucem
+  edge_kind: borrowed_from
+  source_id: wf-old-french-old-french-lucid-candidate
+  target_id: wf-latin-lucem
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-lucid-candidate-borrowed-from-old-french-lucid-candidate
+  edge_kind: borrowed_from
+  source_id: wf-middle-english-middle-english-lucid-candidate
+  target_id: wf-old-french-old-french-lucid-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-lucid-descends-from-middle-english-lucid-candidate
+  edge_kind: descends_from
+  source_id: wf-modern-english-lucid
+  target_id: wf-middle-english-middle-english-lucid-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review

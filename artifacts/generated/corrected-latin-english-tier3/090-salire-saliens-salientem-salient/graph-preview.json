@@ -1,0 +1,149 @@
+{
+  "slice_id": "LEXIS-GEN-CORR-090",
+  "nodes": [
+    {
+      "id": "lang-latin",
+      "label": "Latin",
+      "record_class": "Language",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "lang-modern-english",
+      "label": "Modern English",
+      "record_class": "Language",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-latin-salire",
+      "label": "salire",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-latin-saliens",
+      "label": "saliens",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-latin-salientem",
+      "label": "salientem",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-modern-english-salient",
+      "label": "salient",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "sense-wf-modern-english-salient",
+      "label": "Corrected candidate target meaning; source-detail review required.",
+      "record_class": "MeaningSense",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-wf-latin-salire-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-latin-salire",
+      "target_id": "wf-latin-salire",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-103-tier3-proof-salient"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-latin-saliens-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-latin-saliens",
+      "target_id": "wf-latin-saliens",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-103-tier3-proof-salient"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-latin-salientem-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-latin-salientem",
+      "target_id": "wf-latin-salientem",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-103-tier3-proof-salient"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-modern-english-salient-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-modern-english-salient",
+      "target_id": "wf-modern-english-salient",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-103-tier3-proof-salient"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-modern-english-salient-meaning",
+      "edge_kind": "meaning_shift_to",
+      "source_id": "wf-modern-english-salient",
+      "target_id": "sense-wf-modern-english-salient",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-103-tier3-proof-salient"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-latin-saliens-descends-from-wf-latin-salire",
+      "edge_kind": "descends_from",
+      "source_id": "wf-latin-saliens",
+      "target_id": "wf-latin-salire",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-103-tier3-proof-salient"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-modern-english-salient-borrowed-from-wf-latin-saliens",
+      "edge_kind": "borrowed_from",
+      "source_id": "wf-modern-english-salient",
+      "target_id": "wf-latin-saliens",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-103-tier3-proof-salient"
+      ],
+      "review_state": "candidate_review"
+    }
+  ],
+  "source_posture_summary": [
+    "LEXIS-SRCDEC-103-tier3-proof-salient:candidate_review"
+  ],
+  "graph_engine_posture": "local-only",
+  "graph_output_posture": "preview_only_not_promoted",
+  "validation_error_count": 12
+}

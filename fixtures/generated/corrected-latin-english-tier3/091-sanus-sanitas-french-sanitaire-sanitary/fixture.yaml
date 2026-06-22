@@ -1,0 +1,167 @@
+fixture_id: LEXIS-GEN-CORR-091
+status: candidate_review
+scope:
+  scope_id: corrected-candidate-091-scope
+  question: Corrected graph-facing candidate route for generated Latin-English chain 091.
+  excluded_claims:
+  - unreviewed generated relationship claims
+  - source text ingestion or redistribution
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+- source_ref: LEXIS-SRCDEC-104-tier3-proof-sanitary
+  contract_state: candidate_review
+  may_support_claims: false
+deferred_records: []
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers: []
+nodes:
+  languages:
+  - id: lang-french
+    label: French
+    kind: language
+    source_posture: candidate_review
+  - id: lang-latin
+    label: Latin
+    kind: language
+    source_posture: candidate_review
+  - id: lang-modern-english
+    label: Modern English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-unspecified-intermediate
+    label: Unspecified intermediate
+    kind: language
+    source_posture: candidate_review
+  roots: []
+  wordforms:
+  - id: wf-latin-sanus
+    label: sanus
+    language_id: lang-latin
+    form: sanus
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-sanus
+  - id: wf-unspecified-intermediate-sanitas
+    label: sanitas
+    language_id: lang-unspecified-intermediate
+    form: sanitas
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-unspecified-intermediate-sanitas
+  - id: wf-french-sanitaire
+    label: sanitaire
+    language_id: lang-french
+    form: sanitaire
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-french-sanitaire
+  - id: wf-modern-english-sanitary
+    label: sanitary
+    language_id: lang-modern-english
+    form: sanitary
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-sanitary
+  meaning_senses:
+  - id: sense-wf-modern-english-sanitary
+    label: Corrected candidate target meaning; source-detail review required.
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-sanitary
+  script_forms: []
+source_links:
+- id: src-latin-sanus
+  source_ref: LEXIS-SRCDEC-104-tier3-proof-sanitary
+  contract_state: candidate_review
+- id: src-unspecified-intermediate-sanitas
+  source_ref: LEXIS-SRCDEC-104-tier3-proof-sanitary
+  contract_state: candidate_review
+- id: src-french-sanitaire
+  source_ref: LEXIS-SRCDEC-104-tier3-proof-sanitary
+  contract_state: candidate_review
+- id: src-modern-english-sanitary
+  source_ref: LEXIS-SRCDEC-104-tier3-proof-sanitary
+  contract_state: candidate_review
+relationship_edges:
+- id: edge-wf-latin-sanus-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-sanus
+  target_id: wf-latin-sanus
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-104-tier3-proof-sanitary
+  review_state: candidate_review
+- id: edge-wf-unspecified-intermediate-sanitas-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-unspecified-intermediate-sanitas
+  target_id: wf-unspecified-intermediate-sanitas
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-104-tier3-proof-sanitary
+  review_state: candidate_review
+- id: edge-wf-french-sanitaire-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-french-sanitaire
+  target_id: wf-french-sanitaire
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-104-tier3-proof-sanitary
+  review_state: candidate_review
+- id: edge-wf-modern-english-sanitary-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-modern-english-sanitary
+  target_id: wf-modern-english-sanitary
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-104-tier3-proof-sanitary
+  review_state: candidate_review
+- id: edge-wf-modern-english-sanitary-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-modern-english-sanitary
+  target_id: sense-wf-modern-english-sanitary
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-104-tier3-proof-sanitary
+  review_state: candidate_review
+- id: edge-wf-unspecified-intermediate-sanitas-borrowed-from-wf-latin-sanus
+  edge_kind: borrowed_from
+  source_id: wf-unspecified-intermediate-sanitas
+  target_id: wf-latin-sanus
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-104-tier3-proof-sanitary
+  review_state: candidate_review
+- id: edge-wf-french-sanitaire-borrowed-from-wf-unspecified-intermediate-sanitas
+  edge_kind: borrowed_from
+  source_id: wf-french-sanitaire
+  target_id: wf-unspecified-intermediate-sanitas
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-104-tier3-proof-sanitary
+  review_state: candidate_review
+- id: edge-wf-modern-english-sanitary-borrowed-from-wf-french-sanitaire
+  edge_kind: borrowed_from
+  source_id: wf-modern-english-sanitary
+  target_id: wf-french-sanitaire
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-104-tier3-proof-sanitary
+  review_state: candidate_review

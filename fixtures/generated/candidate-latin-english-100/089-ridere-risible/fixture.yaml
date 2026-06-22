@@ -1,0 +1,212 @@
+fixture_id: LEXIS-GEN-CAND-089-ridere-risible
+status: candidate_review
+scope:
+  scope_id: candidate-089-ridere-risible-scope
+  question: Candidate generated multi-stage graph-facing chain for Latin ridere, Old French, Middle English, and Modern English risible.
+  excluded_claims:
+  - unreviewed generated relationship claims
+  - source text ingestion or redistribution
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+- source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+  may_support_claims: false
+deferred_records: []
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers: []
+nodes:
+  languages:
+  - id: lang-latin
+    label: Latin
+    kind: language
+    source_posture: candidate_review
+  - id: lang-middle-english
+    label: Middle English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-modern-english
+    label: Modern English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-old-french
+    label: Old French
+    kind: language
+    source_posture: candidate_review
+  roots: []
+  wordforms:
+  - id: wf-latin-ridere
+    label: ridere
+    language_id: lang-latin
+    form: ridere
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-ridere
+  - id: wf-latin-risum
+    label: risum
+    language_id: lang-latin
+    form: risum
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-risum
+  - id: wf-old-french-old-french-risible-candidate
+    label: Old French candidate stage for risible
+    language_id: lang-old-french
+    form: old-french-risible-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-old-french-old-french-risible-candidate
+  - id: wf-middle-english-middle-english-risible-candidate
+    label: Middle English candidate stage for risible
+    language_id: lang-middle-english
+    form: middle-english-risible-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-middle-english-middle-english-risible-candidate
+  - id: wf-modern-english-risible
+    label: risible
+    language_id: lang-modern-english
+    form: risible
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-risible
+  meaning_senses:
+  - id: sense-ridere
+    label: laughing or smiling
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-latin-ridere
+  - id: sense-risible
+    label: laughing or smiling
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-risible
+  script_forms: []
+source_links:
+- id: src-latin-ridere
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-latin-risum
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-old-french-old-french-risible-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-middle-english-middle-english-risible-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-modern-english-risible
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+relationship_edges:
+- id: edge-ridere-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-ridere
+  target_id: wf-latin-ridere
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-ridere-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-latin-ridere
+  target_id: sense-ridere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-risum-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-risum
+  target_id: wf-latin-risum
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-risible-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-old-french-old-french-risible-candidate
+  target_id: wf-old-french-old-french-risible-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-risible-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-middle-english-middle-english-risible-candidate
+  target_id: wf-middle-english-middle-english-risible-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-risible-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-modern-english-risible
+  target_id: wf-modern-english-risible
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-risible-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-modern-english-risible
+  target_id: sense-risible
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-risum-descends-from-ridere
+  edge_kind: descends_from
+  source_id: wf-latin-risum
+  target_id: wf-latin-ridere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-risible-candidate-borrowed-from-risum
+  edge_kind: borrowed_from
+  source_id: wf-old-french-old-french-risible-candidate
+  target_id: wf-latin-risum
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-risible-candidate-borrowed-from-old-french-risible-candidate
+  edge_kind: borrowed_from
+  source_id: wf-middle-english-middle-english-risible-candidate
+  target_id: wf-old-french-old-french-risible-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-risible-descends-from-middle-english-risible-candidate
+  edge_kind: descends_from
+  source_id: wf-modern-english-risible
+  target_id: wf-middle-english-middle-english-risible-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review

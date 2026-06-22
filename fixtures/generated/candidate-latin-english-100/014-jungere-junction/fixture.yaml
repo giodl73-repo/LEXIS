@@ -1,0 +1,212 @@
+fixture_id: LEXIS-GEN-CAND-014-jungere-junction
+status: candidate_review
+scope:
+  scope_id: candidate-014-jungere-junction-scope
+  question: Candidate generated multi-stage graph-facing chain for Latin jungere, Old French, Middle English, and Modern English junction.
+  excluded_claims:
+  - unreviewed generated relationship claims
+  - source text ingestion or redistribution
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+- source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+  may_support_claims: false
+deferred_records: []
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers: []
+nodes:
+  languages:
+  - id: lang-latin
+    label: Latin
+    kind: language
+    source_posture: candidate_review
+  - id: lang-middle-english
+    label: Middle English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-modern-english
+    label: Modern English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-old-french
+    label: Old French
+    kind: language
+    source_posture: candidate_review
+  roots: []
+  wordforms:
+  - id: wf-latin-jungere
+    label: jungere
+    language_id: lang-latin
+    form: jungere
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-jungere
+  - id: wf-latin-junctum
+    label: junctum
+    language_id: lang-latin
+    form: junctum
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-junctum
+  - id: wf-old-french-old-french-junction-candidate
+    label: Old French candidate stage for junction
+    language_id: lang-old-french
+    form: old-french-junction-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-old-french-old-french-junction-candidate
+  - id: wf-middle-english-middle-english-junction-candidate
+    label: Middle English candidate stage for junction
+    language_id: lang-middle-english
+    form: middle-english-junction-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-middle-english-middle-english-junction-candidate
+  - id: wf-modern-english-junction
+    label: junction
+    language_id: lang-modern-english
+    form: junction
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-junction
+  meaning_senses:
+  - id: sense-jungere
+    label: joining or linking
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-latin-jungere
+  - id: sense-junction
+    label: joining or linking
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-junction
+  script_forms: []
+source_links:
+- id: src-latin-jungere
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-latin-junctum
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-old-french-old-french-junction-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-middle-english-middle-english-junction-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-modern-english-junction
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+relationship_edges:
+- id: edge-jungere-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-jungere
+  target_id: wf-latin-jungere
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-jungere-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-latin-jungere
+  target_id: sense-jungere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-junctum-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-junctum
+  target_id: wf-latin-junctum
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-junction-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-old-french-old-french-junction-candidate
+  target_id: wf-old-french-old-french-junction-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-junction-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-middle-english-middle-english-junction-candidate
+  target_id: wf-middle-english-middle-english-junction-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-junction-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-modern-english-junction
+  target_id: wf-modern-english-junction
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-junction-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-modern-english-junction
+  target_id: sense-junction
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-junctum-descends-from-jungere
+  edge_kind: descends_from
+  source_id: wf-latin-junctum
+  target_id: wf-latin-jungere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-junction-candidate-borrowed-from-junctum
+  edge_kind: borrowed_from
+  source_id: wf-old-french-old-french-junction-candidate
+  target_id: wf-latin-junctum
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-junction-candidate-borrowed-from-old-french-junction-candidate
+  edge_kind: borrowed_from
+  source_id: wf-middle-english-middle-english-junction-candidate
+  target_id: wf-old-french-old-french-junction-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-junction-descends-from-middle-english-junction-candidate
+  edge_kind: descends_from
+  source_id: wf-modern-english-junction
+  target_id: wf-middle-english-middle-english-junction-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review

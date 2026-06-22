@@ -1,0 +1,14 @@
+digraph lexis_slice {
+  graph [label="LEXIS-FIX-006-script-alphabet-slice\npreview_only_not_promoted\nvalidation errors: 8"];
+  "lang-grc-script" [label="Greek script lane\nLanguage\nplanned_blocked"];
+  "lang-lat-script" [label="Latin script lane\nLanguage\nplanned_blocked"];
+  "lang-cyrillic-script" [label="Cyrillic script lane\nLanguage\nplanned_blocked"];
+  "sense-letter-form" [label="letter-form continuity candidate\nMeaningSense\nplanned_blocked"];
+  "script-greek-alpha" [label="Greek alpha form\nScriptForm\nplanned_blocked"];
+  "script-latin-a" [label="Latin A form\nScriptForm\nplanned_blocked"];
+  "script-cyrillic-az" [label="Cyrillic az form\nScriptForm\nplanned_blocked"];
+  "src-script-history" -> "script-greek-alpha" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "script-latin-a" -> "script-greek-alpha" [label="script_variant_of\ninference\nsource_limited"];
+  "script-cyrillic-az" -> "script-greek-alpha" [label="script_variant_of\ninference\nsource_limited"];
+  "script-latin-a" -> "script-cyrillic-az" [label="disputes_claim\nrejected_alternative\ndisputed"];
+}

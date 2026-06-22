@@ -1,0 +1,212 @@
+fixture_id: LEXIS-GEN-CAND-045-velle-volition
+status: candidate_review
+scope:
+  scope_id: candidate-045-velle-volition-scope
+  question: Candidate generated multi-stage graph-facing chain for Latin velle, Old French, Middle English, and Modern English volition.
+  excluded_claims:
+  - unreviewed generated relationship claims
+  - source text ingestion or redistribution
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+- source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+  may_support_claims: false
+deferred_records: []
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers: []
+nodes:
+  languages:
+  - id: lang-latin
+    label: Latin
+    kind: language
+    source_posture: candidate_review
+  - id: lang-middle-english
+    label: Middle English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-modern-english
+    label: Modern English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-old-french
+    label: Old French
+    kind: language
+    source_posture: candidate_review
+  roots: []
+  wordforms:
+  - id: wf-latin-velle
+    label: velle
+    language_id: lang-latin
+    form: velle
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-velle
+  - id: wf-latin-volitio
+    label: volitio
+    language_id: lang-latin
+    form: volitio
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-volitio
+  - id: wf-old-french-old-french-volition-candidate
+    label: Old French candidate stage for volition
+    language_id: lang-old-french
+    form: old-french-volition-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-old-french-old-french-volition-candidate
+  - id: wf-middle-english-middle-english-volition-candidate
+    label: Middle English candidate stage for volition
+    language_id: lang-middle-english
+    form: middle-english-volition-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-middle-english-middle-english-volition-candidate
+  - id: wf-modern-english-volition
+    label: volition
+    language_id: lang-modern-english
+    form: volition
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-volition
+  meaning_senses:
+  - id: sense-velle
+    label: willing or choosing
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-latin-velle
+  - id: sense-volition
+    label: willing or choosing
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-volition
+  script_forms: []
+source_links:
+- id: src-latin-velle
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-latin-volitio
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-old-french-old-french-volition-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-middle-english-middle-english-volition-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-modern-english-volition
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+relationship_edges:
+- id: edge-velle-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-velle
+  target_id: wf-latin-velle
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-velle-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-latin-velle
+  target_id: sense-velle
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-volitio-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-volitio
+  target_id: wf-latin-volitio
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-volition-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-old-french-old-french-volition-candidate
+  target_id: wf-old-french-old-french-volition-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-volition-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-middle-english-middle-english-volition-candidate
+  target_id: wf-middle-english-middle-english-volition-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-volition-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-modern-english-volition
+  target_id: wf-modern-english-volition
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-volition-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-modern-english-volition
+  target_id: sense-volition
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-volitio-descends-from-velle
+  edge_kind: descends_from
+  source_id: wf-latin-volitio
+  target_id: wf-latin-velle
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-volition-candidate-borrowed-from-volitio
+  edge_kind: borrowed_from
+  source_id: wf-old-french-old-french-volition-candidate
+  target_id: wf-latin-volitio
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-volition-candidate-borrowed-from-old-french-volition-candidate
+  edge_kind: borrowed_from
+  source_id: wf-middle-english-middle-english-volition-candidate
+  target_id: wf-old-french-old-french-volition-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-volition-descends-from-middle-english-volition-candidate
+  edge_kind: descends_from
+  source_id: wf-modern-english-volition
+  target_id: wf-middle-english-middle-english-volition-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review

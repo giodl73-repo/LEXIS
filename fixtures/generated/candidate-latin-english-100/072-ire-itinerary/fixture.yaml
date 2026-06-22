@@ -1,0 +1,212 @@
+fixture_id: LEXIS-GEN-CAND-072-ire-itinerary
+status: candidate_review
+scope:
+  scope_id: candidate-072-ire-itinerary-scope
+  question: Candidate generated multi-stage graph-facing chain for Latin ire, Old French, Middle English, and Modern English itinerary.
+  excluded_claims:
+  - unreviewed generated relationship claims
+  - source text ingestion or redistribution
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+- source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+  may_support_claims: false
+deferred_records: []
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers: []
+nodes:
+  languages:
+  - id: lang-latin
+    label: Latin
+    kind: language
+    source_posture: candidate_review
+  - id: lang-middle-english
+    label: Middle English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-modern-english
+    label: Modern English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-old-french
+    label: Old French
+    kind: language
+    source_posture: candidate_review
+  roots: []
+  wordforms:
+  - id: wf-latin-ire
+    label: ire
+    language_id: lang-latin
+    form: ire
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-ire
+  - id: wf-latin-itum
+    label: itum
+    language_id: lang-latin
+    form: itum
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-itum
+  - id: wf-old-french-old-french-itinerary-candidate
+    label: Old French candidate stage for itinerary
+    language_id: lang-old-french
+    form: old-french-itinerary-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-old-french-old-french-itinerary-candidate
+  - id: wf-middle-english-middle-english-itinerary-candidate
+    label: Middle English candidate stage for itinerary
+    language_id: lang-middle-english
+    form: middle-english-itinerary-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-middle-english-middle-english-itinerary-candidate
+  - id: wf-modern-english-itinerary
+    label: itinerary
+    language_id: lang-modern-english
+    form: itinerary
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-itinerary
+  meaning_senses:
+  - id: sense-ire
+    label: going or traveling
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-latin-ire
+  - id: sense-itinerary
+    label: going or traveling
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-itinerary
+  script_forms: []
+source_links:
+- id: src-latin-ire
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-latin-itum
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-old-french-old-french-itinerary-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-middle-english-middle-english-itinerary-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-modern-english-itinerary
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+relationship_edges:
+- id: edge-ire-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-ire
+  target_id: wf-latin-ire
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-ire-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-latin-ire
+  target_id: sense-ire
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-itum-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-itum
+  target_id: wf-latin-itum
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-itinerary-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-old-french-old-french-itinerary-candidate
+  target_id: wf-old-french-old-french-itinerary-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-itinerary-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-middle-english-middle-english-itinerary-candidate
+  target_id: wf-middle-english-middle-english-itinerary-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-itinerary-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-modern-english-itinerary
+  target_id: wf-modern-english-itinerary
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-itinerary-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-modern-english-itinerary
+  target_id: sense-itinerary
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-itum-descends-from-ire
+  edge_kind: descends_from
+  source_id: wf-latin-itum
+  target_id: wf-latin-ire
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-itinerary-candidate-borrowed-from-itum
+  edge_kind: borrowed_from
+  source_id: wf-old-french-old-french-itinerary-candidate
+  target_id: wf-latin-itum
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-itinerary-candidate-borrowed-from-old-french-itinerary-candidate
+  edge_kind: borrowed_from
+  source_id: wf-middle-english-middle-english-itinerary-candidate
+  target_id: wf-old-french-old-french-itinerary-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-itinerary-descends-from-middle-english-itinerary-candidate
+  edge_kind: descends_from
+  source_id: wf-modern-english-itinerary
+  target_id: wf-middle-english-middle-english-itinerary-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review

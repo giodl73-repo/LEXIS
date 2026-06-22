@@ -1,0 +1,17 @@
+decision_id: LEXIS-SRCDEC-088-tier2-proof-question
+status: candidate_review
+source_family: English etymology pointer for Latin-to-English candidate question
+related_slice_packages:
+  - LEXIS-SLICE-001-SOURCE
+pointer: https://www.etymonline.com/es/word/question
+candidate_source_name: Etymonline entry for question
+rights_posture: copyrighted_reference_pointer_only
+redistribution_posture: pointer_only_planned
+citation_note: Proof pointer supports Latin quaestionem/quaestio from quaerere route; no source text is copied.
+review_state: source_detail_required
+reviewer: L-5 Source Custody Reviewer pending
+promotion_allowed: false
+blocks:
+  - stronger direct English pointer should be selected before promotion
+  - generated bridge should model quaestio or quaestionem rather than quaesitum
+

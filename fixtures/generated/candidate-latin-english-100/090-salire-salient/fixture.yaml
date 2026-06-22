@@ -1,0 +1,212 @@
+fixture_id: LEXIS-GEN-CAND-090-salire-salient
+status: candidate_review
+scope:
+  scope_id: candidate-090-salire-salient-scope
+  question: Candidate generated multi-stage graph-facing chain for Latin salire, Old French, Middle English, and Modern English salient.
+  excluded_claims:
+  - unreviewed generated relationship claims
+  - source text ingestion or redistribution
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+- source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+  may_support_claims: false
+deferred_records: []
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers: []
+nodes:
+  languages:
+  - id: lang-latin
+    label: Latin
+    kind: language
+    source_posture: candidate_review
+  - id: lang-middle-english
+    label: Middle English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-modern-english
+    label: Modern English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-old-french
+    label: Old French
+    kind: language
+    source_posture: candidate_review
+  roots: []
+  wordforms:
+  - id: wf-latin-salire
+    label: salire
+    language_id: lang-latin
+    form: salire
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-salire
+  - id: wf-latin-saltum
+    label: saltum
+    language_id: lang-latin
+    form: saltum
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-saltum
+  - id: wf-old-french-old-french-salient-candidate
+    label: Old French candidate stage for salient
+    language_id: lang-old-french
+    form: old-french-salient-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-old-french-old-french-salient-candidate
+  - id: wf-middle-english-middle-english-salient-candidate
+    label: Middle English candidate stage for salient
+    language_id: lang-middle-english
+    form: middle-english-salient-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-middle-english-middle-english-salient-candidate
+  - id: wf-modern-english-salient
+    label: salient
+    language_id: lang-modern-english
+    form: salient
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-salient
+  meaning_senses:
+  - id: sense-salire
+    label: leaping or jumping
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-latin-salire
+  - id: sense-salient
+    label: leaping or jumping
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-salient
+  script_forms: []
+source_links:
+- id: src-latin-salire
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-latin-saltum
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-old-french-old-french-salient-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-middle-english-middle-english-salient-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-modern-english-salient
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+relationship_edges:
+- id: edge-salire-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-salire
+  target_id: wf-latin-salire
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-salire-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-latin-salire
+  target_id: sense-salire
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-saltum-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-saltum
+  target_id: wf-latin-saltum
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-salient-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-old-french-old-french-salient-candidate
+  target_id: wf-old-french-old-french-salient-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-salient-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-middle-english-middle-english-salient-candidate
+  target_id: wf-middle-english-middle-english-salient-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-salient-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-modern-english-salient
+  target_id: wf-modern-english-salient
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-salient-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-modern-english-salient
+  target_id: sense-salient
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-saltum-descends-from-salire
+  edge_kind: descends_from
+  source_id: wf-latin-saltum
+  target_id: wf-latin-salire
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-salient-candidate-borrowed-from-saltum
+  edge_kind: borrowed_from
+  source_id: wf-old-french-old-french-salient-candidate
+  target_id: wf-latin-saltum
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-salient-candidate-borrowed-from-old-french-salient-candidate
+  edge_kind: borrowed_from
+  source_id: wf-middle-english-middle-english-salient-candidate
+  target_id: wf-old-french-old-french-salient-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-salient-descends-from-middle-english-salient-candidate
+  edge_kind: descends_from
+  source_id: wf-modern-english-salient
+  target_id: wf-middle-english-middle-english-salient-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review

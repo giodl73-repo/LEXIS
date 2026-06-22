@@ -1,0 +1,16 @@
+decision_id: LEXIS-SRCDEC-094-tier2-proof-use
+status: candidate_review
+source_family: English etymology pointer for Latin-to-English candidate use
+related_slice_packages:
+  - LEXIS-SLICE-001-SOURCE
+pointer: https://www.etymonline.com/word/use
+candidate_source_name: Etymonline and Merriam-Webster entries for use
+rights_posture: copyrighted_reference_pointer_only
+redistribution_posture: pointer_only_planned
+citation_note: Proof pointers support Middle English/Anglo-French use, Latin usus, uti, and verb route through Old French user/Vulgar Latin usare; no source text is copied.
+review_state: source_detail_required
+reviewer: L-5 Source Custody Reviewer pending
+promotion_allowed: false
+blocks:
+  - noun and verb routes should be modeled separately
+  - generated bridge should model usus and/or usare with route distinction

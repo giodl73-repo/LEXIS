@@ -1,0 +1,212 @@
+fixture_id: LEXIS-GEN-CAND-091-sanare-sanitary
+status: candidate_review
+scope:
+  scope_id: candidate-091-sanare-sanitary-scope
+  question: Candidate generated multi-stage graph-facing chain for Latin sanare, Old French, Middle English, and Modern English sanitary.
+  excluded_claims:
+  - unreviewed generated relationship claims
+  - source text ingestion or redistribution
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+- source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+  may_support_claims: false
+deferred_records: []
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers: []
+nodes:
+  languages:
+  - id: lang-latin
+    label: Latin
+    kind: language
+    source_posture: candidate_review
+  - id: lang-middle-english
+    label: Middle English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-modern-english
+    label: Modern English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-old-french
+    label: Old French
+    kind: language
+    source_posture: candidate_review
+  roots: []
+  wordforms:
+  - id: wf-latin-sanare
+    label: sanare
+    language_id: lang-latin
+    form: sanare
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-sanare
+  - id: wf-latin-sanatum
+    label: sanatum
+    language_id: lang-latin
+    form: sanatum
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-sanatum
+  - id: wf-old-french-old-french-sanitary-candidate
+    label: Old French candidate stage for sanitary
+    language_id: lang-old-french
+    form: old-french-sanitary-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-old-french-old-french-sanitary-candidate
+  - id: wf-middle-english-middle-english-sanitary-candidate
+    label: Middle English candidate stage for sanitary
+    language_id: lang-middle-english
+    form: middle-english-sanitary-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-middle-english-middle-english-sanitary-candidate
+  - id: wf-modern-english-sanitary
+    label: sanitary
+    language_id: lang-modern-english
+    form: sanitary
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-sanitary
+  meaning_senses:
+  - id: sense-sanare
+    label: healing or making sound
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-latin-sanare
+  - id: sense-sanitary
+    label: healing or making sound
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-sanitary
+  script_forms: []
+source_links:
+- id: src-latin-sanare
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-latin-sanatum
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-old-french-old-french-sanitary-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-middle-english-middle-english-sanitary-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-modern-english-sanitary
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+relationship_edges:
+- id: edge-sanare-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-sanare
+  target_id: wf-latin-sanare
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-sanare-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-latin-sanare
+  target_id: sense-sanare
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-sanatum-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-sanatum
+  target_id: wf-latin-sanatum
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-sanitary-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-old-french-old-french-sanitary-candidate
+  target_id: wf-old-french-old-french-sanitary-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-sanitary-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-middle-english-middle-english-sanitary-candidate
+  target_id: wf-middle-english-middle-english-sanitary-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-sanitary-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-modern-english-sanitary
+  target_id: wf-modern-english-sanitary
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-sanitary-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-modern-english-sanitary
+  target_id: sense-sanitary
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-sanatum-descends-from-sanare
+  edge_kind: descends_from
+  source_id: wf-latin-sanatum
+  target_id: wf-latin-sanare
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-sanitary-candidate-borrowed-from-sanatum
+  edge_kind: borrowed_from
+  source_id: wf-old-french-old-french-sanitary-candidate
+  target_id: wf-latin-sanatum
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-sanitary-candidate-borrowed-from-old-french-sanitary-candidate
+  edge_kind: borrowed_from
+  source_id: wf-middle-english-middle-english-sanitary-candidate
+  target_id: wf-old-french-old-french-sanitary-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-sanitary-descends-from-middle-english-sanitary-candidate
+  edge_kind: descends_from
+  source_id: wf-modern-english-sanitary
+  target_id: wf-middle-english-middle-english-sanitary-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review

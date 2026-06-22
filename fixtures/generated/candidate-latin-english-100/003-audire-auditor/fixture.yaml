@@ -1,0 +1,212 @@
+fixture_id: LEXIS-GEN-CAND-003-audire-auditor
+status: candidate_review
+scope:
+  scope_id: candidate-003-audire-auditor-scope
+  question: Candidate generated multi-stage graph-facing chain for Latin audire, Old French, Middle English, and Modern English auditor.
+  excluded_claims:
+  - unreviewed generated relationship claims
+  - source text ingestion or redistribution
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+- source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+  may_support_claims: false
+deferred_records: []
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers: []
+nodes:
+  languages:
+  - id: lang-latin
+    label: Latin
+    kind: language
+    source_posture: candidate_review
+  - id: lang-middle-english
+    label: Middle English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-modern-english
+    label: Modern English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-old-french
+    label: Old French
+    kind: language
+    source_posture: candidate_review
+  roots: []
+  wordforms:
+  - id: wf-latin-audire
+    label: audire
+    language_id: lang-latin
+    form: audire
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-audire
+  - id: wf-latin-auditum
+    label: auditum
+    language_id: lang-latin
+    form: auditum
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-auditum
+  - id: wf-old-french-old-french-auditor-candidate
+    label: Old French candidate stage for auditor
+    language_id: lang-old-french
+    form: old-french-auditor-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-old-french-old-french-auditor-candidate
+  - id: wf-middle-english-middle-english-auditor-candidate
+    label: Middle English candidate stage for auditor
+    language_id: lang-middle-english
+    form: middle-english-auditor-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-middle-english-middle-english-auditor-candidate
+  - id: wf-modern-english-auditor
+    label: auditor
+    language_id: lang-modern-english
+    form: auditor
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-auditor
+  meaning_senses:
+  - id: sense-audire
+    label: hearing or listening
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-latin-audire
+  - id: sense-auditor
+    label: hearing or listening
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-auditor
+  script_forms: []
+source_links:
+- id: src-latin-audire
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-latin-auditum
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-old-french-old-french-auditor-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-middle-english-middle-english-auditor-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-modern-english-auditor
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+relationship_edges:
+- id: edge-audire-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-audire
+  target_id: wf-latin-audire
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-audire-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-latin-audire
+  target_id: sense-audire
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-auditum-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-auditum
+  target_id: wf-latin-auditum
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-auditor-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-old-french-old-french-auditor-candidate
+  target_id: wf-old-french-old-french-auditor-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-auditor-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-middle-english-middle-english-auditor-candidate
+  target_id: wf-middle-english-middle-english-auditor-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-auditor-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-modern-english-auditor
+  target_id: wf-modern-english-auditor
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-auditor-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-modern-english-auditor
+  target_id: sense-auditor
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-auditum-descends-from-audire
+  edge_kind: descends_from
+  source_id: wf-latin-auditum
+  target_id: wf-latin-audire
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-auditor-candidate-borrowed-from-auditum
+  edge_kind: borrowed_from
+  source_id: wf-old-french-old-french-auditor-candidate
+  target_id: wf-latin-auditum
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-auditor-candidate-borrowed-from-old-french-auditor-candidate
+  edge_kind: borrowed_from
+  source_id: wf-middle-english-middle-english-auditor-candidate
+  target_id: wf-old-french-old-french-auditor-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-auditor-descends-from-middle-english-auditor-candidate
+  edge_kind: descends_from
+  source_id: wf-modern-english-auditor
+  target_id: wf-middle-english-middle-english-auditor-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review

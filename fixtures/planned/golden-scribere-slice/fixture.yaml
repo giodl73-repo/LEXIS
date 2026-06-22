@@ -1,0 +1,348 @@
+fixture_id: LEXIS-FIX-002-golden-scribere-slice
+status: accepted_for_slice
+fixture_class: golden slice fixture
+scope:
+  scope_id: LEXIS-SLICE-001-SCOPE
+  question: Accepted graph-facing slice for Latin scribere / scribo and selected English writing-related forms.
+  included_languages:
+    - lat
+    - en
+  included_forms:
+    - wf-lat-scribere
+    - wf-lat-scriba
+    - wf-lat-scriptum
+    - wf-lat-inscriptio
+    - wf-lat-describere
+    - wf-en-scribe
+    - wf-en-script
+    - wf-en-inscription
+    - wf-en-describe
+  excluded_claims:
+    - Proto-Indo-European reconstruction
+    - full history of writing
+    - Old French or Middle English intermediate path expansion
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+  - source_ref: LEXIS-SRCDEC-001-latin-lexicographic-reference
+    contract_state: accepted_for_slice
+    may_support_claims: true
+  - source_ref: LEXIS-SRCDEC-002-english-etymology-reference
+    contract_state: accepted_for_slice
+    may_support_claims: true
+deferred_records: []
+nodes:
+  languages:
+    - id: lang-lat
+      label: Latin
+      kind: language
+      source_posture: accepted_for_slice
+    - id: lang-en
+      label: English
+      kind: language
+      source_posture: accepted_for_slice
+  roots: []
+  wordforms:
+    - id: wf-lat-scribere
+      label: scribere / scribo
+      language_id: lang-lat
+      form: scribere
+      claim_type: direct_evidence
+      uncertainty: settled_for_slice
+      source_links:
+        - src-lat-scribere
+    - id: wf-lat-scriba
+      label: scriba
+      language_id: lang-lat
+      form: scriba
+      claim_type: direct_evidence
+      uncertainty: settled_for_slice
+      source_links:
+        - src-en-scribe
+    - id: wf-lat-scriptum
+      label: scriptum
+      language_id: lang-lat
+      form: scriptum
+      claim_type: direct_evidence
+      uncertainty: settled_for_slice
+      source_links:
+        - src-en-script
+    - id: wf-lat-inscriptio
+      label: inscriptio / inscribere
+      language_id: lang-lat
+      form: inscriptio
+      claim_type: direct_evidence
+      uncertainty: settled_for_slice
+      source_links:
+        - src-en-inscription
+    - id: wf-lat-describere
+      label: describere
+      language_id: lang-lat
+      form: describere
+      claim_type: direct_evidence
+      uncertainty: settled_for_slice
+      source_links:
+        - src-en-describe
+    - id: wf-en-scribe
+      label: scribe
+      language_id: lang-en
+      form: scribe
+      claim_type: direct_evidence
+      uncertainty: settled_for_slice
+      source_links:
+        - src-en-scribe
+    - id: wf-en-script
+      label: script
+      language_id: lang-en
+      form: script
+      claim_type: direct_evidence
+      uncertainty: settled_for_slice
+      source_links:
+        - src-en-script
+    - id: wf-en-inscription
+      label: inscription
+      language_id: lang-en
+      form: inscription
+      claim_type: direct_evidence
+      uncertainty: settled_for_slice
+      source_links:
+        - src-en-inscription
+    - id: wf-en-describe
+      label: describe
+      language_id: lang-en
+      form: describe
+      claim_type: direct_evidence
+      uncertainty: settled_for_slice
+      source_links:
+        - src-en-describe
+  meaning_senses:
+    - id: sense-writing
+      label: writing / marking with words
+      gloss: Project summary of writing-related meaning; not copied source text.
+      claim_type: inference
+      uncertainty: settled_for_slice
+      source_links:
+        - src-lat-scribere
+    - id: sense-scribe-person
+      label: person who writes
+      gloss: Project summary of person-associated writing role; not copied source text.
+      claim_type: inference
+      uncertainty: settled_for_slice
+      source_links:
+        - src-en-scribe
+    - id: sense-script-written-text
+      label: written text / writing system context
+      gloss: Project summary of written-text and script-related sense; not copied source text.
+      claim_type: inference
+      uncertainty: settled_for_slice
+      source_links:
+        - src-en-script
+    - id: sense-inscription-marked-text
+      label: marked or written text on a surface
+      gloss: Project summary of inscription-related marked text; not copied source text.
+      claim_type: inference
+      uncertainty: settled_for_slice
+      source_links:
+        - src-en-inscription
+    - id: sense-describe-account
+      label: written or verbal account
+      gloss: Project summary of describe-related account sense; not copied source text.
+      claim_type: inference
+      uncertainty: settled_for_slice
+      source_links:
+        - src-en-describe
+  script_forms:
+    - id: script-latin-form
+      label: Latin script form posture
+      script_label: Latin alphabet
+      form_text: scribere
+      transliteration_posture: not_applicable
+      source_links:
+        - src-lat-scribere
+source_links:
+  - id: src-lat-scribere
+    source_ref: LEXIS-SRCDEC-001-latin-lexicographic-reference
+    contract_state: accepted_for_slice
+  - id: src-en-scribe
+    source_ref: LEXIS-SRCDEC-002-english-etymology-reference
+    contract_state: accepted_for_slice
+  - id: src-en-script
+    source_ref: LEXIS-SRCDEC-002-english-etymology-reference
+    contract_state: accepted_for_slice
+  - id: src-en-inscription
+    source_ref: LEXIS-SRCDEC-002-english-etymology-reference
+    contract_state: accepted_for_slice
+  - id: src-en-describe
+    source_ref: LEXIS-SRCDEC-002-english-etymology-reference
+    contract_state: accepted_for_slice
+relationship_edges:
+  - id: edge-scribere-supported-by-latin-source
+    edge_kind: supports_claim
+    source_id: src-lat-scribere
+    target_id: wf-lat-scribere
+    claim_type: direct_evidence
+    uncertainty: settled_for_slice
+    supporting_sources:
+      - LEXIS-SRCDEC-001-latin-lexicographic-reference
+    review_state: accepted_for_slice
+  - id: edge-scribe-supported-by-english-source
+    edge_kind: supports_claim
+    source_id: src-en-scribe
+    target_id: wf-en-scribe
+    claim_type: direct_evidence
+    uncertainty: settled_for_slice
+    supporting_sources:
+      - LEXIS-SRCDEC-002-english-etymology-reference
+    review_state: accepted_for_slice
+  - id: edge-script-supported-by-english-source
+    edge_kind: supports_claim
+    source_id: src-en-script
+    target_id: wf-en-script
+    claim_type: direct_evidence
+    uncertainty: settled_for_slice
+    supporting_sources:
+      - LEXIS-SRCDEC-002-english-etymology-reference
+    review_state: accepted_for_slice
+  - id: edge-inscription-supported-by-english-source
+    edge_kind: supports_claim
+    source_id: src-en-inscription
+    target_id: wf-en-inscription
+    claim_type: direct_evidence
+    uncertainty: settled_for_slice
+    supporting_sources:
+      - LEXIS-SRCDEC-002-english-etymology-reference
+    review_state: accepted_for_slice
+  - id: edge-describe-supported-by-english-source
+    edge_kind: supports_claim
+    source_id: src-en-describe
+    target_id: wf-en-describe
+    claim_type: direct_evidence
+    uncertainty: settled_for_slice
+    supporting_sources:
+      - LEXIS-SRCDEC-002-english-etymology-reference
+    review_state: accepted_for_slice
+  - id: edge-scriba-descends-from-scribere
+    edge_kind: descends_from
+    source_id: wf-lat-scriba
+    target_id: wf-lat-scribere
+    claim_type: direct_evidence
+    uncertainty: settled_for_slice
+    supporting_sources:
+      - LEXIS-SRCDEC-001-latin-lexicographic-reference
+    review_state: accepted_for_slice
+  - id: edge-scriptum-descends-from-scribere
+    edge_kind: descends_from
+    source_id: wf-lat-scriptum
+    target_id: wf-lat-scribere
+    claim_type: direct_evidence
+    uncertainty: settled_for_slice
+    supporting_sources:
+      - LEXIS-SRCDEC-001-latin-lexicographic-reference
+    review_state: accepted_for_slice
+  - id: edge-inscriptio-descends-from-scribere
+    edge_kind: descends_from
+    source_id: wf-lat-inscriptio
+    target_id: wf-lat-scribere
+    claim_type: direct_evidence
+    uncertainty: settled_for_slice
+    supporting_sources:
+      - LEXIS-SRCDEC-001-latin-lexicographic-reference
+    review_state: accepted_for_slice
+  - id: edge-describere-descends-from-scribere
+    edge_kind: descends_from
+    source_id: wf-lat-describere
+    target_id: wf-lat-scribere
+    claim_type: direct_evidence
+    uncertainty: settled_for_slice
+    supporting_sources:
+      - LEXIS-SRCDEC-001-latin-lexicographic-reference
+    review_state: accepted_for_slice
+  - id: edge-scribe-borrowed-from-scriba
+    edge_kind: borrowed_from
+    source_id: wf-en-scribe
+    target_id: wf-lat-scriba
+    claim_type: direct_evidence
+    uncertainty: settled_for_slice
+    supporting_sources:
+      - LEXIS-SRCDEC-002-english-etymology-reference
+    review_state: accepted_for_slice
+  - id: edge-script-borrowed-from-scriptum
+    edge_kind: borrowed_from
+    source_id: wf-en-script
+    target_id: wf-lat-scriptum
+    claim_type: direct_evidence
+    uncertainty: settled_for_slice
+    supporting_sources:
+      - LEXIS-SRCDEC-002-english-etymology-reference
+    review_state: accepted_for_slice
+  - id: edge-inscription-borrowed-from-inscriptio
+    edge_kind: borrowed_from
+    source_id: wf-en-inscription
+    target_id: wf-lat-inscriptio
+    claim_type: direct_evidence
+    uncertainty: settled_for_slice
+    supporting_sources:
+      - LEXIS-SRCDEC-002-english-etymology-reference
+    review_state: accepted_for_slice
+  - id: edge-describe-borrowed-from-describere
+    edge_kind: borrowed_from
+    source_id: wf-en-describe
+    target_id: wf-lat-describere
+    claim_type: direct_evidence
+    uncertainty: settled_for_slice
+    supporting_sources:
+      - LEXIS-SRCDEC-002-english-etymology-reference
+    review_state: accepted_for_slice
+  - id: edge-scribe-meaning-writing-role
+    edge_kind: meaning_shift_to
+    source_id: wf-en-scribe
+    target_id: sense-scribe-person
+    claim_type: inference
+    uncertainty: settled_for_slice
+    supporting_sources:
+      - LEXIS-SRCDEC-002-english-etymology-reference
+    review_state: accepted_for_slice
+  - id: edge-script-meaning-written-text
+    edge_kind: meaning_shift_to
+    source_id: wf-en-script
+    target_id: sense-script-written-text
+    claim_type: inference
+    uncertainty: settled_for_slice
+    supporting_sources:
+      - LEXIS-SRCDEC-002-english-etymology-reference
+    review_state: accepted_for_slice
+  - id: edge-inscription-meaning-marked-text
+    edge_kind: meaning_shift_to
+    source_id: wf-en-inscription
+    target_id: sense-inscription-marked-text
+    claim_type: inference
+    uncertainty: settled_for_slice
+    supporting_sources:
+      - LEXIS-SRCDEC-002-english-etymology-reference
+    review_state: accepted_for_slice
+  - id: edge-describe-meaning-account
+    edge_kind: meaning_shift_to
+    source_id: wf-en-describe
+    target_id: sense-describe-account
+    claim_type: inference
+    uncertainty: settled_for_slice
+    supporting_sources:
+      - LEXIS-SRCDEC-002-english-etymology-reference
+    review_state: accepted_for_slice
+language_claims: []
+relationship_claims: []
+graph_outputs:
+  - id: graph-scribere-slice-accepted
+    format: json
+    status: validated
+  - id: graph-scribere-slice-accepted-dot
+    format: dot
+    status: validated
+chronicle_outputs: []
+promotion_blockers: []
+review_lanes_required:
+  - L-1 Language Historian
+  - L-2 Etymology Reviewer
+  - L-5 Source Custody Reviewer
+  - L-6 Graph Systems Reviewer
+  - L-8 Software Assurance Reviewer

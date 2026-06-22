@@ -1,0 +1,212 @@
+fixture_id: LEXIS-GEN-CAND-088-rapere-rapture
+status: candidate_review
+scope:
+  scope_id: candidate-088-rapere-rapture-scope
+  question: Candidate generated multi-stage graph-facing chain for Latin rapere, Old French, Middle English, and Modern English rapture.
+  excluded_claims:
+  - unreviewed generated relationship claims
+  - source text ingestion or redistribution
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+- source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+  may_support_claims: false
+deferred_records: []
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers: []
+nodes:
+  languages:
+  - id: lang-latin
+    label: Latin
+    kind: language
+    source_posture: candidate_review
+  - id: lang-middle-english
+    label: Middle English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-modern-english
+    label: Modern English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-old-french
+    label: Old French
+    kind: language
+    source_posture: candidate_review
+  roots: []
+  wordforms:
+  - id: wf-latin-rapere
+    label: rapere
+    language_id: lang-latin
+    form: rapere
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-rapere
+  - id: wf-latin-raptum
+    label: raptum
+    language_id: lang-latin
+    form: raptum
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-raptum
+  - id: wf-old-french-old-french-rapture-candidate
+    label: Old French candidate stage for rapture
+    language_id: lang-old-french
+    form: old-french-rapture-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-old-french-old-french-rapture-candidate
+  - id: wf-middle-english-middle-english-rapture-candidate
+    label: Middle English candidate stage for rapture
+    language_id: lang-middle-english
+    form: middle-english-rapture-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-middle-english-middle-english-rapture-candidate
+  - id: wf-modern-english-rapture
+    label: rapture
+    language_id: lang-modern-english
+    form: rapture
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-rapture
+  meaning_senses:
+  - id: sense-rapere
+    label: seizing or carrying off
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-latin-rapere
+  - id: sense-rapture
+    label: seizing or carrying off
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-rapture
+  script_forms: []
+source_links:
+- id: src-latin-rapere
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-latin-raptum
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-old-french-old-french-rapture-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-middle-english-middle-english-rapture-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-modern-english-rapture
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+relationship_edges:
+- id: edge-rapere-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-rapere
+  target_id: wf-latin-rapere
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-rapere-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-latin-rapere
+  target_id: sense-rapere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-raptum-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-raptum
+  target_id: wf-latin-raptum
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-rapture-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-old-french-old-french-rapture-candidate
+  target_id: wf-old-french-old-french-rapture-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-rapture-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-middle-english-middle-english-rapture-candidate
+  target_id: wf-middle-english-middle-english-rapture-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-rapture-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-modern-english-rapture
+  target_id: wf-modern-english-rapture
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-rapture-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-modern-english-rapture
+  target_id: sense-rapture
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-raptum-descends-from-rapere
+  edge_kind: descends_from
+  source_id: wf-latin-raptum
+  target_id: wf-latin-rapere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-rapture-candidate-borrowed-from-raptum
+  edge_kind: borrowed_from
+  source_id: wf-old-french-old-french-rapture-candidate
+  target_id: wf-latin-raptum
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-rapture-candidate-borrowed-from-old-french-rapture-candidate
+  edge_kind: borrowed_from
+  source_id: wf-middle-english-middle-english-rapture-candidate
+  target_id: wf-old-french-old-french-rapture-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-rapture-descends-from-middle-english-rapture-candidate
+  edge_kind: descends_from
+  source_id: wf-modern-english-rapture
+  target_id: wf-middle-english-middle-english-rapture-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review

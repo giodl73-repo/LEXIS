@@ -1,0 +1,17 @@
+decision_id: LEXIS-SRCDEC-052-tier2-proof-advent
+status: candidate_review
+source_family: English etymology pointer for Latin-to-English candidate advent
+related_slice_packages:
+  - LEXIS-SLICE-001-SOURCE
+pointer: https://www.etymonline.com/word/advent
+candidate_source_name: Etymonline entry for advent
+rights_posture: copyrighted_reference_pointer_only
+redistribution_posture: pointer_only_planned
+citation_note: Proof pointer supports Latin adventus, advenire, and venire route; no source text is copied.
+review_state: source_detail_required
+reviewer: L-5 Source Custody Reviewer pending
+promotion_allowed: false
+blocks:
+  - compound ad- plus venire path must be modeled explicitly
+  - generated bridge should model adventus rather than ventum
+

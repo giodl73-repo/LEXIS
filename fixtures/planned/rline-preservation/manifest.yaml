@@ -1,0 +1,28 @@
+fixture_id: LEXIS-FIX-005-rline-preservation
+status: planned_blocked
+fixture_class: graph-preservation fixture
+owning_work_package: LEXIS-WP-006
+linked_scenarios:
+  - LEXIS-SC-004-rline-preservation
+linked_slice_packages:
+  - LEXIS-SLICE-001-GRAPH
+linked_research:
+  - LEXIS-PAPER-006
+linked_source_custody_decision:
+  - depends_on_source_records_in_graph_slice
+  - LEXIS-SRCDEC-001-latin-lexicographic-reference
+  - LEXIS-SRCDEC-002-english-etymology-reference
+linked_scope: LEXIS-SLICE-001-SCOPE
+expected_result: invalid_if_graph_output_drops_lexis_labels
+expected_diagnostics:
+  - graph_preservation
+  - relationship
+records_and_edges_included: local_preview_graph_artifacts_exist_for_candidate_slices
+source_text_redistribution_posture: no_source_text
+graph_impact: local_graph_preservation_precedes_optional_rline_adapter
+chronicle_impact: graph_summary_input_later
+review_state: rline_adapter_deferred_after_local_preservation
+promotion_blockers:
+  - RLINE adapter not implemented
+  - local graph artifacts remain candidate-only and non-promoted
+  - dependency adoption decision remains outside LEXIS source acceptance

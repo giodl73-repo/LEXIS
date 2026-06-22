@@ -1,0 +1,212 @@
+fixture_id: LEXIS-GEN-CAND-001-agere-act
+status: candidate_review
+scope:
+  scope_id: candidate-001-agere-act-scope
+  question: Candidate generated multi-stage graph-facing chain for Latin agere, Old French, Middle English, and Modern English act.
+  excluded_claims:
+  - unreviewed generated relationship claims
+  - source text ingestion or redistribution
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+- source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+  may_support_claims: false
+deferred_records: []
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers: []
+nodes:
+  languages:
+  - id: lang-latin
+    label: Latin
+    kind: language
+    source_posture: candidate_review
+  - id: lang-middle-english
+    label: Middle English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-modern-english
+    label: Modern English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-old-french
+    label: Old French
+    kind: language
+    source_posture: candidate_review
+  roots: []
+  wordforms:
+  - id: wf-latin-agere
+    label: agere
+    language_id: lang-latin
+    form: agere
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-agere
+  - id: wf-latin-actum
+    label: actum
+    language_id: lang-latin
+    form: actum
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-actum
+  - id: wf-old-french-old-french-act-candidate
+    label: Old French candidate stage for act
+    language_id: lang-old-french
+    form: old-french-act-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-old-french-old-french-act-candidate
+  - id: wf-middle-english-middle-english-act-candidate
+    label: Middle English candidate stage for act
+    language_id: lang-middle-english
+    form: middle-english-act-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-middle-english-middle-english-act-candidate
+  - id: wf-modern-english-act
+    label: act
+    language_id: lang-modern-english
+    form: act
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-act
+  meaning_senses:
+  - id: sense-agere
+    label: doing or acting
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-latin-agere
+  - id: sense-act
+    label: doing or acting
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-act
+  script_forms: []
+source_links:
+- id: src-latin-agere
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-latin-actum
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-old-french-old-french-act-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-middle-english-middle-english-act-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-modern-english-act
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+relationship_edges:
+- id: edge-agere-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-agere
+  target_id: wf-latin-agere
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-agere-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-latin-agere
+  target_id: sense-agere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-actum-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-actum
+  target_id: wf-latin-actum
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-act-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-old-french-old-french-act-candidate
+  target_id: wf-old-french-old-french-act-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-act-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-middle-english-middle-english-act-candidate
+  target_id: wf-middle-english-middle-english-act-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-act-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-modern-english-act
+  target_id: wf-modern-english-act
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-act-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-modern-english-act
+  target_id: sense-act
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-actum-descends-from-agere
+  edge_kind: descends_from
+  source_id: wf-latin-actum
+  target_id: wf-latin-agere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-act-candidate-borrowed-from-actum
+  edge_kind: borrowed_from
+  source_id: wf-old-french-old-french-act-candidate
+  target_id: wf-latin-actum
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-act-candidate-borrowed-from-old-french-act-candidate
+  edge_kind: borrowed_from
+  source_id: wf-middle-english-middle-english-act-candidate
+  target_id: wf-old-french-old-french-act-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-act-descends-from-middle-english-act-candidate
+  edge_kind: descends_from
+  source_id: wf-modern-english-act
+  target_id: wf-middle-english-middle-english-act-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review

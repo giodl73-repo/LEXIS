@@ -1,0 +1,16 @@
+decision_id: LEXIS-SRCDEC-045-tier2-proof-spirit
+status: candidate_review
+source_family: English etymology pointer for Latin-to-English candidate spirit
+related_slice_packages:
+  - LEXIS-SLICE-001-SOURCE
+pointer: https://www.etymonline.com/word/spirit
+candidate_source_name: Etymonline and Merriam-Webster entries for spirit
+rights_posture: copyrighted_reference_pointer_only
+redistribution_posture: pointer_only_planned
+citation_note: Proof pointers support Anglo-French or Latin route, Latin spiritus, and spirare route; no source text is copied.
+review_state: source_detail_required
+reviewer: L-5 Source Custody Reviewer pending
+promotion_allowed: false
+blocks:
+  - generated bridge should model spiritus rather than spiritum
+  - semantic and translation context must be retained before promotion

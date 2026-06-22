@@ -1,0 +1,54 @@
+scenario_id: LEXIS-SC-001-word-root-slice
+status: planned_not_executed
+actor: language-history reviewer
+purpose: >
+  Prove that a bounded word/root family slice can move from source pointers to
+  scoped records, relationship edges, graph slice planning, and chronicle
+  review without claiming broad language-family coverage.
+slice_package: LEXIS-SLICE-001
+related_work_packages:
+  - LEXIS-WP-003
+  - LEXIS-WP-004
+  - LEXIS-WP-005
+  - LEXIS-WP-006
+  - LEXIS-WP-008
+specs_exercised:
+  - docs/specs/source-custody.md
+  - docs/specs/language-history-model.md
+  - docs/specs/relationship-edges.md
+  - docs/specs/fixture-promotion.md
+  - docs/specs/graph-slice.md
+  - docs/specs/chronicle-output.md
+boundary_classes:
+  - source-custody contract
+  - data/model contract
+  - graph contract
+  - chronicle/report contract
+positive_path:
+  - Review source families for Latin scribere and selected English forms using pointer-only posture.
+  - Create a ChronicleScope that excludes full PIE reconstruction.
+  - Draft at most five wordform records with meaning and source posture.
+  - Draft relationship edges with claim type and uncertainty labels.
+  - Record at least one rejected or deferred alternative.
+  - Plan graph and chronicle outputs after validation exists.
+negative_paths:
+  - Reject a wordform record with no source posture.
+  - Reject a relationship edge that collapses borrowing and descent.
+  - Block a chronicle draft that implies broad Indo-European coverage.
+diagnostics_expected:
+  - source_custody
+  - scope
+  - claim_type
+  - relationship
+  - chronicle_overclaim
+evidence_expected:
+  - source-custody review record
+  - future fixture validation output
+  - future graph preservation report
+  - future chronicle review findings
+fixture_candidates:
+  - source-pointer fixture
+  - golden slice fixture
+  - negative relationship fixture
+findings_file: 99-findings.md
+

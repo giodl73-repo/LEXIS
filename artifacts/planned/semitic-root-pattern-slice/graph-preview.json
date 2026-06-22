@@ -1,0 +1,143 @@
+{
+  "slice_id": "LEXIS-FIX-008-semitic-root-pattern-slice",
+  "nodes": [
+    {
+      "id": "lang-ar",
+      "label": "Arabic",
+      "record_class": "Language",
+      "source_posture": "planned_blocked"
+    },
+    {
+      "id": "lang-he",
+      "label": "Hebrew",
+      "record_class": "Language",
+      "source_posture": "planned_blocked"
+    },
+    {
+      "id": "lang-arc",
+      "label": "Aramaic candidate context",
+      "record_class": "Language",
+      "source_posture": "planned_blocked"
+    },
+    {
+      "id": "root-sem-ktb",
+      "label": "Semitic root candidate K-T-B",
+      "record_class": "Root",
+      "claim_type": "reconstruction",
+      "uncertainty": "source_limited",
+      "source_posture": "planned_blocked"
+    },
+    {
+      "id": "wf-ar-kitab",
+      "label": "kitab",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "planned_blocked"
+    },
+    {
+      "id": "wf-he-ketav",
+      "label": "ketav",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "planned_blocked"
+    },
+    {
+      "id": "wf-arc-ktaba",
+      "label": "ktaba",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "planned_blocked"
+    },
+    {
+      "id": "sense-writing-root-pattern",
+      "label": "writing-associated root-pattern candidate",
+      "record_class": "MeaningSense",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "source_posture": "planned_blocked"
+    },
+    {
+      "id": "script-arabic-translit",
+      "label": "Arabic transliteration posture",
+      "record_class": "ScriptForm",
+      "source_posture": "planned_blocked"
+    },
+    {
+      "id": "script-hebrew-translit",
+      "label": "Hebrew transliteration posture",
+      "record_class": "ScriptForm",
+      "source_posture": "planned_blocked"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-semitic-root-support",
+      "edge_kind": "supports_claim",
+      "source_id": "src-semitic-root",
+      "target_id": "root-sem-ktb",
+      "claim_type": "reconstruction",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-007-semitic-root-reference"
+      ],
+      "review_state": "blocked"
+    },
+    {
+      "id": "edge-ar-kitab-root-candidate",
+      "edge_kind": "cognate_with",
+      "source_id": "wf-ar-kitab",
+      "target_id": "root-sem-ktb",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-007-semitic-root-reference"
+      ],
+      "review_state": "blocked"
+    },
+    {
+      "id": "edge-he-ketav-root-candidate",
+      "edge_kind": "cognate_with",
+      "source_id": "wf-he-ketav",
+      "target_id": "root-sem-ktb",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-007-semitic-root-reference"
+      ],
+      "review_state": "blocked"
+    },
+    {
+      "id": "edge-transliteration-not-equivalence",
+      "edge_kind": "disputes_claim",
+      "source_id": "script-arabic-translit",
+      "target_id": "script-hebrew-translit",
+      "claim_type": "rejected_alternative",
+      "uncertainty": "disputed",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-007-semitic-root-reference"
+      ],
+      "review_state": "blocked"
+    },
+    {
+      "id": "edge-root-writing-meaning",
+      "edge_kind": "meaning_shift_to",
+      "source_id": "root-sem-ktb",
+      "target_id": "sense-writing-root-pattern",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-007-semitic-root-reference"
+      ],
+      "review_state": "blocked"
+    }
+  ],
+  "source_posture_summary": [
+    "LEXIS-SRCDEC-007-semitic-root-reference:planned_blocked"
+  ],
+  "graph_engine_posture": "local-only",
+  "graph_output_posture": "preview_only_not_promoted",
+  "validation_error_count": 9
+}

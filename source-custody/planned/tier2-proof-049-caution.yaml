@@ -1,0 +1,17 @@
+decision_id: LEXIS-SRCDEC-059-tier2-proof-caution
+status: candidate_review
+source_family: English etymology pointer for Latin-to-English candidate caution
+related_slice_packages:
+  - LEXIS-SLICE-001-SOURCE
+pointer: https://www.etymonline.com/word/caution
+candidate_source_name: Etymonline entry for caution
+rights_posture: copyrighted_reference_pointer_only
+redistribution_posture: pointer_only_planned
+citation_note: Proof pointer supports Old French caution, Latin cautionem/cautio, and cavere route; no source text is copied.
+review_state: source_detail_required
+reviewer: L-5 Source Custody Reviewer pending
+promotion_allowed: false
+blocks:
+  - generated bridge should model cautio or cautionem rather than cautum
+  - per-chain fixture has not been corrected or accepted
+

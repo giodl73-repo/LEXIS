@@ -1,0 +1,25 @@
+digraph lexis_slice {
+  graph [label="LEXIS-GEN-CORR-095\npreview_only_not_promoted\nvalidation errors: 18"];
+  "lang-latin" [label="Latin\nLanguage\ncandidate_review"];
+  "lang-middle-english" [label="Middle English\nLanguage\ncandidate_review"];
+  "lang-modern-english" [label="Modern English\nLanguage\ncandidate_review"];
+  "lang-old-french" [label="Old French\nLanguage\ncandidate_review"];
+  "wf-latin-sperare" [label="sperare\nWordform\ncandidate_review"];
+  "wf-latin-desperare" [label="desperare\nWordform\ncandidate_review"];
+  "wf-old-french-desperer" [label="desperer\nWordform\ncandidate_review"];
+  "wf-old-french-despoir" [label="despoir\nWordform\ncandidate_review"];
+  "wf-middle-english-despair" [label="despair\nWordform\ncandidate_review"];
+  "wf-modern-english-despair" [label="despair\nWordform\ncandidate_review"];
+  "sense-wf-modern-english-despair" [label="Corrected candidate target meaning; source-detail review required.\nMeaningSense\ncandidate_review"];
+  "src-latin-sperare" -> "wf-latin-sperare" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "src-latin-desperare" -> "wf-latin-desperare" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "src-old-french-desperer" -> "wf-old-french-desperer" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "src-old-french-despoir" -> "wf-old-french-despoir" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "src-middle-english-despair" -> "wf-middle-english-despair" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "src-modern-english-despair" -> "wf-modern-english-despair" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "wf-modern-english-despair" -> "sense-wf-modern-english-despair" [label="meaning_shift_to\ninference\nsource_limited"];
+  "wf-latin-desperare" -> "wf-latin-sperare" [label="descends_from\ninference\nsource_limited"];
+  "wf-old-french-desperer" -> "wf-latin-desperare" [label="borrowed_from\ninference\nsource_limited"];
+  "wf-middle-english-despair" -> "wf-old-french-desperer" [label="borrowed_from\ninference\nsource_limited"];
+  "wf-modern-english-despair" -> "wf-middle-english-despair" [label="borrowed_from\ninference\nsource_limited"];
+}

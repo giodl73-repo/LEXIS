@@ -1,0 +1,17 @@
+decision_id: LEXIS-SRCDEC-015-tier1-proof-factor
+status: candidate_review
+source_family: English etymology pointer for Latin-to-English candidate factor
+related_slice_packages:
+  - LEXIS-SLICE-001-SOURCE
+pointer: https://www.etymonline.com/word/factor
+candidate_source_name: Etymonline entry for factor
+rights_posture: copyrighted_reference_pointer_only
+redistribution_posture: pointer_only_planned
+citation_note: Proof pointer supports French/Old French factor/faitor, Latin factor, and facere route; no source text is copied.
+review_state: source_detail_required
+reviewer: L-5 Source Custody Reviewer pending
+promotion_allowed: false
+blocks:
+  - generated bridge should model agent noun path rather than only factum
+  - per-chain fixture has not been corrected or accepted
+

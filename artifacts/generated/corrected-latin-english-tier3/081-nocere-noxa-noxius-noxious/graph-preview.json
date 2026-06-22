@@ -1,0 +1,149 @@
+{
+  "slice_id": "LEXIS-GEN-CORR-081",
+  "nodes": [
+    {
+      "id": "lang-latin",
+      "label": "Latin",
+      "record_class": "Language",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "lang-modern-english",
+      "label": "Modern English",
+      "record_class": "Language",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-latin-nocere",
+      "label": "nocere",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-latin-noxa",
+      "label": "noxa",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-latin-noxius",
+      "label": "noxius",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-modern-english-noxious",
+      "label": "noxious",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "sense-wf-modern-english-noxious",
+      "label": "Corrected candidate target meaning; source-detail review required.",
+      "record_class": "MeaningSense",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-wf-latin-nocere-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-latin-nocere",
+      "target_id": "wf-latin-nocere",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-100-tier3-proof-noxious"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-latin-noxa-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-latin-noxa",
+      "target_id": "wf-latin-noxa",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-100-tier3-proof-noxious"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-latin-noxius-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-latin-noxius",
+      "target_id": "wf-latin-noxius",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-100-tier3-proof-noxious"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-modern-english-noxious-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-modern-english-noxious",
+      "target_id": "wf-modern-english-noxious",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-100-tier3-proof-noxious"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-modern-english-noxious-meaning",
+      "edge_kind": "meaning_shift_to",
+      "source_id": "wf-modern-english-noxious",
+      "target_id": "sense-wf-modern-english-noxious",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-100-tier3-proof-noxious"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-latin-noxa-descends-from-wf-latin-nocere",
+      "edge_kind": "descends_from",
+      "source_id": "wf-latin-noxa",
+      "target_id": "wf-latin-nocere",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-100-tier3-proof-noxious"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-modern-english-noxious-borrowed-from-wf-latin-noxa",
+      "edge_kind": "borrowed_from",
+      "source_id": "wf-modern-english-noxious",
+      "target_id": "wf-latin-noxa",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-100-tier3-proof-noxious"
+      ],
+      "review_state": "candidate_review"
+    }
+  ],
+  "source_posture_summary": [
+    "LEXIS-SRCDEC-100-tier3-proof-noxious:candidate_review"
+  ],
+  "graph_engine_posture": "local-only",
+  "graph_output_posture": "preview_only_not_promoted",
+  "validation_error_count": 12
+}

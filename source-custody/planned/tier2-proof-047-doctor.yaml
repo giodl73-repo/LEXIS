@@ -1,0 +1,17 @@
+decision_id: LEXIS-SRCDEC-058-tier2-proof-doctor
+status: candidate_review
+source_family: English etymology pointer for Latin-to-English candidate doctor
+related_slice_packages:
+  - LEXIS-SLICE-001-SOURCE
+pointer: https://www.etymonline.com/word/doctor
+candidate_source_name: Etymonline entry for doctor
+rights_posture: copyrighted_reference_pointer_only
+redistribution_posture: pointer_only_planned
+citation_note: Proof pointer supports Old French doctour, Medieval/classical Latin doctor, and docere route; no source text is copied.
+review_state: source_detail_required
+reviewer: L-5 Source Custody Reviewer pending
+promotion_allowed: false
+blocks:
+  - generated bridge should model doctor agent noun rather than doctum
+  - semantic shift from teacher/scholar to medical professional must be labeled if used
+

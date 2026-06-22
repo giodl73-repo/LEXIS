@@ -1,0 +1,212 @@
+fixture_id: LEXIS-GEN-CAND-028-tangere-contact
+status: candidate_review
+scope:
+  scope_id: candidate-028-tangere-contact-scope
+  question: Candidate generated multi-stage graph-facing chain for Latin tangere, Old French, Middle English, and Modern English contact.
+  excluded_claims:
+  - unreviewed generated relationship claims
+  - source text ingestion or redistribution
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+- source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+  may_support_claims: false
+deferred_records: []
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers: []
+nodes:
+  languages:
+  - id: lang-latin
+    label: Latin
+    kind: language
+    source_posture: candidate_review
+  - id: lang-middle-english
+    label: Middle English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-modern-english
+    label: Modern English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-old-french
+    label: Old French
+    kind: language
+    source_posture: candidate_review
+  roots: []
+  wordforms:
+  - id: wf-latin-tangere
+    label: tangere
+    language_id: lang-latin
+    form: tangere
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-tangere
+  - id: wf-latin-tactum
+    label: tactum
+    language_id: lang-latin
+    form: tactum
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-tactum
+  - id: wf-old-french-old-french-contact-candidate
+    label: Old French candidate stage for contact
+    language_id: lang-old-french
+    form: old-french-contact-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-old-french-old-french-contact-candidate
+  - id: wf-middle-english-middle-english-contact-candidate
+    label: Middle English candidate stage for contact
+    language_id: lang-middle-english
+    form: middle-english-contact-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-middle-english-middle-english-contact-candidate
+  - id: wf-modern-english-contact
+    label: contact
+    language_id: lang-modern-english
+    form: contact
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-contact
+  meaning_senses:
+  - id: sense-tangere
+    label: touching or reaching
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-latin-tangere
+  - id: sense-contact
+    label: touching or reaching
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-contact
+  script_forms: []
+source_links:
+- id: src-latin-tangere
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-latin-tactum
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-old-french-old-french-contact-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-middle-english-middle-english-contact-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-modern-english-contact
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+relationship_edges:
+- id: edge-tangere-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-tangere
+  target_id: wf-latin-tangere
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-tangere-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-latin-tangere
+  target_id: sense-tangere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-tactum-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-tactum
+  target_id: wf-latin-tactum
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-contact-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-old-french-old-french-contact-candidate
+  target_id: wf-old-french-old-french-contact-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-contact-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-middle-english-middle-english-contact-candidate
+  target_id: wf-middle-english-middle-english-contact-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-contact-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-modern-english-contact
+  target_id: wf-modern-english-contact
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-contact-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-modern-english-contact
+  target_id: sense-contact
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-tactum-descends-from-tangere
+  edge_kind: descends_from
+  source_id: wf-latin-tactum
+  target_id: wf-latin-tangere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-contact-candidate-borrowed-from-tactum
+  edge_kind: borrowed_from
+  source_id: wf-old-french-old-french-contact-candidate
+  target_id: wf-latin-tactum
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-contact-candidate-borrowed-from-old-french-contact-candidate
+  edge_kind: borrowed_from
+  source_id: wf-middle-english-middle-english-contact-candidate
+  target_id: wf-old-french-old-french-contact-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-contact-descends-from-middle-english-contact-candidate
+  edge_kind: descends_from
+  source_id: wf-modern-english-contact
+  target_id: wf-middle-english-middle-english-contact-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review

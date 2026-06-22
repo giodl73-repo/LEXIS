@@ -1,0 +1,212 @@
+fixture_id: LEXIS-GEN-CAND-079-monere-monitor
+status: candidate_review
+scope:
+  scope_id: candidate-079-monere-monitor-scope
+  question: Candidate generated multi-stage graph-facing chain for Latin monere, Old French, Middle English, and Modern English monitor.
+  excluded_claims:
+  - unreviewed generated relationship claims
+  - source text ingestion or redistribution
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+- source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+  may_support_claims: false
+deferred_records: []
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers: []
+nodes:
+  languages:
+  - id: lang-latin
+    label: Latin
+    kind: language
+    source_posture: candidate_review
+  - id: lang-middle-english
+    label: Middle English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-modern-english
+    label: Modern English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-old-french
+    label: Old French
+    kind: language
+    source_posture: candidate_review
+  roots: []
+  wordforms:
+  - id: wf-latin-monere
+    label: monere
+    language_id: lang-latin
+    form: monere
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-monere
+  - id: wf-latin-monitum
+    label: monitum
+    language_id: lang-latin
+    form: monitum
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-monitum
+  - id: wf-old-french-old-french-monitor-candidate
+    label: Old French candidate stage for monitor
+    language_id: lang-old-french
+    form: old-french-monitor-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-old-french-old-french-monitor-candidate
+  - id: wf-middle-english-middle-english-monitor-candidate
+    label: Middle English candidate stage for monitor
+    language_id: lang-middle-english
+    form: middle-english-monitor-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-middle-english-middle-english-monitor-candidate
+  - id: wf-modern-english-monitor
+    label: monitor
+    language_id: lang-modern-english
+    form: monitor
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-monitor
+  meaning_senses:
+  - id: sense-monere
+    label: warning or advising
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-latin-monere
+  - id: sense-monitor
+    label: warning or advising
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-monitor
+  script_forms: []
+source_links:
+- id: src-latin-monere
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-latin-monitum
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-old-french-old-french-monitor-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-middle-english-middle-english-monitor-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-modern-english-monitor
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+relationship_edges:
+- id: edge-monere-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-monere
+  target_id: wf-latin-monere
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-monere-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-latin-monere
+  target_id: sense-monere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-monitum-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-monitum
+  target_id: wf-latin-monitum
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-monitor-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-old-french-old-french-monitor-candidate
+  target_id: wf-old-french-old-french-monitor-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-monitor-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-middle-english-middle-english-monitor-candidate
+  target_id: wf-middle-english-middle-english-monitor-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-monitor-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-modern-english-monitor
+  target_id: wf-modern-english-monitor
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-monitor-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-modern-english-monitor
+  target_id: sense-monitor
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-monitum-descends-from-monere
+  edge_kind: descends_from
+  source_id: wf-latin-monitum
+  target_id: wf-latin-monere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-monitor-candidate-borrowed-from-monitum
+  edge_kind: borrowed_from
+  source_id: wf-old-french-old-french-monitor-candidate
+  target_id: wf-latin-monitum
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-monitor-candidate-borrowed-from-old-french-monitor-candidate
+  edge_kind: borrowed_from
+  source_id: wf-middle-english-middle-english-monitor-candidate
+  target_id: wf-old-french-old-french-monitor-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-monitor-descends-from-middle-english-monitor-candidate
+  edge_kind: descends_from
+  source_id: wf-modern-english-monitor
+  target_id: wf-middle-english-middle-english-monitor-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review

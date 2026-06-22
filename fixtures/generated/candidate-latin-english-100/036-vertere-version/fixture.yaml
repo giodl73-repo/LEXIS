@@ -1,0 +1,212 @@
+fixture_id: LEXIS-GEN-CAND-036-vertere-version
+status: candidate_review
+scope:
+  scope_id: candidate-036-vertere-version-scope
+  question: Candidate generated multi-stage graph-facing chain for Latin vertere, Old French, Middle English, and Modern English version.
+  excluded_claims:
+  - unreviewed generated relationship claims
+  - source text ingestion or redistribution
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+- source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+  may_support_claims: false
+deferred_records: []
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers: []
+nodes:
+  languages:
+  - id: lang-latin
+    label: Latin
+    kind: language
+    source_posture: candidate_review
+  - id: lang-middle-english
+    label: Middle English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-modern-english
+    label: Modern English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-old-french
+    label: Old French
+    kind: language
+    source_posture: candidate_review
+  roots: []
+  wordforms:
+  - id: wf-latin-vertere
+    label: vertere
+    language_id: lang-latin
+    form: vertere
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-vertere
+  - id: wf-latin-versum
+    label: versum
+    language_id: lang-latin
+    form: versum
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-versum
+  - id: wf-old-french-old-french-version-candidate
+    label: Old French candidate stage for version
+    language_id: lang-old-french
+    form: old-french-version-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-old-french-old-french-version-candidate
+  - id: wf-middle-english-middle-english-version-candidate
+    label: Middle English candidate stage for version
+    language_id: lang-middle-english
+    form: middle-english-version-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-middle-english-middle-english-version-candidate
+  - id: wf-modern-english-version
+    label: version
+    language_id: lang-modern-english
+    form: version
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-version
+  meaning_senses:
+  - id: sense-vertere
+    label: turning or changing
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-latin-vertere
+  - id: sense-version
+    label: turning or changing
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-version
+  script_forms: []
+source_links:
+- id: src-latin-vertere
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-latin-versum
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-old-french-old-french-version-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-middle-english-middle-english-version-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-modern-english-version
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+relationship_edges:
+- id: edge-vertere-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-vertere
+  target_id: wf-latin-vertere
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-vertere-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-latin-vertere
+  target_id: sense-vertere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-versum-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-versum
+  target_id: wf-latin-versum
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-version-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-old-french-old-french-version-candidate
+  target_id: wf-old-french-old-french-version-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-version-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-middle-english-middle-english-version-candidate
+  target_id: wf-middle-english-middle-english-version-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-version-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-modern-english-version
+  target_id: wf-modern-english-version
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-version-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-modern-english-version
+  target_id: sense-version
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-versum-descends-from-vertere
+  edge_kind: descends_from
+  source_id: wf-latin-versum
+  target_id: wf-latin-vertere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-version-candidate-borrowed-from-versum
+  edge_kind: borrowed_from
+  source_id: wf-old-french-old-french-version-candidate
+  target_id: wf-latin-versum
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-version-candidate-borrowed-from-old-french-version-candidate
+  edge_kind: borrowed_from
+  source_id: wf-middle-english-middle-english-version-candidate
+  target_id: wf-old-french-old-french-version-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-version-descends-from-middle-english-version-candidate
+  edge_kind: descends_from
+  source_id: wf-modern-english-version
+  target_id: wf-middle-english-middle-english-version-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review

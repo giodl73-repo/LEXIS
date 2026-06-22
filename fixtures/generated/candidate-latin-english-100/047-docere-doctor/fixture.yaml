@@ -1,0 +1,212 @@
+fixture_id: LEXIS-GEN-CAND-047-docere-doctor
+status: candidate_review
+scope:
+  scope_id: candidate-047-docere-doctor-scope
+  question: Candidate generated multi-stage graph-facing chain for Latin docere, Old French, Middle English, and Modern English doctor.
+  excluded_claims:
+  - unreviewed generated relationship claims
+  - source text ingestion or redistribution
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+- source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+  may_support_claims: false
+deferred_records: []
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers: []
+nodes:
+  languages:
+  - id: lang-latin
+    label: Latin
+    kind: language
+    source_posture: candidate_review
+  - id: lang-middle-english
+    label: Middle English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-modern-english
+    label: Modern English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-old-french
+    label: Old French
+    kind: language
+    source_posture: candidate_review
+  roots: []
+  wordforms:
+  - id: wf-latin-docere
+    label: docere
+    language_id: lang-latin
+    form: docere
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-docere
+  - id: wf-latin-doctum
+    label: doctum
+    language_id: lang-latin
+    form: doctum
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-doctum
+  - id: wf-old-french-old-french-doctor-candidate
+    label: Old French candidate stage for doctor
+    language_id: lang-old-french
+    form: old-french-doctor-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-old-french-old-french-doctor-candidate
+  - id: wf-middle-english-middle-english-doctor-candidate
+    label: Middle English candidate stage for doctor
+    language_id: lang-middle-english
+    form: middle-english-doctor-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-middle-english-middle-english-doctor-candidate
+  - id: wf-modern-english-doctor
+    label: doctor
+    language_id: lang-modern-english
+    form: doctor
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-doctor
+  meaning_senses:
+  - id: sense-docere
+    label: teaching or showing
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-latin-docere
+  - id: sense-doctor
+    label: teaching or showing
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-doctor
+  script_forms: []
+source_links:
+- id: src-latin-docere
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-latin-doctum
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-old-french-old-french-doctor-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-middle-english-middle-english-doctor-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-modern-english-doctor
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+relationship_edges:
+- id: edge-docere-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-docere
+  target_id: wf-latin-docere
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-docere-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-latin-docere
+  target_id: sense-docere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-doctum-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-doctum
+  target_id: wf-latin-doctum
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-doctor-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-old-french-old-french-doctor-candidate
+  target_id: wf-old-french-old-french-doctor-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-doctor-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-middle-english-middle-english-doctor-candidate
+  target_id: wf-middle-english-middle-english-doctor-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-doctor-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-modern-english-doctor
+  target_id: wf-modern-english-doctor
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-doctor-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-modern-english-doctor
+  target_id: sense-doctor
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-doctum-descends-from-docere
+  edge_kind: descends_from
+  source_id: wf-latin-doctum
+  target_id: wf-latin-docere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-doctor-candidate-borrowed-from-doctum
+  edge_kind: borrowed_from
+  source_id: wf-old-french-old-french-doctor-candidate
+  target_id: wf-latin-doctum
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-doctor-candidate-borrowed-from-old-french-doctor-candidate
+  edge_kind: borrowed_from
+  source_id: wf-middle-english-middle-english-doctor-candidate
+  target_id: wf-old-french-old-french-doctor-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-doctor-descends-from-middle-english-doctor-candidate
+  edge_kind: descends_from
+  source_id: wf-modern-english-doctor
+  target_id: wf-middle-english-middle-english-doctor-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review

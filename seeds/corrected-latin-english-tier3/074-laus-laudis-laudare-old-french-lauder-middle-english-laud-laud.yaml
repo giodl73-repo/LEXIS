@@ -1,0 +1,79 @@
+slice_id: corrected-candidate-074
+fixture_id: LEXIS-GEN-CORR-074
+status: candidate_review
+question: Corrected graph-facing candidate route for generated Latin-English chain 074.
+source_state: candidate_review
+sources:
+- id: LEXIS-SRCDEC-098-tier3-proof-laud
+  state: candidate_review
+  may_support_claims: false
+forms:
+- form: laus
+  language: Latin
+  source: LEXIS-SRCDEC-098-tier3-proof-laud
+  id: wf-latin-laus
+  label: null
+  meaning: null
+- form: laudis
+  language: Latin
+  source: LEXIS-SRCDEC-098-tier3-proof-laud
+  id: wf-latin-laudis
+  label: null
+  meaning: null
+- form: laudare
+  language: Unspecified intermediate
+  source: LEXIS-SRCDEC-098-tier3-proof-laud
+  id: wf-unspecified-intermediate-laudare
+  label: null
+  meaning: null
+- form: lauder
+  language: Old French
+  source: LEXIS-SRCDEC-098-tier3-proof-laud
+  id: wf-old-french-lauder
+  label: null
+  meaning: null
+- form: laud
+  language: Middle English
+  source: LEXIS-SRCDEC-098-tier3-proof-laud
+  id: wf-middle-english-laud
+  label: null
+  meaning: null
+- form: laud
+  language: Modern English
+  source: LEXIS-SRCDEC-098-tier3-proof-laud
+  id: wf-modern-english-laud
+  label: null
+  meaning: Corrected candidate target meaning; source-detail review required.
+relationships:
+- kind: borrowed_from
+  source: wf-unspecified-intermediate-laudare
+  target: wf-latin-laus
+  claim_type: inference
+  uncertainty: source_limited
+  support:
+  - LEXIS-SRCDEC-098-tier3-proof-laud
+  review_state: candidate_review
+- kind: borrowed_from
+  source: wf-old-french-lauder
+  target: wf-unspecified-intermediate-laudare
+  claim_type: inference
+  uncertainty: source_limited
+  support:
+  - LEXIS-SRCDEC-098-tier3-proof-laud
+  review_state: candidate_review
+- kind: borrowed_from
+  source: wf-middle-english-laud
+  target: wf-old-french-lauder
+  claim_type: inference
+  uncertainty: source_limited
+  support:
+  - LEXIS-SRCDEC-098-tier3-proof-laud
+  review_state: candidate_review
+- kind: borrowed_from
+  source: wf-modern-english-laud
+  target: wf-middle-english-laud
+  claim_type: inference
+  uncertainty: source_limited
+  support:
+  - LEXIS-SRCDEC-098-tier3-proof-laud
+  review_state: candidate_review

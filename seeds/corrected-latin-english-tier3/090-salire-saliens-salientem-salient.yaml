@@ -1,0 +1,51 @@
+slice_id: corrected-candidate-090
+fixture_id: LEXIS-GEN-CORR-090
+status: candidate_review
+question: Corrected graph-facing candidate route for generated Latin-English chain 090.
+source_state: candidate_review
+sources:
+- id: LEXIS-SRCDEC-103-tier3-proof-salient
+  state: candidate_review
+  may_support_claims: false
+forms:
+- form: salire
+  language: Latin
+  source: LEXIS-SRCDEC-103-tier3-proof-salient
+  id: wf-latin-salire
+  label: null
+  meaning: null
+- form: saliens
+  language: Latin
+  source: LEXIS-SRCDEC-103-tier3-proof-salient
+  id: wf-latin-saliens
+  label: null
+  meaning: null
+- form: salientem
+  language: Latin
+  source: LEXIS-SRCDEC-103-tier3-proof-salient
+  id: wf-latin-salientem
+  label: null
+  meaning: null
+- form: salient
+  language: Modern English
+  source: LEXIS-SRCDEC-103-tier3-proof-salient
+  id: wf-modern-english-salient
+  label: null
+  meaning: Corrected candidate target meaning; source-detail review required.
+relationships:
+- kind: descends_from
+  source: wf-latin-saliens
+  target: wf-latin-salire
+  claim_type: inference
+  uncertainty: source_limited
+  support:
+  - LEXIS-SRCDEC-103-tier3-proof-salient
+  review_state: candidate_review
+- kind: borrowed_from
+  source: wf-modern-english-salient
+  target: wf-latin-saliens
+  claim_type: inference
+  uncertainty: source_limited
+  support:
+  - LEXIS-SRCDEC-103-tier3-proof-salient
+  review_state: candidate_review

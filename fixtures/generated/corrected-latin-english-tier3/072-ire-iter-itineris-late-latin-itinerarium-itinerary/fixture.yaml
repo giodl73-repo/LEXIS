@@ -1,0 +1,183 @@
+fixture_id: LEXIS-GEN-CORR-072
+status: candidate_review
+scope:
+  scope_id: corrected-candidate-072-scope
+  question: Corrected graph-facing candidate route for generated Latin-English chain 072.
+  excluded_claims:
+  - unreviewed generated relationship claims
+  - source text ingestion or redistribution
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+- source_ref: LEXIS-SRCDEC-097-tier3-proof-itinerary
+  contract_state: candidate_review
+  may_support_claims: false
+deferred_records: []
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers: []
+nodes:
+  languages:
+  - id: lang-late-latin
+    label: Late Latin
+    kind: language
+    source_posture: candidate_review
+  - id: lang-latin
+    label: Latin
+    kind: language
+    source_posture: candidate_review
+  - id: lang-modern-english
+    label: Modern English
+    kind: language
+    source_posture: candidate_review
+  roots: []
+  wordforms:
+  - id: wf-latin-ire
+    label: ire
+    language_id: lang-latin
+    form: ire
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-ire
+  - id: wf-latin-iter
+    label: iter
+    language_id: lang-latin
+    form: iter
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-iter
+  - id: wf-latin-itineris
+    label: itineris
+    language_id: lang-latin
+    form: itineris
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-itineris
+  - id: wf-late-latin-itinerarium
+    label: itinerarium
+    language_id: lang-late-latin
+    form: itinerarium
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-late-latin-itinerarium
+  - id: wf-modern-english-itinerary
+    label: itinerary
+    language_id: lang-modern-english
+    form: itinerary
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-itinerary
+  meaning_senses:
+  - id: sense-wf-modern-english-itinerary
+    label: Corrected candidate target meaning; source-detail review required.
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-itinerary
+  script_forms: []
+source_links:
+- id: src-latin-ire
+  source_ref: LEXIS-SRCDEC-097-tier3-proof-itinerary
+  contract_state: candidate_review
+- id: src-latin-iter
+  source_ref: LEXIS-SRCDEC-097-tier3-proof-itinerary
+  contract_state: candidate_review
+- id: src-latin-itineris
+  source_ref: LEXIS-SRCDEC-097-tier3-proof-itinerary
+  contract_state: candidate_review
+- id: src-late-latin-itinerarium
+  source_ref: LEXIS-SRCDEC-097-tier3-proof-itinerary
+  contract_state: candidate_review
+- id: src-modern-english-itinerary
+  source_ref: LEXIS-SRCDEC-097-tier3-proof-itinerary
+  contract_state: candidate_review
+relationship_edges:
+- id: edge-wf-latin-ire-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-ire
+  target_id: wf-latin-ire
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-097-tier3-proof-itinerary
+  review_state: candidate_review
+- id: edge-wf-latin-iter-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-iter
+  target_id: wf-latin-iter
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-097-tier3-proof-itinerary
+  review_state: candidate_review
+- id: edge-wf-latin-itineris-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-itineris
+  target_id: wf-latin-itineris
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-097-tier3-proof-itinerary
+  review_state: candidate_review
+- id: edge-wf-late-latin-itinerarium-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-late-latin-itinerarium
+  target_id: wf-late-latin-itinerarium
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-097-tier3-proof-itinerary
+  review_state: candidate_review
+- id: edge-wf-modern-english-itinerary-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-modern-english-itinerary
+  target_id: wf-modern-english-itinerary
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-097-tier3-proof-itinerary
+  review_state: candidate_review
+- id: edge-wf-modern-english-itinerary-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-modern-english-itinerary
+  target_id: sense-wf-modern-english-itinerary
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-097-tier3-proof-itinerary
+  review_state: candidate_review
+- id: edge-wf-latin-iter-descends-from-wf-latin-ire
+  edge_kind: descends_from
+  source_id: wf-latin-iter
+  target_id: wf-latin-ire
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-097-tier3-proof-itinerary
+  review_state: candidate_review
+- id: edge-wf-late-latin-itinerarium-borrowed-from-wf-latin-iter
+  edge_kind: borrowed_from
+  source_id: wf-late-latin-itinerarium
+  target_id: wf-latin-iter
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-097-tier3-proof-itinerary
+  review_state: candidate_review
+- id: edge-wf-modern-english-itinerary-borrowed-from-wf-late-latin-itinerarium
+  edge_kind: borrowed_from
+  source_id: wf-modern-english-itinerary
+  target_id: wf-late-latin-itinerarium
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-097-tier3-proof-itinerary
+  review_state: candidate_review

@@ -1,0 +1,212 @@
+fixture_id: LEXIS-GEN-CAND-002-amare-amateur
+status: candidate_review
+scope:
+  scope_id: candidate-002-amare-amateur-scope
+  question: Candidate generated multi-stage graph-facing chain for Latin amare, Old French, Middle English, and Modern English amateur.
+  excluded_claims:
+  - unreviewed generated relationship claims
+  - source text ingestion or redistribution
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+- source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+  may_support_claims: false
+deferred_records: []
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers: []
+nodes:
+  languages:
+  - id: lang-latin
+    label: Latin
+    kind: language
+    source_posture: candidate_review
+  - id: lang-middle-english
+    label: Middle English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-modern-english
+    label: Modern English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-old-french
+    label: Old French
+    kind: language
+    source_posture: candidate_review
+  roots: []
+  wordforms:
+  - id: wf-latin-amare
+    label: amare
+    language_id: lang-latin
+    form: amare
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-amare
+  - id: wf-latin-amator
+    label: amator
+    language_id: lang-latin
+    form: amator
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-amator
+  - id: wf-old-french-old-french-amateur-candidate
+    label: Old French candidate stage for amateur
+    language_id: lang-old-french
+    form: old-french-amateur-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-old-french-old-french-amateur-candidate
+  - id: wf-middle-english-middle-english-amateur-candidate
+    label: Middle English candidate stage for amateur
+    language_id: lang-middle-english
+    form: middle-english-amateur-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-middle-english-middle-english-amateur-candidate
+  - id: wf-modern-english-amateur
+    label: amateur
+    language_id: lang-modern-english
+    form: amateur
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-amateur
+  meaning_senses:
+  - id: sense-amare
+    label: love or devoted pursuit
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-latin-amare
+  - id: sense-amateur
+    label: love or devoted pursuit
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-amateur
+  script_forms: []
+source_links:
+- id: src-latin-amare
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-latin-amator
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-old-french-old-french-amateur-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-middle-english-middle-english-amateur-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-modern-english-amateur
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+relationship_edges:
+- id: edge-amare-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-amare
+  target_id: wf-latin-amare
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-amare-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-latin-amare
+  target_id: sense-amare
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-amator-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-amator
+  target_id: wf-latin-amator
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-amateur-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-old-french-old-french-amateur-candidate
+  target_id: wf-old-french-old-french-amateur-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-amateur-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-middle-english-middle-english-amateur-candidate
+  target_id: wf-middle-english-middle-english-amateur-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-amateur-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-modern-english-amateur
+  target_id: wf-modern-english-amateur
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-amateur-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-modern-english-amateur
+  target_id: sense-amateur
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-amator-descends-from-amare
+  edge_kind: descends_from
+  source_id: wf-latin-amator
+  target_id: wf-latin-amare
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-amateur-candidate-borrowed-from-amator
+  edge_kind: borrowed_from
+  source_id: wf-old-french-old-french-amateur-candidate
+  target_id: wf-latin-amator
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-amateur-candidate-borrowed-from-old-french-amateur-candidate
+  edge_kind: borrowed_from
+  source_id: wf-middle-english-middle-english-amateur-candidate
+  target_id: wf-old-french-old-french-amateur-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-amateur-descends-from-middle-english-amateur-candidate
+  edge_kind: descends_from
+  source_id: wf-modern-english-amateur
+  target_id: wf-middle-english-middle-english-amateur-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review

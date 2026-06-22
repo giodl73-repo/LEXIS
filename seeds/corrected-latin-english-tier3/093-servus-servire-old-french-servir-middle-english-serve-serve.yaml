@@ -1,0 +1,73 @@
+slice_id: corrected-candidate-093
+fixture_id: LEXIS-GEN-CORR-093
+status: candidate_review
+question: Corrected graph-facing candidate route for generated Latin-English chain 093.
+source_state: candidate_review
+sources:
+- id: LEXIS-SRCDEC-105-tier3-proof-serve
+  state: candidate_review
+  may_support_claims: false
+forms:
+- form: servus
+  language: Latin
+  source: LEXIS-SRCDEC-105-tier3-proof-serve
+  id: wf-latin-servus
+  label: null
+  meaning: null
+- form: servire
+  language: Unspecified intermediate
+  source: LEXIS-SRCDEC-105-tier3-proof-serve
+  id: wf-unspecified-intermediate-servire
+  label: null
+  meaning: null
+- form: servir
+  language: Old French
+  source: LEXIS-SRCDEC-105-tier3-proof-serve
+  id: wf-old-french-servir
+  label: null
+  meaning: null
+- form: serve
+  language: Middle English
+  source: LEXIS-SRCDEC-105-tier3-proof-serve
+  id: wf-middle-english-serve
+  label: null
+  meaning: null
+- form: serve
+  language: Modern English
+  source: LEXIS-SRCDEC-105-tier3-proof-serve
+  id: wf-modern-english-serve
+  label: null
+  meaning: Corrected candidate target meaning; source-detail review required.
+relationships:
+- kind: borrowed_from
+  source: wf-unspecified-intermediate-servire
+  target: wf-latin-servus
+  claim_type: inference
+  uncertainty: source_limited
+  support:
+  - LEXIS-SRCDEC-105-tier3-proof-serve
+  review_state: candidate_review
+- kind: borrowed_from
+  source: wf-old-french-servir
+  target: wf-unspecified-intermediate-servire
+  claim_type: inference
+  uncertainty: source_limited
+  support:
+  - LEXIS-SRCDEC-105-tier3-proof-serve
+  review_state: candidate_review
+- kind: borrowed_from
+  source: wf-middle-english-serve
+  target: wf-old-french-servir
+  claim_type: inference
+  uncertainty: source_limited
+  support:
+  - LEXIS-SRCDEC-105-tier3-proof-serve
+  review_state: candidate_review
+- kind: borrowed_from
+  source: wf-modern-english-serve
+  target: wf-middle-english-serve
+  claim_type: inference
+  uncertainty: source_limited
+  support:
+  - LEXIS-SRCDEC-105-tier3-proof-serve
+  review_state: candidate_review

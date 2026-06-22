@@ -1,0 +1,37 @@
+digraph lexis_slice {
+  graph [label="LEXIS-FIX-002-golden-scribere-slice\nvalidated\nvalidation errors: 0"];
+  "lang-lat" [label="Latin\nLanguage\naccepted_for_slice"];
+  "lang-en" [label="English\nLanguage\naccepted_for_slice"];
+  "wf-lat-scribere" [label="scribere / scribo\nWordform\naccepted_for_slice"];
+  "wf-lat-scriba" [label="scriba\nWordform\naccepted_for_slice"];
+  "wf-lat-scriptum" [label="scriptum\nWordform\naccepted_for_slice"];
+  "wf-lat-inscriptio" [label="inscriptio / inscribere\nWordform\naccepted_for_slice"];
+  "wf-lat-describere" [label="describere\nWordform\naccepted_for_slice"];
+  "wf-en-scribe" [label="scribe\nWordform\naccepted_for_slice"];
+  "wf-en-script" [label="script\nWordform\naccepted_for_slice"];
+  "wf-en-inscription" [label="inscription\nWordform\naccepted_for_slice"];
+  "wf-en-describe" [label="describe\nWordform\naccepted_for_slice"];
+  "sense-writing" [label="writing / marking with words\nMeaningSense\naccepted_for_slice"];
+  "sense-scribe-person" [label="person who writes\nMeaningSense\naccepted_for_slice"];
+  "sense-script-written-text" [label="written text / writing system context\nMeaningSense\naccepted_for_slice"];
+  "sense-inscription-marked-text" [label="marked or written text on a surface\nMeaningSense\naccepted_for_slice"];
+  "sense-describe-account" [label="written or verbal account\nMeaningSense\naccepted_for_slice"];
+  "script-latin-form" [label="Latin script form posture\nScriptForm\naccepted_for_slice"];
+  "src-lat-scribere" -> "wf-lat-scribere" [label="supports_claim\ndirect_evidence\nsettled_for_slice"];
+  "src-en-scribe" -> "wf-en-scribe" [label="supports_claim\ndirect_evidence\nsettled_for_slice"];
+  "src-en-script" -> "wf-en-script" [label="supports_claim\ndirect_evidence\nsettled_for_slice"];
+  "src-en-inscription" -> "wf-en-inscription" [label="supports_claim\ndirect_evidence\nsettled_for_slice"];
+  "src-en-describe" -> "wf-en-describe" [label="supports_claim\ndirect_evidence\nsettled_for_slice"];
+  "wf-lat-scriba" -> "wf-lat-scribere" [label="descends_from\ndirect_evidence\nsettled_for_slice"];
+  "wf-lat-scriptum" -> "wf-lat-scribere" [label="descends_from\ndirect_evidence\nsettled_for_slice"];
+  "wf-lat-inscriptio" -> "wf-lat-scribere" [label="descends_from\ndirect_evidence\nsettled_for_slice"];
+  "wf-lat-describere" -> "wf-lat-scribere" [label="descends_from\ndirect_evidence\nsettled_for_slice"];
+  "wf-en-scribe" -> "wf-lat-scriba" [label="borrowed_from\ndirect_evidence\nsettled_for_slice"];
+  "wf-en-script" -> "wf-lat-scriptum" [label="borrowed_from\ndirect_evidence\nsettled_for_slice"];
+  "wf-en-inscription" -> "wf-lat-inscriptio" [label="borrowed_from\ndirect_evidence\nsettled_for_slice"];
+  "wf-en-describe" -> "wf-lat-describere" [label="borrowed_from\ndirect_evidence\nsettled_for_slice"];
+  "wf-en-scribe" -> "sense-scribe-person" [label="meaning_shift_to\ninference\nsettled_for_slice"];
+  "wf-en-script" -> "sense-script-written-text" [label="meaning_shift_to\ninference\nsettled_for_slice"];
+  "wf-en-inscription" -> "sense-inscription-marked-text" [label="meaning_shift_to\ninference\nsettled_for_slice"];
+  "wf-en-describe" -> "sense-describe-account" [label="meaning_shift_to\ninference\nsettled_for_slice"];
+}

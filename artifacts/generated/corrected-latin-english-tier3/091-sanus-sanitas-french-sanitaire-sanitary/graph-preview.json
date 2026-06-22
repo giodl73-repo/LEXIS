@@ -1,0 +1,173 @@
+{
+  "slice_id": "LEXIS-GEN-CORR-091",
+  "nodes": [
+    {
+      "id": "lang-french",
+      "label": "French",
+      "record_class": "Language",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "lang-latin",
+      "label": "Latin",
+      "record_class": "Language",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "lang-modern-english",
+      "label": "Modern English",
+      "record_class": "Language",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "lang-unspecified-intermediate",
+      "label": "Unspecified intermediate",
+      "record_class": "Language",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-latin-sanus",
+      "label": "sanus",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-unspecified-intermediate-sanitas",
+      "label": "sanitas",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-french-sanitaire",
+      "label": "sanitaire",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-modern-english-sanitary",
+      "label": "sanitary",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "sense-wf-modern-english-sanitary",
+      "label": "Corrected candidate target meaning; source-detail review required.",
+      "record_class": "MeaningSense",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-wf-latin-sanus-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-latin-sanus",
+      "target_id": "wf-latin-sanus",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-104-tier3-proof-sanitary"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-unspecified-intermediate-sanitas-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-unspecified-intermediate-sanitas",
+      "target_id": "wf-unspecified-intermediate-sanitas",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-104-tier3-proof-sanitary"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-french-sanitaire-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-french-sanitaire",
+      "target_id": "wf-french-sanitaire",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-104-tier3-proof-sanitary"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-modern-english-sanitary-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-modern-english-sanitary",
+      "target_id": "wf-modern-english-sanitary",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-104-tier3-proof-sanitary"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-modern-english-sanitary-meaning",
+      "edge_kind": "meaning_shift_to",
+      "source_id": "wf-modern-english-sanitary",
+      "target_id": "sense-wf-modern-english-sanitary",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-104-tier3-proof-sanitary"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-unspecified-intermediate-sanitas-borrowed-from-wf-latin-sanus",
+      "edge_kind": "borrowed_from",
+      "source_id": "wf-unspecified-intermediate-sanitas",
+      "target_id": "wf-latin-sanus",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-104-tier3-proof-sanitary"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-french-sanitaire-borrowed-from-wf-unspecified-intermediate-sanitas",
+      "edge_kind": "borrowed_from",
+      "source_id": "wf-french-sanitaire",
+      "target_id": "wf-unspecified-intermediate-sanitas",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-104-tier3-proof-sanitary"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-modern-english-sanitary-borrowed-from-wf-french-sanitaire",
+      "edge_kind": "borrowed_from",
+      "source_id": "wf-modern-english-sanitary",
+      "target_id": "wf-french-sanitaire",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-104-tier3-proof-sanitary"
+      ],
+      "review_state": "candidate_review"
+    }
+  ],
+  "source_posture_summary": [
+    "LEXIS-SRCDEC-104-tier3-proof-sanitary:candidate_review"
+  ],
+  "graph_engine_posture": "local-only",
+  "graph_output_posture": "preview_only_not_promoted",
+  "validation_error_count": 13
+}

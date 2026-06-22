@@ -1,0 +1,212 @@
+fixture_id: LEXIS-GEN-CAND-059-eximere-exempt
+status: candidate_review
+scope:
+  scope_id: candidate-059-eximere-exempt-scope
+  question: Candidate generated multi-stage graph-facing chain for Latin eximere, Old French, Middle English, and Modern English exempt.
+  excluded_claims:
+  - unreviewed generated relationship claims
+  - source text ingestion or redistribution
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+- source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+  may_support_claims: false
+deferred_records: []
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers: []
+nodes:
+  languages:
+  - id: lang-latin
+    label: Latin
+    kind: language
+    source_posture: candidate_review
+  - id: lang-middle-english
+    label: Middle English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-modern-english
+    label: Modern English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-old-french
+    label: Old French
+    kind: language
+    source_posture: candidate_review
+  roots: []
+  wordforms:
+  - id: wf-latin-eximere
+    label: eximere
+    language_id: lang-latin
+    form: eximere
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-eximere
+  - id: wf-latin-exemptum
+    label: exemptum
+    language_id: lang-latin
+    form: exemptum
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-exemptum
+  - id: wf-old-french-old-french-exempt-candidate
+    label: Old French candidate stage for exempt
+    language_id: lang-old-french
+    form: old-french-exempt-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-old-french-old-french-exempt-candidate
+  - id: wf-middle-english-middle-english-exempt-candidate
+    label: Middle English candidate stage for exempt
+    language_id: lang-middle-english
+    form: middle-english-exempt-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-middle-english-middle-english-exempt-candidate
+  - id: wf-modern-english-exempt
+    label: exempt
+    language_id: lang-modern-english
+    form: exempt
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-exempt
+  meaning_senses:
+  - id: sense-eximere
+    label: taking out or freeing
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-latin-eximere
+  - id: sense-exempt
+    label: taking out or freeing
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-exempt
+  script_forms: []
+source_links:
+- id: src-latin-eximere
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-latin-exemptum
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-old-french-old-french-exempt-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-middle-english-middle-english-exempt-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-modern-english-exempt
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+relationship_edges:
+- id: edge-eximere-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-eximere
+  target_id: wf-latin-eximere
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-eximere-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-latin-eximere
+  target_id: sense-eximere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-exemptum-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-exemptum
+  target_id: wf-latin-exemptum
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-exempt-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-old-french-old-french-exempt-candidate
+  target_id: wf-old-french-old-french-exempt-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-exempt-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-middle-english-middle-english-exempt-candidate
+  target_id: wf-middle-english-middle-english-exempt-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-exempt-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-modern-english-exempt
+  target_id: wf-modern-english-exempt
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-exempt-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-modern-english-exempt
+  target_id: sense-exempt
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-exemptum-descends-from-eximere
+  edge_kind: descends_from
+  source_id: wf-latin-exemptum
+  target_id: wf-latin-eximere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-exempt-candidate-borrowed-from-exemptum
+  edge_kind: borrowed_from
+  source_id: wf-old-french-old-french-exempt-candidate
+  target_id: wf-latin-exemptum
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-exempt-candidate-borrowed-from-old-french-exempt-candidate
+  edge_kind: borrowed_from
+  source_id: wf-middle-english-middle-english-exempt-candidate
+  target_id: wf-old-french-old-french-exempt-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-exempt-descends-from-middle-english-exempt-candidate
+  edge_kind: descends_from
+  source_id: wf-modern-english-exempt
+  target_id: wf-middle-english-middle-english-exempt-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review

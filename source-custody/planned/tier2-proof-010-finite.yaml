@@ -1,0 +1,17 @@
+decision_id: LEXIS-SRCDEC-039-tier2-proof-finite
+status: candidate_review
+source_family: English etymology pointer for Latin-to-English candidate finite
+related_slice_packages:
+  - LEXIS-SLICE-001-SOURCE
+pointer: https://www.etymonline.com/word/finite
+candidate_source_name: Etymonline entry for finite
+rights_posture: copyrighted_reference_pointer_only
+redistribution_posture: pointer_only_planned
+citation_note: Proof pointer supports Latin finitum from finire route; no source text is copied.
+review_state: source_detail_required
+reviewer: L-5 Source Custody Reviewer pending
+promotion_allowed: false
+blocks:
+  - generated Old French and Middle English placeholders need omission or attestation decisions
+  - per-chain fixture has not been corrected or accepted
+

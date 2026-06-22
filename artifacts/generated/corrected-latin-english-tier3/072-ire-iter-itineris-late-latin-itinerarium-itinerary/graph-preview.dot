@@ -1,0 +1,21 @@
+digraph lexis_slice {
+  graph [label="LEXIS-GEN-CORR-072\npreview_only_not_promoted\nvalidation errors: 15"];
+  "lang-late-latin" [label="Late Latin\nLanguage\ncandidate_review"];
+  "lang-latin" [label="Latin\nLanguage\ncandidate_review"];
+  "lang-modern-english" [label="Modern English\nLanguage\ncandidate_review"];
+  "wf-latin-ire" [label="ire\nWordform\ncandidate_review"];
+  "wf-latin-iter" [label="iter\nWordform\ncandidate_review"];
+  "wf-latin-itineris" [label="itineris\nWordform\ncandidate_review"];
+  "wf-late-latin-itinerarium" [label="itinerarium\nWordform\ncandidate_review"];
+  "wf-modern-english-itinerary" [label="itinerary\nWordform\ncandidate_review"];
+  "sense-wf-modern-english-itinerary" [label="Corrected candidate target meaning; source-detail review required.\nMeaningSense\ncandidate_review"];
+  "src-latin-ire" -> "wf-latin-ire" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "src-latin-iter" -> "wf-latin-iter" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "src-latin-itineris" -> "wf-latin-itineris" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "src-late-latin-itinerarium" -> "wf-late-latin-itinerarium" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "src-modern-english-itinerary" -> "wf-modern-english-itinerary" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "wf-modern-english-itinerary" -> "sense-wf-modern-english-itinerary" [label="meaning_shift_to\ninference\nsource_limited"];
+  "wf-latin-iter" -> "wf-latin-ire" [label="descends_from\ninference\nsource_limited"];
+  "wf-late-latin-itinerarium" -> "wf-latin-iter" [label="borrowed_from\ninference\nsource_limited"];
+  "wf-modern-english-itinerary" -> "wf-late-latin-itinerarium" [label="borrowed_from\ninference\nsource_limited"];
+}

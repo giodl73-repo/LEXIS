@@ -1,0 +1,17 @@
+digraph lexis_slice {
+  graph [label="LEXIS-GEN-CORR-081\npreview_only_not_promoted\nvalidation errors: 12"];
+  "lang-latin" [label="Latin\nLanguage\ncandidate_review"];
+  "lang-modern-english" [label="Modern English\nLanguage\ncandidate_review"];
+  "wf-latin-nocere" [label="nocere\nWordform\ncandidate_review"];
+  "wf-latin-noxa" [label="noxa\nWordform\ncandidate_review"];
+  "wf-latin-noxius" [label="noxius\nWordform\ncandidate_review"];
+  "wf-modern-english-noxious" [label="noxious\nWordform\ncandidate_review"];
+  "sense-wf-modern-english-noxious" [label="Corrected candidate target meaning; source-detail review required.\nMeaningSense\ncandidate_review"];
+  "src-latin-nocere" -> "wf-latin-nocere" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "src-latin-noxa" -> "wf-latin-noxa" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "src-latin-noxius" -> "wf-latin-noxius" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "src-modern-english-noxious" -> "wf-modern-english-noxious" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "wf-modern-english-noxious" -> "sense-wf-modern-english-noxious" [label="meaning_shift_to\ninference\nsource_limited"];
+  "wf-latin-noxa" -> "wf-latin-nocere" [label="descends_from\ninference\nsource_limited"];
+  "wf-modern-english-noxious" -> "wf-latin-noxa" [label="borrowed_from\ninference\nsource_limited"];
+}

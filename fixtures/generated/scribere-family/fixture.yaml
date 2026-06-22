@@ -1,0 +1,149 @@
+fixture_id: LEXIS-GEN-scribere-family
+status: accepted_for_slice
+scope:
+  scope_id: scribere-family-scope
+  question: Generated graph-facing slice for Latin scribere and selected English writing-related forms.
+  excluded_claims:
+  - unreviewed generated relationship claims
+  - source text ingestion or redistribution
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+- source_ref: LEXIS-SRCDEC-001-latin-lexicographic-reference
+  contract_state: accepted_for_slice
+  may_support_claims: true
+- source_ref: LEXIS-SRCDEC-002-english-etymology-reference
+  contract_state: accepted_for_slice
+  may_support_claims: true
+deferred_records: []
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers: []
+nodes:
+  languages:
+  - id: lang-english
+    label: English
+    kind: language
+    source_posture: accepted_for_slice
+  - id: lang-latin
+    label: Latin
+    kind: language
+    source_posture: accepted_for_slice
+  roots: []
+  wordforms:
+  - id: wf-latin-scribere
+    label: scribere / scribo
+    language_id: lang-latin
+    form: scribere
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-scribere
+  - id: wf-latin-describere
+    label: describere
+    language_id: lang-latin
+    form: describere
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-describere
+  - id: wf-english-describe
+    label: describe
+    language_id: lang-english
+    form: describe
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-english-describe
+  meaning_senses:
+  - id: sense-scribere
+    label: writing / marking with words
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-latin-scribere
+  - id: sense-describe
+    label: written or verbal account
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-english-describe
+  script_forms: []
+source_links:
+- id: src-latin-scribere
+  source_ref: LEXIS-SRCDEC-001-latin-lexicographic-reference
+  contract_state: accepted_for_slice
+- id: src-latin-describere
+  source_ref: LEXIS-SRCDEC-001-latin-lexicographic-reference
+  contract_state: accepted_for_slice
+- id: src-english-describe
+  source_ref: LEXIS-SRCDEC-002-english-etymology-reference
+  contract_state: accepted_for_slice
+relationship_edges:
+- id: edge-scribere-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-scribere
+  target_id: wf-latin-scribere
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-001-latin-lexicographic-reference
+  review_state: accepted_for_slice
+- id: edge-scribere-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-latin-scribere
+  target_id: sense-scribere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-001-latin-lexicographic-reference
+  review_state: accepted_for_slice
+- id: edge-describere-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-describere
+  target_id: wf-latin-describere
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-001-latin-lexicographic-reference
+  review_state: accepted_for_slice
+- id: edge-describe-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-english-describe
+  target_id: wf-english-describe
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-002-english-etymology-reference
+  review_state: accepted_for_slice
+- id: edge-describe-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-english-describe
+  target_id: sense-describe
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-002-english-etymology-reference
+  review_state: accepted_for_slice
+- id: edge-describere-descends-from-scribere
+  edge_kind: descends_from
+  source_id: wf-latin-describere
+  target_id: wf-latin-scribere
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-001-latin-lexicographic-reference
+  review_state: accepted_for_slice
+- id: edge-describe-borrowed-from-describere
+  edge_kind: borrowed_from
+  source_id: wf-english-describe
+  target_id: wf-latin-describere
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-002-english-etymology-reference
+  review_state: accepted_for_slice

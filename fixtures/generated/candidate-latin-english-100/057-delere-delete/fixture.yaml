@@ -1,0 +1,212 @@
+fixture_id: LEXIS-GEN-CAND-057-delere-delete
+status: candidate_review
+scope:
+  scope_id: candidate-057-delere-delete-scope
+  question: Candidate generated multi-stage graph-facing chain for Latin delere, Old French, Middle English, and Modern English delete.
+  excluded_claims:
+  - unreviewed generated relationship claims
+  - source text ingestion or redistribution
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+- source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+  may_support_claims: false
+deferred_records: []
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers: []
+nodes:
+  languages:
+  - id: lang-latin
+    label: Latin
+    kind: language
+    source_posture: candidate_review
+  - id: lang-middle-english
+    label: Middle English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-modern-english
+    label: Modern English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-old-french
+    label: Old French
+    kind: language
+    source_posture: candidate_review
+  roots: []
+  wordforms:
+  - id: wf-latin-delere
+    label: delere
+    language_id: lang-latin
+    form: delere
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-delere
+  - id: wf-latin-deletum
+    label: deletum
+    language_id: lang-latin
+    form: deletum
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-deletum
+  - id: wf-old-french-old-french-delete-candidate
+    label: Old French candidate stage for delete
+    language_id: lang-old-french
+    form: old-french-delete-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-old-french-old-french-delete-candidate
+  - id: wf-middle-english-middle-english-delete-candidate
+    label: Middle English candidate stage for delete
+    language_id: lang-middle-english
+    form: middle-english-delete-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-middle-english-middle-english-delete-candidate
+  - id: wf-modern-english-delete
+    label: delete
+    language_id: lang-modern-english
+    form: delete
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-delete
+  meaning_senses:
+  - id: sense-delere
+    label: destroying or erasing
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-latin-delere
+  - id: sense-delete
+    label: destroying or erasing
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-delete
+  script_forms: []
+source_links:
+- id: src-latin-delere
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-latin-deletum
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-old-french-old-french-delete-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-middle-english-middle-english-delete-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-modern-english-delete
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+relationship_edges:
+- id: edge-delere-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-delere
+  target_id: wf-latin-delere
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-delere-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-latin-delere
+  target_id: sense-delere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-deletum-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-deletum
+  target_id: wf-latin-deletum
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-delete-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-old-french-old-french-delete-candidate
+  target_id: wf-old-french-old-french-delete-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-delete-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-middle-english-middle-english-delete-candidate
+  target_id: wf-middle-english-middle-english-delete-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-delete-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-modern-english-delete
+  target_id: wf-modern-english-delete
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-delete-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-modern-english-delete
+  target_id: sense-delete
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-deletum-descends-from-delere
+  edge_kind: descends_from
+  source_id: wf-latin-deletum
+  target_id: wf-latin-delere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-delete-candidate-borrowed-from-deletum
+  edge_kind: borrowed_from
+  source_id: wf-old-french-old-french-delete-candidate
+  target_id: wf-latin-deletum
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-delete-candidate-borrowed-from-old-french-delete-candidate
+  edge_kind: borrowed_from
+  source_id: wf-middle-english-middle-english-delete-candidate
+  target_id: wf-old-french-old-french-delete-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-delete-descends-from-middle-english-delete-candidate
+  edge_kind: descends_from
+  source_id: wf-modern-english-delete
+  target_id: wf-middle-english-middle-english-delete-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review

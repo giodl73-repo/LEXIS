@@ -1,0 +1,29 @@
+decision_id: LEXIS-SRCDEC-003-general-language-history-reference
+status: deferred_after_first_slice_scope
+source_family: General scholarly language-history reference
+related_slice_packages:
+  - LEXIS-SLICE-001-SOURCE
+  - LEXIS-SLICE-003-SOURCE
+  - LEXIS-SLICE-004-SOURCE
+related_research:
+  - LEXIS-PAPER-001
+  - LEXIS-PAPER-003
+  - LEXIS-PAPER-005
+candidate_use:
+  - source pointers for theories and reconstructions when slice scope requires them
+pointer: none_selected
+rights_posture: unknown_until_source_review
+redistribution_posture: pointer_only_planned
+citation_note: Deferred for the first scribere source review unless scope expands into reconstruction, theory comparison, or broad historical linguistics claims.
+date_posture: unavailable_until_source_review
+language_script_posture: cross-language scholarly reference family deferred for first slice
+review_state: deferred_blocked
+reviewer: L-5 Source Custody Reviewer required
+promotion_allowed: false
+blocks:
+  - reconstructed root fixture
+  - competing theory fixture
+  - chronicle output
+defer_reason:
+  - First scribere slice should avoid broad Proto-Indo-European reconstruction and should not require general theory support to promote a pointer-only source fixture.
+  - This decision remains blocked for future reconstruction, competing-theory, and world-evolution narrative claims.

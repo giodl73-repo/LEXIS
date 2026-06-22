@@ -1,0 +1,44 @@
+scenario_id: LEXIS-SC-003-source-limited-claim
+status: planned_not_executed
+actor: source custody reviewer
+purpose: >
+  Prove that source-limited, unknown-rights, pointer-only, or disputed source
+  posture blocks overconfident claims in fixtures, graph slices, chronicles, and
+  publisher handoff.
+slice_package: LEXIS-SLICE-001
+related_work_packages:
+  - LEXIS-WP-003
+  - LEXIS-WP-005
+  - LEXIS-WP-008
+  - LEXIS-WP-009
+specs_exercised:
+  - docs/specs/source-custody.md
+  - docs/specs/validation-diagnostics.md
+  - docs/specs/fixture-promotion.md
+  - docs/specs/chronicle-output.md
+  - docs/specs/publisher-handoff.md
+boundary_classes:
+  - source-custody contract
+  - diagnostic contract
+  - chronicle/report contract
+  - publisher contract
+positive_path:
+  - Accept pointer-only source posture for reviewed references.
+  - Preserve source limits in fixture candidates, graph summaries, chronicles, and handoff plans.
+  - Keep public claims bounded to accepted source posture.
+negative_paths:
+  - Block copied dictionary text without rights review.
+  - Block a source with unknown rights from promoting a chronicle claim.
+  - Block publisher handoff when downstream artifact requires source text but posture is pointer-only.
+diagnostics_expected:
+  - source_custody
+  - chronicle_overclaim
+evidence_expected:
+  - source-custody review record
+  - future validation output
+  - future chronicle review findings
+fixture_candidates:
+  - source-pointer fixture
+  - chronicle fixture
+findings_file: 99-findings.md
+

@@ -1,0 +1,212 @@
+fixture_id: LEXIS-GEN-CAND-013-jacere-project
+status: candidate_review
+scope:
+  scope_id: candidate-013-jacere-project-scope
+  question: Candidate generated multi-stage graph-facing chain for Latin jacere, Old French, Middle English, and Modern English project.
+  excluded_claims:
+  - unreviewed generated relationship claims
+  - source text ingestion or redistribution
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+- source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+  may_support_claims: false
+deferred_records: []
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers: []
+nodes:
+  languages:
+  - id: lang-latin
+    label: Latin
+    kind: language
+    source_posture: candidate_review
+  - id: lang-middle-english
+    label: Middle English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-modern-english
+    label: Modern English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-old-french
+    label: Old French
+    kind: language
+    source_posture: candidate_review
+  roots: []
+  wordforms:
+  - id: wf-latin-jacere
+    label: jacere
+    language_id: lang-latin
+    form: jacere
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-jacere
+  - id: wf-latin-projectum
+    label: projectum
+    language_id: lang-latin
+    form: projectum
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-projectum
+  - id: wf-old-french-old-french-project-candidate
+    label: Old French candidate stage for project
+    language_id: lang-old-french
+    form: old-french-project-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-old-french-old-french-project-candidate
+  - id: wf-middle-english-middle-english-project-candidate
+    label: Middle English candidate stage for project
+    language_id: lang-middle-english
+    form: middle-english-project-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-middle-english-middle-english-project-candidate
+  - id: wf-modern-english-project
+    label: project
+    language_id: lang-modern-english
+    form: project
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-project
+  meaning_senses:
+  - id: sense-jacere
+    label: throwing or casting forward
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-latin-jacere
+  - id: sense-project
+    label: throwing or casting forward
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-project
+  script_forms: []
+source_links:
+- id: src-latin-jacere
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-latin-projectum
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-old-french-old-french-project-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-middle-english-middle-english-project-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-modern-english-project
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+relationship_edges:
+- id: edge-jacere-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-jacere
+  target_id: wf-latin-jacere
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-jacere-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-latin-jacere
+  target_id: sense-jacere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-projectum-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-projectum
+  target_id: wf-latin-projectum
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-project-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-old-french-old-french-project-candidate
+  target_id: wf-old-french-old-french-project-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-project-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-middle-english-middle-english-project-candidate
+  target_id: wf-middle-english-middle-english-project-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-project-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-modern-english-project
+  target_id: wf-modern-english-project
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-project-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-modern-english-project
+  target_id: sense-project
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-projectum-descends-from-jacere
+  edge_kind: descends_from
+  source_id: wf-latin-projectum
+  target_id: wf-latin-jacere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-project-candidate-borrowed-from-projectum
+  edge_kind: borrowed_from
+  source_id: wf-old-french-old-french-project-candidate
+  target_id: wf-latin-projectum
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-project-candidate-borrowed-from-old-french-project-candidate
+  edge_kind: borrowed_from
+  source_id: wf-middle-english-middle-english-project-candidate
+  target_id: wf-old-french-old-french-project-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-project-descends-from-middle-english-project-candidate
+  edge_kind: descends_from
+  source_id: wf-modern-english-project
+  target_id: wf-middle-english-middle-english-project-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review

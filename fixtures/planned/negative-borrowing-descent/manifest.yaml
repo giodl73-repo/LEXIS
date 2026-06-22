@@ -1,0 +1,31 @@
+fixture_id: LEXIS-FIX-003-negative-borrowing-descent
+status: planned_blocked
+fixture_class: negative relationship fixture
+owning_work_package: LEXIS-WP-005
+linked_scenarios:
+  - LEXIS-SC-002-borrowing-vs-descent
+linked_slice_packages:
+  - LEXIS-SLICE-001-EDGES
+  - LEXIS-SLICE-001-NEGATIVES
+linked_research:
+  - LEXIS-PAPER-002
+  - LEXIS-PAPER-003
+  - LEXIS-PAPER-010
+linked_source_custody_decision:
+  - LEXIS-SRCDEC-002-english-etymology-reference
+  - not_required_for_synthetic_negative_shape_but_required_for_real_claims
+linked_scope: LEXIS-SLICE-001-SCOPE
+expected_result: invalid
+expected_diagnostics:
+  - relationship
+  - claim_type
+records_and_edges_included: invalid_borrowed_from_and_descends_from_same_ordered_pair
+source_text_redistribution_posture: no_source_text
+graph_impact: must_block_graph_output_if_relationship_collapses
+chronicle_impact: must_block_over-simplified_relationship_wording
+fixture_shape: fixture.yaml
+review_state: executable_negative_fixture_not_promoted
+promotion_blockers:
+  - fixture intentionally violates relationship semantics
+  - candidate source cannot support promoted relationship claims
+  - negative fixture must remain invalid

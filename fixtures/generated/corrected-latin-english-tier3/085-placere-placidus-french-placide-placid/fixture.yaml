@@ -1,0 +1,167 @@
+fixture_id: LEXIS-GEN-CORR-085
+status: candidate_review
+scope:
+  scope_id: corrected-candidate-085-scope
+  question: Corrected graph-facing candidate route for generated Latin-English chain 085.
+  excluded_claims:
+  - unreviewed generated relationship claims
+  - source text ingestion or redistribution
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+- source_ref: LEXIS-SRCDEC-102-tier3-proof-placid
+  contract_state: candidate_review
+  may_support_claims: false
+deferred_records: []
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers: []
+nodes:
+  languages:
+  - id: lang-french
+    label: French
+    kind: language
+    source_posture: candidate_review
+  - id: lang-latin
+    label: Latin
+    kind: language
+    source_posture: candidate_review
+  - id: lang-modern-english
+    label: Modern English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-unspecified-intermediate
+    label: Unspecified intermediate
+    kind: language
+    source_posture: candidate_review
+  roots: []
+  wordforms:
+  - id: wf-latin-placere
+    label: placere
+    language_id: lang-latin
+    form: placere
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-placere
+  - id: wf-unspecified-intermediate-placidus
+    label: placidus
+    language_id: lang-unspecified-intermediate
+    form: placidus
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-unspecified-intermediate-placidus
+  - id: wf-french-placide
+    label: placide
+    language_id: lang-french
+    form: placide
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-french-placide
+  - id: wf-modern-english-placid
+    label: placid
+    language_id: lang-modern-english
+    form: placid
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-placid
+  meaning_senses:
+  - id: sense-wf-modern-english-placid
+    label: Corrected candidate target meaning; source-detail review required.
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-placid
+  script_forms: []
+source_links:
+- id: src-latin-placere
+  source_ref: LEXIS-SRCDEC-102-tier3-proof-placid
+  contract_state: candidate_review
+- id: src-unspecified-intermediate-placidus
+  source_ref: LEXIS-SRCDEC-102-tier3-proof-placid
+  contract_state: candidate_review
+- id: src-french-placide
+  source_ref: LEXIS-SRCDEC-102-tier3-proof-placid
+  contract_state: candidate_review
+- id: src-modern-english-placid
+  source_ref: LEXIS-SRCDEC-102-tier3-proof-placid
+  contract_state: candidate_review
+relationship_edges:
+- id: edge-wf-latin-placere-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-placere
+  target_id: wf-latin-placere
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-102-tier3-proof-placid
+  review_state: candidate_review
+- id: edge-wf-unspecified-intermediate-placidus-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-unspecified-intermediate-placidus
+  target_id: wf-unspecified-intermediate-placidus
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-102-tier3-proof-placid
+  review_state: candidate_review
+- id: edge-wf-french-placide-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-french-placide
+  target_id: wf-french-placide
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-102-tier3-proof-placid
+  review_state: candidate_review
+- id: edge-wf-modern-english-placid-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-modern-english-placid
+  target_id: wf-modern-english-placid
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-102-tier3-proof-placid
+  review_state: candidate_review
+- id: edge-wf-modern-english-placid-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-modern-english-placid
+  target_id: sense-wf-modern-english-placid
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-102-tier3-proof-placid
+  review_state: candidate_review
+- id: edge-wf-unspecified-intermediate-placidus-borrowed-from-wf-latin-placere
+  edge_kind: borrowed_from
+  source_id: wf-unspecified-intermediate-placidus
+  target_id: wf-latin-placere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-102-tier3-proof-placid
+  review_state: candidate_review
+- id: edge-wf-french-placide-borrowed-from-wf-unspecified-intermediate-placidus
+  edge_kind: borrowed_from
+  source_id: wf-french-placide
+  target_id: wf-unspecified-intermediate-placidus
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-102-tier3-proof-placid
+  review_state: candidate_review
+- id: edge-wf-modern-english-placid-borrowed-from-wf-french-placide
+  edge_kind: borrowed_from
+  source_id: wf-modern-english-placid
+  target_id: wf-french-placide
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-102-tier3-proof-placid
+  review_state: candidate_review

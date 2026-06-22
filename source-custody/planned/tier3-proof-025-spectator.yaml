@@ -1,0 +1,16 @@
+decision_id: LEXIS-SRCDEC-095-tier3-proof-spectator
+status: candidate_review
+source_family: English etymology pointer for Latin-to-English candidate spectator
+related_slice_packages:
+  - LEXIS-SLICE-001-SOURCE
+pointer: https://www.etymonline.com/word/spectator
+candidate_source_name: Etymonline entry for spectator
+rights_posture: copyrighted_reference_pointer_only
+redistribution_posture: pointer_only_planned
+citation_note: Proof pointer supports Latin spectator as an agent noun from spectare; no source text is copied.
+review_state: source_detail_required
+reviewer: L-5 Source Custody Reviewer pending
+promotion_allowed: false
+blocks:
+  - decide whether to keep as direct agent-noun study or replace target
+  - Old French and Middle English placeholder stages are not accepted

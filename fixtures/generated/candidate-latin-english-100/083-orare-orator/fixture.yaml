@@ -1,0 +1,212 @@
+fixture_id: LEXIS-GEN-CAND-083-orare-orator
+status: candidate_review
+scope:
+  scope_id: candidate-083-orare-orator-scope
+  question: Candidate generated multi-stage graph-facing chain for Latin orare, Old French, Middle English, and Modern English orator.
+  excluded_claims:
+  - unreviewed generated relationship claims
+  - source text ingestion or redistribution
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+- source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+  may_support_claims: false
+deferred_records: []
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers: []
+nodes:
+  languages:
+  - id: lang-latin
+    label: Latin
+    kind: language
+    source_posture: candidate_review
+  - id: lang-middle-english
+    label: Middle English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-modern-english
+    label: Modern English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-old-french
+    label: Old French
+    kind: language
+    source_posture: candidate_review
+  roots: []
+  wordforms:
+  - id: wf-latin-orare
+    label: orare
+    language_id: lang-latin
+    form: orare
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-orare
+  - id: wf-latin-oratum
+    label: oratum
+    language_id: lang-latin
+    form: oratum
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-oratum
+  - id: wf-old-french-old-french-orator-candidate
+    label: Old French candidate stage for orator
+    language_id: lang-old-french
+    form: old-french-orator-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-old-french-old-french-orator-candidate
+  - id: wf-middle-english-middle-english-orator-candidate
+    label: Middle English candidate stage for orator
+    language_id: lang-middle-english
+    form: middle-english-orator-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-middle-english-middle-english-orator-candidate
+  - id: wf-modern-english-orator
+    label: orator
+    language_id: lang-modern-english
+    form: orator
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-orator
+  meaning_senses:
+  - id: sense-orare
+    label: speaking or pleading
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-latin-orare
+  - id: sense-orator
+    label: speaking or pleading
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-orator
+  script_forms: []
+source_links:
+- id: src-latin-orare
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-latin-oratum
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-old-french-old-french-orator-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-middle-english-middle-english-orator-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-modern-english-orator
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+relationship_edges:
+- id: edge-orare-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-orare
+  target_id: wf-latin-orare
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-orare-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-latin-orare
+  target_id: sense-orare
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-oratum-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-oratum
+  target_id: wf-latin-oratum
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-orator-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-old-french-old-french-orator-candidate
+  target_id: wf-old-french-old-french-orator-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-orator-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-middle-english-middle-english-orator-candidate
+  target_id: wf-middle-english-middle-english-orator-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-orator-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-modern-english-orator
+  target_id: wf-modern-english-orator
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-orator-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-modern-english-orator
+  target_id: sense-orator
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-oratum-descends-from-orare
+  edge_kind: descends_from
+  source_id: wf-latin-oratum
+  target_id: wf-latin-orare
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-orator-candidate-borrowed-from-oratum
+  edge_kind: borrowed_from
+  source_id: wf-old-french-old-french-orator-candidate
+  target_id: wf-latin-oratum
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-orator-candidate-borrowed-from-old-french-orator-candidate
+  edge_kind: borrowed_from
+  source_id: wf-middle-english-middle-english-orator-candidate
+  target_id: wf-old-french-old-french-orator-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-orator-descends-from-middle-english-orator-candidate
+  edge_kind: descends_from
+  source_id: wf-modern-english-orator
+  target_id: wf-middle-english-middle-english-orator-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review

@@ -1,0 +1,25 @@
+decision_id: LEXIS-SRCDEC-001-latin-lexicographic-reference
+status: accepted_for_slice
+source_family: Latin lexicographic or dictionary reference
+related_slice_packages:
+  - LEXIS-SLICE-001-SOURCE
+related_research:
+  - LEXIS-PAPER-001
+  - LEXIS-PAPER-008
+candidate_use:
+  - pointer metadata for Latin scribere source posture
+pointer: https://atlas.perseus.tufts.edu/dictionaries/entry/urn%3Acite2%3Ascaife-viewer%3Adictionary-entries.atlas_v1%3Alat.ls.perseus-eng2-n43092/
+candidate_source_name: Lewis and Short Latin Dictionary entry for scribo via Scaife ATLAS / Perseus
+rights_posture: public_domain_reference_pointer_only
+redistribution_posture: pointer_only_planned
+citation_note: Accepted for the first bounded scribere slice as a pointer-only Latin lexicographic source; no entry text is copied into fixtures.
+date_posture: source_work_1879_pointer_reviewed_for_slice
+language_script_posture: Latin lexicographic pointer for first scribere slice
+review_state: accepted_for_first_slice
+reviewer: L-5 Source Custody Reviewer local acceptance for LEXIS-SLICE-001
+promotion_allowed: true
+blocks: []
+candidate_review_notes:
+  - Accepted only for the bounded LEXIS-SLICE-001 Latin scribo/scribere wordform and writing-sense posture.
+  - Acceptance does not authorize copied dictionary text or broader Indo-European reconstruction claims.
+  - Future slices must re-review source posture if they need quotation, cached text, or broader claims.

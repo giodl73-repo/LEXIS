@@ -1,0 +1,17 @@
+decision_id: LEXIS-SRCDEC-011-tier1-proof-capture
+status: candidate_review
+source_family: English etymology pointer for Latin-to-English candidate capture
+related_slice_packages:
+  - LEXIS-SLICE-001-SOURCE
+pointer: https://www.etymonline.com/word/capture
+candidate_source_name: Etymonline entry for capture
+rights_posture: copyrighted_reference_pointer_only
+redistribution_posture: pointer_only_planned
+citation_note: Proof pointer supports French capture, Latin captura/captus, and capere route; no source text is copied.
+review_state: source_detail_required
+reviewer: L-5 Source Custody Reviewer pending
+promotion_allowed: false
+blocks:
+  - exact French and English intermediate handling is not yet modeled
+  - per-chain fixture has not been corrected or accepted
+

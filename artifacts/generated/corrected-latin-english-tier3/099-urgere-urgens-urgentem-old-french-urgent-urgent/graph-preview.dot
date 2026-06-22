@@ -1,0 +1,21 @@
+digraph lexis_slice {
+  graph [label="LEXIS-GEN-CORR-099\npreview_only_not_promoted\nvalidation errors: 15"];
+  "lang-latin" [label="Latin\nLanguage\ncandidate_review"];
+  "lang-modern-english" [label="Modern English\nLanguage\ncandidate_review"];
+  "lang-old-french" [label="Old French\nLanguage\ncandidate_review"];
+  "wf-latin-urgere" [label="urgere\nWordform\ncandidate_review"];
+  "wf-latin-urgens" [label="urgens\nWordform\ncandidate_review"];
+  "wf-latin-urgentem" [label="urgentem\nWordform\ncandidate_review"];
+  "wf-old-french-urgent" [label="urgent\nWordform\ncandidate_review"];
+  "wf-modern-english-urgent" [label="urgent\nWordform\ncandidate_review"];
+  "sense-wf-modern-english-urgent" [label="Corrected candidate target meaning; source-detail review required.\nMeaningSense\ncandidate_review"];
+  "src-latin-urgere" -> "wf-latin-urgere" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "src-latin-urgens" -> "wf-latin-urgens" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "src-latin-urgentem" -> "wf-latin-urgentem" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "src-old-french-urgent" -> "wf-old-french-urgent" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "src-modern-english-urgent" -> "wf-modern-english-urgent" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "wf-modern-english-urgent" -> "sense-wf-modern-english-urgent" [label="meaning_shift_to\ninference\nsource_limited"];
+  "wf-latin-urgens" -> "wf-latin-urgere" [label="descends_from\ninference\nsource_limited"];
+  "wf-old-french-urgent" -> "wf-latin-urgens" [label="borrowed_from\ninference\nsource_limited"];
+  "wf-modern-english-urgent" -> "wf-old-french-urgent" [label="borrowed_from\ninference\nsource_limited"];
+}

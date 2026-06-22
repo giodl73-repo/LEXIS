@@ -1,0 +1,29 @@
+fixture_id: LEXIS-FIX-007-pie-root-mini-slice
+status: draft_node_edge_shape_blocked
+fixture_class: reconstruction fixture
+owning_work_package: LEXIS-WP-004
+linked_scenarios:
+  - LEXIS-SC-002-borrowing-vs-descent
+linked_slice_packages:
+  - LEXIS-SLICE-003-SCOPE
+  - LEXIS-SLICE-003-NODES
+  - LEXIS-SLICE-003-EDGES
+  - LEXIS-SLICE-003-NEGATIVES
+linked_source_custody_decision:
+  - LEXIS-SRCDEC-006-pie-reconstruction-reference
+  - LEXIS-SRCDEC-003-general-language-history-reference
+linked_scope: LEXIS-SLICE-003-SCOPE
+fixture_shape: fixture.yaml
+expected_result: invalid_until_reconstruction_source_custody_is_accepted
+expected_diagnostics:
+  - source_custody
+  - relationship
+  - graph_preservation
+records_and_edges_included: draft_pie_root_cognate_nodes_and_edges
+source_text_redistribution_posture: pointer_only_planned
+graph_impact: graph_candidate_blocked_until_validation_passes
+chronicle_impact: chronicle_candidate_after_graph_review
+review_state: draft_shape_not_promoted
+promotion_blockers:
+  - no accepted reconstruction source-custody decision
+  - no etymology review

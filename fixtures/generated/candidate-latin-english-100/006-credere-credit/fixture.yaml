@@ -1,0 +1,212 @@
+fixture_id: LEXIS-GEN-CAND-006-credere-credit
+status: candidate_review
+scope:
+  scope_id: candidate-006-credere-credit-scope
+  question: Candidate generated multi-stage graph-facing chain for Latin credere, Old French, Middle English, and Modern English credit.
+  excluded_claims:
+  - unreviewed generated relationship claims
+  - source text ingestion or redistribution
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+- source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+  may_support_claims: false
+deferred_records: []
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers: []
+nodes:
+  languages:
+  - id: lang-latin
+    label: Latin
+    kind: language
+    source_posture: candidate_review
+  - id: lang-middle-english
+    label: Middle English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-modern-english
+    label: Modern English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-old-french
+    label: Old French
+    kind: language
+    source_posture: candidate_review
+  roots: []
+  wordforms:
+  - id: wf-latin-credere
+    label: credere
+    language_id: lang-latin
+    form: credere
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-credere
+  - id: wf-latin-creditum
+    label: creditum
+    language_id: lang-latin
+    form: creditum
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-creditum
+  - id: wf-old-french-old-french-credit-candidate
+    label: Old French candidate stage for credit
+    language_id: lang-old-french
+    form: old-french-credit-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-old-french-old-french-credit-candidate
+  - id: wf-middle-english-middle-english-credit-candidate
+    label: Middle English candidate stage for credit
+    language_id: lang-middle-english
+    form: middle-english-credit-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-middle-english-middle-english-credit-candidate
+  - id: wf-modern-english-credit
+    label: credit
+    language_id: lang-modern-english
+    form: credit
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-credit
+  meaning_senses:
+  - id: sense-credere
+    label: trust or belief
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-latin-credere
+  - id: sense-credit
+    label: trust or belief
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-credit
+  script_forms: []
+source_links:
+- id: src-latin-credere
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-latin-creditum
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-old-french-old-french-credit-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-middle-english-middle-english-credit-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-modern-english-credit
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+relationship_edges:
+- id: edge-credere-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-credere
+  target_id: wf-latin-credere
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-credere-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-latin-credere
+  target_id: sense-credere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-creditum-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-creditum
+  target_id: wf-latin-creditum
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-credit-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-old-french-old-french-credit-candidate
+  target_id: wf-old-french-old-french-credit-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-credit-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-middle-english-middle-english-credit-candidate
+  target_id: wf-middle-english-middle-english-credit-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-credit-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-modern-english-credit
+  target_id: wf-modern-english-credit
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-credit-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-modern-english-credit
+  target_id: sense-credit
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-creditum-descends-from-credere
+  edge_kind: descends_from
+  source_id: wf-latin-creditum
+  target_id: wf-latin-credere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-credit-candidate-borrowed-from-creditum
+  edge_kind: borrowed_from
+  source_id: wf-old-french-old-french-credit-candidate
+  target_id: wf-latin-creditum
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-credit-candidate-borrowed-from-old-french-credit-candidate
+  edge_kind: borrowed_from
+  source_id: wf-middle-english-middle-english-credit-candidate
+  target_id: wf-old-french-old-french-credit-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-credit-descends-from-middle-english-credit-candidate
+  edge_kind: descends_from
+  source_id: wf-modern-english-credit
+  target_id: wf-middle-english-middle-english-credit-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review

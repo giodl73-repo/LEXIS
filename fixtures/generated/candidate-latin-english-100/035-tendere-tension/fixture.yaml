@@ -1,0 +1,212 @@
+fixture_id: LEXIS-GEN-CAND-035-tendere-tension
+status: candidate_review
+scope:
+  scope_id: candidate-035-tendere-tension-scope
+  question: Candidate generated multi-stage graph-facing chain for Latin tendere, Old French, Middle English, and Modern English tension.
+  excluded_claims:
+  - unreviewed generated relationship claims
+  - source text ingestion or redistribution
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+- source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+  may_support_claims: false
+deferred_records: []
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers: []
+nodes:
+  languages:
+  - id: lang-latin
+    label: Latin
+    kind: language
+    source_posture: candidate_review
+  - id: lang-middle-english
+    label: Middle English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-modern-english
+    label: Modern English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-old-french
+    label: Old French
+    kind: language
+    source_posture: candidate_review
+  roots: []
+  wordforms:
+  - id: wf-latin-tendere
+    label: tendere
+    language_id: lang-latin
+    form: tendere
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-tendere
+  - id: wf-latin-tensum
+    label: tensum
+    language_id: lang-latin
+    form: tensum
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-tensum
+  - id: wf-old-french-old-french-tension-candidate
+    label: Old French candidate stage for tension
+    language_id: lang-old-french
+    form: old-french-tension-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-old-french-old-french-tension-candidate
+  - id: wf-middle-english-middle-english-tension-candidate
+    label: Middle English candidate stage for tension
+    language_id: lang-middle-english
+    form: middle-english-tension-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-middle-english-middle-english-tension-candidate
+  - id: wf-modern-english-tension
+    label: tension
+    language_id: lang-modern-english
+    form: tension
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-tension
+  meaning_senses:
+  - id: sense-tendere
+    label: stretching or extending
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-latin-tendere
+  - id: sense-tension
+    label: stretching or extending
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-tension
+  script_forms: []
+source_links:
+- id: src-latin-tendere
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-latin-tensum
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-old-french-old-french-tension-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-middle-english-middle-english-tension-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-modern-english-tension
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+relationship_edges:
+- id: edge-tendere-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-tendere
+  target_id: wf-latin-tendere
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-tendere-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-latin-tendere
+  target_id: sense-tendere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-tensum-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-tensum
+  target_id: wf-latin-tensum
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-tension-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-old-french-old-french-tension-candidate
+  target_id: wf-old-french-old-french-tension-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-tension-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-middle-english-middle-english-tension-candidate
+  target_id: wf-middle-english-middle-english-tension-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-tension-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-modern-english-tension
+  target_id: wf-modern-english-tension
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-tension-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-modern-english-tension
+  target_id: sense-tension
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-tensum-descends-from-tendere
+  edge_kind: descends_from
+  source_id: wf-latin-tensum
+  target_id: wf-latin-tendere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-tension-candidate-borrowed-from-tensum
+  edge_kind: borrowed_from
+  source_id: wf-old-french-old-french-tension-candidate
+  target_id: wf-latin-tensum
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-tension-candidate-borrowed-from-old-french-tension-candidate
+  edge_kind: borrowed_from
+  source_id: wf-middle-english-middle-english-tension-candidate
+  target_id: wf-old-french-old-french-tension-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-tension-descends-from-middle-english-tension-candidate
+  edge_kind: descends_from
+  source_id: wf-modern-english-tension
+  target_id: wf-middle-english-middle-english-tension-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review

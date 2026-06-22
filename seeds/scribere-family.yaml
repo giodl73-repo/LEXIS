@@ -1,0 +1,42 @@
+slice_id: scribere-family
+fixture_id: LEXIS-GEN-scribere-family
+status: accepted_for_slice
+source_state: accepted_for_slice
+question: Generated graph-facing slice for Latin scribere and selected English writing-related forms.
+sources:
+  - id: LEXIS-SRCDEC-001-latin-lexicographic-reference
+    state: accepted_for_slice
+    may_support_claims: true
+  - id: LEXIS-SRCDEC-002-english-etymology-reference
+    state: accepted_for_slice
+    may_support_claims: true
+forms:
+  - form: scribere
+    label: scribere / scribo
+    language: Latin
+    source: LEXIS-SRCDEC-001-latin-lexicographic-reference
+    meaning: writing / marking with words
+  - form: describere
+    language: Latin
+    source: LEXIS-SRCDEC-001-latin-lexicographic-reference
+  - form: describe
+    language: English
+    source: LEXIS-SRCDEC-002-english-etymology-reference
+    meaning: written or verbal account
+relationships:
+  - kind: descends_from
+    source: describere
+    target: scribere
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    support:
+      - LEXIS-SRCDEC-001-latin-lexicographic-reference
+    review_state: accepted_for_slice
+  - kind: borrowed_from
+    source: describe
+    target: describere
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    support:
+      - LEXIS-SRCDEC-002-english-etymology-reference
+    review_state: accepted_for_slice

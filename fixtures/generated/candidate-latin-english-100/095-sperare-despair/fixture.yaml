@@ -1,0 +1,212 @@
+fixture_id: LEXIS-GEN-CAND-095-sperare-despair
+status: candidate_review
+scope:
+  scope_id: candidate-095-sperare-despair-scope
+  question: Candidate generated multi-stage graph-facing chain for Latin sperare, Old French, Middle English, and Modern English despair.
+  excluded_claims:
+  - unreviewed generated relationship claims
+  - source text ingestion or redistribution
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+- source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+  may_support_claims: false
+deferred_records: []
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers: []
+nodes:
+  languages:
+  - id: lang-latin
+    label: Latin
+    kind: language
+    source_posture: candidate_review
+  - id: lang-middle-english
+    label: Middle English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-modern-english
+    label: Modern English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-old-french
+    label: Old French
+    kind: language
+    source_posture: candidate_review
+  roots: []
+  wordforms:
+  - id: wf-latin-sperare
+    label: sperare
+    language_id: lang-latin
+    form: sperare
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-sperare
+  - id: wf-latin-speratum
+    label: speratum
+    language_id: lang-latin
+    form: speratum
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-speratum
+  - id: wf-old-french-old-french-despair-candidate
+    label: Old French candidate stage for despair
+    language_id: lang-old-french
+    form: old-french-despair-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-old-french-old-french-despair-candidate
+  - id: wf-middle-english-middle-english-despair-candidate
+    label: Middle English candidate stage for despair
+    language_id: lang-middle-english
+    form: middle-english-despair-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-middle-english-middle-english-despair-candidate
+  - id: wf-modern-english-despair
+    label: despair
+    language_id: lang-modern-english
+    form: despair
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-despair
+  meaning_senses:
+  - id: sense-sperare
+    label: hoping or expecting
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-latin-sperare
+  - id: sense-despair
+    label: hoping or expecting
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-despair
+  script_forms: []
+source_links:
+- id: src-latin-sperare
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-latin-speratum
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-old-french-old-french-despair-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-middle-english-middle-english-despair-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-modern-english-despair
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+relationship_edges:
+- id: edge-sperare-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-sperare
+  target_id: wf-latin-sperare
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-sperare-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-latin-sperare
+  target_id: sense-sperare
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-speratum-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-speratum
+  target_id: wf-latin-speratum
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-despair-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-old-french-old-french-despair-candidate
+  target_id: wf-old-french-old-french-despair-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-despair-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-middle-english-middle-english-despair-candidate
+  target_id: wf-middle-english-middle-english-despair-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-despair-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-modern-english-despair
+  target_id: wf-modern-english-despair
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-despair-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-modern-english-despair
+  target_id: sense-despair
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-speratum-descends-from-sperare
+  edge_kind: descends_from
+  source_id: wf-latin-speratum
+  target_id: wf-latin-sperare
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-despair-candidate-borrowed-from-speratum
+  edge_kind: borrowed_from
+  source_id: wf-old-french-old-french-despair-candidate
+  target_id: wf-latin-speratum
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-despair-candidate-borrowed-from-old-french-despair-candidate
+  edge_kind: borrowed_from
+  source_id: wf-middle-english-middle-english-despair-candidate
+  target_id: wf-old-french-old-french-despair-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-despair-descends-from-middle-english-despair-candidate
+  edge_kind: descends_from
+  source_id: wf-modern-english-despair
+  target_id: wf-middle-english-middle-english-despair-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review

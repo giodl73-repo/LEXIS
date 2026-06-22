@@ -1,0 +1,17 @@
+decision_id: LEXIS-SRCDEC-087-tier2-proof-complicate
+status: candidate_review
+source_family: English etymology pointer for Latin-to-English candidate complicate
+related_slice_packages:
+  - LEXIS-SLICE-001-SOURCE
+pointer: https://www.etymonline.com/word/complicate
+candidate_source_name: Etymonline entry for complicate
+rights_posture: copyrighted_reference_pointer_only
+redistribution_posture: pointer_only_planned
+citation_note: Proof pointer supports Latin complicatus/complicare from com- plus plicare route; no source text is copied.
+review_state: source_detail_required
+reviewer: L-5 Source Custody Reviewer pending
+promotion_allowed: false
+blocks:
+  - compound com- plus plicare path must be modeled explicitly
+  - generated bridge should model complicatus or complicare rather than plicatum
+

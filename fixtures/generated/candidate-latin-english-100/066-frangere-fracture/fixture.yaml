@@ -1,0 +1,212 @@
+fixture_id: LEXIS-GEN-CAND-066-frangere-fracture
+status: candidate_review
+scope:
+  scope_id: candidate-066-frangere-fracture-scope
+  question: Candidate generated multi-stage graph-facing chain for Latin frangere, Old French, Middle English, and Modern English fracture.
+  excluded_claims:
+  - unreviewed generated relationship claims
+  - source text ingestion or redistribution
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+- source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+  may_support_claims: false
+deferred_records: []
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers: []
+nodes:
+  languages:
+  - id: lang-latin
+    label: Latin
+    kind: language
+    source_posture: candidate_review
+  - id: lang-middle-english
+    label: Middle English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-modern-english
+    label: Modern English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-old-french
+    label: Old French
+    kind: language
+    source_posture: candidate_review
+  roots: []
+  wordforms:
+  - id: wf-latin-frangere
+    label: frangere
+    language_id: lang-latin
+    form: frangere
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-frangere
+  - id: wf-latin-fractum
+    label: fractum
+    language_id: lang-latin
+    form: fractum
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-fractum
+  - id: wf-old-french-old-french-fracture-candidate
+    label: Old French candidate stage for fracture
+    language_id: lang-old-french
+    form: old-french-fracture-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-old-french-old-french-fracture-candidate
+  - id: wf-middle-english-middle-english-fracture-candidate
+    label: Middle English candidate stage for fracture
+    language_id: lang-middle-english
+    form: middle-english-fracture-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-middle-english-middle-english-fracture-candidate
+  - id: wf-modern-english-fracture
+    label: fracture
+    language_id: lang-modern-english
+    form: fracture
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-fracture
+  meaning_senses:
+  - id: sense-frangere
+    label: breaking or shattering
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-latin-frangere
+  - id: sense-fracture
+    label: breaking or shattering
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-fracture
+  script_forms: []
+source_links:
+- id: src-latin-frangere
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-latin-fractum
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-old-french-old-french-fracture-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-middle-english-middle-english-fracture-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-modern-english-fracture
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+relationship_edges:
+- id: edge-frangere-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-frangere
+  target_id: wf-latin-frangere
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-frangere-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-latin-frangere
+  target_id: sense-frangere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-fractum-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-fractum
+  target_id: wf-latin-fractum
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-fracture-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-old-french-old-french-fracture-candidate
+  target_id: wf-old-french-old-french-fracture-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-fracture-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-middle-english-middle-english-fracture-candidate
+  target_id: wf-middle-english-middle-english-fracture-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-fracture-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-modern-english-fracture
+  target_id: wf-modern-english-fracture
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-fracture-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-modern-english-fracture
+  target_id: sense-fracture
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-fractum-descends-from-frangere
+  edge_kind: descends_from
+  source_id: wf-latin-fractum
+  target_id: wf-latin-frangere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-fracture-candidate-borrowed-from-fractum
+  edge_kind: borrowed_from
+  source_id: wf-old-french-old-french-fracture-candidate
+  target_id: wf-latin-fractum
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-fracture-candidate-borrowed-from-old-french-fracture-candidate
+  edge_kind: borrowed_from
+  source_id: wf-middle-english-middle-english-fracture-candidate
+  target_id: wf-old-french-old-french-fracture-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-fracture-descends-from-middle-english-fracture-candidate
+  edge_kind: descends_from
+  source_id: wf-modern-english-fracture
+  target_id: wf-middle-english-middle-english-fracture-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review

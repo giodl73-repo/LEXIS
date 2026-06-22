@@ -1,0 +1,22 @@
+decision_id: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+status: candidate_review
+source_family: Latin and English etymology batch candidate reference
+related_slice_packages:
+  - LEXIS-SLICE-001-SOURCE
+candidate_use:
+  - pointer-only source posture for generated Latin-to-English candidate seed batches
+candidate_source_name: Batch candidate reference placeholder for Latin lexicographic and English etymology review
+rights_posture: pointer_only_unreviewed
+redistribution_posture: pointer_only_planned
+citation_note: Candidate placeholder for generated seed inputs only; individual forms and relationship edges require source review before acceptance.
+date_posture: generated_candidate_batch_2026-06-06
+language_script_posture: Latin and English candidate etymology review queue
+review_state: candidate_review_required
+reviewer: unassigned
+promotion_allowed: false
+blocks:
+  - source pointers must be reviewed per generated slice before graph promotion
+  - generated relationships are candidate inputs, not accepted etymology claims
+candidate_review_notes:
+  - Use generated seeds to queue review work at scale.
+  - Do not promote generated candidate fixtures until source custody and relationship review settle each slice.

@@ -1,0 +1,193 @@
+{
+  "slice_id": "LEXIS-GEN-CORR-082",
+  "nodes": [
+    {
+      "id": "lang-latin",
+      "label": "Latin",
+      "record_class": "Language",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "lang-modern-english",
+      "label": "Modern English",
+      "record_class": "Language",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "lang-old-french",
+      "label": "Old French",
+      "record_class": "Language",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "lang-unspecified-intermediate",
+      "label": "Unspecified intermediate",
+      "record_class": "Language",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-latin-novus",
+      "label": "novus",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-unspecified-intermediate-novellus",
+      "label": "novellus",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-old-french-novel",
+      "label": "novel",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-old-french-nouvel",
+      "label": "nouvel",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-modern-english-novel",
+      "label": "novel",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "sense-wf-modern-english-novel",
+      "label": "Corrected candidate target meaning; source-detail review required.",
+      "record_class": "MeaningSense",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-wf-latin-novus-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-latin-novus",
+      "target_id": "wf-latin-novus",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-101-tier3-proof-novel"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-unspecified-intermediate-novellus-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-unspecified-intermediate-novellus",
+      "target_id": "wf-unspecified-intermediate-novellus",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-101-tier3-proof-novel"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-old-french-novel-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-old-french-novel",
+      "target_id": "wf-old-french-novel",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-101-tier3-proof-novel"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-old-french-nouvel-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-old-french-nouvel",
+      "target_id": "wf-old-french-nouvel",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-101-tier3-proof-novel"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-modern-english-novel-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-modern-english-novel",
+      "target_id": "wf-modern-english-novel",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-101-tier3-proof-novel"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-modern-english-novel-meaning",
+      "edge_kind": "meaning_shift_to",
+      "source_id": "wf-modern-english-novel",
+      "target_id": "sense-wf-modern-english-novel",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-101-tier3-proof-novel"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-unspecified-intermediate-novellus-borrowed-from-wf-latin-novus",
+      "edge_kind": "borrowed_from",
+      "source_id": "wf-unspecified-intermediate-novellus",
+      "target_id": "wf-latin-novus",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-101-tier3-proof-novel"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-old-french-novel-borrowed-from-wf-unspecified-intermediate-novellus",
+      "edge_kind": "borrowed_from",
+      "source_id": "wf-old-french-novel",
+      "target_id": "wf-unspecified-intermediate-novellus",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-101-tier3-proof-novel"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-modern-english-novel-borrowed-from-wf-old-french-novel",
+      "edge_kind": "borrowed_from",
+      "source_id": "wf-modern-english-novel",
+      "target_id": "wf-old-french-novel",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-101-tier3-proof-novel"
+      ],
+      "review_state": "candidate_review"
+    }
+  ],
+  "source_posture_summary": [
+    "LEXIS-SRCDEC-101-tier3-proof-novel:candidate_review"
+  ],
+  "graph_engine_posture": "local-only",
+  "graph_output_posture": "preview_only_not_promoted",
+  "validation_error_count": 15
+}

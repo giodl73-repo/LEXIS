@@ -1,0 +1,17 @@
+decision_id: LEXIS-SRCDEC-072-tier2-proof-flex
+status: candidate_review
+source_family: English etymology pointer for Latin-to-English candidate flex
+related_slice_packages:
+  - LEXIS-SLICE-001-SOURCE
+pointer: https://www.etymonline.com/word/flex
+candidate_source_name: Etymonline entry for flex
+rights_posture: copyrighted_reference_pointer_only
+redistribution_posture: pointer_only_planned
+citation_note: Proof pointer supports Latin flex- from the past-participle stem of flectere, with uncertain deeper origin; no source text is copied.
+review_state: source_detail_required
+reviewer: L-5 Source Custody Reviewer pending
+promotion_allowed: false
+blocks:
+  - modern English flex route needs source-detail decision
+  - uncertain deeper origin must be retained
+

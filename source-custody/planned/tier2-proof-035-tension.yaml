@@ -1,0 +1,17 @@
+decision_id: LEXIS-SRCDEC-051-tier2-proof-tension
+status: candidate_review
+source_family: English etymology pointer for Latin-to-English candidate tension
+related_slice_packages:
+  - LEXIS-SLICE-001-SOURCE
+pointer: https://www.etymonline.com/word/tension
+candidate_source_name: Etymonline entry for tension
+rights_posture: copyrighted_reference_pointer_only
+redistribution_posture: pointer_only_planned
+citation_note: Proof pointer supports French tension, Latin tensionem/tensio, tensus, and tendere route; no source text is copied.
+review_state: source_detail_required
+reviewer: L-5 Source Custody Reviewer pending
+promotion_allowed: false
+blocks:
+  - generated bridge should model tensio or tensionem rather than tensum
+  - per-chain fixture has not been corrected or accepted
+

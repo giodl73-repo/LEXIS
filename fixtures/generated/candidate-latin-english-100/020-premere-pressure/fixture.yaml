@@ -1,0 +1,212 @@
+fixture_id: LEXIS-GEN-CAND-020-premere-pressure
+status: candidate_review
+scope:
+  scope_id: candidate-020-premere-pressure-scope
+  question: Candidate generated multi-stage graph-facing chain for Latin premere, Old French, Middle English, and Modern English pressure.
+  excluded_claims:
+  - unreviewed generated relationship claims
+  - source text ingestion or redistribution
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+- source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+  may_support_claims: false
+deferred_records: []
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers: []
+nodes:
+  languages:
+  - id: lang-latin
+    label: Latin
+    kind: language
+    source_posture: candidate_review
+  - id: lang-middle-english
+    label: Middle English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-modern-english
+    label: Modern English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-old-french
+    label: Old French
+    kind: language
+    source_posture: candidate_review
+  roots: []
+  wordforms:
+  - id: wf-latin-premere
+    label: premere
+    language_id: lang-latin
+    form: premere
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-premere
+  - id: wf-latin-pressum
+    label: pressum
+    language_id: lang-latin
+    form: pressum
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-pressum
+  - id: wf-old-french-old-french-pressure-candidate
+    label: Old French candidate stage for pressure
+    language_id: lang-old-french
+    form: old-french-pressure-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-old-french-old-french-pressure-candidate
+  - id: wf-middle-english-middle-english-pressure-candidate
+    label: Middle English candidate stage for pressure
+    language_id: lang-middle-english
+    form: middle-english-pressure-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-middle-english-middle-english-pressure-candidate
+  - id: wf-modern-english-pressure
+    label: pressure
+    language_id: lang-modern-english
+    form: pressure
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-pressure
+  meaning_senses:
+  - id: sense-premere
+    label: pressing or compressing
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-latin-premere
+  - id: sense-pressure
+    label: pressing or compressing
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-pressure
+  script_forms: []
+source_links:
+- id: src-latin-premere
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-latin-pressum
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-old-french-old-french-pressure-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-middle-english-middle-english-pressure-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-modern-english-pressure
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+relationship_edges:
+- id: edge-premere-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-premere
+  target_id: wf-latin-premere
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-premere-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-latin-premere
+  target_id: sense-premere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-pressum-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-pressum
+  target_id: wf-latin-pressum
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-pressure-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-old-french-old-french-pressure-candidate
+  target_id: wf-old-french-old-french-pressure-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-pressure-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-middle-english-middle-english-pressure-candidate
+  target_id: wf-middle-english-middle-english-pressure-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-pressure-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-modern-english-pressure
+  target_id: wf-modern-english-pressure
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-pressure-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-modern-english-pressure
+  target_id: sense-pressure
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-pressum-descends-from-premere
+  edge_kind: descends_from
+  source_id: wf-latin-pressum
+  target_id: wf-latin-premere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-pressure-candidate-borrowed-from-pressum
+  edge_kind: borrowed_from
+  source_id: wf-old-french-old-french-pressure-candidate
+  target_id: wf-latin-pressum
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-pressure-candidate-borrowed-from-old-french-pressure-candidate
+  edge_kind: borrowed_from
+  source_id: wf-middle-english-middle-english-pressure-candidate
+  target_id: wf-old-french-old-french-pressure-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-pressure-descends-from-middle-english-pressure-candidate
+  edge_kind: descends_from
+  source_id: wf-modern-english-pressure
+  target_id: wf-middle-english-middle-english-pressure-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review

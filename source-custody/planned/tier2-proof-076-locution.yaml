@@ -1,0 +1,17 @@
+decision_id: LEXIS-SRCDEC-080-tier2-proof-locution
+status: candidate_review
+source_family: English etymology pointer for Latin-to-English candidate locution
+related_slice_packages:
+  - LEXIS-SLICE-001-SOURCE
+pointer: https://www.catholicculture.org/culture/library/dictionary/index.cfm?id=34640&randomterm=false
+candidate_source_name: Catholic Culture dictionary pointer for locution
+rights_posture: copyrighted_reference_pointer_only
+redistribution_posture: pointer_only_planned
+citation_note: Proof pointer supports Latin locutio from loqui route but requires stronger dictionary review before acceptance; no source text is copied.
+review_state: source_detail_required
+reviewer: L-5 Source Custody Reviewer pending
+promotion_allowed: false
+blocks:
+  - stronger etymology dictionary pointer needed before promotion
+  - generated bridge should model locutio rather than locutum
+

@@ -1,0 +1,212 @@
+fixture_id: LEXIS-GEN-CAND-100-uti-use
+status: candidate_review
+scope:
+  scope_id: candidate-100-uti-use-scope
+  question: Candidate generated multi-stage graph-facing chain for Latin uti, Old French, Middle English, and Modern English use.
+  excluded_claims:
+  - unreviewed generated relationship claims
+  - source text ingestion or redistribution
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+- source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+  may_support_claims: false
+deferred_records: []
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers: []
+nodes:
+  languages:
+  - id: lang-latin
+    label: Latin
+    kind: language
+    source_posture: candidate_review
+  - id: lang-middle-english
+    label: Middle English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-modern-english
+    label: Modern English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-old-french
+    label: Old French
+    kind: language
+    source_posture: candidate_review
+  roots: []
+  wordforms:
+  - id: wf-latin-uti
+    label: uti
+    language_id: lang-latin
+    form: uti
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-uti
+  - id: wf-latin-usum
+    label: usum
+    language_id: lang-latin
+    form: usum
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-usum
+  - id: wf-old-french-old-french-use-candidate
+    label: Old French candidate stage for use
+    language_id: lang-old-french
+    form: old-french-use-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-old-french-old-french-use-candidate
+  - id: wf-middle-english-middle-english-use-candidate
+    label: Middle English candidate stage for use
+    language_id: lang-middle-english
+    form: middle-english-use-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-middle-english-middle-english-use-candidate
+  - id: wf-modern-english-use
+    label: use
+    language_id: lang-modern-english
+    form: use
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-use
+  meaning_senses:
+  - id: sense-uti
+    label: using or employing
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-latin-uti
+  - id: sense-use
+    label: using or employing
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-use
+  script_forms: []
+source_links:
+- id: src-latin-uti
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-latin-usum
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-old-french-old-french-use-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-middle-english-middle-english-use-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-modern-english-use
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+relationship_edges:
+- id: edge-uti-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-uti
+  target_id: wf-latin-uti
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-uti-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-latin-uti
+  target_id: sense-uti
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-usum-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-usum
+  target_id: wf-latin-usum
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-use-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-old-french-old-french-use-candidate
+  target_id: wf-old-french-old-french-use-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-use-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-middle-english-middle-english-use-candidate
+  target_id: wf-middle-english-middle-english-use-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-use-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-modern-english-use
+  target_id: wf-modern-english-use
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-use-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-modern-english-use
+  target_id: sense-use
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-usum-descends-from-uti
+  edge_kind: descends_from
+  source_id: wf-latin-usum
+  target_id: wf-latin-uti
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-use-candidate-borrowed-from-usum
+  edge_kind: borrowed_from
+  source_id: wf-old-french-old-french-use-candidate
+  target_id: wf-latin-usum
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-use-candidate-borrowed-from-old-french-use-candidate
+  edge_kind: borrowed_from
+  source_id: wf-middle-english-middle-english-use-candidate
+  target_id: wf-old-french-old-french-use-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-use-descends-from-middle-english-use-candidate
+  edge_kind: descends_from
+  source_id: wf-modern-english-use
+  target_id: wf-middle-english-middle-english-use-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review

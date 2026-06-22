@@ -1,0 +1,16 @@
+decision_id: LEXIS-SRCDEC-035-tier1-proof-delete
+status: candidate_review
+source_family: English etymology pointer for Latin-to-English candidate delete
+related_slice_packages:
+  - LEXIS-SLICE-001-SOURCE
+pointer: https://www.etymonline.com/word/delete
+candidate_source_name: Etymonline and Merriam-Webster entries for delete
+rights_posture: copyrighted_reference_pointer_only
+redistribution_posture: pointer_only_planned
+citation_note: Proof pointers support Latin deletus from delere route; no source text is copied.
+review_state: source_detail_required
+reviewer: L-5 Source Custody Reviewer pending
+promotion_allowed: false
+blocks:
+  - generated Old French and Middle English placeholders should likely be removed unless separately attested
+  - per-chain fixture has not been corrected or accepted

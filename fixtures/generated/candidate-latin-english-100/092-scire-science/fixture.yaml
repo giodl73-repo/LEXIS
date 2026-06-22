@@ -1,0 +1,212 @@
+fixture_id: LEXIS-GEN-CAND-092-scire-science
+status: candidate_review
+scope:
+  scope_id: candidate-092-scire-science-scope
+  question: Candidate generated multi-stage graph-facing chain for Latin scire, Old French, Middle English, and Modern English science.
+  excluded_claims:
+  - unreviewed generated relationship claims
+  - source text ingestion or redistribution
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+- source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+  may_support_claims: false
+deferred_records: []
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers: []
+nodes:
+  languages:
+  - id: lang-latin
+    label: Latin
+    kind: language
+    source_posture: candidate_review
+  - id: lang-middle-english
+    label: Middle English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-modern-english
+    label: Modern English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-old-french
+    label: Old French
+    kind: language
+    source_posture: candidate_review
+  roots: []
+  wordforms:
+  - id: wf-latin-scire
+    label: scire
+    language_id: lang-latin
+    form: scire
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-scire
+  - id: wf-latin-scientia
+    label: scientia
+    language_id: lang-latin
+    form: scientia
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-scientia
+  - id: wf-old-french-old-french-science-candidate
+    label: Old French candidate stage for science
+    language_id: lang-old-french
+    form: old-french-science-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-old-french-old-french-science-candidate
+  - id: wf-middle-english-middle-english-science-candidate
+    label: Middle English candidate stage for science
+    language_id: lang-middle-english
+    form: middle-english-science-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-middle-english-middle-english-science-candidate
+  - id: wf-modern-english-science
+    label: science
+    language_id: lang-modern-english
+    form: science
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-science
+  meaning_senses:
+  - id: sense-scire
+    label: knowing or understanding
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-latin-scire
+  - id: sense-science
+    label: knowing or understanding
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-science
+  script_forms: []
+source_links:
+- id: src-latin-scire
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-latin-scientia
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-old-french-old-french-science-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-middle-english-middle-english-science-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-modern-english-science
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+relationship_edges:
+- id: edge-scire-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-scire
+  target_id: wf-latin-scire
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-scire-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-latin-scire
+  target_id: sense-scire
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-scientia-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-scientia
+  target_id: wf-latin-scientia
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-science-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-old-french-old-french-science-candidate
+  target_id: wf-old-french-old-french-science-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-science-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-middle-english-middle-english-science-candidate
+  target_id: wf-middle-english-middle-english-science-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-science-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-modern-english-science
+  target_id: wf-modern-english-science
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-science-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-modern-english-science
+  target_id: sense-science
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-scientia-descends-from-scire
+  edge_kind: descends_from
+  source_id: wf-latin-scientia
+  target_id: wf-latin-scire
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-science-candidate-borrowed-from-scientia
+  edge_kind: borrowed_from
+  source_id: wf-old-french-old-french-science-candidate
+  target_id: wf-latin-scientia
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-science-candidate-borrowed-from-old-french-science-candidate
+  edge_kind: borrowed_from
+  source_id: wf-middle-english-middle-english-science-candidate
+  target_id: wf-old-french-old-french-science-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-science-descends-from-middle-english-science-candidate
+  edge_kind: descends_from
+  source_id: wf-modern-english-science
+  target_id: wf-middle-english-middle-english-science-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review

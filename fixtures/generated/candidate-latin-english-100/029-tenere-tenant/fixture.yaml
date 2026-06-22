@@ -1,0 +1,212 @@
+fixture_id: LEXIS-GEN-CAND-029-tenere-tenant
+status: candidate_review
+scope:
+  scope_id: candidate-029-tenere-tenant-scope
+  question: Candidate generated multi-stage graph-facing chain for Latin tenere, Old French, Middle English, and Modern English tenant.
+  excluded_claims:
+  - unreviewed generated relationship claims
+  - source text ingestion or redistribution
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+- source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+  may_support_claims: false
+deferred_records: []
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers: []
+nodes:
+  languages:
+  - id: lang-latin
+    label: Latin
+    kind: language
+    source_posture: candidate_review
+  - id: lang-middle-english
+    label: Middle English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-modern-english
+    label: Modern English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-old-french
+    label: Old French
+    kind: language
+    source_posture: candidate_review
+  roots: []
+  wordforms:
+  - id: wf-latin-tenere
+    label: tenere
+    language_id: lang-latin
+    form: tenere
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-tenere
+  - id: wf-latin-tentum
+    label: tentum
+    language_id: lang-latin
+    form: tentum
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-tentum
+  - id: wf-old-french-old-french-tenant-candidate
+    label: Old French candidate stage for tenant
+    language_id: lang-old-french
+    form: old-french-tenant-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-old-french-old-french-tenant-candidate
+  - id: wf-middle-english-middle-english-tenant-candidate
+    label: Middle English candidate stage for tenant
+    language_id: lang-middle-english
+    form: middle-english-tenant-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-middle-english-middle-english-tenant-candidate
+  - id: wf-modern-english-tenant
+    label: tenant
+    language_id: lang-modern-english
+    form: tenant
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-tenant
+  meaning_senses:
+  - id: sense-tenere
+    label: holding or keeping
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-latin-tenere
+  - id: sense-tenant
+    label: holding or keeping
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-tenant
+  script_forms: []
+source_links:
+- id: src-latin-tenere
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-latin-tentum
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-old-french-old-french-tenant-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-middle-english-middle-english-tenant-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-modern-english-tenant
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+relationship_edges:
+- id: edge-tenere-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-tenere
+  target_id: wf-latin-tenere
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-tenere-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-latin-tenere
+  target_id: sense-tenere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-tentum-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-tentum
+  target_id: wf-latin-tentum
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-tenant-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-old-french-old-french-tenant-candidate
+  target_id: wf-old-french-old-french-tenant-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-tenant-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-middle-english-middle-english-tenant-candidate
+  target_id: wf-middle-english-middle-english-tenant-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-tenant-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-modern-english-tenant
+  target_id: wf-modern-english-tenant
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-tenant-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-modern-english-tenant
+  target_id: sense-tenant
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-tentum-descends-from-tenere
+  edge_kind: descends_from
+  source_id: wf-latin-tentum
+  target_id: wf-latin-tenere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-tenant-candidate-borrowed-from-tentum
+  edge_kind: borrowed_from
+  source_id: wf-old-french-old-french-tenant-candidate
+  target_id: wf-latin-tentum
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-tenant-candidate-borrowed-from-old-french-tenant-candidate
+  edge_kind: borrowed_from
+  source_id: wf-middle-english-middle-english-tenant-candidate
+  target_id: wf-old-french-old-french-tenant-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-tenant-descends-from-middle-english-tenant-candidate
+  edge_kind: descends_from
+  source_id: wf-modern-english-tenant
+  target_id: wf-middle-english-middle-english-tenant-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review

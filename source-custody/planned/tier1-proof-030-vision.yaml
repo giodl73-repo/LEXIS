@@ -1,0 +1,17 @@
+decision_id: LEXIS-SRCDEC-026-tier1-proof-vision
+status: candidate_review
+source_family: English etymology pointer for Latin-to-English candidate vision
+related_slice_packages:
+  - LEXIS-SLICE-001-SOURCE
+pointer: https://www.etymonline.com/word/vision
+candidate_source_name: Etymonline entry for vision
+rights_posture: copyrighted_reference_pointer_only
+redistribution_posture: pointer_only_planned
+citation_note: Proof pointer supports Anglo-French/Old French vision, Latin visionem/visio, and videre route; no source text is copied.
+review_state: source_detail_required
+reviewer: L-5 Source Custody Reviewer pending
+promotion_allowed: false
+blocks:
+  - generated bridge should model visio or visionem rather than only visum
+  - per-chain fixture has not been corrected or accepted
+

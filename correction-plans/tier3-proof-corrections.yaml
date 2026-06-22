@@ -1,0 +1,212 @@
+plan_id: LEXIS-CORR-001-tier3-proof-corrections
+status: candidate_corrections_ready
+source_report: reports/candidate-latin-english-100/tier3-proof-batch-001.md
+scope: Tier 3 replacement and route-split corrections for generated Latin-English 100 chains.
+entries:
+  - chain_id: "025"
+    generated_seed: seeds/candidate-latin-english-100/025-spectare-spectator.yaml
+    proof_source: LEXIS-SRCDEC-095-tier3-proof-spectator
+    action: keep_or_replace_target
+    generated_path: spectare -> spectator -> old-french-spectator-candidate -> middle-english-spectator-candidate -> spectator
+    corrected_path: spectare -> spectator -> spectator
+    replacement_forms:
+      - spectator
+    route_notes: Direct Latin agent-noun route is supported; richer graph value may come from replacing target with spectacle or inspect.
+    promotion_blockers:
+      - placeholder Old French and Middle English stages are not accepted
+      - target is redundant unless retained as an agent-noun study
+  - chain_id: "068"
+    generated_seed: seeds/candidate-latin-english-100/068-gaudere-joy.yaml
+    proof_source: LEXIS-SRCDEC-096-tier3-proof-joy
+    action: replace_bridge
+    generated_path: gaudere -> gaudium -> old-french-joy-candidate -> middle-english-joy-candidate -> joy
+    corrected_path: gaudere -> gaudium/gaudia -> Old French joie -> Middle English joy -> joy
+    replacement_forms:
+      - gaudium
+      - gaudia
+      - joie
+    route_notes: Romance/French route is useful once Old French joie and Latin gaudia are modeled.
+    promotion_blockers:
+      - generated Old French placeholder must become joie
+      - semantic development should be labeled
+  - chain_id: "072"
+    generated_seed: seeds/candidate-latin-english-100/072-ire-itinerary.yaml
+    proof_source: LEXIS-SRCDEC-097-tier3-proof-itinerary
+    action: replace_bridge
+    generated_path: ire -> itum -> old-french-itinerary-candidate -> middle-english-itinerary-candidate -> itinerary
+    corrected_path: ire -> iter/itineris -> Late Latin itinerarium -> itinerary
+    replacement_forms:
+      - iter
+      - itineris
+      - itinerarium
+    route_notes: The useful graph path is journey/route noun formation, not the generated itum bridge.
+    promotion_blockers:
+      - generated bridge itum is not the preferred source route
+      - Late Latin stage should be modeled directly
+  - chain_id: "074"
+    generated_seed: seeds/candidate-latin-english-100/074-laudare-laud.yaml
+    proof_source: LEXIS-SRCDEC-098-tier3-proof-laud
+    action: replace_bridge
+    generated_path: laudare -> laudatum -> old-french-laud-candidate -> middle-english-laud-candidate -> laud
+    corrected_path: laus/laudis -> laudare -> Old French lauder -> Middle English laud -> laud
+    replacement_forms:
+      - laus
+      - laudis
+      - laudare
+      - lauder
+    route_notes: Valid but lower-priority praise-family path.
+    promotion_blockers:
+      - generated bridge laudatum should be replaced
+      - Middle English stage still needs exact source detail
+  - chain_id: "075"
+    generated_seed: seeds/candidate-latin-english-100/075-linquere-relic.yaml
+    proof_source: LEXIS-SRCDEC-099-tier3-proof-relic
+    action: replace_bridge
+    generated_path: linquere -> lictum -> old-french-relic-candidate -> middle-english-relic-candidate -> relic
+    corrected_path: linquere -> relinquere/reliquus -> Late Latin reliquiae -> Old French relique -> relic
+    replacement_forms:
+      - relinquere
+      - reliquus
+      - reliquiae
+      - relique
+    route_notes: Relic is a compound/remains route, not a simple lictum bridge.
+    promotion_blockers:
+      - generated bridge lictum is not promotion-ready
+      - compound re- plus linquere should be modeled
+  - chain_id: "081"
+    generated_seed: seeds/candidate-latin-english-100/081-nocere-noxious.yaml
+    proof_source: LEXIS-SRCDEC-100-tier3-proof-noxious
+    action: replace_bridge
+    generated_path: nocere -> nocitum -> old-french-noxious-candidate -> middle-english-noxious-candidate -> noxious
+    corrected_path: nocere -> noxa/noxius -> noxious
+    replacement_forms:
+      - noxa
+      - noxius
+    route_notes: Learned adjective route should use noxius and noxa.
+    promotion_blockers:
+      - generated bridge nocitum should be replaced
+      - deeper harm/death-family uncertainty should be labeled
+  - chain_id: "082"
+    generated_seed: seeds/candidate-latin-english-100/082-novare-novel.yaml
+    proof_source: LEXIS-SRCDEC-101-tier3-proof-novel
+    action: replace_base_and_bridge
+    generated_path: novare -> novatum -> old-french-novel-candidate -> middle-english-novel-candidate -> novel
+    corrected_path: novus -> novellus -> Old French novel/nouvel -> novel
+    replacement_forms:
+      - novus
+      - novellus
+      - novel
+      - nouvel
+    route_notes: The sourced route is adjective/noun from novus and novellus, not primarily novare.
+    promotion_blockers:
+      - generated base should be replaced or downgraded to related-family context
+      - adjective and prose-fiction noun routes may need separate paths
+  - chain_id: "085"
+    generated_seed: seeds/candidate-latin-english-100/085-placere-placid.yaml
+    proof_source: LEXIS-SRCDEC-102-tier3-proof-placid
+    action: replace_bridge
+    generated_path: placere -> placitum -> old-french-placid-candidate -> middle-english-placid-candidate -> placid
+    corrected_path: placere -> placidus -> French placide -> placid
+    replacement_forms:
+      - placidus
+      - placide
+    route_notes: Use placidus for the calm/peaceful adjective path.
+    promotion_blockers:
+      - generated bridge placitum should be replaced
+      - pleasing-to-peaceful semantic development should be labeled
+  - chain_id: "090"
+    generated_seed: seeds/candidate-latin-english-100/090-salire-salient.yaml
+    proof_source: LEXIS-SRCDEC-103-tier3-proof-salient
+    action: replace_bridge
+    generated_path: salire -> saltum -> old-french-salient-candidate -> middle-english-salient-candidate -> salient
+    corrected_path: salire -> saliens/salientem -> salient
+    replacement_forms:
+      - saliens
+      - salientem
+    route_notes: Present participle route with semantic drift from leaping to projecting/prominent.
+    promotion_blockers:
+      - generated bridge saltum should be replaced
+      - semantic drift must be modeled
+  - chain_id: "091"
+    generated_seed: seeds/candidate-latin-english-100/091-sanare-sanitary.yaml
+    proof_source: LEXIS-SRCDEC-104-tier3-proof-sanitary
+    action: replace_base_and_bridge
+    generated_path: sanare -> sanatum -> old-french-sanitary-candidate -> middle-english-sanitary-candidate -> sanitary
+    corrected_path: sanus -> sanitas -> French sanitaire -> sanitary
+    replacement_forms:
+      - sanus
+      - sanitas
+      - sanitaire
+    route_notes: Health/hygiene domain path should route through sanitas, not sanare/sanatum.
+    promotion_blockers:
+      - generated base and bridge should be replaced or marked related-family context
+      - modern domain narrowing should be labeled
+  - chain_id: "093"
+    generated_seed: seeds/candidate-latin-english-100/093-servire-serve.yaml
+    proof_source: LEXIS-SRCDEC-105-tier3-proof-serve
+    action: replace_bridge
+    generated_path: servire -> servitum -> old-french-serve-candidate -> middle-english-serve-candidate -> serve
+    corrected_path: servus -> servire -> Old French servir -> Middle English serve -> serve
+    replacement_forms:
+      - servus
+      - servire
+      - servir
+    route_notes: Social-status/service route is useful but origin uncertainty must be carried.
+    promotion_blockers:
+      - generated bridge servitum should be replaced
+      - servus/servire deeper-origin uncertainty should be labeled
+  - chain_id: "094"
+    generated_seed: seeds/candidate-latin-english-100/094-sonare-sound.yaml
+    proof_source: LEXIS-SRCDEC-106-tier3-proof-sound
+    action: split_homonym_route
+    generated_path: sonare -> sonitum -> old-french-sound-candidate -> middle-english-sound-candidate -> sound
+    corrected_path: sonus/sonare -> Old French son/soner -> Middle English sound -> sound acoustic route
+    replacement_forms:
+      - sonus
+      - sonare
+      - son
+      - soner
+    route_notes: Only the acoustic noun/verb route belongs here; adjective and water-channel sound are separate etymologies.
+    promotion_blockers:
+      - homonym routes must be split before promotion
+      - generated bridge sonitum should be replaced
+  - chain_id: "095"
+    generated_seed: seeds/candidate-latin-english-100/095-sperare-despair.yaml
+    proof_source: LEXIS-SRCDEC-107-tier3-proof-despair
+    action: compound_route
+    generated_path: sperare -> speratum -> old-french-despair-candidate -> middle-english-despair-candidate -> despair
+    corrected_path: sperare -> Latin desperare -> Old French desperer/despoir -> Middle English despair -> despair
+    replacement_forms:
+      - desperare
+      - desperer
+      - despoir
+    route_notes: Despair is the negative-prefix compound route from sperare.
+    promotion_blockers:
+      - generated bridge speratum should be replaced
+      - de- negative-prefix edge should be modeled
+  - chain_id: "098"
+    generated_seed: seeds/candidate-latin-english-100/098-timere-timid.yaml
+    proof_source: LEXIS-SRCDEC-108-tier3-proof-timid
+    action: replace_bridge
+    generated_path: timere -> timorem -> old-french-timid-candidate -> middle-english-timid-candidate -> timid
+    corrected_path: timere -> timidus -> French timide -> timid
+    replacement_forms:
+      - timidus
+      - timide
+    route_notes: Timid is an adjective route through timidus/timide.
+    promotion_blockers:
+      - generated bridge timorem should be replaced
+      - uncertain deeper origin should be retained
+  - chain_id: "099"
+    generated_seed: seeds/candidate-latin-english-100/099-urgere-urgent.yaml
+    proof_source: LEXIS-SRCDEC-109-tier3-proof-urgent
+    action: replace_bridge
+    generated_path: urgere -> ursum -> old-french-urgent-candidate -> middle-english-urgent-candidate -> urgent
+    corrected_path: urgere -> urgens/urgentem -> Old French urgent -> urgent
+    replacement_forms:
+      - urgens
+      - urgentem
+    route_notes: Present participle route with uncertain deeper-origin alternatives.
+    promotion_blockers:
+      - generated bridge ursum should be replaced
+      - deeper-origin alternatives should be labeled

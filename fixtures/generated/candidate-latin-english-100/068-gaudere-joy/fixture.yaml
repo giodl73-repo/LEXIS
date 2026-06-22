@@ -1,0 +1,212 @@
+fixture_id: LEXIS-GEN-CAND-068-gaudere-joy
+status: candidate_review
+scope:
+  scope_id: candidate-068-gaudere-joy-scope
+  question: Candidate generated multi-stage graph-facing chain for Latin gaudere, Old French, Middle English, and Modern English joy.
+  excluded_claims:
+  - unreviewed generated relationship claims
+  - source text ingestion or redistribution
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+- source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+  may_support_claims: false
+deferred_records: []
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers: []
+nodes:
+  languages:
+  - id: lang-latin
+    label: Latin
+    kind: language
+    source_posture: candidate_review
+  - id: lang-middle-english
+    label: Middle English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-modern-english
+    label: Modern English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-old-french
+    label: Old French
+    kind: language
+    source_posture: candidate_review
+  roots: []
+  wordforms:
+  - id: wf-latin-gaudere
+    label: gaudere
+    language_id: lang-latin
+    form: gaudere
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-gaudere
+  - id: wf-latin-gaudium
+    label: gaudium
+    language_id: lang-latin
+    form: gaudium
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-gaudium
+  - id: wf-old-french-old-french-joy-candidate
+    label: Old French candidate stage for joy
+    language_id: lang-old-french
+    form: old-french-joy-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-old-french-old-french-joy-candidate
+  - id: wf-middle-english-middle-english-joy-candidate
+    label: Middle English candidate stage for joy
+    language_id: lang-middle-english
+    form: middle-english-joy-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-middle-english-middle-english-joy-candidate
+  - id: wf-modern-english-joy
+    label: joy
+    language_id: lang-modern-english
+    form: joy
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-joy
+  meaning_senses:
+  - id: sense-gaudere
+    label: rejoicing or gladness
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-latin-gaudere
+  - id: sense-joy
+    label: rejoicing or gladness
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-joy
+  script_forms: []
+source_links:
+- id: src-latin-gaudere
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-latin-gaudium
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-old-french-old-french-joy-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-middle-english-middle-english-joy-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-modern-english-joy
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+relationship_edges:
+- id: edge-gaudere-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-gaudere
+  target_id: wf-latin-gaudere
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-gaudere-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-latin-gaudere
+  target_id: sense-gaudere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-gaudium-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-gaudium
+  target_id: wf-latin-gaudium
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-joy-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-old-french-old-french-joy-candidate
+  target_id: wf-old-french-old-french-joy-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-joy-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-middle-english-middle-english-joy-candidate
+  target_id: wf-middle-english-middle-english-joy-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-joy-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-modern-english-joy
+  target_id: wf-modern-english-joy
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-joy-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-modern-english-joy
+  target_id: sense-joy
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-gaudium-descends-from-gaudere
+  edge_kind: descends_from
+  source_id: wf-latin-gaudium
+  target_id: wf-latin-gaudere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-joy-candidate-borrowed-from-gaudium
+  edge_kind: borrowed_from
+  source_id: wf-old-french-old-french-joy-candidate
+  target_id: wf-latin-gaudium
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-joy-candidate-borrowed-from-old-french-joy-candidate
+  edge_kind: borrowed_from
+  source_id: wf-middle-english-middle-english-joy-candidate
+  target_id: wf-old-french-old-french-joy-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-joy-descends-from-middle-english-joy-candidate
+  edge_kind: descends_from
+  source_id: wf-modern-english-joy
+  target_id: wf-middle-english-middle-english-joy-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review

@@ -1,0 +1,31 @@
+decision_id: LEXIS-SRCDEC-002-english-etymology-reference
+status: accepted_for_slice
+source_family: English etymology reference
+related_slice_packages:
+  - LEXIS-SLICE-001-SOURCE
+related_research:
+  - LEXIS-PAPER-001
+  - LEXIS-PAPER-008
+candidate_use:
+  - pointer metadata for English scribe script inscription describe source posture
+pointer: https://www.merriam-webster.com/dictionary/scribe
+candidate_source_name: Merriam-Webster Dictionary entries for scribe, script, inscription, inscribe, and describe
+secondary_candidate_pointers:
+  - https://www.merriam-webster.com/dictionary/script
+  - https://www.merriam-webster.com/dictionary/inscription
+  - https://www.merriam-webster.com/dictionary/inscribe
+  - https://www.merriam-webster.com/dictionary/describe
+  - https://www.etymonline.com/word/scribe
+rights_posture: copyrighted_reference_pointer_only
+redistribution_posture: pointer_only_planned
+citation_note: Accepted for the first bounded scribere slice as pointer-only etymology evidence for English forms; no dictionary text is copied into fixtures.
+date_posture: web_source_accessed_2026-06-06_pointer_reviewed_for_slice
+language_script_posture: English etymology pointer family for first scribere slice
+review_state: accepted_for_first_slice
+reviewer: L-5 Source Custody Reviewer local acceptance for LEXIS-SLICE-001
+promotion_allowed: true
+blocks: []
+candidate_review_notes:
+  - Accepted only for bounded first-slice etymology pointers connecting scribe, script, inscription, and describe to Latin scribere-derived forms.
+  - Acceptance does not authorize copied dictionary text, full entry ingestion, or OED-level historical detail.
+  - Old French, Middle English, and PIE intermediate paths remain excluded or deferred unless separately reviewed.

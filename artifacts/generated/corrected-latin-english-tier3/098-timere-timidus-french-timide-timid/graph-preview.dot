@@ -1,0 +1,20 @@
+digraph lexis_slice {
+  graph [label="LEXIS-GEN-CORR-098\npreview_only_not_promoted\nvalidation errors: 13"];
+  "lang-french" [label="French\nLanguage\ncandidate_review"];
+  "lang-latin" [label="Latin\nLanguage\ncandidate_review"];
+  "lang-modern-english" [label="Modern English\nLanguage\ncandidate_review"];
+  "lang-unspecified-intermediate" [label="Unspecified intermediate\nLanguage\ncandidate_review"];
+  "wf-latin-timere" [label="timere\nWordform\ncandidate_review"];
+  "wf-unspecified-intermediate-timidus" [label="timidus\nWordform\ncandidate_review"];
+  "wf-french-timide" [label="timide\nWordform\ncandidate_review"];
+  "wf-modern-english-timid" [label="timid\nWordform\ncandidate_review"];
+  "sense-wf-modern-english-timid" [label="Corrected candidate target meaning; source-detail review required.\nMeaningSense\ncandidate_review"];
+  "src-latin-timere" -> "wf-latin-timere" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "src-unspecified-intermediate-timidus" -> "wf-unspecified-intermediate-timidus" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "src-french-timide" -> "wf-french-timide" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "src-modern-english-timid" -> "wf-modern-english-timid" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "wf-modern-english-timid" -> "sense-wf-modern-english-timid" [label="meaning_shift_to\ninference\nsource_limited"];
+  "wf-unspecified-intermediate-timidus" -> "wf-latin-timere" [label="borrowed_from\ninference\nsource_limited"];
+  "wf-french-timide" -> "wf-unspecified-intermediate-timidus" [label="borrowed_from\ninference\nsource_limited"];
+  "wf-modern-english-timid" -> "wf-french-timide" [label="borrowed_from\ninference\nsource_limited"];
+}

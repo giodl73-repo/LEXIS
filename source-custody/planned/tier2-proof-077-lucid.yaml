@@ -1,0 +1,17 @@
+decision_id: LEXIS-SRCDEC-081-tier2-proof-lucid
+status: candidate_review
+source_family: English etymology pointer for Latin-to-English candidate lucid
+related_slice_packages:
+  - LEXIS-SLICE-001-SOURCE
+pointer: https://www.etymonline.com/word/lucid
+candidate_source_name: Etymonline entry for lucid
+rights_posture: copyrighted_reference_pointer_only
+redistribution_posture: pointer_only_planned
+citation_note: Proof pointer supports Latin lucidus, lucere, and lux/lucis route; no source text is copied.
+review_state: source_detail_required
+reviewer: L-5 Source Custody Reviewer pending
+promotion_allowed: false
+blocks:
+  - generated bridge should model lucidus rather than lucem
+  - semantic shift from shining to clear or perspicuous must be labeled
+

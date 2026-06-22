@@ -1,0 +1,79 @@
+slice_id: corrected-candidate-095
+fixture_id: LEXIS-GEN-CORR-095
+status: candidate_review
+question: Corrected graph-facing candidate route for generated Latin-English chain 095.
+source_state: candidate_review
+sources:
+- id: LEXIS-SRCDEC-107-tier3-proof-despair
+  state: candidate_review
+  may_support_claims: false
+forms:
+- form: sperare
+  language: Latin
+  source: LEXIS-SRCDEC-107-tier3-proof-despair
+  id: wf-latin-sperare
+  label: null
+  meaning: null
+- form: desperare
+  language: Latin
+  source: LEXIS-SRCDEC-107-tier3-proof-despair
+  id: wf-latin-desperare
+  label: null
+  meaning: null
+- form: desperer
+  language: Old French
+  source: LEXIS-SRCDEC-107-tier3-proof-despair
+  id: wf-old-french-desperer
+  label: null
+  meaning: null
+- form: despoir
+  language: Old French
+  source: LEXIS-SRCDEC-107-tier3-proof-despair
+  id: wf-old-french-despoir
+  label: null
+  meaning: null
+- form: despair
+  language: Middle English
+  source: LEXIS-SRCDEC-107-tier3-proof-despair
+  id: wf-middle-english-despair
+  label: null
+  meaning: null
+- form: despair
+  language: Modern English
+  source: LEXIS-SRCDEC-107-tier3-proof-despair
+  id: wf-modern-english-despair
+  label: null
+  meaning: Corrected candidate target meaning; source-detail review required.
+relationships:
+- kind: descends_from
+  source: wf-latin-desperare
+  target: wf-latin-sperare
+  claim_type: inference
+  uncertainty: source_limited
+  support:
+  - LEXIS-SRCDEC-107-tier3-proof-despair
+  review_state: candidate_review
+- kind: borrowed_from
+  source: wf-old-french-desperer
+  target: wf-latin-desperare
+  claim_type: inference
+  uncertainty: source_limited
+  support:
+  - LEXIS-SRCDEC-107-tier3-proof-despair
+  review_state: candidate_review
+- kind: borrowed_from
+  source: wf-middle-english-despair
+  target: wf-old-french-desperer
+  claim_type: inference
+  uncertainty: source_limited
+  support:
+  - LEXIS-SRCDEC-107-tier3-proof-despair
+  review_state: candidate_review
+- kind: borrowed_from
+  source: wf-modern-english-despair
+  target: wf-middle-english-despair
+  claim_type: inference
+  uncertainty: source_limited
+  support:
+  - LEXIS-SRCDEC-107-tier3-proof-despair
+  review_state: candidate_review

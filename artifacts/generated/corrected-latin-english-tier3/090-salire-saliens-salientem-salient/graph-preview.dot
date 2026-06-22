@@ -1,0 +1,17 @@
+digraph lexis_slice {
+  graph [label="LEXIS-GEN-CORR-090\npreview_only_not_promoted\nvalidation errors: 12"];
+  "lang-latin" [label="Latin\nLanguage\ncandidate_review"];
+  "lang-modern-english" [label="Modern English\nLanguage\ncandidate_review"];
+  "wf-latin-salire" [label="salire\nWordform\ncandidate_review"];
+  "wf-latin-saliens" [label="saliens\nWordform\ncandidate_review"];
+  "wf-latin-salientem" [label="salientem\nWordform\ncandidate_review"];
+  "wf-modern-english-salient" [label="salient\nWordform\ncandidate_review"];
+  "sense-wf-modern-english-salient" [label="Corrected candidate target meaning; source-detail review required.\nMeaningSense\ncandidate_review"];
+  "src-latin-salire" -> "wf-latin-salire" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "src-latin-saliens" -> "wf-latin-saliens" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "src-latin-salientem" -> "wf-latin-salientem" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "src-modern-english-salient" -> "wf-modern-english-salient" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "wf-modern-english-salient" -> "sense-wf-modern-english-salient" [label="meaning_shift_to\ninference\nsource_limited"];
+  "wf-latin-saliens" -> "wf-latin-salire" [label="descends_from\ninference\nsource_limited"];
+  "wf-modern-english-salient" -> "wf-latin-saliens" [label="borrowed_from\ninference\nsource_limited"];
+}

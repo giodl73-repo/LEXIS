@@ -1,0 +1,82 @@
+fixture_id: LEXIS-FIX-003-negative-borrowing-descent
+status: draft_shape_invalid_by_design
+fixture_class: negative relationship fixture
+scope:
+  scope_id: LEXIS-SLICE-001-NEGATIVES
+  question: Negative fixture proving borrowing and descent cannot collapse into one relationship.
+  included_languages:
+    - lat
+    - en
+  included_forms:
+    - wf-neg-lat-scribere
+    - wf-neg-en-scribe
+  excluded_claims:
+    - accepted etymology for this synthetic negative case
+    - public chronicle wording
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+  - source_ref: LEXIS-SRCDEC-002-english-etymology-reference
+    contract_state: candidate_review
+    may_support_claims: false
+nodes:
+  languages:
+    - id: lang-neg-lat
+      label: Latin negative fixture context
+      kind: language
+      source_posture: candidate_review
+    - id: lang-neg-en
+      label: English negative fixture context
+      kind: language
+      source_posture: candidate_review
+  roots: []
+  wordforms:
+    - id: wf-neg-lat-scribere
+      label: scribere negative fixture source
+      language_id: lang-neg-lat
+      form: scribere
+      claim_type: direct_evidence
+      uncertainty: source_limited
+      source_links:
+        - src-neg-english
+    - id: wf-neg-en-scribe
+      label: scribe negative fixture target
+      language_id: lang-neg-en
+      form: scribe
+      claim_type: direct_evidence
+      uncertainty: source_limited
+      source_links:
+        - src-neg-english
+  meaning_senses: []
+  script_forms: []
+source_links:
+  - id: src-neg-english
+    source_ref: LEXIS-SRCDEC-002-english-etymology-reference
+    contract_state: candidate_review
+relationship_edges:
+  - id: edge-negative-borrowed
+    edge_kind: borrowed_from
+    source_id: wf-neg-en-scribe
+    target_id: wf-neg-lat-scribere
+    claim_type: inference
+    uncertainty: source_limited
+    supporting_sources:
+      - LEXIS-SRCDEC-002-english-etymology-reference
+    review_state: blocked
+  - id: edge-negative-descended
+    edge_kind: descends_from
+    source_id: wf-neg-en-scribe
+    target_id: wf-neg-lat-scribere
+    claim_type: inference
+    uncertainty: source_limited
+    supporting_sources:
+      - LEXIS-SRCDEC-002-english-etymology-reference
+    review_state: blocked
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers:
+  - fixture intentionally collapses borrowing and descent for the same ordered node pair
+  - candidate source cannot support promoted relationship claims
+  - negative fixture must remain invalid

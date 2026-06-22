@@ -1,0 +1,17 @@
+decision_id: LEXIS-SRCDEC-083-tier2-proof-monitor
+status: candidate_review
+source_family: English etymology pointer for Latin-to-English candidate monitor
+related_slice_packages:
+  - LEXIS-SLICE-001-SOURCE
+pointer: https://www.etymonline.com/word/monitor
+candidate_source_name: Etymonline and Merriam-Webster entries for monitor
+rights_posture: copyrighted_reference_pointer_only
+redistribution_posture: pointer_only_planned
+citation_note: Proof pointers support Latin monitor as agent noun from monere route; no source text is copied.
+review_state: source_detail_required
+reviewer: L-5 Source Custody Reviewer pending
+promotion_allowed: false
+blocks:
+  - generated bridge should model monitor agent noun rather than monitum
+  - Moneta/deity material should remain out of this chain unless separately scoped
+

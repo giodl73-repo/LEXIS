@@ -1,0 +1,212 @@
+fixture_id: LEXIS-GEN-CAND-086-plicare-complicate
+status: candidate_review
+scope:
+  scope_id: candidate-086-plicare-complicate-scope
+  question: Candidate generated multi-stage graph-facing chain for Latin plicare, Old French, Middle English, and Modern English complicate.
+  excluded_claims:
+  - unreviewed generated relationship claims
+  - source text ingestion or redistribution
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+- source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+  may_support_claims: false
+deferred_records: []
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers: []
+nodes:
+  languages:
+  - id: lang-latin
+    label: Latin
+    kind: language
+    source_posture: candidate_review
+  - id: lang-middle-english
+    label: Middle English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-modern-english
+    label: Modern English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-old-french
+    label: Old French
+    kind: language
+    source_posture: candidate_review
+  roots: []
+  wordforms:
+  - id: wf-latin-plicare
+    label: plicare
+    language_id: lang-latin
+    form: plicare
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-plicare
+  - id: wf-latin-plicatum
+    label: plicatum
+    language_id: lang-latin
+    form: plicatum
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-plicatum
+  - id: wf-old-french-old-french-complicate-candidate
+    label: Old French candidate stage for complicate
+    language_id: lang-old-french
+    form: old-french-complicate-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-old-french-old-french-complicate-candidate
+  - id: wf-middle-english-middle-english-complicate-candidate
+    label: Middle English candidate stage for complicate
+    language_id: lang-middle-english
+    form: middle-english-complicate-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-middle-english-middle-english-complicate-candidate
+  - id: wf-modern-english-complicate
+    label: complicate
+    language_id: lang-modern-english
+    form: complicate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-complicate
+  meaning_senses:
+  - id: sense-plicare
+    label: folding or layering
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-latin-plicare
+  - id: sense-complicate
+    label: folding or layering
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-complicate
+  script_forms: []
+source_links:
+- id: src-latin-plicare
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-latin-plicatum
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-old-french-old-french-complicate-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-middle-english-middle-english-complicate-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-modern-english-complicate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+relationship_edges:
+- id: edge-plicare-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-plicare
+  target_id: wf-latin-plicare
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-plicare-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-latin-plicare
+  target_id: sense-plicare
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-plicatum-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-plicatum
+  target_id: wf-latin-plicatum
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-complicate-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-old-french-old-french-complicate-candidate
+  target_id: wf-old-french-old-french-complicate-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-complicate-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-middle-english-middle-english-complicate-candidate
+  target_id: wf-middle-english-middle-english-complicate-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-complicate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-modern-english-complicate
+  target_id: wf-modern-english-complicate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-complicate-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-modern-english-complicate
+  target_id: sense-complicate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-plicatum-descends-from-plicare
+  edge_kind: descends_from
+  source_id: wf-latin-plicatum
+  target_id: wf-latin-plicare
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-complicate-candidate-borrowed-from-plicatum
+  edge_kind: borrowed_from
+  source_id: wf-old-french-old-french-complicate-candidate
+  target_id: wf-latin-plicatum
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-complicate-candidate-borrowed-from-old-french-complicate-candidate
+  edge_kind: borrowed_from
+  source_id: wf-middle-english-middle-english-complicate-candidate
+  target_id: wf-old-french-old-french-complicate-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-complicate-descends-from-middle-english-complicate-candidate
+  edge_kind: descends_from
+  source_id: wf-modern-english-complicate
+  target_id: wf-middle-english-middle-english-complicate-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review

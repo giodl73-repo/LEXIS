@@ -1,0 +1,212 @@
+fixture_id: LEXIS-GEN-CAND-076-loqui-locution
+status: candidate_review
+scope:
+  scope_id: candidate-076-loqui-locution-scope
+  question: Candidate generated multi-stage graph-facing chain for Latin loqui, Old French, Middle English, and Modern English locution.
+  excluded_claims:
+  - unreviewed generated relationship claims
+  - source text ingestion or redistribution
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+- source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+  may_support_claims: false
+deferred_records: []
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers: []
+nodes:
+  languages:
+  - id: lang-latin
+    label: Latin
+    kind: language
+    source_posture: candidate_review
+  - id: lang-middle-english
+    label: Middle English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-modern-english
+    label: Modern English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-old-french
+    label: Old French
+    kind: language
+    source_posture: candidate_review
+  roots: []
+  wordforms:
+  - id: wf-latin-loqui
+    label: loqui
+    language_id: lang-latin
+    form: loqui
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-loqui
+  - id: wf-latin-locutum
+    label: locutum
+    language_id: lang-latin
+    form: locutum
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-locutum
+  - id: wf-old-french-old-french-locution-candidate
+    label: Old French candidate stage for locution
+    language_id: lang-old-french
+    form: old-french-locution-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-old-french-old-french-locution-candidate
+  - id: wf-middle-english-middle-english-locution-candidate
+    label: Middle English candidate stage for locution
+    language_id: lang-middle-english
+    form: middle-english-locution-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-middle-english-middle-english-locution-candidate
+  - id: wf-modern-english-locution
+    label: locution
+    language_id: lang-modern-english
+    form: locution
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-locution
+  meaning_senses:
+  - id: sense-loqui
+    label: speaking or saying
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-latin-loqui
+  - id: sense-locution
+    label: speaking or saying
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-locution
+  script_forms: []
+source_links:
+- id: src-latin-loqui
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-latin-locutum
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-old-french-old-french-locution-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-middle-english-middle-english-locution-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-modern-english-locution
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+relationship_edges:
+- id: edge-loqui-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-loqui
+  target_id: wf-latin-loqui
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-loqui-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-latin-loqui
+  target_id: sense-loqui
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-locutum-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-locutum
+  target_id: wf-latin-locutum
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-locution-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-old-french-old-french-locution-candidate
+  target_id: wf-old-french-old-french-locution-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-locution-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-middle-english-middle-english-locution-candidate
+  target_id: wf-middle-english-middle-english-locution-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-locution-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-modern-english-locution
+  target_id: wf-modern-english-locution
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-locution-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-modern-english-locution
+  target_id: sense-locution
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-locutum-descends-from-loqui
+  edge_kind: descends_from
+  source_id: wf-latin-locutum
+  target_id: wf-latin-loqui
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-locution-candidate-borrowed-from-locutum
+  edge_kind: borrowed_from
+  source_id: wf-old-french-old-french-locution-candidate
+  target_id: wf-latin-locutum
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-locution-candidate-borrowed-from-old-french-locution-candidate
+  edge_kind: borrowed_from
+  source_id: wf-middle-english-middle-english-locution-candidate
+  target_id: wf-old-french-old-french-locution-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-locution-descends-from-middle-english-locution-candidate
+  edge_kind: descends_from
+  source_id: wf-modern-english-locution
+  target_id: wf-middle-english-middle-english-locution-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review

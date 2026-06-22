@@ -1,0 +1,187 @@
+{
+  "slice_id": "LEXIS-GEN-CORR-099",
+  "nodes": [
+    {
+      "id": "lang-latin",
+      "label": "Latin",
+      "record_class": "Language",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "lang-modern-english",
+      "label": "Modern English",
+      "record_class": "Language",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "lang-old-french",
+      "label": "Old French",
+      "record_class": "Language",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-latin-urgere",
+      "label": "urgere",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-latin-urgens",
+      "label": "urgens",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-latin-urgentem",
+      "label": "urgentem",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-old-french-urgent",
+      "label": "urgent",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-modern-english-urgent",
+      "label": "urgent",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "sense-wf-modern-english-urgent",
+      "label": "Corrected candidate target meaning; source-detail review required.",
+      "record_class": "MeaningSense",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-wf-latin-urgere-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-latin-urgere",
+      "target_id": "wf-latin-urgere",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-109-tier3-proof-urgent"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-latin-urgens-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-latin-urgens",
+      "target_id": "wf-latin-urgens",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-109-tier3-proof-urgent"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-latin-urgentem-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-latin-urgentem",
+      "target_id": "wf-latin-urgentem",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-109-tier3-proof-urgent"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-old-french-urgent-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-old-french-urgent",
+      "target_id": "wf-old-french-urgent",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-109-tier3-proof-urgent"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-modern-english-urgent-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-modern-english-urgent",
+      "target_id": "wf-modern-english-urgent",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-109-tier3-proof-urgent"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-modern-english-urgent-meaning",
+      "edge_kind": "meaning_shift_to",
+      "source_id": "wf-modern-english-urgent",
+      "target_id": "sense-wf-modern-english-urgent",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-109-tier3-proof-urgent"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-latin-urgens-descends-from-wf-latin-urgere",
+      "edge_kind": "descends_from",
+      "source_id": "wf-latin-urgens",
+      "target_id": "wf-latin-urgere",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-109-tier3-proof-urgent"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-old-french-urgent-borrowed-from-wf-latin-urgens",
+      "edge_kind": "borrowed_from",
+      "source_id": "wf-old-french-urgent",
+      "target_id": "wf-latin-urgens",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-109-tier3-proof-urgent"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-modern-english-urgent-borrowed-from-wf-old-french-urgent",
+      "edge_kind": "borrowed_from",
+      "source_id": "wf-modern-english-urgent",
+      "target_id": "wf-old-french-urgent",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-109-tier3-proof-urgent"
+      ],
+      "review_state": "candidate_review"
+    }
+  ],
+  "source_posture_summary": [
+    "LEXIS-SRCDEC-109-tier3-proof-urgent:candidate_review"
+  ],
+  "graph_engine_posture": "local-only",
+  "graph_output_posture": "preview_only_not_promoted",
+  "validation_error_count": 15
+}

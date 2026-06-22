@@ -1,0 +1,212 @@
+fixture_id: LEXIS-GEN-CAND-093-servire-serve
+status: candidate_review
+scope:
+  scope_id: candidate-093-servire-serve-scope
+  question: Candidate generated multi-stage graph-facing chain for Latin servire, Old French, Middle English, and Modern English serve.
+  excluded_claims:
+  - unreviewed generated relationship claims
+  - source text ingestion or redistribution
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+- source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+  may_support_claims: false
+deferred_records: []
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers: []
+nodes:
+  languages:
+  - id: lang-latin
+    label: Latin
+    kind: language
+    source_posture: candidate_review
+  - id: lang-middle-english
+    label: Middle English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-modern-english
+    label: Modern English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-old-french
+    label: Old French
+    kind: language
+    source_posture: candidate_review
+  roots: []
+  wordforms:
+  - id: wf-latin-servire
+    label: servire
+    language_id: lang-latin
+    form: servire
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-servire
+  - id: wf-latin-servitum
+    label: servitum
+    language_id: lang-latin
+    form: servitum
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-servitum
+  - id: wf-old-french-old-french-serve-candidate
+    label: Old French candidate stage for serve
+    language_id: lang-old-french
+    form: old-french-serve-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-old-french-old-french-serve-candidate
+  - id: wf-middle-english-middle-english-serve-candidate
+    label: Middle English candidate stage for serve
+    language_id: lang-middle-english
+    form: middle-english-serve-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-middle-english-middle-english-serve-candidate
+  - id: wf-modern-english-serve
+    label: serve
+    language_id: lang-modern-english
+    form: serve
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-serve
+  meaning_senses:
+  - id: sense-servire
+    label: serving or being subject
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-latin-servire
+  - id: sense-serve
+    label: serving or being subject
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-serve
+  script_forms: []
+source_links:
+- id: src-latin-servire
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-latin-servitum
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-old-french-old-french-serve-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-middle-english-middle-english-serve-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-modern-english-serve
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+relationship_edges:
+- id: edge-servire-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-servire
+  target_id: wf-latin-servire
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-servire-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-latin-servire
+  target_id: sense-servire
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-servitum-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-servitum
+  target_id: wf-latin-servitum
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-serve-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-old-french-old-french-serve-candidate
+  target_id: wf-old-french-old-french-serve-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-serve-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-middle-english-middle-english-serve-candidate
+  target_id: wf-middle-english-middle-english-serve-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-serve-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-modern-english-serve
+  target_id: wf-modern-english-serve
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-serve-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-modern-english-serve
+  target_id: sense-serve
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-servitum-descends-from-servire
+  edge_kind: descends_from
+  source_id: wf-latin-servitum
+  target_id: wf-latin-servire
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-serve-candidate-borrowed-from-servitum
+  edge_kind: borrowed_from
+  source_id: wf-old-french-old-french-serve-candidate
+  target_id: wf-latin-servitum
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-serve-candidate-borrowed-from-old-french-serve-candidate
+  edge_kind: borrowed_from
+  source_id: wf-middle-english-middle-english-serve-candidate
+  target_id: wf-old-french-old-french-serve-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-serve-descends-from-middle-english-serve-candidate
+  edge_kind: descends_from
+  source_id: wf-modern-english-serve
+  target_id: wf-middle-english-middle-english-serve-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review

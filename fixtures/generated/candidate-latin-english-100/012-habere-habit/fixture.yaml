@@ -1,0 +1,212 @@
+fixture_id: LEXIS-GEN-CAND-012-habere-habit
+status: candidate_review
+scope:
+  scope_id: candidate-012-habere-habit-scope
+  question: Candidate generated multi-stage graph-facing chain for Latin habere, Old French, Middle English, and Modern English habit.
+  excluded_claims:
+  - unreviewed generated relationship claims
+  - source text ingestion or redistribution
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+- source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+  may_support_claims: false
+deferred_records: []
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers: []
+nodes:
+  languages:
+  - id: lang-latin
+    label: Latin
+    kind: language
+    source_posture: candidate_review
+  - id: lang-middle-english
+    label: Middle English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-modern-english
+    label: Modern English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-old-french
+    label: Old French
+    kind: language
+    source_posture: candidate_review
+  roots: []
+  wordforms:
+  - id: wf-latin-habere
+    label: habere
+    language_id: lang-latin
+    form: habere
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-habere
+  - id: wf-latin-habitum
+    label: habitum
+    language_id: lang-latin
+    form: habitum
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-habitum
+  - id: wf-old-french-old-french-habit-candidate
+    label: Old French candidate stage for habit
+    language_id: lang-old-french
+    form: old-french-habit-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-old-french-old-french-habit-candidate
+  - id: wf-middle-english-middle-english-habit-candidate
+    label: Middle English candidate stage for habit
+    language_id: lang-middle-english
+    form: middle-english-habit-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-middle-english-middle-english-habit-candidate
+  - id: wf-modern-english-habit
+    label: habit
+    language_id: lang-modern-english
+    form: habit
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-habit
+  meaning_senses:
+  - id: sense-habere
+    label: holding or having
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-latin-habere
+  - id: sense-habit
+    label: holding or having
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-habit
+  script_forms: []
+source_links:
+- id: src-latin-habere
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-latin-habitum
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-old-french-old-french-habit-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-middle-english-middle-english-habit-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-modern-english-habit
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+relationship_edges:
+- id: edge-habere-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-habere
+  target_id: wf-latin-habere
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-habere-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-latin-habere
+  target_id: sense-habere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-habitum-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-habitum
+  target_id: wf-latin-habitum
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-habit-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-old-french-old-french-habit-candidate
+  target_id: wf-old-french-old-french-habit-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-habit-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-middle-english-middle-english-habit-candidate
+  target_id: wf-middle-english-middle-english-habit-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-habit-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-modern-english-habit
+  target_id: wf-modern-english-habit
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-habit-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-modern-english-habit
+  target_id: sense-habit
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-habitum-descends-from-habere
+  edge_kind: descends_from
+  source_id: wf-latin-habitum
+  target_id: wf-latin-habere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-habit-candidate-borrowed-from-habitum
+  edge_kind: borrowed_from
+  source_id: wf-old-french-old-french-habit-candidate
+  target_id: wf-latin-habitum
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-habit-candidate-borrowed-from-old-french-habit-candidate
+  edge_kind: borrowed_from
+  source_id: wf-middle-english-middle-english-habit-candidate
+  target_id: wf-old-french-old-french-habit-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-habit-descends-from-middle-english-habit-candidate
+  edge_kind: descends_from
+  source_id: wf-modern-english-habit
+  target_id: wf-middle-english-middle-english-habit-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review

@@ -1,0 +1,225 @@
+{
+  "slice_id": "LEXIS-GEN-CORR-068",
+  "nodes": [
+    {
+      "id": "lang-latin",
+      "label": "Latin",
+      "record_class": "Language",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "lang-middle-english",
+      "label": "Middle English",
+      "record_class": "Language",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "lang-modern-english",
+      "label": "Modern English",
+      "record_class": "Language",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "lang-old-french",
+      "label": "Old French",
+      "record_class": "Language",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-latin-gaudere",
+      "label": "gaudere",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-latin-gaudium",
+      "label": "gaudium",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-latin-gaudia",
+      "label": "gaudia",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-old-french-joie",
+      "label": "joie",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-middle-english-joy",
+      "label": "joy",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-modern-english-joy",
+      "label": "joy",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "sense-wf-modern-english-joy",
+      "label": "Corrected candidate target meaning; source-detail review required.",
+      "record_class": "MeaningSense",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-wf-latin-gaudere-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-latin-gaudere",
+      "target_id": "wf-latin-gaudere",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-096-tier3-proof-joy"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-latin-gaudium-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-latin-gaudium",
+      "target_id": "wf-latin-gaudium",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-096-tier3-proof-joy"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-latin-gaudia-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-latin-gaudia",
+      "target_id": "wf-latin-gaudia",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-096-tier3-proof-joy"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-old-french-joie-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-old-french-joie",
+      "target_id": "wf-old-french-joie",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-096-tier3-proof-joy"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-middle-english-joy-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-middle-english-joy",
+      "target_id": "wf-middle-english-joy",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-096-tier3-proof-joy"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-modern-english-joy-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-modern-english-joy",
+      "target_id": "wf-modern-english-joy",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-096-tier3-proof-joy"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-modern-english-joy-meaning",
+      "edge_kind": "meaning_shift_to",
+      "source_id": "wf-modern-english-joy",
+      "target_id": "sense-wf-modern-english-joy",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-096-tier3-proof-joy"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-latin-gaudium-descends-from-wf-latin-gaudere",
+      "edge_kind": "descends_from",
+      "source_id": "wf-latin-gaudium",
+      "target_id": "wf-latin-gaudere",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-096-tier3-proof-joy"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-old-french-joie-borrowed-from-wf-latin-gaudium",
+      "edge_kind": "borrowed_from",
+      "source_id": "wf-old-french-joie",
+      "target_id": "wf-latin-gaudium",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-096-tier3-proof-joy"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-middle-english-joy-borrowed-from-wf-old-french-joie",
+      "edge_kind": "borrowed_from",
+      "source_id": "wf-middle-english-joy",
+      "target_id": "wf-old-french-joie",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-096-tier3-proof-joy"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-modern-english-joy-borrowed-from-wf-middle-english-joy",
+      "edge_kind": "borrowed_from",
+      "source_id": "wf-modern-english-joy",
+      "target_id": "wf-middle-english-joy",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-096-tier3-proof-joy"
+      ],
+      "review_state": "candidate_review"
+    }
+  ],
+  "source_posture_summary": [
+    "LEXIS-SRCDEC-096-tier3-proof-joy:candidate_review"
+  ],
+  "graph_engine_posture": "local-only",
+  "graph_output_posture": "preview_only_not_promoted",
+  "validation_error_count": 18
+}

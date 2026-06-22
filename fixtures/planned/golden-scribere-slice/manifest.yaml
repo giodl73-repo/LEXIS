@@ -1,0 +1,30 @@
+fixture_id: LEXIS-FIX-002-golden-scribere-slice
+status: accepted_for_slice
+fixture_class: golden slice fixture
+owning_work_package: LEXIS-WP-004
+linked_scenarios:
+  - LEXIS-SC-001-word-root-slice
+linked_slice_packages:
+  - LEXIS-SLICE-001-SCOPE
+  - LEXIS-SLICE-001-NODES
+  - LEXIS-SLICE-001-EDGES
+linked_research:
+  - LEXIS-PAPER-001
+  - LEXIS-PAPER-002
+  - LEXIS-PAPER-003
+  - LEXIS-PAPER-008
+linked_source_custody_decision:
+  - LEXIS-SRCDEC-001-latin-lexicographic-reference
+  - LEXIS-SRCDEC-002-english-etymology-reference
+  - LEXIS-SRCDEC-003-general-language-history-reference
+linked_scope: LEXIS-SLICE-001-SCOPE
+fixture_shape: fixture.yaml
+expected_result: valid_for_bounded_pointer_only_slice
+expected_diagnostics:
+  - none
+records_and_edges_included: accepted_scribere_scribe_script_inscription_describe_nodes_and_edges
+source_text_redistribution_posture: pointer_only_planned
+graph_impact: graph_emit_allowed_for_bounded_pointer_only_slice
+chronicle_impact: chronicle_preview_allowed_without_source_text
+review_state: accepted_for_first_slice_not_publication
+promotion_blockers: []

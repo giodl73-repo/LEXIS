@@ -1,0 +1,151 @@
+fixture_id: LEXIS-FIX-009-glyph-graph-write-meta-slice
+status: draft_shape_invalid_by_design
+fixture_class: contrastive meta-language fixture
+scope:
+  scope_id: LEXIS-SLICE-005-SCOPE
+  question: Draft graph-facing contrast slice for glyph, graph, and write without conflating unrelated roots.
+  included_languages:
+    - en
+    - grc
+  included_forms:
+    - wf-en-glyph
+    - wf-en-graph
+    - wf-en-write
+    - wf-grc-graphein
+  excluded_claims:
+    - single shared origin for all writing-related words
+    - brand identity as etymological evidence
+    - superficial spelling similarity as proof
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+  - source_ref: LEXIS-SRCDEC-008-meta-etymology-reference
+    contract_state: planned_blocked
+    may_support_claims: false
+  - source_ref: LEXIS-SRCDEC-005-source-limited-placeholder
+    contract_state: planned_blocked
+    may_support_claims: false
+nodes:
+  languages:
+    - id: lang-en
+      label: English
+      kind: language
+      source_posture: planned_blocked
+    - id: lang-grc
+      label: Ancient Greek candidate context
+      kind: language
+      source_posture: planned_blocked
+  roots:
+    - id: root-grc-graph
+      label: Greek graph root candidate
+      root_text: graph
+      claim_type: inference
+      uncertainty: source_limited
+      source_links:
+        - src-meta-etymology
+  wordforms:
+    - id: wf-en-glyph
+      label: glyph
+      language_id: lang-en
+      form: glyph
+      claim_type: direct_evidence
+      uncertainty: source_limited
+      source_links:
+        - src-meta-etymology
+    - id: wf-en-graph
+      label: graph
+      language_id: lang-en
+      form: graph
+      claim_type: direct_evidence
+      uncertainty: source_limited
+      source_links:
+        - src-meta-etymology
+    - id: wf-en-write
+      label: write
+      language_id: lang-en
+      form: write
+      claim_type: direct_evidence
+      uncertainty: source_limited
+      source_links:
+        - src-meta-etymology
+    - id: wf-grc-graphein
+      label: graphein
+      language_id: lang-grc
+      form: graphein
+      claim_type: direct_evidence
+      uncertainty: source_limited
+      source_links:
+        - src-meta-etymology
+  meaning_senses:
+    - id: sense-mark-write
+      label: writing and marking semantic neighborhood
+      gloss: Project summary of writing/marking semantic neighborhood; not copied source text.
+      claim_type: inference
+      uncertainty: source_limited
+      source_links:
+        - src-meta-etymology
+  script_forms: []
+source_links:
+  - id: src-meta-etymology
+    source_ref: LEXIS-SRCDEC-008-meta-etymology-reference
+    contract_state: planned_blocked
+  - id: src-source-limited
+    source_ref: LEXIS-SRCDEC-005-source-limited-placeholder
+    contract_state: planned_blocked
+relationship_edges:
+  - id: edge-graph-greek-candidate
+    edge_kind: borrowed_from
+    source_id: wf-en-graph
+    target_id: wf-grc-graphein
+    claim_type: inference
+    uncertainty: source_limited
+    supporting_sources:
+      - LEXIS-SRCDEC-008-meta-etymology-reference
+    review_state: blocked
+  - id: edge-graph-root-candidate
+    edge_kind: cognate_with
+    source_id: wf-grc-graphein
+    target_id: root-grc-graph
+    claim_type: inference
+    uncertainty: source_limited
+    supporting_sources:
+      - LEXIS-SRCDEC-008-meta-etymology-reference
+    review_state: blocked
+  - id: edge-write-not-graph-root
+    edge_kind: disputes_claim
+    source_id: wf-en-write
+    target_id: root-grc-graph
+    claim_type: rejected_alternative
+    uncertainty: disputed
+    supporting_sources:
+      - LEXIS-SRCDEC-005-source-limited-placeholder
+    review_state: blocked
+  - id: edge-glyph-not-graph-by-spelling
+    edge_kind: disputes_claim
+    source_id: wf-en-glyph
+    target_id: wf-en-graph
+    claim_type: rejected_alternative
+    uncertainty: disputed
+    supporting_sources:
+      - LEXIS-SRCDEC-008-meta-etymology-reference
+    review_state: blocked
+  - id: edge-meta-meaning-neighborhood
+    edge_kind: meaning_shift_to
+    source_id: wf-en-graph
+    target_id: sense-mark-write
+    claim_type: inference
+    uncertainty: source_limited
+    supporting_sources:
+      - LEXIS-SRCDEC-008-meta-etymology-reference
+    review_state: blocked
+language_claims: []
+relationship_claims: []
+graph_outputs:
+  - id: graph-glyph-graph-write-draft
+    format: json
+    status: blocked_until_validation_passes
+chronicle_outputs: []
+promotion_blockers:
+  - contrastive meta-etymology source is planned_blocked, not accepted_for_slice
+  - rejected relationship claims require etymology review
+  - graph output blocked while fixture is invalid

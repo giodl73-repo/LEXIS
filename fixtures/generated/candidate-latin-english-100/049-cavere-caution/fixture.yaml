@@ -1,0 +1,212 @@
+fixture_id: LEXIS-GEN-CAND-049-cavere-caution
+status: candidate_review
+scope:
+  scope_id: candidate-049-cavere-caution-scope
+  question: Candidate generated multi-stage graph-facing chain for Latin cavere, Old French, Middle English, and Modern English caution.
+  excluded_claims:
+  - unreviewed generated relationship claims
+  - source text ingestion or redistribution
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+- source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+  may_support_claims: false
+deferred_records: []
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers: []
+nodes:
+  languages:
+  - id: lang-latin
+    label: Latin
+    kind: language
+    source_posture: candidate_review
+  - id: lang-middle-english
+    label: Middle English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-modern-english
+    label: Modern English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-old-french
+    label: Old French
+    kind: language
+    source_posture: candidate_review
+  roots: []
+  wordforms:
+  - id: wf-latin-cavere
+    label: cavere
+    language_id: lang-latin
+    form: cavere
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-cavere
+  - id: wf-latin-cautum
+    label: cautum
+    language_id: lang-latin
+    form: cautum
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-cautum
+  - id: wf-old-french-old-french-caution-candidate
+    label: Old French candidate stage for caution
+    language_id: lang-old-french
+    form: old-french-caution-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-old-french-old-french-caution-candidate
+  - id: wf-middle-english-middle-english-caution-candidate
+    label: Middle English candidate stage for caution
+    language_id: lang-middle-english
+    form: middle-english-caution-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-middle-english-middle-english-caution-candidate
+  - id: wf-modern-english-caution
+    label: caution
+    language_id: lang-modern-english
+    form: caution
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-caution
+  meaning_senses:
+  - id: sense-cavere
+    label: guarding or taking care
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-latin-cavere
+  - id: sense-caution
+    label: guarding or taking care
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-caution
+  script_forms: []
+source_links:
+- id: src-latin-cavere
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-latin-cautum
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-old-french-old-french-caution-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-middle-english-middle-english-caution-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-modern-english-caution
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+relationship_edges:
+- id: edge-cavere-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-cavere
+  target_id: wf-latin-cavere
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-cavere-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-latin-cavere
+  target_id: sense-cavere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-cautum-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-cautum
+  target_id: wf-latin-cautum
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-caution-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-old-french-old-french-caution-candidate
+  target_id: wf-old-french-old-french-caution-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-caution-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-middle-english-middle-english-caution-candidate
+  target_id: wf-middle-english-middle-english-caution-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-caution-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-modern-english-caution
+  target_id: wf-modern-english-caution
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-caution-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-modern-english-caution
+  target_id: sense-caution
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-cautum-descends-from-cavere
+  edge_kind: descends_from
+  source_id: wf-latin-cautum
+  target_id: wf-latin-cavere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-caution-candidate-borrowed-from-cautum
+  edge_kind: borrowed_from
+  source_id: wf-old-french-old-french-caution-candidate
+  target_id: wf-latin-cautum
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-caution-candidate-borrowed-from-old-french-caution-candidate
+  edge_kind: borrowed_from
+  source_id: wf-middle-english-middle-english-caution-candidate
+  target_id: wf-old-french-old-french-caution-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-caution-descends-from-middle-english-caution-candidate
+  edge_kind: descends_from
+  source_id: wf-modern-english-caution
+  target_id: wf-middle-english-middle-english-caution-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review

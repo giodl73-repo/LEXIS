@@ -1,0 +1,16 @@
+digraph lexis_slice {
+  graph [label="LEXIS-FIX-009-glyph-graph-write-meta-slice\npreview_only_not_promoted\nvalidation errors: 11"];
+  "lang-en" [label="English\nLanguage\nplanned_blocked"];
+  "lang-grc" [label="Ancient Greek candidate context\nLanguage\nplanned_blocked"];
+  "root-grc-graph" [label="Greek graph root candidate\nRoot\nplanned_blocked"];
+  "wf-en-glyph" [label="glyph\nWordform\nplanned_blocked"];
+  "wf-en-graph" [label="graph\nWordform\nplanned_blocked"];
+  "wf-en-write" [label="write\nWordform\nplanned_blocked"];
+  "wf-grc-graphein" [label="graphein\nWordform\nplanned_blocked"];
+  "sense-mark-write" [label="writing and marking semantic neighborhood\nMeaningSense\nplanned_blocked"];
+  "wf-en-graph" -> "wf-grc-graphein" [label="borrowed_from\ninference\nsource_limited"];
+  "wf-grc-graphein" -> "root-grc-graph" [label="cognate_with\ninference\nsource_limited"];
+  "wf-en-write" -> "root-grc-graph" [label="disputes_claim\nrejected_alternative\ndisputed"];
+  "wf-en-glyph" -> "wf-en-graph" [label="disputes_claim\nrejected_alternative\ndisputed"];
+  "wf-en-graph" -> "sense-mark-write" [label="meaning_shift_to\ninference\nsource_limited"];
+}

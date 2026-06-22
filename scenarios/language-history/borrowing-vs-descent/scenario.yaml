@@ -1,0 +1,40 @@
+scenario_id: LEXIS-SC-002-borrowing-vs-descent
+status: planned_not_executed
+actor: etymology reviewer
+purpose: >
+  Prove that LEXIS preserves the distinction between descent, cognacy,
+  borrowing, calque, coincidence, unknown, disputed, and rejected alternatives.
+slice_package: LEXIS-SLICE-001
+related_work_packages:
+  - LEXIS-WP-002
+  - LEXIS-WP-005
+  - LEXIS-WP-006
+specs_exercised:
+  - docs/specs/language-history-model.md
+  - docs/specs/relationship-edges.md
+  - docs/specs/validation-diagnostics.md
+  - docs/specs/graph-slice.md
+boundary_classes:
+  - data/model contract
+  - diagnostic contract
+  - graph contract
+positive_path:
+  - Draft distinct edge records for descent, borrowing, calque, support, and dispute when evidence allows.
+  - Preserve claim type and uncertainty labels for every relationship edge.
+  - Keep rejected or unknown alternatives visible in graph and chronicle planning.
+negative_paths:
+  - Reject generic related_to graph edges.
+  - Reject visual or semantic similarity used as etymological proof.
+  - Reject a disputed cognate edge with no disputed or competing-theory posture.
+diagnostics_expected:
+  - relationship
+  - claim_type
+  - graph_preservation
+evidence_expected:
+  - future negative fixture validation output
+  - future graph preservation report
+fixture_candidates:
+  - negative relationship fixture
+  - graph-preservation fixture
+findings_file: 99-findings.md
+

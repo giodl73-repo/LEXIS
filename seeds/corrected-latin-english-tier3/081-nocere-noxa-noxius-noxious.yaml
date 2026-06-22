@@ -1,0 +1,51 @@
+slice_id: corrected-candidate-081
+fixture_id: LEXIS-GEN-CORR-081
+status: candidate_review
+question: Corrected graph-facing candidate route for generated Latin-English chain 081.
+source_state: candidate_review
+sources:
+- id: LEXIS-SRCDEC-100-tier3-proof-noxious
+  state: candidate_review
+  may_support_claims: false
+forms:
+- form: nocere
+  language: Latin
+  source: LEXIS-SRCDEC-100-tier3-proof-noxious
+  id: wf-latin-nocere
+  label: null
+  meaning: null
+- form: noxa
+  language: Latin
+  source: LEXIS-SRCDEC-100-tier3-proof-noxious
+  id: wf-latin-noxa
+  label: null
+  meaning: null
+- form: noxius
+  language: Latin
+  source: LEXIS-SRCDEC-100-tier3-proof-noxious
+  id: wf-latin-noxius
+  label: null
+  meaning: null
+- form: noxious
+  language: Modern English
+  source: LEXIS-SRCDEC-100-tier3-proof-noxious
+  id: wf-modern-english-noxious
+  label: null
+  meaning: Corrected candidate target meaning; source-detail review required.
+relationships:
+- kind: descends_from
+  source: wf-latin-noxa
+  target: wf-latin-nocere
+  claim_type: inference
+  uncertainty: source_limited
+  support:
+  - LEXIS-SRCDEC-100-tier3-proof-noxious
+  review_state: candidate_review
+- kind: borrowed_from
+  source: wf-modern-english-noxious
+  target: wf-latin-noxa
+  claim_type: inference
+  uncertainty: source_limited
+  support:
+  - LEXIS-SRCDEC-100-tier3-proof-noxious
+  review_state: candidate_review

@@ -1,0 +1,212 @@
+fixture_id: LEXIS-GEN-CAND-062-fallere-false
+status: candidate_review
+scope:
+  scope_id: candidate-062-fallere-false-scope
+  question: Candidate generated multi-stage graph-facing chain for Latin fallere, Old French, Middle English, and Modern English false.
+  excluded_claims:
+  - unreviewed generated relationship claims
+  - source text ingestion or redistribution
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+- source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+  may_support_claims: false
+deferred_records: []
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers: []
+nodes:
+  languages:
+  - id: lang-latin
+    label: Latin
+    kind: language
+    source_posture: candidate_review
+  - id: lang-middle-english
+    label: Middle English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-modern-english
+    label: Modern English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-old-french
+    label: Old French
+    kind: language
+    source_posture: candidate_review
+  roots: []
+  wordforms:
+  - id: wf-latin-fallere
+    label: fallere
+    language_id: lang-latin
+    form: fallere
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-fallere
+  - id: wf-latin-falsum
+    label: falsum
+    language_id: lang-latin
+    form: falsum
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-falsum
+  - id: wf-old-french-old-french-false-candidate
+    label: Old French candidate stage for false
+    language_id: lang-old-french
+    form: old-french-false-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-old-french-old-french-false-candidate
+  - id: wf-middle-english-middle-english-false-candidate
+    label: Middle English candidate stage for false
+    language_id: lang-middle-english
+    form: middle-english-false-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-middle-english-middle-english-false-candidate
+  - id: wf-modern-english-false
+    label: 'false'
+    language_id: lang-modern-english
+    form: 'false'
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-false
+  meaning_senses:
+  - id: sense-fallere
+    label: deceiving or failing
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-latin-fallere
+  - id: sense-false
+    label: deceiving or failing
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-false
+  script_forms: []
+source_links:
+- id: src-latin-fallere
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-latin-falsum
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-old-french-old-french-false-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-middle-english-middle-english-false-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-modern-english-false
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+relationship_edges:
+- id: edge-fallere-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-fallere
+  target_id: wf-latin-fallere
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-fallere-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-latin-fallere
+  target_id: sense-fallere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-falsum-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-falsum
+  target_id: wf-latin-falsum
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-false-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-old-french-old-french-false-candidate
+  target_id: wf-old-french-old-french-false-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-false-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-middle-english-middle-english-false-candidate
+  target_id: wf-middle-english-middle-english-false-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-false-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-modern-english-false
+  target_id: wf-modern-english-false
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-false-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-modern-english-false
+  target_id: sense-false
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-falsum-descends-from-fallere
+  edge_kind: descends_from
+  source_id: wf-latin-falsum
+  target_id: wf-latin-fallere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-false-candidate-borrowed-from-falsum
+  edge_kind: borrowed_from
+  source_id: wf-old-french-old-french-false-candidate
+  target_id: wf-latin-falsum
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-false-candidate-borrowed-from-old-french-false-candidate
+  edge_kind: borrowed_from
+  source_id: wf-middle-english-middle-english-false-candidate
+  target_id: wf-old-french-old-french-false-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-false-descends-from-middle-english-false-candidate
+  edge_kind: descends_from
+  source_id: wf-modern-english-false
+  target_id: wf-middle-english-middle-english-false-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review

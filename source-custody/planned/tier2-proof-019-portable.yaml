@@ -1,0 +1,17 @@
+decision_id: LEXIS-SRCDEC-043-tier2-proof-portable
+status: candidate_review
+source_family: English etymology pointer for Latin-to-English candidate portable
+related_slice_packages:
+  - LEXIS-SLICE-001-SOURCE
+pointer: https://www.merriam-webster.com/dictionary/portable
+candidate_source_name: Merriam-Webster entry for portable
+rights_posture: copyrighted_reference_pointer_only
+redistribution_posture: pointer_only_planned
+citation_note: Proof pointer supports Middle English/French portable, Latin portabilis, and portare route; no source text is copied.
+review_state: source_detail_required
+reviewer: L-5 Source Custody Reviewer pending
+promotion_allowed: false
+blocks:
+  - generated bridge should model portabilis rather than portatum
+  - per-chain fixture has not been corrected or accepted
+

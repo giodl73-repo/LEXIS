@@ -1,0 +1,212 @@
+fixture_id: LEXIS-GEN-CAND-038-vincere-victory
+status: candidate_review
+scope:
+  scope_id: candidate-038-vincere-victory-scope
+  question: Candidate generated multi-stage graph-facing chain for Latin vincere, Old French, Middle English, and Modern English victory.
+  excluded_claims:
+  - unreviewed generated relationship claims
+  - source text ingestion or redistribution
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+- source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+  may_support_claims: false
+deferred_records: []
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers: []
+nodes:
+  languages:
+  - id: lang-latin
+    label: Latin
+    kind: language
+    source_posture: candidate_review
+  - id: lang-middle-english
+    label: Middle English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-modern-english
+    label: Modern English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-old-french
+    label: Old French
+    kind: language
+    source_posture: candidate_review
+  roots: []
+  wordforms:
+  - id: wf-latin-vincere
+    label: vincere
+    language_id: lang-latin
+    form: vincere
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-vincere
+  - id: wf-latin-victum
+    label: victum
+    language_id: lang-latin
+    form: victum
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-victum
+  - id: wf-old-french-old-french-victory-candidate
+    label: Old French candidate stage for victory
+    language_id: lang-old-french
+    form: old-french-victory-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-old-french-old-french-victory-candidate
+  - id: wf-middle-english-middle-english-victory-candidate
+    label: Middle English candidate stage for victory
+    language_id: lang-middle-english
+    form: middle-english-victory-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-middle-english-middle-english-victory-candidate
+  - id: wf-modern-english-victory
+    label: victory
+    language_id: lang-modern-english
+    form: victory
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-victory
+  meaning_senses:
+  - id: sense-vincere
+    label: conquering or overcoming
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-latin-vincere
+  - id: sense-victory
+    label: conquering or overcoming
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-victory
+  script_forms: []
+source_links:
+- id: src-latin-vincere
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-latin-victum
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-old-french-old-french-victory-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-middle-english-middle-english-victory-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-modern-english-victory
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+relationship_edges:
+- id: edge-vincere-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-vincere
+  target_id: wf-latin-vincere
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-vincere-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-latin-vincere
+  target_id: sense-vincere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-victum-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-victum
+  target_id: wf-latin-victum
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-victory-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-old-french-old-french-victory-candidate
+  target_id: wf-old-french-old-french-victory-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-victory-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-middle-english-middle-english-victory-candidate
+  target_id: wf-middle-english-middle-english-victory-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-victory-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-modern-english-victory
+  target_id: wf-modern-english-victory
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-victory-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-modern-english-victory
+  target_id: sense-victory
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-victum-descends-from-vincere
+  edge_kind: descends_from
+  source_id: wf-latin-victum
+  target_id: wf-latin-vincere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-victory-candidate-borrowed-from-victum
+  edge_kind: borrowed_from
+  source_id: wf-old-french-old-french-victory-candidate
+  target_id: wf-latin-victum
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-victory-candidate-borrowed-from-old-french-victory-candidate
+  edge_kind: borrowed_from
+  source_id: wf-middle-english-middle-english-victory-candidate
+  target_id: wf-old-french-old-french-victory-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-victory-descends-from-middle-english-victory-candidate
+  edge_kind: descends_from
+  source_id: wf-modern-english-victory
+  target_id: wf-middle-english-middle-english-victory-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review

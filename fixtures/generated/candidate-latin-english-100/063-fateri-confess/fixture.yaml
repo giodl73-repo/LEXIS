@@ -1,0 +1,212 @@
+fixture_id: LEXIS-GEN-CAND-063-fateri-confess
+status: candidate_review
+scope:
+  scope_id: candidate-063-fateri-confess-scope
+  question: Candidate generated multi-stage graph-facing chain for Latin fateri, Old French, Middle English, and Modern English confess.
+  excluded_claims:
+  - unreviewed generated relationship claims
+  - source text ingestion or redistribution
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+- source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+  may_support_claims: false
+deferred_records: []
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers: []
+nodes:
+  languages:
+  - id: lang-latin
+    label: Latin
+    kind: language
+    source_posture: candidate_review
+  - id: lang-middle-english
+    label: Middle English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-modern-english
+    label: Modern English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-old-french
+    label: Old French
+    kind: language
+    source_posture: candidate_review
+  roots: []
+  wordforms:
+  - id: wf-latin-fateri
+    label: fateri
+    language_id: lang-latin
+    form: fateri
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-fateri
+  - id: wf-latin-fassum
+    label: fassum
+    language_id: lang-latin
+    form: fassum
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-fassum
+  - id: wf-old-french-old-french-confess-candidate
+    label: Old French candidate stage for confess
+    language_id: lang-old-french
+    form: old-french-confess-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-old-french-old-french-confess-candidate
+  - id: wf-middle-english-middle-english-confess-candidate
+    label: Middle English candidate stage for confess
+    language_id: lang-middle-english
+    form: middle-english-confess-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-middle-english-middle-english-confess-candidate
+  - id: wf-modern-english-confess
+    label: confess
+    language_id: lang-modern-english
+    form: confess
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-confess
+  meaning_senses:
+  - id: sense-fateri
+    label: acknowledging or declaring
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-latin-fateri
+  - id: sense-confess
+    label: acknowledging or declaring
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-confess
+  script_forms: []
+source_links:
+- id: src-latin-fateri
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-latin-fassum
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-old-french-old-french-confess-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-middle-english-middle-english-confess-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-modern-english-confess
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+relationship_edges:
+- id: edge-fateri-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-fateri
+  target_id: wf-latin-fateri
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-fateri-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-latin-fateri
+  target_id: sense-fateri
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-fassum-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-fassum
+  target_id: wf-latin-fassum
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-confess-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-old-french-old-french-confess-candidate
+  target_id: wf-old-french-old-french-confess-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-confess-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-middle-english-middle-english-confess-candidate
+  target_id: wf-middle-english-middle-english-confess-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-confess-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-modern-english-confess
+  target_id: wf-modern-english-confess
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-confess-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-modern-english-confess
+  target_id: sense-confess
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-fassum-descends-from-fateri
+  edge_kind: descends_from
+  source_id: wf-latin-fassum
+  target_id: wf-latin-fateri
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-confess-candidate-borrowed-from-fassum
+  edge_kind: borrowed_from
+  source_id: wf-old-french-old-french-confess-candidate
+  target_id: wf-latin-fassum
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-confess-candidate-borrowed-from-old-french-confess-candidate
+  edge_kind: borrowed_from
+  source_id: wf-middle-english-middle-english-confess-candidate
+  target_id: wf-old-french-old-french-confess-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-confess-descends-from-middle-english-confess-candidate
+  edge_kind: descends_from
+  source_id: wf-modern-english-confess
+  target_id: wf-middle-english-middle-english-confess-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review

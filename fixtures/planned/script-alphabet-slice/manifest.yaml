@@ -1,0 +1,28 @@
+fixture_id: LEXIS-FIX-006-script-alphabet-slice
+status: draft_node_edge_shape_blocked
+fixture_class: script lane fixture
+owning_work_package: LEXIS-WP-004
+linked_scenarios:
+  - LEXIS-SC-004-rline-preservation
+linked_slice_packages:
+  - LEXIS-SLICE-002-SCOPE
+  - LEXIS-SLICE-002-NODES
+  - LEXIS-SLICE-002-EDGES
+  - LEXIS-SLICE-002-NEGATIVES
+linked_source_custody_decision:
+  - LEXIS-SRCDEC-004-script-history-reference
+linked_scope: LEXIS-SLICE-002-SCOPE
+fixture_shape: fixture.yaml
+expected_result: invalid_until_script_source_custody_is_accepted
+expected_diagnostics:
+  - source_custody
+  - relationship
+  - graph_preservation
+records_and_edges_included: draft_greek_latin_cyrillic_script_nodes_and_edges
+source_text_redistribution_posture: pointer_only_planned
+graph_impact: graph_candidate_blocked_until_validation_passes
+chronicle_impact: chronicle_candidate_after_graph_review
+review_state: draft_shape_not_promoted
+promotion_blockers:
+  - no accepted script-history source-custody decision
+  - no script systems review

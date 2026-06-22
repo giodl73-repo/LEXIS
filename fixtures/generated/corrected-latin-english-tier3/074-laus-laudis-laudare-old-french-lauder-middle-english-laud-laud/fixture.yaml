@@ -1,0 +1,220 @@
+fixture_id: LEXIS-GEN-CORR-074
+status: candidate_review
+scope:
+  scope_id: corrected-candidate-074-scope
+  question: Corrected graph-facing candidate route for generated Latin-English chain 074.
+  excluded_claims:
+  - unreviewed generated relationship claims
+  - source text ingestion or redistribution
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+- source_ref: LEXIS-SRCDEC-098-tier3-proof-laud
+  contract_state: candidate_review
+  may_support_claims: false
+deferred_records: []
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers: []
+nodes:
+  languages:
+  - id: lang-latin
+    label: Latin
+    kind: language
+    source_posture: candidate_review
+  - id: lang-middle-english
+    label: Middle English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-modern-english
+    label: Modern English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-old-french
+    label: Old French
+    kind: language
+    source_posture: candidate_review
+  - id: lang-unspecified-intermediate
+    label: Unspecified intermediate
+    kind: language
+    source_posture: candidate_review
+  roots: []
+  wordforms:
+  - id: wf-latin-laus
+    label: laus
+    language_id: lang-latin
+    form: laus
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-laus
+  - id: wf-latin-laudis
+    label: laudis
+    language_id: lang-latin
+    form: laudis
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-laudis
+  - id: wf-unspecified-intermediate-laudare
+    label: laudare
+    language_id: lang-unspecified-intermediate
+    form: laudare
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-unspecified-intermediate-laudare
+  - id: wf-old-french-lauder
+    label: lauder
+    language_id: lang-old-french
+    form: lauder
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-old-french-lauder
+  - id: wf-middle-english-laud
+    label: laud
+    language_id: lang-middle-english
+    form: laud
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-middle-english-laud
+  - id: wf-modern-english-laud
+    label: laud
+    language_id: lang-modern-english
+    form: laud
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-laud
+  meaning_senses:
+  - id: sense-wf-modern-english-laud
+    label: Corrected candidate target meaning; source-detail review required.
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-laud
+  script_forms: []
+source_links:
+- id: src-latin-laus
+  source_ref: LEXIS-SRCDEC-098-tier3-proof-laud
+  contract_state: candidate_review
+- id: src-latin-laudis
+  source_ref: LEXIS-SRCDEC-098-tier3-proof-laud
+  contract_state: candidate_review
+- id: src-unspecified-intermediate-laudare
+  source_ref: LEXIS-SRCDEC-098-tier3-proof-laud
+  contract_state: candidate_review
+- id: src-old-french-lauder
+  source_ref: LEXIS-SRCDEC-098-tier3-proof-laud
+  contract_state: candidate_review
+- id: src-middle-english-laud
+  source_ref: LEXIS-SRCDEC-098-tier3-proof-laud
+  contract_state: candidate_review
+- id: src-modern-english-laud
+  source_ref: LEXIS-SRCDEC-098-tier3-proof-laud
+  contract_state: candidate_review
+relationship_edges:
+- id: edge-wf-latin-laus-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-laus
+  target_id: wf-latin-laus
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-098-tier3-proof-laud
+  review_state: candidate_review
+- id: edge-wf-latin-laudis-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-laudis
+  target_id: wf-latin-laudis
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-098-tier3-proof-laud
+  review_state: candidate_review
+- id: edge-wf-unspecified-intermediate-laudare-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-unspecified-intermediate-laudare
+  target_id: wf-unspecified-intermediate-laudare
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-098-tier3-proof-laud
+  review_state: candidate_review
+- id: edge-wf-old-french-lauder-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-old-french-lauder
+  target_id: wf-old-french-lauder
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-098-tier3-proof-laud
+  review_state: candidate_review
+- id: edge-wf-middle-english-laud-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-middle-english-laud
+  target_id: wf-middle-english-laud
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-098-tier3-proof-laud
+  review_state: candidate_review
+- id: edge-wf-modern-english-laud-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-modern-english-laud
+  target_id: wf-modern-english-laud
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-098-tier3-proof-laud
+  review_state: candidate_review
+- id: edge-wf-modern-english-laud-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-modern-english-laud
+  target_id: sense-wf-modern-english-laud
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-098-tier3-proof-laud
+  review_state: candidate_review
+- id: edge-wf-unspecified-intermediate-laudare-borrowed-from-wf-latin-laus
+  edge_kind: borrowed_from
+  source_id: wf-unspecified-intermediate-laudare
+  target_id: wf-latin-laus
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-098-tier3-proof-laud
+  review_state: candidate_review
+- id: edge-wf-old-french-lauder-borrowed-from-wf-unspecified-intermediate-laudare
+  edge_kind: borrowed_from
+  source_id: wf-old-french-lauder
+  target_id: wf-unspecified-intermediate-laudare
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-098-tier3-proof-laud
+  review_state: candidate_review
+- id: edge-wf-middle-english-laud-borrowed-from-wf-old-french-lauder
+  edge_kind: borrowed_from
+  source_id: wf-middle-english-laud
+  target_id: wf-old-french-lauder
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-098-tier3-proof-laud
+  review_state: candidate_review
+- id: edge-wf-modern-english-laud-borrowed-from-wf-middle-english-laud
+  edge_kind: borrowed_from
+  source_id: wf-modern-english-laud
+  target_id: wf-middle-english-laud
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-098-tier3-proof-laud
+  review_state: candidate_review

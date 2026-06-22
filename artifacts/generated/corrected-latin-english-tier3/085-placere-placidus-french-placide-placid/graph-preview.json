@@ -1,0 +1,173 @@
+{
+  "slice_id": "LEXIS-GEN-CORR-085",
+  "nodes": [
+    {
+      "id": "lang-french",
+      "label": "French",
+      "record_class": "Language",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "lang-latin",
+      "label": "Latin",
+      "record_class": "Language",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "lang-modern-english",
+      "label": "Modern English",
+      "record_class": "Language",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "lang-unspecified-intermediate",
+      "label": "Unspecified intermediate",
+      "record_class": "Language",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-latin-placere",
+      "label": "placere",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-unspecified-intermediate-placidus",
+      "label": "placidus",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-french-placide",
+      "label": "placide",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-modern-english-placid",
+      "label": "placid",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "sense-wf-modern-english-placid",
+      "label": "Corrected candidate target meaning; source-detail review required.",
+      "record_class": "MeaningSense",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-wf-latin-placere-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-latin-placere",
+      "target_id": "wf-latin-placere",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-102-tier3-proof-placid"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-unspecified-intermediate-placidus-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-unspecified-intermediate-placidus",
+      "target_id": "wf-unspecified-intermediate-placidus",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-102-tier3-proof-placid"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-french-placide-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-french-placide",
+      "target_id": "wf-french-placide",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-102-tier3-proof-placid"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-modern-english-placid-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-modern-english-placid",
+      "target_id": "wf-modern-english-placid",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-102-tier3-proof-placid"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-modern-english-placid-meaning",
+      "edge_kind": "meaning_shift_to",
+      "source_id": "wf-modern-english-placid",
+      "target_id": "sense-wf-modern-english-placid",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-102-tier3-proof-placid"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-unspecified-intermediate-placidus-borrowed-from-wf-latin-placere",
+      "edge_kind": "borrowed_from",
+      "source_id": "wf-unspecified-intermediate-placidus",
+      "target_id": "wf-latin-placere",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-102-tier3-proof-placid"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-french-placide-borrowed-from-wf-unspecified-intermediate-placidus",
+      "edge_kind": "borrowed_from",
+      "source_id": "wf-french-placide",
+      "target_id": "wf-unspecified-intermediate-placidus",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-102-tier3-proof-placid"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-modern-english-placid-borrowed-from-wf-french-placide",
+      "edge_kind": "borrowed_from",
+      "source_id": "wf-modern-english-placid",
+      "target_id": "wf-french-placide",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-102-tier3-proof-placid"
+      ],
+      "review_state": "candidate_review"
+    }
+  ],
+  "source_posture_summary": [
+    "LEXIS-SRCDEC-102-tier3-proof-placid:candidate_review"
+  ],
+  "graph_engine_posture": "local-only",
+  "graph_output_posture": "preview_only_not_promoted",
+  "validation_error_count": 13
+}

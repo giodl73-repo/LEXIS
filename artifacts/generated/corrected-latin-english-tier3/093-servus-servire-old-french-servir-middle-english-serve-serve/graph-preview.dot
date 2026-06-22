@@ -1,0 +1,24 @@
+digraph lexis_slice {
+  graph [label="LEXIS-GEN-CORR-093\npreview_only_not_promoted\nvalidation errors: 16"];
+  "lang-latin" [label="Latin\nLanguage\ncandidate_review"];
+  "lang-middle-english" [label="Middle English\nLanguage\ncandidate_review"];
+  "lang-modern-english" [label="Modern English\nLanguage\ncandidate_review"];
+  "lang-old-french" [label="Old French\nLanguage\ncandidate_review"];
+  "lang-unspecified-intermediate" [label="Unspecified intermediate\nLanguage\ncandidate_review"];
+  "wf-latin-servus" [label="servus\nWordform\ncandidate_review"];
+  "wf-unspecified-intermediate-servire" [label="servire\nWordform\ncandidate_review"];
+  "wf-old-french-servir" [label="servir\nWordform\ncandidate_review"];
+  "wf-middle-english-serve" [label="serve\nWordform\ncandidate_review"];
+  "wf-modern-english-serve" [label="serve\nWordform\ncandidate_review"];
+  "sense-wf-modern-english-serve" [label="Corrected candidate target meaning; source-detail review required.\nMeaningSense\ncandidate_review"];
+  "src-latin-servus" -> "wf-latin-servus" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "src-unspecified-intermediate-servire" -> "wf-unspecified-intermediate-servire" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "src-old-french-servir" -> "wf-old-french-servir" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "src-middle-english-serve" -> "wf-middle-english-serve" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "src-modern-english-serve" -> "wf-modern-english-serve" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "wf-modern-english-serve" -> "sense-wf-modern-english-serve" [label="meaning_shift_to\ninference\nsource_limited"];
+  "wf-unspecified-intermediate-servire" -> "wf-latin-servus" [label="borrowed_from\ninference\nsource_limited"];
+  "wf-old-french-servir" -> "wf-unspecified-intermediate-servire" [label="borrowed_from\ninference\nsource_limited"];
+  "wf-middle-english-serve" -> "wf-old-french-servir" [label="borrowed_from\ninference\nsource_limited"];
+  "wf-modern-english-serve" -> "wf-middle-english-serve" [label="borrowed_from\ninference\nsource_limited"];
+}

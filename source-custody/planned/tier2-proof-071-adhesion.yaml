@@ -1,0 +1,17 @@
+decision_id: LEXIS-SRCDEC-078-tier2-proof-adhesion
+status: candidate_review
+source_family: English etymology pointer for Latin-to-English candidate adhesion
+related_slice_packages:
+  - LEXIS-SLICE-001-SOURCE
+pointer: https://www.etymonline.com/word/adhere
+candidate_source_name: Etymonline entry for adhere as adhesion-family pointer
+rights_posture: copyrighted_reference_pointer_only
+redistribution_posture: pointer_only_planned
+citation_note: Proof pointer supports French adherer, Latin adhaerare/adhaerere, and haerere route; no source text is copied.
+review_state: source_detail_required
+reviewer: L-5 Source Custody Reviewer pending
+promotion_allowed: false
+blocks:
+  - adhesion-specific noun pointer still needs final selection
+  - compound ad- plus haerere path must be modeled explicitly
+

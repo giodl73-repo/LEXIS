@@ -1,0 +1,28 @@
+fixture_id: LEXIS-FIX-008-semitic-root-pattern-slice
+status: draft_node_edge_shape_blocked
+fixture_class: root-pattern fixture
+owning_work_package: LEXIS-WP-004
+linked_scenarios:
+  - LEXIS-SC-002-borrowing-vs-descent
+linked_slice_packages:
+  - LEXIS-SLICE-004-SCOPE
+  - LEXIS-SLICE-004-NODES
+  - LEXIS-SLICE-004-EDGES
+  - LEXIS-SLICE-004-NEGATIVES
+linked_source_custody_decision:
+  - LEXIS-SRCDEC-007-semitic-root-reference
+linked_scope: LEXIS-SLICE-004-SCOPE
+fixture_shape: fixture.yaml
+expected_result: invalid_until_semitic_source_custody_is_accepted
+expected_diagnostics:
+  - source_custody
+  - relationship
+  - graph_preservation
+records_and_edges_included: draft_semitic_root_pattern_nodes_and_edges
+source_text_redistribution_posture: pointer_only_planned
+graph_impact: graph_candidate_blocked_until_validation_passes
+chronicle_impact: chronicle_candidate_after_graph_review
+review_state: draft_shape_not_promoted
+promotion_blockers:
+  - no accepted Semitic root-pattern source-custody decision
+  - no transliteration review

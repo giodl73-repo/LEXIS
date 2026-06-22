@@ -1,0 +1,17 @@
+decision_id: LEXIS-SRCDEC-036-tier2-proof-amateur
+status: candidate_review
+source_family: English etymology pointer for Latin-to-English candidate amateur
+related_slice_packages:
+  - LEXIS-SLICE-001-SOURCE
+pointer: https://www.etymonline.com/word/amateur
+candidate_source_name: Etymonline and Merriam-Webster entries for amateur
+rights_posture: copyrighted_reference_pointer_only
+redistribution_posture: pointer_only_planned
+citation_note: Proof pointers support French amateur, Latin amatorem/amator, and amare route; no source text is copied.
+review_state: source_detail_required
+reviewer: L-5 Source Custody Reviewer pending
+promotion_allowed: false
+blocks:
+  - exact French and Latin case-form handling must be modeled before promotion
+  - per-chain fixture has not been corrected or accepted
+

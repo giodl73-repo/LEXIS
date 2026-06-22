@@ -1,0 +1,59 @@
+slice_id: corrected-candidate-091
+fixture_id: LEXIS-GEN-CORR-091
+status: candidate_review
+question: Corrected graph-facing candidate route for generated Latin-English chain 091.
+source_state: candidate_review
+sources:
+- id: LEXIS-SRCDEC-104-tier3-proof-sanitary
+  state: candidate_review
+  may_support_claims: false
+forms:
+- form: sanus
+  language: Latin
+  source: LEXIS-SRCDEC-104-tier3-proof-sanitary
+  id: wf-latin-sanus
+  label: null
+  meaning: null
+- form: sanitas
+  language: Unspecified intermediate
+  source: LEXIS-SRCDEC-104-tier3-proof-sanitary
+  id: wf-unspecified-intermediate-sanitas
+  label: null
+  meaning: null
+- form: sanitaire
+  language: French
+  source: LEXIS-SRCDEC-104-tier3-proof-sanitary
+  id: wf-french-sanitaire
+  label: null
+  meaning: null
+- form: sanitary
+  language: Modern English
+  source: LEXIS-SRCDEC-104-tier3-proof-sanitary
+  id: wf-modern-english-sanitary
+  label: null
+  meaning: Corrected candidate target meaning; source-detail review required.
+relationships:
+- kind: borrowed_from
+  source: wf-unspecified-intermediate-sanitas
+  target: wf-latin-sanus
+  claim_type: inference
+  uncertainty: source_limited
+  support:
+  - LEXIS-SRCDEC-104-tier3-proof-sanitary
+  review_state: candidate_review
+- kind: borrowed_from
+  source: wf-french-sanitaire
+  target: wf-unspecified-intermediate-sanitas
+  claim_type: inference
+  uncertainty: source_limited
+  support:
+  - LEXIS-SRCDEC-104-tier3-proof-sanitary
+  review_state: candidate_review
+- kind: borrowed_from
+  source: wf-modern-english-sanitary
+  target: wf-french-sanitaire
+  claim_type: inference
+  uncertainty: source_limited
+  support:
+  - LEXIS-SRCDEC-104-tier3-proof-sanitary
+  review_state: candidate_review

@@ -1,0 +1,212 @@
+fixture_id: LEXIS-GEN-CAND-067-fundere-fusion
+status: candidate_review
+scope:
+  scope_id: candidate-067-fundere-fusion-scope
+  question: Candidate generated multi-stage graph-facing chain for Latin fundere, Old French, Middle English, and Modern English fusion.
+  excluded_claims:
+  - unreviewed generated relationship claims
+  - source text ingestion or redistribution
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+- source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+  may_support_claims: false
+deferred_records: []
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers: []
+nodes:
+  languages:
+  - id: lang-latin
+    label: Latin
+    kind: language
+    source_posture: candidate_review
+  - id: lang-middle-english
+    label: Middle English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-modern-english
+    label: Modern English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-old-french
+    label: Old French
+    kind: language
+    source_posture: candidate_review
+  roots: []
+  wordforms:
+  - id: wf-latin-fundere
+    label: fundere
+    language_id: lang-latin
+    form: fundere
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-fundere
+  - id: wf-latin-fusum
+    label: fusum
+    language_id: lang-latin
+    form: fusum
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-fusum
+  - id: wf-old-french-old-french-fusion-candidate
+    label: Old French candidate stage for fusion
+    language_id: lang-old-french
+    form: old-french-fusion-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-old-french-old-french-fusion-candidate
+  - id: wf-middle-english-middle-english-fusion-candidate
+    label: Middle English candidate stage for fusion
+    language_id: lang-middle-english
+    form: middle-english-fusion-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-middle-english-middle-english-fusion-candidate
+  - id: wf-modern-english-fusion
+    label: fusion
+    language_id: lang-modern-english
+    form: fusion
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-fusion
+  meaning_senses:
+  - id: sense-fundere
+    label: pouring or spreading
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-latin-fundere
+  - id: sense-fusion
+    label: pouring or spreading
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-fusion
+  script_forms: []
+source_links:
+- id: src-latin-fundere
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-latin-fusum
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-old-french-old-french-fusion-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-middle-english-middle-english-fusion-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-modern-english-fusion
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+relationship_edges:
+- id: edge-fundere-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-fundere
+  target_id: wf-latin-fundere
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-fundere-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-latin-fundere
+  target_id: sense-fundere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-fusum-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-fusum
+  target_id: wf-latin-fusum
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-fusion-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-old-french-old-french-fusion-candidate
+  target_id: wf-old-french-old-french-fusion-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-fusion-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-middle-english-middle-english-fusion-candidate
+  target_id: wf-middle-english-middle-english-fusion-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-fusion-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-modern-english-fusion
+  target_id: wf-modern-english-fusion
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-fusion-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-modern-english-fusion
+  target_id: sense-fusion
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-fusum-descends-from-fundere
+  edge_kind: descends_from
+  source_id: wf-latin-fusum
+  target_id: wf-latin-fundere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-fusion-candidate-borrowed-from-fusum
+  edge_kind: borrowed_from
+  source_id: wf-old-french-old-french-fusion-candidate
+  target_id: wf-latin-fusum
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-fusion-candidate-borrowed-from-old-french-fusion-candidate
+  edge_kind: borrowed_from
+  source_id: wf-middle-english-middle-english-fusion-candidate
+  target_id: wf-old-french-old-french-fusion-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-fusion-descends-from-middle-english-fusion-candidate
+  edge_kind: descends_from
+  source_id: wf-modern-english-fusion
+  target_id: wf-middle-english-middle-english-fusion-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review

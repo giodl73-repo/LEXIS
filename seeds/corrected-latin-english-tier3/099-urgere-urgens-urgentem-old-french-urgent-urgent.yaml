@@ -1,0 +1,65 @@
+slice_id: corrected-candidate-099
+fixture_id: LEXIS-GEN-CORR-099
+status: candidate_review
+question: Corrected graph-facing candidate route for generated Latin-English chain 099.
+source_state: candidate_review
+sources:
+- id: LEXIS-SRCDEC-109-tier3-proof-urgent
+  state: candidate_review
+  may_support_claims: false
+forms:
+- form: urgere
+  language: Latin
+  source: LEXIS-SRCDEC-109-tier3-proof-urgent
+  id: wf-latin-urgere
+  label: null
+  meaning: null
+- form: urgens
+  language: Latin
+  source: LEXIS-SRCDEC-109-tier3-proof-urgent
+  id: wf-latin-urgens
+  label: null
+  meaning: null
+- form: urgentem
+  language: Latin
+  source: LEXIS-SRCDEC-109-tier3-proof-urgent
+  id: wf-latin-urgentem
+  label: null
+  meaning: null
+- form: urgent
+  language: Old French
+  source: LEXIS-SRCDEC-109-tier3-proof-urgent
+  id: wf-old-french-urgent
+  label: null
+  meaning: null
+- form: urgent
+  language: Modern English
+  source: LEXIS-SRCDEC-109-tier3-proof-urgent
+  id: wf-modern-english-urgent
+  label: null
+  meaning: Corrected candidate target meaning; source-detail review required.
+relationships:
+- kind: descends_from
+  source: wf-latin-urgens
+  target: wf-latin-urgere
+  claim_type: inference
+  uncertainty: source_limited
+  support:
+  - LEXIS-SRCDEC-109-tier3-proof-urgent
+  review_state: candidate_review
+- kind: borrowed_from
+  source: wf-old-french-urgent
+  target: wf-latin-urgens
+  claim_type: inference
+  uncertainty: source_limited
+  support:
+  - LEXIS-SRCDEC-109-tier3-proof-urgent
+  review_state: candidate_review
+- kind: borrowed_from
+  source: wf-modern-english-urgent
+  target: wf-old-french-urgent
+  claim_type: inference
+  uncertainty: source_limited
+  support:
+  - LEXIS-SRCDEC-109-tier3-proof-urgent
+  review_state: candidate_review

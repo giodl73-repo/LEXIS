@@ -1,0 +1,25 @@
+decision_id: LEXIS-SRCDEC-004-script-history-reference
+status: planned_blocked
+source_family: Script and alphabet-history reference
+related_slice_packages:
+  - LEXIS-SLICE-002-SOURCE
+related_research:
+  - LEXIS-PAPER-001
+  - LEXIS-PAPER-004
+  - LEXIS-PAPER-009
+candidate_use:
+  - pointer metadata for Greek Latin Cyrillic script-lane source posture
+pointer: none_selected
+rights_posture: unknown_until_source_review
+redistribution_posture: pointer_only_planned
+citation_note: no real source selected
+date_posture: unavailable_until_source_review
+language_script_posture: script-history reference family planned
+review_state: proposed_blocked
+reviewer: L-5 Source Custody Reviewer and L-4 Script Systems Reviewer required
+promotion_allowed: false
+blocks:
+  - script-lane fixture
+  - graph slice output
+  - chronicle output
+

@@ -1,0 +1,65 @@
+slice_id: corrected-candidate-082
+fixture_id: LEXIS-GEN-CORR-082
+status: candidate_review
+question: Corrected graph-facing candidate route for generated Latin-English chain 082.
+source_state: candidate_review
+sources:
+- id: LEXIS-SRCDEC-101-tier3-proof-novel
+  state: candidate_review
+  may_support_claims: false
+forms:
+- form: novus
+  language: Latin
+  source: LEXIS-SRCDEC-101-tier3-proof-novel
+  id: wf-latin-novus
+  label: null
+  meaning: null
+- form: novellus
+  language: Unspecified intermediate
+  source: LEXIS-SRCDEC-101-tier3-proof-novel
+  id: wf-unspecified-intermediate-novellus
+  label: null
+  meaning: null
+- form: novel
+  language: Old French
+  source: LEXIS-SRCDEC-101-tier3-proof-novel
+  id: wf-old-french-novel
+  label: null
+  meaning: null
+- form: nouvel
+  language: Old French
+  source: LEXIS-SRCDEC-101-tier3-proof-novel
+  id: wf-old-french-nouvel
+  label: null
+  meaning: null
+- form: novel
+  language: Modern English
+  source: LEXIS-SRCDEC-101-tier3-proof-novel
+  id: wf-modern-english-novel
+  label: null
+  meaning: Corrected candidate target meaning; source-detail review required.
+relationships:
+- kind: borrowed_from
+  source: wf-unspecified-intermediate-novellus
+  target: wf-latin-novus
+  claim_type: inference
+  uncertainty: source_limited
+  support:
+  - LEXIS-SRCDEC-101-tier3-proof-novel
+  review_state: candidate_review
+- kind: borrowed_from
+  source: wf-old-french-novel
+  target: wf-unspecified-intermediate-novellus
+  claim_type: inference
+  uncertainty: source_limited
+  support:
+  - LEXIS-SRCDEC-101-tier3-proof-novel
+  review_state: candidate_review
+- kind: borrowed_from
+  source: wf-modern-english-novel
+  target: wf-old-french-novel
+  claim_type: inference
+  uncertainty: source_limited
+  support:
+  - LEXIS-SRCDEC-101-tier3-proof-novel
+  review_state: candidate_review

@@ -1,0 +1,25 @@
+digraph lexis_slice {
+  graph [label="LEXIS-GEN-CORR-075\npreview_only_not_promoted\nvalidation errors: 18"];
+  "lang-late-latin" [label="Late Latin\nLanguage\ncandidate_review"];
+  "lang-latin" [label="Latin\nLanguage\ncandidate_review"];
+  "lang-modern-english" [label="Modern English\nLanguage\ncandidate_review"];
+  "lang-old-french" [label="Old French\nLanguage\ncandidate_review"];
+  "wf-latin-linquere" [label="linquere\nWordform\ncandidate_review"];
+  "wf-latin-relinquere" [label="relinquere\nWordform\ncandidate_review"];
+  "wf-latin-reliquus" [label="reliquus\nWordform\ncandidate_review"];
+  "wf-late-latin-reliquiae" [label="reliquiae\nWordform\ncandidate_review"];
+  "wf-old-french-relique" [label="relique\nWordform\ncandidate_review"];
+  "wf-modern-english-relic" [label="relic\nWordform\ncandidate_review"];
+  "sense-wf-modern-english-relic" [label="Corrected candidate target meaning; source-detail review required.\nMeaningSense\ncandidate_review"];
+  "src-latin-linquere" -> "wf-latin-linquere" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "src-latin-relinquere" -> "wf-latin-relinquere" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "src-latin-reliquus" -> "wf-latin-reliquus" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "src-late-latin-reliquiae" -> "wf-late-latin-reliquiae" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "src-old-french-relique" -> "wf-old-french-relique" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "src-modern-english-relic" -> "wf-modern-english-relic" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "wf-modern-english-relic" -> "sense-wf-modern-english-relic" [label="meaning_shift_to\ninference\nsource_limited"];
+  "wf-latin-relinquere" -> "wf-latin-linquere" [label="descends_from\ninference\nsource_limited"];
+  "wf-late-latin-reliquiae" -> "wf-latin-relinquere" [label="borrowed_from\ninference\nsource_limited"];
+  "wf-old-french-relique" -> "wf-late-latin-reliquiae" [label="borrowed_from\ninference\nsource_limited"];
+  "wf-modern-english-relic" -> "wf-old-french-relique" [label="borrowed_from\ninference\nsource_limited"];
+}

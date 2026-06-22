@@ -1,0 +1,225 @@
+{
+  "slice_id": "LEXIS-GEN-CORR-095",
+  "nodes": [
+    {
+      "id": "lang-latin",
+      "label": "Latin",
+      "record_class": "Language",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "lang-middle-english",
+      "label": "Middle English",
+      "record_class": "Language",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "lang-modern-english",
+      "label": "Modern English",
+      "record_class": "Language",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "lang-old-french",
+      "label": "Old French",
+      "record_class": "Language",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-latin-sperare",
+      "label": "sperare",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-latin-desperare",
+      "label": "desperare",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-old-french-desperer",
+      "label": "desperer",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-old-french-despoir",
+      "label": "despoir",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-middle-english-despair",
+      "label": "despair",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-modern-english-despair",
+      "label": "despair",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "sense-wf-modern-english-despair",
+      "label": "Corrected candidate target meaning; source-detail review required.",
+      "record_class": "MeaningSense",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-wf-latin-sperare-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-latin-sperare",
+      "target_id": "wf-latin-sperare",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-107-tier3-proof-despair"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-latin-desperare-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-latin-desperare",
+      "target_id": "wf-latin-desperare",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-107-tier3-proof-despair"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-old-french-desperer-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-old-french-desperer",
+      "target_id": "wf-old-french-desperer",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-107-tier3-proof-despair"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-old-french-despoir-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-old-french-despoir",
+      "target_id": "wf-old-french-despoir",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-107-tier3-proof-despair"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-middle-english-despair-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-middle-english-despair",
+      "target_id": "wf-middle-english-despair",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-107-tier3-proof-despair"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-modern-english-despair-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-modern-english-despair",
+      "target_id": "wf-modern-english-despair",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-107-tier3-proof-despair"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-modern-english-despair-meaning",
+      "edge_kind": "meaning_shift_to",
+      "source_id": "wf-modern-english-despair",
+      "target_id": "sense-wf-modern-english-despair",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-107-tier3-proof-despair"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-latin-desperare-descends-from-wf-latin-sperare",
+      "edge_kind": "descends_from",
+      "source_id": "wf-latin-desperare",
+      "target_id": "wf-latin-sperare",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-107-tier3-proof-despair"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-old-french-desperer-borrowed-from-wf-latin-desperare",
+      "edge_kind": "borrowed_from",
+      "source_id": "wf-old-french-desperer",
+      "target_id": "wf-latin-desperare",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-107-tier3-proof-despair"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-middle-english-despair-borrowed-from-wf-old-french-desperer",
+      "edge_kind": "borrowed_from",
+      "source_id": "wf-middle-english-despair",
+      "target_id": "wf-old-french-desperer",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-107-tier3-proof-despair"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-modern-english-despair-borrowed-from-wf-middle-english-despair",
+      "edge_kind": "borrowed_from",
+      "source_id": "wf-modern-english-despair",
+      "target_id": "wf-middle-english-despair",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-107-tier3-proof-despair"
+      ],
+      "review_state": "candidate_review"
+    }
+  ],
+  "source_posture_summary": [
+    "LEXIS-SRCDEC-107-tier3-proof-despair:candidate_review"
+  ],
+  "graph_engine_posture": "local-only",
+  "graph_output_posture": "preview_only_not_promoted",
+  "validation_error_count": 18
+}

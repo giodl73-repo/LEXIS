@@ -1,0 +1,22 @@
+digraph lexis_slice {
+  graph [label="LEXIS-GEN-CORR-082\npreview_only_not_promoted\nvalidation errors: 15"];
+  "lang-latin" [label="Latin\nLanguage\ncandidate_review"];
+  "lang-modern-english" [label="Modern English\nLanguage\ncandidate_review"];
+  "lang-old-french" [label="Old French\nLanguage\ncandidate_review"];
+  "lang-unspecified-intermediate" [label="Unspecified intermediate\nLanguage\ncandidate_review"];
+  "wf-latin-novus" [label="novus\nWordform\ncandidate_review"];
+  "wf-unspecified-intermediate-novellus" [label="novellus\nWordform\ncandidate_review"];
+  "wf-old-french-novel" [label="novel\nWordform\ncandidate_review"];
+  "wf-old-french-nouvel" [label="nouvel\nWordform\ncandidate_review"];
+  "wf-modern-english-novel" [label="novel\nWordform\ncandidate_review"];
+  "sense-wf-modern-english-novel" [label="Corrected candidate target meaning; source-detail review required.\nMeaningSense\ncandidate_review"];
+  "src-latin-novus" -> "wf-latin-novus" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "src-unspecified-intermediate-novellus" -> "wf-unspecified-intermediate-novellus" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "src-old-french-novel" -> "wf-old-french-novel" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "src-old-french-nouvel" -> "wf-old-french-nouvel" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "src-modern-english-novel" -> "wf-modern-english-novel" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "wf-modern-english-novel" -> "sense-wf-modern-english-novel" [label="meaning_shift_to\ninference\nsource_limited"];
+  "wf-unspecified-intermediate-novellus" -> "wf-latin-novus" [label="borrowed_from\ninference\nsource_limited"];
+  "wf-old-french-novel" -> "wf-unspecified-intermediate-novellus" [label="borrowed_from\ninference\nsource_limited"];
+  "wf-modern-english-novel" -> "wf-old-french-novel" [label="borrowed_from\ninference\nsource_limited"];
+}

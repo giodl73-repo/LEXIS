@@ -1,0 +1,22 @@
+decision_id: LEXIS-SRCDEC-007-semitic-root-reference
+status: planned_blocked
+source_family: Semitic root and pattern reference
+related_slice_packages:
+  - LEXIS-SLICE-004-SOURCE
+related_research:
+  - LEXIS-PAPER-005
+candidate_use:
+  - pointer metadata for Semitic root-pattern and transliteration posture
+pointer: none_selected
+rights_posture: unknown_until_source_review
+redistribution_posture: pointer_only_planned
+citation_note: no real source selected; root-pattern examples remain candidate-only
+date_posture: unavailable_until_source_review
+language_script_posture: Semitic root-pattern and script/transliteration source family planned
+review_state: proposed_blocked
+reviewer: L-5 Source Custody Reviewer and L-4 Script Systems Reviewer required
+promotion_allowed: false
+blocks:
+  - semitic root-pattern fixture
+  - transliteration graph output
+  - root-pattern chronicle output

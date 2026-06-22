@@ -1,0 +1,231 @@
+{
+  "slice_id": "LEXIS-GEN-CORR-074",
+  "nodes": [
+    {
+      "id": "lang-latin",
+      "label": "Latin",
+      "record_class": "Language",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "lang-middle-english",
+      "label": "Middle English",
+      "record_class": "Language",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "lang-modern-english",
+      "label": "Modern English",
+      "record_class": "Language",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "lang-old-french",
+      "label": "Old French",
+      "record_class": "Language",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "lang-unspecified-intermediate",
+      "label": "Unspecified intermediate",
+      "record_class": "Language",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-latin-laus",
+      "label": "laus",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-latin-laudis",
+      "label": "laudis",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-unspecified-intermediate-laudare",
+      "label": "laudare",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-old-french-lauder",
+      "label": "lauder",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-middle-english-laud",
+      "label": "laud",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-modern-english-laud",
+      "label": "laud",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "sense-wf-modern-english-laud",
+      "label": "Corrected candidate target meaning; source-detail review required.",
+      "record_class": "MeaningSense",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-wf-latin-laus-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-latin-laus",
+      "target_id": "wf-latin-laus",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-098-tier3-proof-laud"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-latin-laudis-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-latin-laudis",
+      "target_id": "wf-latin-laudis",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-098-tier3-proof-laud"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-unspecified-intermediate-laudare-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-unspecified-intermediate-laudare",
+      "target_id": "wf-unspecified-intermediate-laudare",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-098-tier3-proof-laud"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-old-french-lauder-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-old-french-lauder",
+      "target_id": "wf-old-french-lauder",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-098-tier3-proof-laud"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-middle-english-laud-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-middle-english-laud",
+      "target_id": "wf-middle-english-laud",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-098-tier3-proof-laud"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-modern-english-laud-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-modern-english-laud",
+      "target_id": "wf-modern-english-laud",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-098-tier3-proof-laud"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-modern-english-laud-meaning",
+      "edge_kind": "meaning_shift_to",
+      "source_id": "wf-modern-english-laud",
+      "target_id": "sense-wf-modern-english-laud",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-098-tier3-proof-laud"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-unspecified-intermediate-laudare-borrowed-from-wf-latin-laus",
+      "edge_kind": "borrowed_from",
+      "source_id": "wf-unspecified-intermediate-laudare",
+      "target_id": "wf-latin-laus",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-098-tier3-proof-laud"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-old-french-lauder-borrowed-from-wf-unspecified-intermediate-laudare",
+      "edge_kind": "borrowed_from",
+      "source_id": "wf-old-french-lauder",
+      "target_id": "wf-unspecified-intermediate-laudare",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-098-tier3-proof-laud"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-middle-english-laud-borrowed-from-wf-old-french-lauder",
+      "edge_kind": "borrowed_from",
+      "source_id": "wf-middle-english-laud",
+      "target_id": "wf-old-french-lauder",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-098-tier3-proof-laud"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-modern-english-laud-borrowed-from-wf-middle-english-laud",
+      "edge_kind": "borrowed_from",
+      "source_id": "wf-modern-english-laud",
+      "target_id": "wf-middle-english-laud",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-098-tier3-proof-laud"
+      ],
+      "review_state": "candidate_review"
+    }
+  ],
+  "source_posture_summary": [
+    "LEXIS-SRCDEC-098-tier3-proof-laud:candidate_review"
+  ],
+  "graph_engine_posture": "local-only",
+  "graph_output_posture": "preview_only_not_promoted",
+  "validation_error_count": 18
+}

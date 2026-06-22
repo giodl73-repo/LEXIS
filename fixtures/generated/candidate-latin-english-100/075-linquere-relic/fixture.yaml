@@ -1,0 +1,212 @@
+fixture_id: LEXIS-GEN-CAND-075-linquere-relic
+status: candidate_review
+scope:
+  scope_id: candidate-075-linquere-relic-scope
+  question: Candidate generated multi-stage graph-facing chain for Latin linquere, Old French, Middle English, and Modern English relic.
+  excluded_claims:
+  - unreviewed generated relationship claims
+  - source text ingestion or redistribution
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+- source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+  may_support_claims: false
+deferred_records: []
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers: []
+nodes:
+  languages:
+  - id: lang-latin
+    label: Latin
+    kind: language
+    source_posture: candidate_review
+  - id: lang-middle-english
+    label: Middle English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-modern-english
+    label: Modern English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-old-french
+    label: Old French
+    kind: language
+    source_posture: candidate_review
+  roots: []
+  wordforms:
+  - id: wf-latin-linquere
+    label: linquere
+    language_id: lang-latin
+    form: linquere
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-linquere
+  - id: wf-latin-lictum
+    label: lictum
+    language_id: lang-latin
+    form: lictum
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-lictum
+  - id: wf-old-french-old-french-relic-candidate
+    label: Old French candidate stage for relic
+    language_id: lang-old-french
+    form: old-french-relic-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-old-french-old-french-relic-candidate
+  - id: wf-middle-english-middle-english-relic-candidate
+    label: Middle English candidate stage for relic
+    language_id: lang-middle-english
+    form: middle-english-relic-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-middle-english-middle-english-relic-candidate
+  - id: wf-modern-english-relic
+    label: relic
+    language_id: lang-modern-english
+    form: relic
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-relic
+  meaning_senses:
+  - id: sense-linquere
+    label: leaving or abandoning
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-latin-linquere
+  - id: sense-relic
+    label: leaving or abandoning
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-relic
+  script_forms: []
+source_links:
+- id: src-latin-linquere
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-latin-lictum
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-old-french-old-french-relic-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-middle-english-middle-english-relic-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-modern-english-relic
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+relationship_edges:
+- id: edge-linquere-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-linquere
+  target_id: wf-latin-linquere
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-linquere-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-latin-linquere
+  target_id: sense-linquere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-lictum-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-lictum
+  target_id: wf-latin-lictum
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-relic-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-old-french-old-french-relic-candidate
+  target_id: wf-old-french-old-french-relic-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-relic-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-middle-english-middle-english-relic-candidate
+  target_id: wf-middle-english-middle-english-relic-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-relic-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-modern-english-relic
+  target_id: wf-modern-english-relic
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-relic-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-modern-english-relic
+  target_id: sense-relic
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-lictum-descends-from-linquere
+  edge_kind: descends_from
+  source_id: wf-latin-lictum
+  target_id: wf-latin-linquere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-relic-candidate-borrowed-from-lictum
+  edge_kind: borrowed_from
+  source_id: wf-old-french-old-french-relic-candidate
+  target_id: wf-latin-lictum
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-relic-candidate-borrowed-from-old-french-relic-candidate
+  edge_kind: borrowed_from
+  source_id: wf-middle-english-middle-english-relic-candidate
+  target_id: wf-old-french-old-french-relic-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-relic-descends-from-middle-english-relic-candidate
+  edge_kind: descends_from
+  source_id: wf-modern-english-relic
+  target_id: wf-middle-english-middle-english-relic-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review

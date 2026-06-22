@@ -1,0 +1,122 @@
+fixture_id: LEXIS-FIX-006-script-alphabet-slice
+status: draft_shape_invalid_by_design
+fixture_class: script lane fixture
+scope:
+  scope_id: LEXIS-SLICE-002-SCOPE
+  question: Draft graph-facing slice for a narrow Greek, Latin, and Cyrillic alphabet lane.
+  included_languages:
+    - grc
+    - lat-script
+    - cu-script
+  included_forms:
+    - script-greek-alpha
+    - script-latin-a
+    - script-cyrillic-az
+  excluded_claims:
+    - full alphabet history
+    - phonetic value reconstruction
+    - visual similarity as proof of descent
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+  - source_ref: LEXIS-SRCDEC-004-script-history-reference
+    contract_state: planned_blocked
+    may_support_claims: false
+nodes:
+  languages:
+    - id: lang-grc-script
+      label: Greek script lane
+      kind: script_context
+      source_posture: planned_blocked
+    - id: lang-lat-script
+      label: Latin script lane
+      kind: script_context
+      source_posture: planned_blocked
+    - id: lang-cyrillic-script
+      label: Cyrillic script lane
+      kind: script_context
+      source_posture: planned_blocked
+  roots: []
+  wordforms: []
+  meaning_senses:
+    - id: sense-letter-form
+      label: letter-form continuity candidate
+      gloss: Project summary of bounded letter-form relation; not copied source text.
+      claim_type: inference
+      uncertainty: source_limited
+      source_links:
+        - src-script-history
+  script_forms:
+    - id: script-greek-alpha
+      label: Greek alpha form
+      script_label: Greek alphabet
+      form_text: alpha
+      transliteration_posture: conventional_label_only
+      source_links:
+        - src-script-history
+    - id: script-latin-a
+      label: Latin A form
+      script_label: Latin alphabet
+      form_text: A
+      transliteration_posture: conventional_label_only
+      source_links:
+        - src-script-history
+    - id: script-cyrillic-az
+      label: Cyrillic az form
+      script_label: Cyrillic alphabet
+      form_text: Az
+      transliteration_posture: conventional_label_only
+      source_links:
+        - src-script-history
+source_links:
+  - id: src-script-history
+    source_ref: LEXIS-SRCDEC-004-script-history-reference
+    contract_state: planned_blocked
+relationship_edges:
+  - id: edge-alpha-support
+    edge_kind: supports_claim
+    source_id: src-script-history
+    target_id: script-greek-alpha
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    supporting_sources:
+      - LEXIS-SRCDEC-004-script-history-reference
+    review_state: blocked
+  - id: edge-alpha-latin-candidate
+    edge_kind: script_variant_of
+    source_id: script-latin-a
+    target_id: script-greek-alpha
+    claim_type: inference
+    uncertainty: source_limited
+    supporting_sources:
+      - LEXIS-SRCDEC-004-script-history-reference
+    review_state: blocked
+  - id: edge-alpha-cyrillic-candidate
+    edge_kind: script_variant_of
+    source_id: script-cyrillic-az
+    target_id: script-greek-alpha
+    claim_type: inference
+    uncertainty: source_limited
+    supporting_sources:
+      - LEXIS-SRCDEC-004-script-history-reference
+    review_state: blocked
+  - id: edge-visual-similarity-not-proof
+    edge_kind: disputes_claim
+    source_id: script-latin-a
+    target_id: script-cyrillic-az
+    claim_type: rejected_alternative
+    uncertainty: disputed
+    supporting_sources:
+      - LEXIS-SRCDEC-004-script-history-reference
+    review_state: blocked
+language_claims: []
+relationship_claims: []
+graph_outputs:
+  - id: graph-script-alphabet-draft
+    format: json
+    status: blocked_until_validation_passes
+chronicle_outputs: []
+promotion_blockers:
+  - script-history source is planned_blocked, not accepted_for_slice
+  - graph output blocked while fixture is invalid
+  - visual similarity claims require script-system review

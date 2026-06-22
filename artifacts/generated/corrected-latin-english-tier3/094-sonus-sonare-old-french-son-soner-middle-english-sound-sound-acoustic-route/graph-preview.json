@@ -1,0 +1,213 @@
+{
+  "slice_id": "LEXIS-GEN-CORR-094",
+  "nodes": [
+    {
+      "id": "lang-latin",
+      "label": "Latin",
+      "record_class": "Language",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "lang-middle-english",
+      "label": "Middle English",
+      "record_class": "Language",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "lang-modern-english",
+      "label": "Modern English",
+      "record_class": "Language",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "lang-old-french",
+      "label": "Old French",
+      "record_class": "Language",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-latin-sonus",
+      "label": "sonus",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-latin-sonare",
+      "label": "sonare",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-old-french-son",
+      "label": "son",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-old-french-soner",
+      "label": "soner",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-middle-english-sound",
+      "label": "sound",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "wf-modern-english-sound",
+      "label": "sound",
+      "record_class": "Wordform",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    },
+    {
+      "id": "sense-wf-modern-english-sound",
+      "label": "Corrected candidate target meaning; source-detail review required.",
+      "record_class": "MeaningSense",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "source_posture": "candidate_review"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-wf-latin-sonus-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-latin-sonus",
+      "target_id": "wf-latin-sonus",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-106-tier3-proof-sound"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-latin-sonare-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-latin-sonare",
+      "target_id": "wf-latin-sonare",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-106-tier3-proof-sound"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-old-french-son-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-old-french-son",
+      "target_id": "wf-old-french-son",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-106-tier3-proof-sound"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-old-french-soner-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-old-french-soner",
+      "target_id": "wf-old-french-soner",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-106-tier3-proof-sound"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-middle-english-sound-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-middle-english-sound",
+      "target_id": "wf-middle-english-sound",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-106-tier3-proof-sound"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-modern-english-sound-supported-by-source",
+      "edge_kind": "supports_claim",
+      "source_id": "src-modern-english-sound",
+      "target_id": "wf-modern-english-sound",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-106-tier3-proof-sound"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-modern-english-sound-meaning",
+      "edge_kind": "meaning_shift_to",
+      "source_id": "wf-modern-english-sound",
+      "target_id": "sense-wf-modern-english-sound",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-106-tier3-proof-sound"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-old-french-son-borrowed-from-wf-latin-sonus",
+      "edge_kind": "borrowed_from",
+      "source_id": "wf-old-french-son",
+      "target_id": "wf-latin-sonus",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-106-tier3-proof-sound"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-middle-english-sound-borrowed-from-wf-old-french-son",
+      "edge_kind": "borrowed_from",
+      "source_id": "wf-middle-english-sound",
+      "target_id": "wf-old-french-son",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-106-tier3-proof-sound"
+      ],
+      "review_state": "candidate_review"
+    },
+    {
+      "id": "edge-wf-modern-english-sound-borrowed-from-wf-middle-english-sound",
+      "edge_kind": "borrowed_from",
+      "source_id": "wf-modern-english-sound",
+      "target_id": "wf-middle-english-sound",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-106-tier3-proof-sound"
+      ],
+      "review_state": "candidate_review"
+    }
+  ],
+  "source_posture_summary": [
+    "LEXIS-SRCDEC-106-tier3-proof-sound:candidate_review"
+  ],
+  "graph_engine_posture": "local-only",
+  "graph_output_posture": "preview_only_not_promoted",
+  "validation_error_count": 17
+}

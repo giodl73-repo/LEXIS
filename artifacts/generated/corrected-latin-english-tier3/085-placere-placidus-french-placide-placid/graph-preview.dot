@@ -1,0 +1,20 @@
+digraph lexis_slice {
+  graph [label="LEXIS-GEN-CORR-085\npreview_only_not_promoted\nvalidation errors: 13"];
+  "lang-french" [label="French\nLanguage\ncandidate_review"];
+  "lang-latin" [label="Latin\nLanguage\ncandidate_review"];
+  "lang-modern-english" [label="Modern English\nLanguage\ncandidate_review"];
+  "lang-unspecified-intermediate" [label="Unspecified intermediate\nLanguage\ncandidate_review"];
+  "wf-latin-placere" [label="placere\nWordform\ncandidate_review"];
+  "wf-unspecified-intermediate-placidus" [label="placidus\nWordform\ncandidate_review"];
+  "wf-french-placide" [label="placide\nWordform\ncandidate_review"];
+  "wf-modern-english-placid" [label="placid\nWordform\ncandidate_review"];
+  "sense-wf-modern-english-placid" [label="Corrected candidate target meaning; source-detail review required.\nMeaningSense\ncandidate_review"];
+  "src-latin-placere" -> "wf-latin-placere" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "src-unspecified-intermediate-placidus" -> "wf-unspecified-intermediate-placidus" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "src-french-placide" -> "wf-french-placide" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "src-modern-english-placid" -> "wf-modern-english-placid" [label="supports_claim\ndirect_evidence\nsource_limited"];
+  "wf-modern-english-placid" -> "sense-wf-modern-english-placid" [label="meaning_shift_to\ninference\nsource_limited"];
+  "wf-unspecified-intermediate-placidus" -> "wf-latin-placere" [label="borrowed_from\ninference\nsource_limited"];
+  "wf-french-placide" -> "wf-unspecified-intermediate-placidus" [label="borrowed_from\ninference\nsource_limited"];
+  "wf-modern-english-placid" -> "wf-french-placide" [label="borrowed_from\ninference\nsource_limited"];
+}

@@ -1,0 +1,212 @@
+fixture_id: LEXIS-GEN-CAND-078-manere-mansion
+status: candidate_review
+scope:
+  scope_id: candidate-078-manere-mansion-scope
+  question: Candidate generated multi-stage graph-facing chain for Latin manere, Old French, Middle English, and Modern English mansion.
+  excluded_claims:
+  - unreviewed generated relationship claims
+  - source text ingestion or redistribution
+source_text_included: false
+source_text_redistribution_posture: pointer_only_planned
+source_records:
+- source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+  may_support_claims: false
+deferred_records: []
+language_claims: []
+relationship_claims: []
+graph_outputs: []
+chronicle_outputs: []
+promotion_blockers: []
+nodes:
+  languages:
+  - id: lang-latin
+    label: Latin
+    kind: language
+    source_posture: candidate_review
+  - id: lang-middle-english
+    label: Middle English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-modern-english
+    label: Modern English
+    kind: language
+    source_posture: candidate_review
+  - id: lang-old-french
+    label: Old French
+    kind: language
+    source_posture: candidate_review
+  roots: []
+  wordforms:
+  - id: wf-latin-manere
+    label: manere
+    language_id: lang-latin
+    form: manere
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-manere
+  - id: wf-latin-mansum
+    label: mansum
+    language_id: lang-latin
+    form: mansum
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-latin-mansum
+  - id: wf-old-french-old-french-mansion-candidate
+    label: Old French candidate stage for mansion
+    language_id: lang-old-french
+    form: old-french-mansion-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-old-french-old-french-mansion-candidate
+  - id: wf-middle-english-middle-english-mansion-candidate
+    label: Middle English candidate stage for mansion
+    language_id: lang-middle-english
+    form: middle-english-mansion-candidate
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-middle-english-middle-english-mansion-candidate
+  - id: wf-modern-english-mansion
+    label: mansion
+    language_id: lang-modern-english
+    form: mansion
+    claim_type: direct_evidence
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-mansion
+  meaning_senses:
+  - id: sense-manere
+    label: remaining or staying
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-latin-manere
+  - id: sense-mansion
+    label: remaining or staying
+    gloss: Generated project summary placeholder; not copied source text.
+    claim_type: inference
+    uncertainty: source_limited
+    source_links:
+    - src-modern-english-mansion
+  script_forms: []
+source_links:
+- id: src-latin-manere
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-latin-mansum
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-old-french-old-french-mansion-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-middle-english-middle-english-mansion-candidate
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+- id: src-modern-english-mansion
+  source_ref: LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  contract_state: candidate_review
+relationship_edges:
+- id: edge-manere-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-manere
+  target_id: wf-latin-manere
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-manere-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-latin-manere
+  target_id: sense-manere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-mansum-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-latin-mansum
+  target_id: wf-latin-mansum
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-mansion-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-old-french-old-french-mansion-candidate
+  target_id: wf-old-french-old-french-mansion-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-mansion-candidate-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-middle-english-middle-english-mansion-candidate
+  target_id: wf-middle-english-middle-english-mansion-candidate
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-mansion-supported-by-source
+  edge_kind: supports_claim
+  source_id: src-modern-english-mansion
+  target_id: wf-modern-english-mansion
+  claim_type: direct_evidence
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-mansion-meaning
+  edge_kind: meaning_shift_to
+  source_id: wf-modern-english-mansion
+  target_id: sense-mansion
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-mansum-descends-from-manere
+  edge_kind: descends_from
+  source_id: wf-latin-mansum
+  target_id: wf-latin-manere
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-old-french-mansion-candidate-borrowed-from-mansum
+  edge_kind: borrowed_from
+  source_id: wf-old-french-old-french-mansion-candidate
+  target_id: wf-latin-mansum
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-middle-english-mansion-candidate-borrowed-from-old-french-mansion-candidate
+  edge_kind: borrowed_from
+  source_id: wf-middle-english-middle-english-mansion-candidate
+  target_id: wf-old-french-old-french-mansion-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review
+- id: edge-mansion-descends-from-middle-english-mansion-candidate
+  edge_kind: descends_from
+  source_id: wf-modern-english-mansion
+  target_id: wf-middle-english-middle-english-mansion-candidate
+  claim_type: inference
+  uncertainty: source_limited
+  supporting_sources:
+  - LEXIS-SRCDEC-009-latin-english-batch-candidate-reference
+  review_state: candidate_review

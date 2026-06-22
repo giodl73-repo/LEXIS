@@ -1,0 +1,105 @@
+{
+  "slice_id": "LEXIS-FIX-006-script-alphabet-slice",
+  "nodes": [
+    {
+      "id": "lang-grc-script",
+      "label": "Greek script lane",
+      "record_class": "Language",
+      "source_posture": "planned_blocked"
+    },
+    {
+      "id": "lang-lat-script",
+      "label": "Latin script lane",
+      "record_class": "Language",
+      "source_posture": "planned_blocked"
+    },
+    {
+      "id": "lang-cyrillic-script",
+      "label": "Cyrillic script lane",
+      "record_class": "Language",
+      "source_posture": "planned_blocked"
+    },
+    {
+      "id": "sense-letter-form",
+      "label": "letter-form continuity candidate",
+      "record_class": "MeaningSense",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "source_posture": "planned_blocked"
+    },
+    {
+      "id": "script-greek-alpha",
+      "label": "Greek alpha form",
+      "record_class": "ScriptForm",
+      "source_posture": "planned_blocked"
+    },
+    {
+      "id": "script-latin-a",
+      "label": "Latin A form",
+      "record_class": "ScriptForm",
+      "source_posture": "planned_blocked"
+    },
+    {
+      "id": "script-cyrillic-az",
+      "label": "Cyrillic az form",
+      "record_class": "ScriptForm",
+      "source_posture": "planned_blocked"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-alpha-support",
+      "edge_kind": "supports_claim",
+      "source_id": "src-script-history",
+      "target_id": "script-greek-alpha",
+      "claim_type": "direct_evidence",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-004-script-history-reference"
+      ],
+      "review_state": "blocked"
+    },
+    {
+      "id": "edge-alpha-latin-candidate",
+      "edge_kind": "script_variant_of",
+      "source_id": "script-latin-a",
+      "target_id": "script-greek-alpha",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-004-script-history-reference"
+      ],
+      "review_state": "blocked"
+    },
+    {
+      "id": "edge-alpha-cyrillic-candidate",
+      "edge_kind": "script_variant_of",
+      "source_id": "script-cyrillic-az",
+      "target_id": "script-greek-alpha",
+      "claim_type": "inference",
+      "uncertainty": "source_limited",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-004-script-history-reference"
+      ],
+      "review_state": "blocked"
+    },
+    {
+      "id": "edge-visual-similarity-not-proof",
+      "edge_kind": "disputes_claim",
+      "source_id": "script-latin-a",
+      "target_id": "script-cyrillic-az",
+      "claim_type": "rejected_alternative",
+      "uncertainty": "disputed",
+      "supporting_sources": [
+        "LEXIS-SRCDEC-004-script-history-reference"
+      ],
+      "review_state": "blocked"
+    }
+  ],
+  "source_posture_summary": [
+    "LEXIS-SRCDEC-004-script-history-reference:planned_blocked"
+  ],
+  "graph_engine_posture": "local-only",
+  "graph_output_posture": "preview_only_not_promoted",
+  "validation_error_count": 8
+}

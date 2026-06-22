@@ -1,0 +1,79 @@
+slice_id: corrected-candidate-075
+fixture_id: LEXIS-GEN-CORR-075
+status: candidate_review
+question: Corrected graph-facing candidate route for generated Latin-English chain 075.
+source_state: candidate_review
+sources:
+- id: LEXIS-SRCDEC-099-tier3-proof-relic
+  state: candidate_review
+  may_support_claims: false
+forms:
+- form: linquere
+  language: Latin
+  source: LEXIS-SRCDEC-099-tier3-proof-relic
+  id: wf-latin-linquere
+  label: null
+  meaning: null
+- form: relinquere
+  language: Latin
+  source: LEXIS-SRCDEC-099-tier3-proof-relic
+  id: wf-latin-relinquere
+  label: null
+  meaning: null
+- form: reliquus
+  language: Latin
+  source: LEXIS-SRCDEC-099-tier3-proof-relic
+  id: wf-latin-reliquus
+  label: null
+  meaning: null
+- form: reliquiae
+  language: Late Latin
+  source: LEXIS-SRCDEC-099-tier3-proof-relic
+  id: wf-late-latin-reliquiae
+  label: null
+  meaning: null
+- form: relique
+  language: Old French
+  source: LEXIS-SRCDEC-099-tier3-proof-relic
+  id: wf-old-french-relique
+  label: null
+  meaning: null
+- form: relic
+  language: Modern English
+  source: LEXIS-SRCDEC-099-tier3-proof-relic
+  id: wf-modern-english-relic
+  label: null
+  meaning: Corrected candidate target meaning; source-detail review required.
+relationships:
+- kind: descends_from
+  source: wf-latin-relinquere
+  target: wf-latin-linquere
+  claim_type: inference
+  uncertainty: source_limited
+  support:
+  - LEXIS-SRCDEC-099-tier3-proof-relic
+  review_state: candidate_review
+- kind: borrowed_from
+  source: wf-late-latin-reliquiae
+  target: wf-latin-relinquere
+  claim_type: inference
+  uncertainty: source_limited
+  support:
+  - LEXIS-SRCDEC-099-tier3-proof-relic
+  review_state: candidate_review
+- kind: borrowed_from
+  source: wf-old-french-relique
+  target: wf-late-latin-reliquiae
+  claim_type: inference
+  uncertainty: source_limited
+  support:
+  - LEXIS-SRCDEC-099-tier3-proof-relic
+  review_state: candidate_review
+- kind: borrowed_from
+  source: wf-modern-english-relic
+  target: wf-old-french-relique
+  claim_type: inference
+  uncertainty: source_limited
+  support:
+  - LEXIS-SRCDEC-099-tier3-proof-relic
+  review_state: candidate_review

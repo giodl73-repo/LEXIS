@@ -1,0 +1,16 @@
+decision_id: LEXIS-SRCDEC-065-tier2-proof-cupidity
+status: candidate_review
+source_family: English etymology pointer for Latin-to-English candidate cupidity
+related_slice_packages:
+  - LEXIS-SLICE-001-SOURCE
+pointer: https://www.etymonline.com/word/cupidity
+candidate_source_name: Etymonline and Merriam-Webster entries for cupidity
+rights_posture: copyrighted_reference_pointer_only
+redistribution_posture: pointer_only_planned
+citation_note: Proof pointers support French or Latin cupiditas, cupidus, and cupere route; no source text is copied.
+review_state: source_detail_required
+reviewer: L-5 Source Custody Reviewer pending
+promotion_allowed: false
+blocks:
+  - generated bridge should model cupiditas or cupidus rather than cupitum
+  - semantic intensity and greed shift must be labeled before promotion
