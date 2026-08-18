@@ -153,6 +153,21 @@ The first implementation slice should stay narrow:
 - Defer Rust crates, CLI contracts, fixtures, and source ingestion until the
   VTRACE mission, CONOPS, requirements, and baseline reviews settle.
 
+## Portfolio reuse posture
+
+LEXIS is intentionally a specialist language-history product, not a reusable
+portfolio foundation. Its fixture schemas, linguistic relationship kinds,
+uncertainty labels, source-custody policy, scoring, and chronicle output remain
+domain-owned and preview-oriented. The current Rust CLI validates LEXIS evidence
+and review workflows; it is not a published graph library or ingestion SDK.
+
+Shared graph mechanics belong in RLINE if that dependency matures, while LEXIS
+retains linguistic interpretation and source authority. Other repositories
+should not copy candidate fixtures, source records, generated artifacts, or
+diagnostic vocabulary as stable APIs. Revisit direct reuse only after an
+accepted versioned contract, a real downstream manifest, and consumer-owned
+compatibility tests exist.
+
 ## Non-goals
 
 - LEXIS is not a general dictionary, translation app, or language-learning
