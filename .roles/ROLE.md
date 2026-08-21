@@ -4,33 +4,37 @@ LEXIS reviews protect language-history evidence, linguistic uncertainty, graph
 semantics, and public-facing chronicle quality. The panel is AI-simulated
 review support for repository work; it is not external peer review.
 
-## Panel
+## Active Panel
 
 | ID | Role | Lens |
 |---|---|---|
-| L-1 | Language Historian | Diachronic framing, contact, migration, era boundaries, and historical caution. |
-| L-2 | Etymology Reviewer | Roots, cognates, borrowings, semantic drift, competing theories, and uncertainty labels. |
-| L-3 | Phonology Reviewer | Sound shifts, pronunciations, reconstruction limits, and transliteration risk. |
-| L-4 | Script Systems Reviewer | Alphabets, writing systems, glyph evolution, orthography, and script-lane boundaries. |
-| L-5 | Source Custody Reviewer | Attestations, citations, source quality, rights posture, and no-redistribution boundaries. |
-| L-6 | Graph Systems Reviewer | RLINE usage, edge semantics, path interpretation, clusters, and connector metrics. |
-| L-7 | Product Chronicle Reviewer | Lucia-style readability, narrative flow, user workflows, and evidence/theory separation. |
-| L-8 | Software Assurance Reviewer | Testability, deterministic fixtures, validation commands, and overclaim prevention. |
+| L-1 | [Linguistic Evidence Steward](parliament/linguistic-evidence-steward.md) | Diachrony, etymology, sound, script, competing theories, and uncertainty. |
+| L-2 | [Source Custody Reviewer](parliament/source-custody-reviewer.md) | Attestations, citations, rights posture, and promotion boundaries. |
+| L-3 | [Graph Semantics Reviewer](parliament/graph-semantics-reviewer.md) | Edge meaning, paths, RLINE boundary, and interpretation limits. |
+| L-4 | [Chronicle and Assurance Reviewer](stakeholders/chronicle-assurance-reviewer.md) | Reader clarity, deterministic fixtures, diagnostics, and evidence/theory separation. |
+
+## Core Tensions
+
+| Pulls | Against | Because |
+|---|---|---|
+| Linguistic Evidence Steward | Chronicle and Assurance Reviewer | Competing theories and uncertainty resist one smooth public narrative. |
+| Source Custody Reviewer | Chronicle and Assurance Reviewer | Readable exposition cannot exceed accepted source and rights posture. |
+| Graph Semantics Reviewer | Linguistic Evidence Steward | A useful path or cluster is not automatically a valid historical claim. |
+| Source Custody Reviewer | Graph Semantics Reviewer | Connected nodes can amplify weak or candidate evidence. |
 
 ## Review order
 
-1. Use the full panel for every VTRACE stage.
+1. Use the full active panel for every VTRACE stage.
 2. Use Source Custody Reviewer before accepting a source family, dictionary,
    corpus, inscription, or attestation format.
-3. Use Graph Systems Reviewer before adding RLINE crates, graph schemas, edge
+3. Use Graph Semantics Reviewer before adding RLINE crates, graph schemas, edge
    scoring, or path/cluster claims.
-4. Use Etymology, Phonology, and Script Systems reviewers before publishing a
-   word-family or script-evolution chronicle.
-5. Use Product Chronicle and Software Assurance reviewers before release claims.
+4. Use Linguistic Evidence Steward before publishing a word-family or
+   script-evolution chronicle.
+5. Use Chronicle and Assurance Reviewer before release claims.
 
 ## Fixed-point rule
 
 A stage is settled only when no critical or major actionable finding remains.
 Minor findings may be fixed immediately or deferred to a named later VTRACE
 stage or work package.
-
